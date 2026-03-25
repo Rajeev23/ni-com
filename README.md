@@ -18,12 +18,6 @@ The site is structured around one shared platform narrative with product, soluti
   Shared UI components, styles, and utility helpers used by the site.
 - `packages/typescript-config`
   Shared TypeScript config presets for the workspace.
-- `neverinstall-unified-strategy-v2.md`
-  Canonical strategy document for sitemap, product positioning, and launch priorities.
-- `Website Revamp/`
-  Source copy and structure inputs for solutions and Trust Center pages.
-- `neverinstall-ia-spec 327c7ebfc13f80eea8a6d00b346ff473.md`
-  Earlier IA baseline used to bootstrap the site.
 
 ## Tech Stack
 
@@ -106,16 +100,6 @@ Important content sources:
 - `apps/web/lib/content/pages/platform.ts`
 - `apps/web/lib/content/pages/trust.ts`
 
-## Content Source Of Truth
-
-Use these documents when updating messaging or IA:
-
-- `neverinstall-unified-strategy-v2.md`
-  Canonical source for navigation, sitemap, launch tiers, and the product/platform narrative.
-- `Website Revamp/`
-  Copy bank for solutions, industry pages, and Trust Center content.
-
-The implementation should follow the strategy first, with the revamp files supplying detailed copy and page-specific structure.
 
 ## Current Focus
 
