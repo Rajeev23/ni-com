@@ -1,0 +1,24 @@
+{
+  "name": "neverinstall.com",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "turbo format",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "eslint-plugin-turbo": "^2.8.1",
+    "oxfmt": "^0.41.0",
+    "oxlint": "^1.56.0",
+    "turbo": "^2.8.17",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20"
+  }
+}
