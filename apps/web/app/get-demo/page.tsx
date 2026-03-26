@@ -25,7 +25,7 @@ export default function GetDemoPage() {
           subtitle:
             "Share your use case, current stack, and rollout goals across Secure Browser, DaaS, or Sovereign HCI. We will tailor the walkthrough to the right product surface.",
           supportingCopy:
-            "All major CTAs should converge here so the site can route browser, workspace, and AI infrastructure buyers into one evaluation entry point.",
+            "One evaluation entry point for browser security, workspace modernization, and sovereign AI infrastructure discussions.",
           primaryCta: { label: "Submit Request", href: "#demo-form" },
           secondaryCta: { label: "See Pricing", href: "/pricing" },
         }}

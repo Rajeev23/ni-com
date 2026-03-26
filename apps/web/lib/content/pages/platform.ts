@@ -29,7 +29,7 @@ export const platformPage: ContentPage = {
     subtitle:
       "The Neverinstall platform is the shared control plane behind secure browser delivery, cloud workspaces, and sovereign AI infrastructure.",
     supportingCopy:
-      "This page exists to prove the platform thesis: the underlying infrastructure stack is the product, and each commercial surface is a route into that same system.",
+      "A single architecture delivers policy, performance, and operational control across browser security, workspaces, and sovereign AI infrastructure.",
     metric: "One infrastructure platform, three GTM surfaces",
     primaryCta: demoCta,
     secondaryCta: contactCta,
@@ -42,7 +42,7 @@ export const platformPage: ContentPage = {
     gridSection({
       title: "Core platform primitives",
       description:
-        "This page should explain the stack as a cohesive system rather than a random list of infrastructure terms.",
+        "A cohesive stack that combines performance, security, and governance in one operating layer.",
       columns: 4,
       blocks: [
         {
@@ -87,10 +87,32 @@ export const platformPage: ContentPage = {
         },
       ],
     }),
+    gridSection({
+      title: "Technical proof points",
+      description:
+        "Production metrics that show how the platform performs under real enterprise workloads.",
+      blocks: [
+        {
+          title: "Sub-second workspace recovery",
+          description:
+            "JIT checkpoint restore commonly resumes user workspaces in under one second for validated desktop workflows.",
+        },
+        {
+          title: "Security controls at runtime",
+          description:
+            "eBPF-driven control paths and pre-encryption inspection support policy enforcement without depending on endpoint trust.",
+        },
+        {
+          title: "Low-overhead delivery",
+          description:
+            "Interactive sessions are tuned for low latency and modest CPU overhead in browser and workspace delivery paths.",
+        },
+      ],
+    }),
     tableSection({
       title: "How each product uses the platform",
       description:
-        "The platform page should clarify product distinctions without breaking the shared-architecture thesis.",
+        "Each product has a distinct buyer motion while sharing core infrastructure primitives.",
       columns: ["Product", "Primary motion", "Platform usage"],
       rows: [
         {
@@ -119,7 +141,7 @@ export const platformPage: ContentPage = {
     statsSection({
       title: "Why the platform page matters",
       description:
-        "This route is both a technical credibility hub and an internal-linking bridge across the site.",
+        "Technical buyers can validate architecture depth before moving into product and comparison evaluation.",
       items: [
         {
           label: "Investor narrative",
@@ -161,7 +183,7 @@ export const platformPage: ContentPage = {
     {
       question: "Why is the platform page separate from the homepage?",
       answer:
-        "The homepage should route visitors quickly, while the platform page carries the deeper shared-infrastructure narrative for technical buyers, investors, and comparison traffic.",
+        "The homepage helps teams find the right entry point quickly, while the platform page provides deeper architecture detail for technical and procurement evaluation.",
     },
   ],
   bottomCtas: [demoCta, contactCta],

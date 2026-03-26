@@ -272,6 +272,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               >
                 Privacy
               </Link>
+              <Link className="hover:text-foreground" href="/cookie-policy">
+                Cookie Policy
+              </Link>
+              <Link className="hover:text-foreground" href="/toc">
+                Terms
+              </Link>
               <Link
                 className="hover:text-foreground"
                 href="/security/compliance-certifications"

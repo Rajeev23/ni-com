@@ -50,7 +50,7 @@ export const industryPages: Record<string, ContentPage> = {
       gridSection({
         title: "What the industry needs",
         description:
-          "The page should connect workforce security, third-party risk, and sovereign AI into one operating model.",
+          "Connect workforce security, third-party risk, and sovereign AI into one operating model.",
         blocks: [
           {
             title: "Controlled user access",
@@ -139,7 +139,7 @@ export const industryPages: Record<string, ContentPage> = {
       {
         question: "Does this page cover both workforce and AI use cases?",
         answer:
-          "Yes. Financial services is one of the most important places where the site should bridge Secure Browser, DaaS, and Sovereign HCI rather than treating them as unrelated products.",
+          "Yes. Financial services is a core segment where Secure Browser, DaaS, and Sovereign HCI are evaluated together rather than as isolated products.",
       },
     ],
     bottomCtas: [],
@@ -535,7 +535,7 @@ export const industryPages: Record<string, ContentPage> = {
       {
         question: "Why mention AI on a healthcare page?",
         answer:
-          "The unified strategy explicitly expands healthcare beyond workforce access into controlled medical AI and inference scenarios, especially for sensitive on-prem or regulated workloads.",
+          "Healthcare teams increasingly evaluate controlled medical AI and inference workflows alongside workforce access, especially in regulated or on-prem environments.",
       },
     ],
     bottomCtas: [],
@@ -584,7 +584,7 @@ export const industryPages: Record<string, ContentPage> = {
           {
             title: "IP protection",
             description:
-              "Design files and models should not be scattered across external or unmanaged devices.",
+              "Design files and models should stay inside controlled environments instead of unmanaged devices.",
           },
         ],
       }),
@@ -633,7 +633,7 @@ export const industryPages: Record<string, ContentPage> = {
       {
         question: "Is this page focused on workspaces or infrastructure?",
         answer:
-          "Primarily workspaces. It should sell delivered compute to end users, then link infrastructure buyers toward Sovereign HCI when the conversation shifts from user experience to platform orchestration.",
+          "Primarily workspaces. It leads with delivered compute for end users and links to Sovereign HCI when buyers shift into platform orchestration.",
       },
     ],
     bottomCtas: [],
@@ -690,7 +690,7 @@ export const industryPages: Record<string, ContentPage> = {
       gridSection({
         title: "Product fit",
         description:
-          "This page combines secure access control with confidential workspace delivery.",
+          "This industry combines secure access control with confidential workspace delivery.",
         columns: 3,
         blocks: [
           {
@@ -748,7 +748,7 @@ export const industryPages: Record<string, ContentPage> = {
         "Secure workspace access for government teams with centralized control, data sovereignty support, and resilience-focused operations.",
     },
     summary:
-      "Legacy government slug preserved for compatibility while the new defense-focused page becomes canonical.",
+      "Legacy government route preserved for compatibility while guiding buyers to the expanded Government & Defense narrative.",
     hero: {
       eyebrow: "Industry",
       title: "Secure access to government systems, without exposing data.",
@@ -766,7 +766,7 @@ export const industryPages: Record<string, ContentPage> = {
       gridSection({
         title: "Compatibility route",
         description:
-          "This page remains available for continuity, but the expanded narrative lives on Government & Defense.",
+          "This route remains available for continuity while the broader narrative lives on Government & Defense.",
         blocks: [
           {
             title: "Public-sector access",
@@ -805,7 +805,7 @@ export const industryPages: Record<string, ContentPage> = {
         question:
           "Should public-sector buyers use this page or Government & Defense?",
         answer:
-          "Government & Defense is the canonical strategic page. This route exists to preserve compatibility with the earlier sitemap and support redirects gracefully.",
+          "Government & Defense is the primary destination for new evaluations, while this route preserves continuity for existing links.",
       },
     ],
     bottomCtas: [],
@@ -821,7 +821,7 @@ export const industryPages: Record<string, ContentPage> = {
         "Sovereign AI infrastructure, secure workspaces, and high-control deployment patterns for government and defense organizations.",
     },
     summary:
-      "Canonical public-sector industry page aligned to the expanded sovereign HCI strategy.",
+      "Primary public-sector industry page for sovereign infrastructure and controlled operations.",
     hero: {
       eyebrow: "Industry",
       title:
@@ -885,7 +885,7 @@ export const industryPages: Record<string, ContentPage> = {
       statsSection({
         title: "Why buyers care",
         description:
-          "The copy should feel controlled, credible, and sovereignty-led rather than generic cybersecurity marketing.",
+          "Sovereignty-led messaging with practical control, compliance, and resilience outcomes.",
         items: [
           {
             label: "Control priority",
@@ -897,7 +897,7 @@ export const industryPages: Record<string, ContentPage> = {
             label: "Expansion path",
             value: "Workspaces to AI infra",
             detail:
-              "The site should show how the same platform supports both user access and infrastructure evolution.",
+              "Show how one platform supports both secure user access and infrastructure evolution.",
           },
           {
             label: "Core differentiator",
@@ -930,7 +930,7 @@ export const industryPages: Record<string, ContentPage> = {
         question:
           "Why is Government & Defense separate from the original Government page?",
         answer:
-          "The unified strategy expands the public-sector narrative into a more explicit sovereignty and AI infrastructure story, so the new page becomes the canonical destination while the old slug remains compatible.",
+          "It gives public-sector buyers a clearer sovereignty and AI infrastructure narrative while keeping the original route compatible.",
       },
     ],
     bottomCtas: [],
@@ -1028,7 +1028,7 @@ export const industryPages: Record<string, ContentPage> = {
       {
         question: "Is this page launch critical?",
         answer:
-          "No. It is a Tier 2 or roadmap page in the strategy, but adding it now keeps the IA aligned and avoids another route refactor later.",
+          "Not for day-one launch. It is a Tier 2 page that still improves coverage and keeps IA expansion clean.",
       },
     ],
     bottomCtas: [],
@@ -1044,7 +1044,7 @@ export const industryPages: Record<string, ContentPage> = {
         "Multi-vendor GPU orchestration, inference serving, and controlled AI infrastructure for AI-native companies and ML platform teams.",
     },
     summary:
-      "AI-native company segment centered on platform and accelerator strategy.",
+      "AI-native segment page centered on platform control and accelerator planning.",
     hero: {
       eyebrow: "Industry",
       title: "Build the AI platform you actually want to own.",
@@ -1124,7 +1124,7 @@ export const industryPages: Record<string, ContentPage> = {
       {
         question: "Why include AI-native companies as an industry page?",
         answer:
-          "Because the unified strategy treats it as a buyer-segment landing page for ML platform teams, research groups, and AI-heavy companies that may arrive with very different intent than general enterprise audiences.",
+          "It serves ML platform teams, research groups, and AI-heavy buyers whose evaluation paths differ from general enterprise audiences.",
       },
     ],
     bottomCtas: [],

@@ -1,7 +1,9 @@
 import type { ContentPage, ResourceCard } from "@/lib/content/types"
 
+import { blogPosts, blogCards } from "@/lib/content/pages/blog"
 import { footerNavigation, primaryNavigation } from "@/lib/content/navigation"
 import { comparePages } from "@/lib/content/pages/compares"
+import { customerStories, customerCards } from "@/lib/content/pages/customers"
 import { industryPages } from "@/lib/content/pages/industries"
 import { platformPage } from "@/lib/content/pages/platform"
 import { productPages } from "@/lib/content/pages/products"
@@ -10,7 +12,9 @@ import { useCasePages } from "@/lib/content/pages/use-cases"
 
 export { primaryNavigation, footerNavigation }
 export {
+  blogCards,
   comparePages,
+  customerCards,
   industryPages,
   platformPage,
   productPages,
@@ -67,48 +71,6 @@ export const resourceCards: ResourceCard[] = [
   },
 ]
 
-export const blogCards: ResourceCard[] = [
-  {
-    title: "Why NVIDIA AI Enterprise Costs More Than It Looks",
-    description:
-      "Educational content supporting the flagship HCI comparison and TCO story.",
-    href: "/blog",
-  },
-  {
-    title: "Enterprise Browser vs DaaS",
-    description:
-      "Bridge content connecting secure browser and workspace buying journeys.",
-    href: "/blog",
-  },
-  {
-    title: "Multi-Vendor GPU Orchestration",
-    description:
-      "Thought leadership for AI infrastructure buyers evaluating beyond NVIDIA-only stacks.",
-    href: "/blog",
-  },
-]
-
-export const customerCards: ResourceCard[] = [
-  {
-    title: "Fintech scales secure BYOD in 6 weeks",
-    description:
-      "A financial services team standardized secure contractor and BYOD access.",
-    href: "/customers",
-  },
-  {
-    title: "IT services firm modernizes legacy VDI operations",
-    description:
-      "How migration phases reduced complexity while improving policy control.",
-    href: "/customers",
-  },
-  {
-    title: "Global delivery team improves recovery readiness",
-    description:
-      "Business continuity workflows with role-based workspace policies.",
-    href: "/customers",
-  },
-]
-
 export const trustCenterCards: ResourceCard[] = [
   {
     title: "Security",
@@ -140,6 +102,18 @@ export const trustCenterCards: ResourceCard[] = [
       "Document inventory for policies, reports, and supporting trust materials.",
     href: "/security/policies-legal-documents",
   },
+  {
+    title: "Cookie Policy",
+    description:
+      "Cookie categories, usage purpose, and preference controls for website visitors.",
+    href: "/security/cookie-policy",
+  },
+  {
+    title: "Terms & Conditions",
+    description:
+      "Public legal entry point for terms, acceptable use context, and procurement review.",
+    href: "/security/terms-conditions",
+  },
 ]
 
 export const allContentPages: ContentPage[] = [
@@ -170,7 +144,9 @@ export const allRoutePaths = [
   ...Object.values(comparePages).map((page) => page.path),
   "/resources",
   "/blog",
+  ...Object.values(blogPosts).map((post) => `/blog/${post.slug}`),
   "/customers",
+  ...Object.values(customerStories).map((story) => `/customers/${story.slug}`),
   "/security",
   ...Object.values(trustPages).map((page) => page.path),
   "/docs",
@@ -233,6 +209,24 @@ export const staticRouteSeo: Record<
     description:
       "See how enterprise teams modernize secure access with Neverinstall.",
   },
+  ...Object.fromEntries(
+    Object.values(blogPosts).map((post) => [
+      `/blog/${post.slug}`,
+      {
+        title: `${post.title} | Neverinstall`,
+        description: post.description,
+      },
+    ])
+  ),
+  ...Object.fromEntries(
+    Object.values(customerStories).map((story) => [
+      `/customers/${story.slug}`,
+      {
+        title: `${story.title} | Neverinstall`,
+        description: story.description,
+      },
+    ])
+  ),
   "/security": {
     title: corePages.trust.title,
     description:

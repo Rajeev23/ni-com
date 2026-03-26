@@ -66,7 +66,7 @@ function comparePage({
       tableSection({
         title: "TL;DR summary",
         description:
-          "Comparison pages should be factual, honest, and useful to evaluators making a shortlist.",
+          "A factual shortlist view for teams evaluating fit, risk, and long-term operating model.",
         columns: ["Topic", "Neverinstall", "Alternative"],
         rows: [
           {
@@ -98,12 +98,12 @@ function comparePage({
       gridSection({
         title: "Where Neverinstall wins",
         description:
-          "The goal is not to trash the alternative. It is to explain which operating model each product favors.",
+          "These are the buyer conditions where Neverinstall typically delivers better outcomes.",
         columns: 3,
         blocks: neverinstallWins.map((item) => ({
           title: item,
           description:
-            "This is a buying journey where Neverinstall's architecture, control model, or expansion path tends to be stronger.",
+            "Best fit when teams want modern architecture, cleaner policy control, and a stronger expansion path.",
         })),
       }),
       gridSection({
@@ -114,7 +114,7 @@ function comparePage({
         blocks: strengths.map((item) => ({
           title: item,
           description:
-            "This is an area where the alternative may remain attractive depending on the buyer's existing environment or priorities.",
+            "A valid choice for organizations already optimized around the incumbent's ecosystem and constraints.",
         })),
       }),
     ],
@@ -166,7 +166,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Why compare Neverinstall to Citrix first?",
         answer:
-          "Citrix alternative intent is one of the highest-value DaaS search clusters in the strategy, so this page should act as a major commercial entry point.",
+          "Citrix replacement evaluations remain one of the highest-intent DaaS buying motions, making this page a primary commercial entry point.",
       },
     ],
   }),
@@ -212,7 +212,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Who is this comparison best for?",
         answer:
-          "This page is best for buyers weighing Azure lock-in, cost structure, and cross-product platform needs rather than simple feature parity.",
+          "Best for buyers evaluating Azure dependency, long-term cost structure, and the need to expand beyond desktop delivery.",
       },
     ],
   }),
@@ -487,7 +487,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Is this comparison mainly about cost?",
         answer:
-          "Cost matters, but the page should focus equally on provider lock-in, operating model, and the broader platform journey that Neverinstall offers.",
+          "Cost matters, but teams should also evaluate provider lock-in, policy control, and long-term platform flexibility.",
       },
     ],
   }),
@@ -533,7 +533,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Why is this the flagship HCI comparison page?",
         answer:
-          "Because the strategy treats NVIDIA AI Enterprise as the clearest commercial and category anchor for the new Sovereign HCI positioning.",
+          "Because NVIDIA AI Enterprise is the clearest enterprise benchmark for evaluating software tax, lock-in risk, and multi-vendor platform alternatives.",
       },
     ],
     aiFocused: true,
@@ -627,7 +627,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Why connect VMware Private AI to Broadcom pricing?",
         answer:
-          "Because the unified strategy treats Broadcom-era customer frustration as a major displacement tailwind across both VDI and private AI infrastructure decisions.",
+          "Because Broadcom-era pricing and bundling changes influence both VDI modernization and private AI platform decisions for many enterprise buyers.",
       },
     ],
     aiFocused: true,
@@ -673,7 +673,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Is Neverinstall claiming OpenShift AI is weak technology?",
         answer:
-          "No. The comparison should stay respectful and focus on assembly burden, platform completeness, and operational outcomes rather than dismissing the software approach.",
+          "No. The comparison focuses on platform assembly effort, operational burden, and delivery speed rather than dismissing software-led approaches.",
       },
     ],
     aiFocused: true,
@@ -720,7 +720,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Is this page launch critical?",
         answer:
-          "No. It is a lower-priority compare page in the strategy, but adding it now helps the compare IA scale cleanly.",
+          "Not for day-one launch. It is a secondary comparison route that expands coverage for hardware-led private AI evaluations.",
       },
     ],
     aiFocused: true,
@@ -767,7 +767,7 @@ export const comparePages: Record<string, ContentPage> = {
       {
         question: "Why include Dell AI Factory now if it is lower priority?",
         answer:
-          "Because the route architecture is already in motion, and adding the page now keeps compare navigation aligned with the strategy without needing another compare-index rewrite later.",
+          "Including it now gives buyers a complete comparison map and reduces rework as private AI evaluations broaden over time.",
       },
     ],
     aiFocused: true,

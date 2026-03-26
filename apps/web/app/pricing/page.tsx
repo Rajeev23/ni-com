@@ -101,11 +101,54 @@ export default function PricingPage() {
           title: corePages.pricing.title,
           subtitle: corePages.pricing.subtitle,
           supportingCopy:
-            "Pricing should reflect the three-product model: secure browser, workspace delivery, and sovereign AI infrastructure each get their own commercial path while still pointing back to the shared platform.",
+            "Choose pricing by buyer motion: browser security, cloud workspaces, or sovereign AI infrastructure.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "Calculate TCO", href: "/tco-calculator" },
         }}
       />
+      <section className="border-b py-10">
+        <PageContainer>
+          <div className="grid gap-4 md:grid-cols-3">
+            <article className="rounded-2xl border bg-card/90 p-5 shadow-sm">
+              <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
+                Secure Browser model
+              </p>
+              <h2 className="mt-2 text-lg font-semibold">
+                From $7 / user / month
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Tiered per-user pricing for browser isolation, policy controls,
+                and enterprise governance.
+              </p>
+            </article>
+            <article className="rounded-2xl border bg-card/90 p-5 shadow-sm">
+              <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
+                DaaS model
+              </p>
+              <h2 className="mt-2 text-lg font-semibold">
+                From $15-$85 / user / month
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Tiered workspace pricing for Windows/Linux support, persistent
+                or ephemeral sessions, and optional GPU-backed user cohorts.
+              </p>
+            </article>
+            <article className="rounded-2xl border bg-card/90 p-5 shadow-sm">
+              <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
+                Sovereign HCI model
+              </p>
+              <h2 className="mt-2 text-lg font-semibold">
+                From $2,000 / accelerator / year
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Accelerator-based pricing for multi-vendor orchestration,
+                integrated serving, and platform control in sovereign AI
+                deployments.
+              </p>
+            </article>
+          </div>
+        </PageContainer>
+      </section>
       <section className="border-b py-14">
         <PageContainer>
           <Tabs defaultValue="browser" className="grid gap-6">
@@ -157,7 +200,7 @@ export default function PricingPage() {
         <PageContainer>
           <div className="rounded-2xl border bg-card/90 p-6 shadow-sm">
             <h2 className="text-xl font-semibold">
-              How the pricing page should be read
+              How to evaluate these pricing models
             </h2>
             <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
               Secure Browser and DaaS use more conventional per-user packaging.
@@ -165,9 +208,8 @@ export default function PricingPage() {
               budget, and operating model are fundamentally different.
             </p>
             <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
-              The HCI commercial story should explicitly contrast
-              Neverinstall&apos;s bundled platform value with NVIDIA AI
-              Enterprise&apos;s software-only pricing.
+              For AI infrastructure buyers, compare bundled platform value and
+              multi-vendor flexibility against software-only licensing models.
             </p>
           </div>
         </PageContainer>

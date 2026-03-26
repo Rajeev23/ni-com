@@ -150,7 +150,7 @@ export const trustPages: Record<string, ContentPage> = {
       gridSection({
         title: "Data protection principles",
         description:
-          "The privacy story is strongest when tied directly to the platform architecture.",
+          "Privacy outcomes are strongest when anchored to concrete architecture controls.",
         blocks: [
           {
             title: "Data stays in the workspace",
@@ -172,7 +172,7 @@ export const trustPages: Record<string, ContentPage> = {
       tableSection({
         title: "Privacy posture",
         description:
-          "The site should make the shared-responsibility model easy to understand.",
+          "A clear shared-responsibility model for governance, access, and retention.",
         columns: ["Area", "Neverinstall", "Customer"],
         rows: [
           {
@@ -220,7 +220,7 @@ export const trustPages: Record<string, ContentPage> = {
       {
         question: "Does Neverinstall claim ownership over customer data?",
         answer:
-          "No. The trust content should be explicit that customers retain ownership and define governance choices while Neverinstall provides the platform and control mechanisms.",
+          "No. Customers retain ownership and governance authority, while Neverinstall provides the control mechanisms and enforcement layer.",
       },
     ],
     bottomCtas: [],
@@ -248,13 +248,13 @@ export const trustPages: Record<string, ContentPage> = {
     },
     answerCapsule: answerCapsule(
       "What is Neverinstall's compliance posture?",
-      "Neverinstall is positioned as compliance-ready through its centralized control model, auditability, and regional deployment flexibility, while certification language should remain precise about what is currently attested versus in progress."
+      "Neverinstall supports compliance-ready operations through centralized controls, auditable workflows, and regional deployment flexibility while keeping certification language precise and current."
     ),
     sections: [
       gridSection({
         title: "How Neverinstall supports regulated work",
         description:
-          "The page should emphasize controls and operational readiness, not just badge collection.",
+          "Operational controls and evidence quality matter more than badge-only messaging.",
         blocks: [
           {
             title: "Centralized audit visibility",
@@ -275,7 +275,8 @@ export const trustPages: Record<string, ContentPage> = {
       }),
       tableSection({
         title: "Certification language guidance",
-        description: "This page must stay legally careful and explicit.",
+        description:
+          "Use precise language that reflects current attestations and avoids overclaiming.",
         columns: ["Topic", "Site language", "Notes"],
         rows: [
           {
@@ -324,7 +325,7 @@ export const trustPages: Record<string, ContentPage> = {
         question:
           "Why is the certification language more careful than the marketing copy?",
         answer:
-          "Because Trust Center content needs to be precise, reviewable, and defensible. It should clarify control posture without implying an attestation that does not exist yet.",
+          "Trust Center claims must be precise, reviewable, and defensible so buyers can assess control posture without implied attestations.",
       },
     ],
     bottomCtas: [],
@@ -358,7 +359,7 @@ export const trustPages: Record<string, ContentPage> = {
       gridSection({
         title: "Architecture overview",
         description:
-          "The trust-facing architecture page should stay readable while still sounding technically credible.",
+          "A readable architecture narrative with enough depth for technical and risk stakeholders.",
         blocks: [
           {
             title: "Centralized workspaces",
@@ -380,7 +381,7 @@ export const trustPages: Record<string, ContentPage> = {
       gridSection({
         title: "Operational architecture benefits",
         description:
-          "This page should explain why the architectural model lowers risk and simplifies control.",
+          "How architecture choices reduce risk and simplify governance operations.",
         columns: 4,
         blocks: [
           {
@@ -455,12 +456,13 @@ export const trustPages: Record<string, ContentPage> = {
     },
     answerCapsule: answerCapsule(
       "What documents are available in the Trust Center?",
-      "The Trust Center should provide a clear index of privacy, legal, security, and data-handling documents, plus a controlled path for requesting sensitive reports when appropriate."
+      "The Trust Center provides a clear index of privacy, legal, security, and data-handling documents plus a controlled request path for sensitive reports."
     ),
     sections: [
       gridSection({
         title: "Document categories",
-        description: "This page is an index first, not a marketing narrative.",
+        description:
+          "An index designed to help legal, security, and procurement teams find the right documents quickly.",
         blocks: [
           {
             title: "Privacy and data terms",
@@ -482,7 +484,7 @@ export const trustPages: Record<string, ContentPage> = {
       tableSection({
         title: "Report access model",
         description:
-          "Some documents can be public while others should be shared through a controlled request path.",
+          "Public-facing policies stay open, while sensitive reports follow controlled sharing workflows.",
         columns: ["Category", "Example", "Access pattern"],
         rows: [
           {
@@ -558,7 +560,7 @@ export const trustPages: Record<string, ContentPage> = {
       gridSection({
         title: "Key controls",
         description:
-          "This page is intentionally lightweight until deeper product-security documentation is published.",
+          "A concise control overview for buyers beginning technical security review.",
         blocks: [
           {
             title: "Access controls",
@@ -627,7 +629,7 @@ export const trustPages: Record<string, ContentPage> = {
       gridSection({
         title: "Response posture",
         description:
-          "This page stays intentionally high level until formal IR documents are published.",
+          "A high-level view of response readiness and customer communication practices.",
         blocks: [
           {
             title: "Centralized visibility",
@@ -637,7 +639,7 @@ export const trustPages: Record<string, ContentPage> = {
           {
             title: "Defined workflows",
             description:
-              "The site should communicate that response procedures and customer notification paths exist.",
+              "Defined response procedures and customer notification workflows support predictable incident handling.",
           },
           {
             title: "Follow-up and remediation",
@@ -737,6 +739,212 @@ export const trustPages: Record<string, ContentPage> = {
         question: "Should this route replace the normal contact page?",
         answer:
           "No. This page is specifically for trust and security workflows, while the main contact route continues to handle general commercial and support outreach.",
+      },
+    ],
+    bottomCtas: [],
+  }),
+  "cookie-policy": trustPage({
+    name: "Cookie Policy",
+    slug: "cookie-policy",
+    path: "/security/cookie-policy",
+    template: "trust",
+    seo: {
+      title: "Cookie Policy - Neverinstall Trust Center",
+      description:
+        "How Neverinstall uses cookies and similar technologies across the website and platform surfaces.",
+    },
+    summary: "Cookie categories, controls, and retention guidance.",
+    hero: {
+      eyebrow: "Trust Center",
+      title: "Cookie and tracking transparency.",
+      subtitle:
+        "This policy explains what cookies we use, why we use them, and how you can control cookie preferences while evaluating Neverinstall.",
+      metric: "Clear cookie categories and controls",
+      primaryCta: contactCta,
+      secondaryCta: docsCta,
+    },
+    answerCapsule: answerCapsule(
+      "What cookies does Neverinstall use?",
+      "Neverinstall uses essential cookies for core site operation and may use analytics or preference cookies to improve experience, with controls for visitor choice where required."
+    ),
+    sections: [
+      gridSection({
+        title: "Cookie categories",
+        description:
+          "A simple model that legal, security, and privacy reviewers can validate quickly.",
+        blocks: [
+          {
+            title: "Essential cookies",
+            description:
+              "Required for security, session continuity, and core website functionality.",
+          },
+          {
+            title: "Preference cookies",
+            description:
+              "Remember user selections such as display preferences when enabled.",
+          },
+          {
+            title: "Analytics cookies",
+            description:
+              "Help us understand page usage patterns so we can improve content and navigation.",
+          },
+        ],
+      }),
+      tableSection({
+        title: "Cookie handling model",
+        description:
+          "High-level ownership for controls, retention, and notice responsibilities.",
+        columns: ["Area", "Neverinstall", "Visitor or customer admin"],
+        rows: [
+          {
+            label: "Essential behavior",
+            values: [
+              "Maintains secure and reliable baseline website operation.",
+              "Can disable non-essential categories where controls are offered.",
+            ],
+          },
+          {
+            label: "Preference and analytics",
+            values: [
+              "Documents purpose and retention assumptions for each category.",
+              "Chooses cookie settings according to local policy requirements.",
+            ],
+          },
+          {
+            label: "Policy updates",
+            values: [
+              "Publishes updates to this route when cookie practices change materially.",
+              "Reviews updates during trust and legal evaluations.",
+            ],
+          },
+        ],
+      }),
+    ],
+    relatedLinks: [
+      relatedLink(
+        "Privacy & Data Protection",
+        "Review the broader data model behind privacy commitments.",
+        "/security/privacy-data-protection"
+      ),
+      relatedLink(
+        "Policies & Legal Documents",
+        "Use the legal index to locate related policy documents.",
+        "/security/policies-legal-documents"
+      ),
+      relatedLink(
+        "Security Contact",
+        "Route legal or trust clarifications through the security contact path.",
+        "/security/security-contact"
+      ),
+    ],
+    faq: [
+      {
+        question: "Can visitors opt out of non-essential cookies?",
+        answer:
+          "Where applicable, yes. Non-essential cookie controls should be available based on site configuration and regional requirements.",
+      },
+    ],
+    bottomCtas: [],
+  }),
+  "terms-conditions": trustPage({
+    name: "Terms & Conditions",
+    slug: "terms-conditions",
+    path: "/security/terms-conditions",
+    template: "trust",
+    seo: {
+      title: "Terms & Conditions - Neverinstall Trust Center",
+      description:
+        "Service terms and high-level legal conditions relevant to Neverinstall website and platform usage.",
+    },
+    summary: "Terms overview and contract navigation entry point.",
+    hero: {
+      eyebrow: "Trust Center",
+      title: "Service terms and usage conditions.",
+      subtitle:
+        "Use this page as the public entry point for terms, acceptable use expectations, and legal context that supports procurement and review.",
+      metric: "Clear legal entry point for evaluations",
+      primaryCta: contactCta,
+      secondaryCta: docsCta,
+    },
+    answerCapsule: answerCapsule(
+      "Where should evaluators start with legal terms?",
+      "Start here for website and service usage conditions, then move to negotiated agreements and request-specific legal documents through the Trust Center workflow."
+    ),
+    sections: [
+      gridSection({
+        title: "Terms structure",
+        description:
+          "A practical legal overview for procurement, security, and business stakeholders.",
+        blocks: [
+          {
+            title: "Service usage boundaries",
+            description:
+              "Defines acceptable use expectations and baseline conditions for platform access.",
+          },
+          {
+            title: "Commercial alignment",
+            description:
+              "Clarifies when public terms apply versus customer-specific contractual agreements.",
+          },
+          {
+            title: "Legal change management",
+            description:
+              "Describes how material updates are communicated and where current terms are published.",
+          },
+        ],
+      }),
+      tableSection({
+        title: "Legal review workflow",
+        description:
+          "Use this model to route legal and trust requests during procurement.",
+        columns: ["Question type", "Start here", "Next step"],
+        rows: [
+          {
+            label: "General terms and AUP",
+            values: [
+              "Review public terms pages linked from this route.",
+              "Raise legal clarifications through your account or sales contact.",
+            ],
+          },
+          {
+            label: "Security and compliance artifacts",
+            values: [
+              "Review Trust Center summaries and document inventory.",
+              "Request deeper materials through controlled trust workflows.",
+            ],
+          },
+          {
+            label: "Negotiated contract language",
+            values: [
+              "Use this route as baseline context.",
+              "Finalize language through formal procurement and legal channels.",
+            ],
+          },
+        ],
+      }),
+    ],
+    relatedLinks: [
+      relatedLink(
+        "Policies & Legal Documents",
+        "Review the full trust and legal document inventory.",
+        "/security/policies-legal-documents"
+      ),
+      relatedLink(
+        "Cookie Policy",
+        "See data collection and tracking details for web surfaces.",
+        "/security/cookie-policy"
+      ),
+      relatedLink(
+        "Privacy & Data Protection",
+        "Connect terms review to the privacy and data control model.",
+        "/security/privacy-data-protection"
+      ),
+    ],
+    faq: [
+      {
+        question: "Is this page a substitute for signed customer contracts?",
+        answer:
+          "No. This page provides public legal context. Signed commercial agreements and negotiated terms govern customer deployments.",
       },
     ],
     bottomCtas: [],

@@ -482,7 +482,7 @@ export const useCasePages: Record<string, ContentPage> = {
       gridSection({
         title: "What this page is for",
         description:
-          "This page is the bridge between workspace-delivered GPU access and the larger Sovereign HCI AI infrastructure story.",
+          "This route connects user-facing GPU workspace delivery with deeper sovereign AI infrastructure decisions.",
         blocks: [
           {
             title: "Cloud-delivered GPU workspaces",
@@ -548,7 +548,7 @@ export const useCasePages: Record<string, ContentPage> = {
       {
         question: "When should a team move from this page to Sovereign HCI?",
         answer:
-          "Move to Sovereign HCI when the buyer is evaluating infrastructure orchestration, inference serving, accelerator strategy, or sovereign on-prem deployment rather than end-user workspace delivery.",
+          "Move to Sovereign HCI when the conversation shifts from end-user GPU workspaces to infrastructure orchestration, inference serving, or sovereign on-prem deployment.",
       },
     ],
     bottomCtas: [],
@@ -592,7 +592,7 @@ export const useCasePages: Record<string, ContentPage> = {
           {
             title: "Office or network disruption",
             description:
-              "A physical-site issue should not eliminate the ability to keep work moving.",
+              "Physical-site disruptions should not stop teams from continuing critical work.",
           },
           {
             title: "Ransomware or compromise",
@@ -707,7 +707,7 @@ export const useCasePages: Record<string, ContentPage> = {
       gridSection({
         title: "Platform fit",
         description:
-          "This page is the primary use-case expression of Sovereign HCI.",
+          "This is the lead use-case route for Sovereign HCI buyers evaluating production inference platforms.",
         columns: 4,
         blocks: [
           {
@@ -857,7 +857,7 @@ export const useCasePages: Record<string, ContentPage> = {
         question:
           "Is this page a thought-leadership use case or a productized capability page?",
         answer:
-          "It is both. The page should feel forward-looking, but it still needs to show the concrete platform primitives that make the positioning credible.",
+          "It is both. The narrative is forward-looking while remaining grounded in concrete platform primitives and deployable controls.",
       },
     ],
     bottomCtas: [],
@@ -1014,7 +1014,7 @@ export const useCasePages: Record<string, ContentPage> = {
       gridSection({
         title: "Neverinstall's angle",
         description:
-          "The page should keep the story focused on platform resilience rather than promising impossible magic.",
+          "Keep the narrative focused on realistic platform resilience and controlled migration outcomes.",
         columns: 4,
         blocks: [
           {

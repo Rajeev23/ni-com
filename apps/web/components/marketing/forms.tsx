@@ -97,7 +97,35 @@ export function DemoForm() {
           <option value="contractor-access">Contractor Access</option>
           <option value="secure-byod">Secure BYOD</option>
           <option value="developer-workspaces">Developer Workspaces</option>
+          <option value="legacy-vdi-migration">Legacy VDI Migration</option>
+          <option value="gpu-workloads">
+            GPU / High-Performance Workloads
+          </option>
+          <option value="business-continuity">Business Continuity</option>
+          <option value="ai-inference-platform">AI Inference Platform</option>
         </select>
+      </label>
+      <label className="grid gap-1.5 text-sm">
+        <span className="font-medium">Company size</span>
+        <select
+          name="companySize"
+          className="h-10 rounded-lg border bg-background px-3 text-sm"
+        >
+          <option value="">Select one</option>
+          <option value="1-50">1-50</option>
+          <option value="51-200">51-200</option>
+          <option value="201-1000">201-1000</option>
+          <option value="1001-5000">1001-5000</option>
+          <option value="5000+">5000+</option>
+        </select>
+      </label>
+      <label className="grid gap-1.5 text-sm">
+        <span className="font-medium">Current stack (optional)</span>
+        <textarea
+          name="currentStack"
+          className="min-h-24 rounded-lg border bg-background px-3 py-2 text-sm"
+          placeholder="e.g., Citrix + AVD, Island, NVIDIA AI Enterprise, VMware Horizon"
+        />
       </label>
       <Message message={state.message} ok={state.ok} />
       <SubmitButton label="Request Demo" />

@@ -80,7 +80,7 @@ export const productPages: Record<string, ContentPage> = {
           {
             title: "Browser-native DLP controls",
             description:
-              "Restrict downloads, printing, clipboard, USB, and file movement with centrally managed policies.",
+              "Restrict downloads, printing, clipboard, USB, and file movement with controls hardened in production enterprise deployments.",
           },
           {
             title: "Zero-trust access",
@@ -269,7 +269,7 @@ export const productPages: Record<string, ContentPage> = {
           {
             title: "Sub-second restore",
             description:
-              "Resume workspaces quickly so users get back to productive states without long rehydration or rebuild cycles.",
+              "Resume workspaces in under one second for validated flows so users recover quickly without long rebuild cycles.",
           },
           {
             title: "Windows and Linux support",
@@ -319,7 +319,7 @@ export const productPages: Record<string, ContentPage> = {
             label: "High-intent searches",
             value: "Citrix / VMware alternatives",
             detail:
-              "The strategy positions DaaS around displacement and modern architecture.",
+              "Modernize from legacy VDI with a cleaner operating model and faster rollout.",
           },
           {
             label: "Fastest customer proof",
@@ -420,7 +420,7 @@ export const productPages: Record<string, ContentPage> = {
       subtitle:
         "Multi-vendor GPU orchestration across NVIDIA, AMD, and Intel. Built-in inference serving. Agentic sandboxing. General compute HCI included.",
       supportingCopy:
-        "Neverinstall positions Sovereign HCI as the premium control plane for enterprises that want sovereign deployment, developer-first operations, and freedom from vendor lock-in.",
+        "Sovereign HCI gives enterprise teams a premium control plane for sovereign deployment, developer-first operations, and multi-vendor freedom.",
       metric: "Multi-vendor AI infrastructure. No NVIDIA tax.",
       primaryCta: demoCta,
       secondaryCta: aiTcoCta,
@@ -471,7 +471,7 @@ export const productPages: Record<string, ContentPage> = {
           {
             title: "Agentic workload sandboxing",
             description:
-              "Run AI agents inside isolated Firecracker-style boundaries with auditability, policy control, and safer execution paths.",
+              "Run AI agents inside Firecracker-style isolated boundaries with auditable execution and policy enforcement.",
           },
           {
             title: "Sovereignty by architecture",
@@ -483,7 +483,7 @@ export const productPages: Record<string, ContentPage> = {
       gridSection({
         title: "How the platform stacks up",
         description:
-          "The HCI page should prove that Neverinstall is not three startups in a trench coat, but one shared infrastructure platform with multiple go-to-market surfaces.",
+          "One shared platform foundation expressed through secure browser, DaaS, and sovereign AI infrastructure.",
         blocks: [
           {
             title: "Platform primitives",
@@ -505,7 +505,7 @@ export const productPages: Record<string, ContentPage> = {
       tableSection({
         title: "Feature to outcome ladder",
         description:
-          "This page should move from technical credibility to commercial differentiation without flattening either.",
+          "Translate architecture depth into clear business outcomes without sacrificing technical precision.",
         columns: ["Capability", "Buyer benefit", "Business outcome"],
         rows: [
           {

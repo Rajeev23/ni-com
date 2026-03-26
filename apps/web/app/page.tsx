@@ -9,6 +9,10 @@ import {
   PageContainer,
   ResourceGrid,
 } from "@/components/marketing/sections"
+import {
+  CloudflareImage,
+  isCloudflareImageConfigured,
+} from "@/components/marketing/cloudflare-image"
 import { getBaseMetadata } from "@/lib/seo/metadata"
 import {
   blogCards,
@@ -26,7 +30,33 @@ export const metadata: Metadata = getBaseMetadata({
   path: "/",
 })
 
+type HomepageLogo = {
+  name: string
+  imageId: string
+}
+
+function getHomepageLogosFromEnv(): HomepageLogo[] {
+  const raw = process.env.NEXT_PUBLIC_HOMEPAGE_LOGOS
+  if (!raw) {
+    return []
+  }
+
+  return raw
+    .split(",")
+    .map((entry) => entry.trim())
+    .filter(Boolean)
+    .map((entry) => {
+      const [name, imageId] = entry.split(":")
+      return { name: name?.trim() ?? "", imageId: imageId?.trim() ?? "" }
+    })
+    .filter((item) => item.name && item.imageId)
+}
+
 export default function Page() {
+  const homepageHeroImageId = process.env.NEXT_PUBLIC_HOMEPAGE_HERO_IMAGE_ID
+  const homepageLogos = getHomepageLogosFromEnv()
+  const canRenderCloudflareImages = isCloudflareImageConfigured()
+
   return (
     <>
       <HeroSection
@@ -41,14 +71,70 @@ export default function Page() {
           secondaryCta: { label: "See the Platform", href: "/platform" },
         }}
       />
+      {homepageHeroImageId && canRenderCloudflareImages ? (
+        <section className="border-b py-10">
+          <PageContainer>
+            <div className="overflow-hidden rounded-3xl border bg-card/80 p-2 shadow-sm">
+              <CloudflareImage
+                imageId={homepageHeroImageId}
+                alt="Neverinstall platform interface preview"
+                width={1600}
+                height={900}
+                className="h-auto w-full rounded-2xl object-cover"
+                priority
+              />
+            </div>
+          </PageContainer>
+        </section>
+      ) : null}
       <BlockGrid
         title="Three product pillars"
-        description="The homepage should route visitors to the right product, not force all three motions into one pitch."
+        description="Choose the product path that matches your immediate security, workspace, or infrastructure priority."
         blocks={Object.values(productPages).map((page) => ({
           title: page.name,
           description: page.summary,
         }))}
       />
+      <section className="border-b py-10">
+        <PageContainer>
+          <div className="space-y-4">
+            <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
+              Trusted by enterprise teams
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {homepageLogos.length > 0 && canRenderCloudflareImages
+                ? homepageLogos.map((logo) => (
+                    <div
+                      key={logo.name}
+                      className="flex items-center rounded-full border bg-background px-4 py-2"
+                    >
+                      <CloudflareImage
+                        imageId={logo.imageId}
+                        alt={`${logo.name} logo`}
+                        width={120}
+                        height={32}
+                        className="h-6 w-auto object-contain"
+                      />
+                    </div>
+                  ))
+                : [
+                    "Tally",
+                    "Porter",
+                    "Alliance Broadband",
+                    "Primebook",
+                    "Global Financial Services Design Partner",
+                  ].map((name) => (
+                    <span
+                      key={name}
+                      className="rounded-full border px-4 py-2 text-sm text-muted-foreground"
+                    >
+                      {name}
+                    </span>
+                  ))}
+            </div>
+          </div>
+        </PageContainer>
+      </section>
       <section className="border-b py-10">
         <PageContainer>
           <div className="grid gap-3 sm:grid-cols-3">
@@ -100,7 +186,7 @@ export default function Page() {
       />
       <BlockGrid
         title="Why Neverinstall"
-        description="Lead with outcomes first, then support them with technical credibility and platform leverage."
+        description="Measurable outcomes backed by architecture that scales across products."
         blocks={[
           {
             title: "One platform, three routes to market",
@@ -157,8 +243,8 @@ export default function Page() {
                 Industry signal
               </h2>
               <p className="text-sm text-muted-foreground sm:text-base">
-                The platform story should feel credible across regulated,
-                distributed, and AI-heavy buyers.
+                Proven patterns for regulated, distributed, and AI-intensive
+                operating environments.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -179,12 +265,12 @@ export default function Page() {
       </section>
       <ResourceGrid
         title="Customer proof and reference points"
-        description="Keep the homepage grounded with evidence from workforce, migration, and resilience use cases."
+        description="Real outcomes from workforce modernization, migration, and resilience programs."
         cards={customerCards}
       />
       <ResourceGrid
         title="Latest resources"
-        description="Comparison content, technical perspective, and bridge content across the three product surfaces."
+        description="Comparison research, technical guidance, and rollout strategy across all three products."
         cards={blogCards}
       />
       <CtaBand
