@@ -1,8 +1,8 @@
 # Neverinstall.com
 
-Marketing site and content workspace for the Neverinstall web presence.
+Marketing site and content codebase for the Neverinstall web presence.
 
-This repository contains the Next.js app for `neverinstall.com`, the shared UI package used by the site, and the workspace-level config used to build, lint, format, and typecheck the project. The current site direction reflects the newer Neverinstall platform story:
+This repository contains a single Next.js app for `neverinstall.com` with local components, styles, and typed content modules. The current site direction reflects the newer Neverinstall platform story:
 
 - `Secure Browser`
 - `Desktop as a Service`
@@ -12,21 +12,20 @@ The site is structured around one shared platform narrative with product, soluti
 
 ## What Is In This Repo
 
-- `apps/web`
-  The main Next.js 16 marketing site.
-- `packages/ui`
-  Shared UI components, styles, and utility helpers used by the site.
-- `packages/typescript-config`
-  Shared TypeScript config presets for the workspace.
+- `app`
+  App Router routes for homepage, products, solutions, compare pages, pricing, Trust Center, and supporting pages.
+- `components`
+  Reusable UI + marketing sections, templates, nav shell, calculators, and shared UI primitives.
+- `lib/content`
+  Central content model, navigation data, and page registries.
+- `lib/seo`
+  Shared metadata and structured-data helpers.
 
 ## Tech Stack
 
 - `Next.js 16`
 - `React 19`
-- `pnpm` workspaces
-- `Turborepo`
 - `Tailwind CSS v4`
-- local shared UI package in `packages/ui`
 - `oxlint` for linting
 - `oxfmt` for formatting
 
@@ -43,21 +42,13 @@ Install dependencies:
 pnpm install
 ```
 
-Start the workspace in development mode:
+Start development:
 
 ```bash
 pnpm dev
 ```
 
-If you only want to work on the website app:
-
-```bash
-pnpm --filter web dev
-```
-
 ## Common Commands
-
-Run all workspace tasks:
 
 ```bash
 pnpm dev
@@ -67,39 +58,18 @@ pnpm format
 pnpm typecheck
 ```
 
-Run commands only for the web app:
-
-```bash
-pnpm --filter web dev
-pnpm --filter web build
-pnpm --filter web lint
-pnpm --filter web typecheck
-```
-
 ## Site Architecture
 
-The marketing app lives in `apps/web` and is organized around typed content modules instead of scattered copy in route files.
-
-Key areas:
-
-- `apps/web/app`
-  App Router routes for homepage, products, solutions, compare pages, pricing, Trust Center, and supporting pages.
-- `apps/web/lib/content`
-  Central content model, navigation data, and page registries.
-- `apps/web/components/marketing`
-  Reusable sections, templates, nav shell, calculators, and marketing UI.
-- `apps/web/lib/seo`
-  Shared metadata and structured-data helpers.
+The app is organized around typed content modules instead of scattered copy in route files.
 
 Important content sources:
 
-- `apps/web/lib/content/pages/products.ts`
-- `apps/web/lib/content/pages/use-cases.ts`
-- `apps/web/lib/content/pages/industries.ts`
-- `apps/web/lib/content/pages/compares.ts`
-- `apps/web/lib/content/pages/platform.ts`
-- `apps/web/lib/content/pages/trust.ts`
-
+- `lib/content/pages/products.ts`
+- `lib/content/pages/use-cases.ts`
+- `lib/content/pages/industries.ts`
+- `lib/content/pages/compares.ts`
+- `lib/content/pages/platform.ts`
+- `lib/content/pages/trust.ts`
 
 ## Current Focus
 
@@ -115,5 +85,5 @@ The site has been moved away from generic starter content and now reflects:
 
 - Keep imports at the top of files.
 - Prefer updating typed content modules over hardcoding long-form marketing copy inside route components.
-- Use the shared navigation/content registries in `apps/web/lib/content` as the source of truth for IA-related changes.
+- Use the shared navigation/content registries in `lib/content` as the source of truth for IA-related changes.
 - If you add new dynamic content pages, make sure the route and metadata implementations follow the async `params` pattern required by Next.js 16.

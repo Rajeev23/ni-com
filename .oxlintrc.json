@@ -6,7 +6,6 @@
     }
   },
   "plugins": ["unicorn", "typescript", "react", "nextjs"],
-  "jsPlugins": ["eslint-plugin-turbo"],
   "categories": {
     "correctness": "off"
   },
@@ -90,7 +89,6 @@
     "@typescript-eslint/prefer-as-const": "error",
     "@typescript-eslint/prefer-namespace-keyword": "error",
     "@typescript-eslint/triple-slash-reference": "error",
-    "turbo/no-undeclared-env-vars": "warn",
     "react/display-name": "error",
     "react/jsx-key": "error",
     "react/jsx-no-comment-textnodes": "error",
