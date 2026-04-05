@@ -26,12 +26,9 @@ export default function TcoCalculatorPage() {
           subtitle:
             "Compare your assembled stack against Neverinstall in transparent 3-year scenarios by region and use case.",
           supportingCopy:
-            "This calculator covers the workspace side of the platform. For the new Sovereign HCI commercial path, use the AI infrastructure TCO route.",
+            "This calculator covers Desktop Workspaces and Secure Browser Workspaces.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
-          secondaryCta: {
-            label: "AI Infrastructure TCO",
-            href: "/ai-tco-calculator",
-          },
+          secondaryCta: { label: "See Pricing", href: "/pricing" },
         }}
       />
       <section className="border-b py-14">
@@ -73,7 +70,6 @@ export default function TcoCalculatorPage() {
       <CtaBand
         ctas={[
           { label: "Talk through your numbers", href: "/get-demo" },
-          { label: "AI Infrastructure TCO", href: "/ai-tco-calculator" },
           { label: "View Pricing", href: "/pricing" },
         ]}
       />

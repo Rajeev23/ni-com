@@ -16,10 +16,6 @@ export const tcoCta: CtaLink = {
   label: "Calculate TCO",
   href: "/tco-calculator",
 }
-export const aiTcoCta: CtaLink = {
-  label: "AI Infrastructure TCO",
-  href: "/ai-tco-calculator",
-}
 export const docsCta: CtaLink = { label: "Read Docs", href: "/docs" }
 export const contactCta: CtaLink = { label: "Contact Us", href: "/contact" }
 export const trustCta: CtaLink = {

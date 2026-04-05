@@ -22,7 +22,7 @@ export default function SolutionsIndexPage() {
           eyebrow: "Solutions",
           title: "Solutions by use case and industry",
           subtitle:
-            "Match Neverinstall to the operational problem or industry context that best fits your current buying journey.",
+            "Match Neverinstall to the operational challenge or industry context your organization is facing today.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "See the Platform", href: "/platform" },
         }}
@@ -38,7 +38,7 @@ export default function SolutionsIndexPage() {
       />
       <ResourceGrid
         title="By industry"
-        description="Explore vertical narratives spanning regulated work, distributed operations, and sovereign AI."
+        description="Explore how Neverinstall meets the security and workspace needs of your industry."
         cards={Object.values(industryPages).map((page) => ({
           title: page.name,
           description: page.summary,

@@ -23,7 +23,7 @@ export const primaryNavigation: NavGroup[] = [
         label: "Platform Technology",
         href: "/platform",
         description:
-          "The shared infrastructure behind Secure Browser, DaaS, and Sovereign HCI.",
+          "The shared infrastructure behind Desktop Workspaces and Secure Browser Workspaces.",
       },
     ],
   },
@@ -34,28 +34,21 @@ export const primaryNavigation: NavGroup[] = [
         title: "Products",
         links: [
           {
+            label: "Desktop Workspaces",
+            href: "/products/daas",
+            description:
+              "Full Windows and Linux desktops with sub-second restore.",
+          },
+          {
             label: "Secure Browser",
             href: "/products/secure-browser",
             description:
-              "Zero-trust browsing with browser-native DLP and isolation.",
-          },
-          {
-            label: "Desktop as a Service",
-            href: "/products/daas",
-            description:
-              "Sub-second workspace restore with Windows and Linux support.",
-          },
-          {
-            label: "Sovereign HCI",
-            href: "/products/sovereign-hci",
-            description:
-              "Multi-vendor AI infrastructure with sovereign deployment options.",
+              "Isolated browser sessions with DLP controls and session recording.",
           },
           {
             label: "Platform Technology",
             href: "/platform",
-            description:
-              "Understand the stack shared across all three products.",
+            description: "The shared stack behind both work modes.",
           },
         ],
       },
@@ -67,6 +60,10 @@ export const primaryNavigation: NavGroup[] = [
       {
         title: "By Use Case",
         links: [
+          {
+            label: "VDI / Citrix Replacement",
+            href: "/solutions/use-case/vdi-replacement",
+          },
           {
             label: "Remote & Hybrid Work",
             href: "/solutions/use-case/remote-hybrid-work",
@@ -81,12 +78,8 @@ export const primaryNavigation: NavGroup[] = [
             href: "/solutions/use-case/developer-workspaces",
           },
           {
-            label: "GPU / High-Performance",
-            href: "/solutions/use-case/gpu-high-performance",
-          },
-          {
-            label: "AI Inference Platform",
-            href: "/solutions/use-case/ai-inference-platform",
+            label: "Data Residency",
+            href: "/solutions/use-case/data-residency",
           },
         ],
       },
@@ -99,18 +92,19 @@ export const primaryNavigation: NavGroup[] = [
           },
           { label: "IT Services", href: "/solutions/industry/it-services" },
           {
-            label: "Government & Defense",
-            href: "/solutions/industry/government-defense",
+            label: "BPO & Call Centers",
+            href: "/solutions/industry/bpo-call-centers",
           },
           { label: "Healthcare", href: "/solutions/industry/healthcare" },
           {
-            label: "AEC / Engineering",
-            href: "/solutions/industry/aec-engineering",
+            label: "Government & Defense",
+            href: "/solutions/industry/government-defense",
           },
           {
-            label: "AI-Native Companies",
-            href: "/solutions/industry/ai-native",
+            label: "Manufacturing",
+            href: "/solutions/industry/manufacturing",
           },
+          { label: "Education", href: "/solutions/industry/education" },
         ],
       },
     ],
@@ -128,35 +122,18 @@ export const primaryNavigation: NavGroup[] = [
           },
           { label: "vs VMware / Omnissa", href: "/compare/vs-omnissa" },
           { label: "vs Windows 365", href: "/compare/vs-windows-365" },
+          { label: "vs AWS WorkSpaces", href: "/compare/vs-aws-workspaces" },
         ],
       },
       {
         title: "Secure Browser",
         links: [
-          { label: "vs Island Browser", href: "/compare/vs-island" },
+          { label: "vs Island", href: "/compare/vs-island" },
           { label: "vs Menlo Security", href: "/compare/vs-menlo" },
           {
             label: "vs Prisma Access Browser",
             href: "/compare/vs-prisma-access-browser",
           },
-        ],
-      },
-      {
-        title: "AI Infrastructure",
-        links: [
-          {
-            label: "vs NVIDIA AI Enterprise",
-            href: "/compare/vs-nvidia-ai-enterprise",
-          },
-          {
-            label: "vs Nutanix GPT-in-a-Box",
-            href: "/compare/vs-nutanix-gpt-in-a-box",
-          },
-          {
-            label: "vs VMware Private AI",
-            href: "/compare/vs-vmware-private-ai",
-          },
-          { label: "vs OpenShift AI", href: "/compare/vs-openshift-ai" },
         ],
       },
     ],
@@ -188,32 +165,31 @@ export const footerNavigation = [
     links: [
       { label: "Platform Technology", href: "/platform" },
       { label: "Pricing", href: "/pricing" },
-      { label: "AI Infrastructure TCO", href: "/ai-tco-calculator" },
+      { label: "TCO Calculator", href: "/tco-calculator" },
     ],
   },
   {
     title: "Products",
     links: [
+      { label: "Desktop Workspaces", href: "/products/daas" },
       { label: "Secure Browser", href: "/products/secure-browser" },
-      { label: "Desktop as a Service", href: "/products/daas" },
-      { label: "Sovereign HCI", href: "/products/sovereign-hci" },
     ],
   },
   {
     title: "Solutions",
     links: [
       {
-        label: "Remote & Hybrid Work",
-        href: "/solutions/use-case/remote-hybrid-work",
+        label: "VDI / Citrix Replacement",
+        href: "/solutions/use-case/vdi-replacement",
+      },
+      {
+        label: "Contractor & Vendor Access",
+        href: "/solutions/use-case/contractor-vendor-access",
       },
       { label: "Secure BYOD", href: "/solutions/use-case/secure-byod" },
       {
         label: "Government & Defense",
         href: "/solutions/industry/government-defense",
-      },
-      {
-        label: "AI Inference Platform",
-        href: "/solutions/use-case/ai-inference-platform",
       },
     ],
   },

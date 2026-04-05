@@ -2,18 +2,17 @@
 
 Marketing site and content codebase for the Neverinstall web presence.
 
-This repository contains a single Next.js app for `neverinstall.com` with local components, styles, and typed content modules. The current site direction reflects the newer Neverinstall platform story:
+This repository contains a single Next.js app for `neverinstall.com`. The site reflects the current platform positioning:
 
-- `Secure Browser`
-- `Desktop as a Service`
-- `Sovereign HCI`
+- `Desktop Workspaces` — Full Windows/Linux cloud desktops replacing legacy VDI
+- `Secure Browser Workspaces` — Isolated browser sessions for contractors, BYOD, and web access
 
-The site is structured around one shared platform narrative with product, solutions, comparison, pricing, and trust content layered on top.
+One platform, two work modes, any deployment (managed cloud, customer cloud, sovereign on-prem).
 
 ## What Is In This Repo
 
 - `app`
-  App Router routes for homepage, products, solutions, compare pages, pricing, Trust Center, and supporting pages.
+  App Router routes for homepage, products, solutions, compare pages, pricing, compliance, Trust Center, and supporting pages.
 - `components`
   Reusable UI + marketing sections, templates, nav shell, calculators, and shared UI primitives.
 - `lib/content`
@@ -26,6 +25,8 @@ The site is structured around one shared platform narrative with product, soluti
 - `Next.js 16`
 - `React 19`
 - `Tailwind CSS v4`
+- `shadcn/ui` (radix-nova style) + Tailark Pro blocks
+- `motion` (Framer Motion 12) for animations
 - `oxlint` for linting
 - `oxfmt` for formatting
 
@@ -69,17 +70,21 @@ Important content sources:
 - `lib/content/pages/industries.ts`
 - `lib/content/pages/compares.ts`
 - `lib/content/pages/platform.ts`
+- `lib/content/pages/compliance.ts`
 - `lib/content/pages/trust.ts`
+- `lib/content/pages/blog.ts`
+- `lib/content/pages/blog-categories.ts`
 
 ## Current Focus
 
-The site has been moved away from generic starter content and now reflects:
+The site reflects a content strategy pivot (April 2026) focusing on:
 
-- a first-class `/platform` page
-- expanded solution and industry coverage
-- AI infrastructure comparison pages
-- a Trust Center rooted at `/security`
-- split TCO paths for workspace and AI infrastructure conversations
+- DaaS as the VDI replacement wedge (Citrix/VMware migration)
+- Secure Browser as the expansion adjacency (contractor/BYOD access)
+- Compliance pages for SEO (SOC 2, HIPAA, GDPR, DPDP Act, etc.)
+- Blog category hubs for topical authority
+- Comparison pages against DaaS competitors (Citrix, AVD, VMware, W365, AWS) and browser competitors (Island, Menlo, Prisma)
+- Trust Center at `/security`
 
 ## Notes For Contributors
 
@@ -87,3 +92,4 @@ The site has been moved away from generic starter content and now reflects:
 - Prefer updating typed content modules over hardcoding long-form marketing copy inside route components.
 - Use the shared navigation/content registries in `lib/content` as the source of truth for IA-related changes.
 - If you add new dynamic content pages, make sure the route and metadata implementations follow the async `params` pattern required by Next.js 16.
+- No references to Sovereign HCI, AI infrastructure, GPU orchestration, or inference serving. These have been removed from the positioning.

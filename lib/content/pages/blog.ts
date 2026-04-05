@@ -14,37 +14,38 @@ export type BlogPost = {
 }
 
 export const blogPosts: Record<string, BlogPost> = {
-  "nvidia-ai-enterprise-cost-breakdown": {
-    slug: "nvidia-ai-enterprise-cost-breakdown",
-    title: "Why NVIDIA AI Enterprise Costs More Than It Looks",
+  "why-enterprises-are-leaving-citrix": {
+    slug: "why-enterprises-are-leaving-citrix",
+    title: "Why Enterprises Are Replacing Citrix in 2026 — and What Comes Next",
     description:
-      "A practical breakdown of NVIDIA software tax, infrastructure lock-in, and platform alternatives for enterprise AI teams.",
+      "Citrix costs are up 3-5x post-acquisition. See what drives replacement and how cloud-native DaaS cuts TCO and deployment time.",
     summary:
-      "NVIDIA AI Enterprise can be the right fit for NVIDIA-standardized organizations, but many teams underestimate the software premium and long-term lock-in effects. This guide outlines a fair evaluation model and where a multi-vendor approach changes economics.",
+      "Broadcom's acquisition of VMware and ongoing Citrix restructuring have created the largest forced migration event in enterprise desktops in a decade. This guide breaks down what is actually driving replacement decisions and what a modern alternative looks like.",
     publishedAt: "Mar 26, 2026",
     readTime: "7 min read",
     sections: [
       {
-        heading: "Where costs expand beyond list pricing",
-        body: "Most teams compare GPU hardware and overlook annual software uplift, support tiers, and the operational cost of narrowing to one accelerator strategy. Total cost should include software tax, procurement flexibility, and migration risk.",
+        heading: "The cost problem is now impossible to ignore",
+        body: "Legacy VDI was already expensive. With 3-5x license cost increases and forced bundling, the economics have shifted from manageable overhead to active budget drain. Enterprises are running real TCO comparisons for the first time in years.",
       },
       {
-        heading: "When NVIDIA-first is still a strong choice",
-        body: "If your roadmap is intentionally NVIDIA-only and your organization has deep CUDA dependency, standardizing on NVIDIA AI Enterprise can reduce integration risk and speed early programs.",
+        heading: "Complexity was tolerable — until it was not",
+        body: "Dedicated infrastructure teams, months-long rollouts, and consultant-heavy change management were accepted costs when there were no credible alternatives. Cloud-native DaaS platforms now deploy in days, not months, with simpler operations.",
       },
       {
-        heading: "When multi-vendor strategy becomes a lever",
-        body: "Enterprises that need sovereignty, budget flexibility, or phased hardware strategy often gain leverage from multi-vendor orchestration. That model helps avoid hard platform resets when pricing, supply, or policy conditions change.",
+        heading: "What a modern replacement actually looks like",
+        body: "The strongest alternatives combine sub-second session restore, Windows and Linux support, persistent and ephemeral modes, and flexible deployment across managed cloud, customer cloud, or on-premises. The key differentiator is whether the platform also covers browser-first users at 70-80% lower cost.",
       },
     ],
   },
   "enterprise-browser-vs-daas": {
     slug: "enterprise-browser-vs-daas",
-    title: "Enterprise Browser vs DaaS: Which Entry Point Is Right?",
+    title:
+      "Enterprise Browser vs DaaS: How to Choose the Right Starting Point",
     description:
-      "How to choose between browser-first rollout and full workspace delivery based on risk, speed, and operating model.",
+      "Start with Secure Browser for fast BYOD rollout or DaaS for full desktop control. A decision framework based on risk and speed.",
     summary:
-      "Secure Browser and DaaS solve adjacent problems. Browser-first is usually the fastest wedge for unmanaged endpoints and contractor access, while DaaS is stronger for full desktop control and legacy VDI replacement.",
+      "Secure Browser and DaaS solve related but different problems. Browser-first is usually the fastest path for unmanaged endpoints and contractor access, while DaaS is stronger for full desktop control and legacy VDI replacement.",
     publishedAt: "Mar 26, 2026",
     readTime: "6 min read",
     sections: [
@@ -54,35 +55,36 @@ export const blogPosts: Record<string, BlogPost> = {
       },
       {
         heading: "Map by rollout friction",
-        body: "Browser-first rollouts usually require less user change and can move faster. DaaS rollouts involve broader persona coverage but create a stronger foundation for persistent workspace governance.",
+        body: "Browser-first rollouts usually require less user change and can move faster. DaaS rollouts cover more user types but create a stronger foundation for persistent workspace governance.",
       },
       {
-        heading: "Treat both as one platform journey",
-        body: "The strongest programs avoid either-or framing. Teams often land browser controls first, then expand to DaaS for high-risk or high-value workloads that need deeper environment control.",
+        heading: "Plan for both from the start",
+        body: "The strongest programs avoid either-or thinking. Teams often deploy browser controls first, then expand to DaaS for high-risk or high-value workloads that need deeper environment control.",
       },
     ],
   },
-  "multi-vendor-gpu-orchestration": {
-    slug: "multi-vendor-gpu-orchestration",
-    title: "Multi-Vendor GPU Orchestration for Enterprise AI Platforms",
+  "byod-without-mdm": {
+    slug: "byod-without-mdm",
+    title:
+      "BYOD Without MDM: Session-Based Access Replaces Device Management",
     description:
-      "Design principles for scheduling, serving, and policy control across NVIDIA, AMD, and Intel environments.",
+      "Drop MDM for BYOD. Session-based workspaces keep data off personal devices while giving employees full device choice.",
     summary:
-      "Enterprise AI teams are moving from single-vendor assumptions toward mixed accelerator fleets. A multi-vendor control plane helps preserve negotiating leverage and align workloads to the best-fit hardware over time.",
+      "MDM-based BYOD programs create friction with employees, limit device choice, and still leave data on endpoints. Session-based access through secure browser workspaces removes the device from the trust equation entirely.",
     publishedAt: "Mar 26, 2026",
-    readTime: "8 min read",
+    readTime: "5 min read",
     sections: [
       {
-        heading: "Scheduler policy must be workload-aware",
-        body: "Not every workload needs top-end accelerators. Intelligent placement should route tasks by latency target, memory profile, and cost threshold rather than static hardware affinity.",
+        heading: "The MDM bargain is breaking down",
+        body: "Employees resist invasive controls on personal devices. IT teams spend disproportionate time managing diverse hardware. And despite all the effort, data still lands on endpoints that the organization does not fully control.",
       },
       {
-        heading: "Serving and observability cannot be afterthoughts",
-        body: "Orchestration alone is not enough. Production deployments need integrated serving, telemetry, and policy controls so platform teams can maintain consistency across clusters and regions.",
+        heading: "Session-based access changes the equation",
+        body: "When work runs inside an isolated browser session, the device becomes a display. No data on the endpoint means no data to lose. DLP controls like clipboard, download, upload, and print restrictions are enforced at the session level.",
       },
       {
-        heading: "Sovereignty and procurement are now platform concerns",
-        body: "Regulatory boundaries and supply variability make hardware optionality strategic. A software-defined control model gives enterprises more resilience against both policy shifts and supply constraints.",
+        heading: "One platform scales with your needs",
+        body: "Organizations that start with secure browser sessions for BYOD users often find that the same platform extends naturally to contractor access, call center operations, and eventually full desktop delivery for power users.",
       },
     ],
   },

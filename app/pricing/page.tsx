@@ -13,7 +13,7 @@ import { getBaseMetadata } from "@/lib/seo/metadata"
 export const metadata: Metadata = getBaseMetadata({
   title: corePages.pricing.title,
   description:
-    "Pricing for secure browser, DaaS, and sovereign HCI with enterprise support options.",
+    "Pricing for Desktop Workspaces and Secure Browser Workspaces with enterprise support options.",
   path: "/pricing",
 })
 
@@ -61,30 +61,6 @@ const tiers = [
       },
     ],
   },
-  {
-    value: "hci",
-    name: "Sovereign HCI",
-    plans: [
-      {
-        label: "Starter",
-        price: "Design partner pricing",
-        detail:
-          "For early sovereign AI infrastructure engagements and platform design programs.",
-      },
-      {
-        label: "Standard",
-        price: "From $2,000 / accelerator / year",
-        detail:
-          "Multi-vendor orchestration and integrated HCI for production AI infrastructure.",
-      },
-      {
-        label: "Enterprise",
-        price: "From $3,500 / accelerator / year",
-        detail:
-          "Adds deeper inference, sandboxing, and premium support expectations.",
-      },
-    ],
-  },
 ]
 
 export default function PricingPage() {
@@ -96,14 +72,14 @@ export default function PricingPage() {
           title: corePages.pricing.title,
           subtitle: corePages.pricing.subtitle,
           supportingCopy:
-            "Choose pricing by buyer motion: browser security, cloud workspaces, or sovereign AI infrastructure.",
+            "Simple per-user pricing for browser security and cloud workspaces.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "Calculate TCO", href: "/tco-calculator" },
         }}
       />
       <section className="border-b py-10">
         <PageContainer>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border bg-card/90 p-5 shadow-sm">
               <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
                 Secure Browser model
@@ -118,7 +94,7 @@ export default function PricingPage() {
             </article>
             <article className="rounded-2xl border bg-card/90 p-5 shadow-sm">
               <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
-                DaaS model
+                Desktop Workspaces model
               </p>
               <h2 className="mt-2 text-lg font-semibold">
                 From $15-$85 / user / month
@@ -126,19 +102,6 @@ export default function PricingPage() {
               <p className="mt-2 text-sm text-muted-foreground">
                 Tiered workspace pricing for Windows/Linux support, persistent
                 or ephemeral sessions, and optional GPU-backed user cohorts.
-              </p>
-            </article>
-            <article className="rounded-2xl border bg-card/90 p-5 shadow-sm">
-              <p className="text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">
-                Sovereign HCI model
-              </p>
-              <h2 className="mt-2 text-lg font-semibold">
-                From $2,000 / accelerator / year
-              </h2>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Accelerator-based pricing for multi-vendor orchestration,
-                integrated serving, and platform control in sovereign AI
-                deployments.
               </p>
             </article>
           </div>
@@ -174,15 +137,9 @@ export default function PricingPage() {
                     </p>
                     <Link
                       className="mt-4 inline-flex text-sm font-medium"
-                      href={
-                        tier.value === "hci"
-                          ? "/ai-tco-calculator"
-                          : "/get-demo"
-                      }
+                      href="/get-demo"
                     >
-                      {tier.value === "hci"
-                        ? "Explore AI infrastructure pricing →"
-                        : "Request pricing details →"}
+                      Request pricing details →
                     </Link>
                   </article>
                 ))}
@@ -198,13 +155,13 @@ export default function PricingPage() {
               How to evaluate these pricing models
             </h2>
             <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
-              Secure Browser and DaaS use more conventional per-user packaging.
-              Sovereign HCI is priced per managed accelerator because the buyer,
-              budget, and operating model are fundamentally different.
+              Both Desktop Workspaces and Secure Browser Workspaces use per-user
+              packaging, making it straightforward to model costs by headcount,
+              session type, and deployment region.
             </p>
             <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
-              For AI infrastructure buyers, compare bundled platform value and
-              multi-vendor flexibility against software-only licensing models.
+              Use the TCO calculator to compare your current assembled stack
+              against Neverinstall in transparent 3-year scenarios.
             </p>
           </div>
         </PageContainer>
@@ -213,7 +170,6 @@ export default function PricingPage() {
         ctas={[
           { label: "Get a Demo", href: "/get-demo" },
           { label: "Calculate TCO", href: "/tco-calculator" },
-          { label: "AI Infrastructure TCO", href: "/ai-tco-calculator" },
         ]}
       />
     </>

@@ -10,7 +10,7 @@ import { getBaseMetadata } from "@/lib/seo/metadata"
 export const metadata: Metadata = getBaseMetadata({
   title: "Careers | Neverinstall",
   description:
-    "Join Neverinstall and help build sovereign enterprise computing products.",
+    "Join Neverinstall and help build secure enterprise workspace products.",
   path: "/company/careers",
 })
 
@@ -22,7 +22,7 @@ export default function CareersPage() {
           eyebrow: "Careers",
           title: "Build the future of secure enterprise computing",
           subtitle:
-            "Join a team focused on modern browser security, cloud desktops, and sovereign infrastructure.",
+            "Join a team focused on modern browser security, cloud desktops, and enterprise deployment infrastructure.",
           primaryCta: { label: "Contact Recruiting", href: "/contact" },
           secondaryCta: { label: "About Neverinstall", href: "/company/about" },
         }}

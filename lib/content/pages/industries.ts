@@ -26,192 +26,250 @@ export const industryPages: Record<string, ContentPage> = {
     template: "industry",
     seo: {
       title:
-        "AI Infrastructure & Secure Workspaces for Financial Services - Neverinstall",
+        "DPDP & GLBA Compliant Virtual Desktops for Financial Services | Neverinstall",
       description:
-        "Secure browser, DaaS, and sovereign AI infrastructure patterns for banks, insurers, fintechs, and regulated financial teams.",
+        "Secure virtual desktops and browser workspaces for banks, insurers, and fintechs. Meet DPDP Act, RBI data localization, GLBA, SOX, and NYDFS requirements with sovereign deployment options.",
     },
     summary:
-      "Regulated workspace and sovereign AI infrastructure narrative for BFSI buyers.",
+      "Regulated workspace delivery for BFSI institutions — data residency under DPDP and RBI, third-party risk controls for vendor and contractor access, and Citrix-class desktop replacement at lower TCO.",
     hero: {
-      eyebrow: "Industry",
+      eyebrow: "Financial Services",
       title:
-        "Secure access for regulated work. Without slowing the business down.",
+        "Every audit finding starts at an unmanaged endpoint. Eliminate the surface.",
       subtitle:
-        "Support employees, contractors, and regulated AI workloads with centralized control, strong auditability, and cleaner data boundaries.",
-      metric: "Endpoint risk becomes regulatory risk",
+        "Banks, NBFCs, and insurers face tightening mandates from DPDP Act, RBI outsourcing guidelines, and GLBA — all while onboarding more third-party vendors. Neverinstall centralizes regulated workloads inside auditable workspace boundaries so data never touches an uncontrolled device.",
+      metric:
+        "Porter chose Neverinstall over Microsoft for secure workspace delivery",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "How does Neverinstall fit financial services?",
-      "Neverinstall gives financial institutions a controlled environment for employee, contractor, and increasingly AI-driven workflows while reducing endpoint exposure, improving auditability, and supporting regional data requirements."
+      "Why do regulated financial institutions choose Neverinstall?",
+      "Financial institutions need workspace infrastructure that satisfies RBI data localization norms, DPDP Act consent and storage requirements, GLBA safeguards, and SOX audit trails — without the per-seat cost of legacy Citrix. Neverinstall delivers full desktops for trading floors and operations teams alongside browser-only access for vendor auditors and outsourced processors, all governed by a single policy engine with complete session-level audit logging."
     ),
     sections: [
       gridSection({
-        title: "What the industry needs",
+        title: "Regulatory and operational pressure points in BFSI",
         description:
-          "Connect workforce security, third-party risk, and sovereign AI into one operating model.",
+          "Financial services firms face a unique combination of tightening compliance mandates, expanding third-party ecosystems, and aging VDI infrastructure that cannot keep pace.",
         blocks: [
           {
-            title: "Controlled user access",
+            title: "RBI and DPDP data localization mandates",
             description:
-              "Banks and fintechs need stronger control over employees, vendors, and outsourced teams.",
+              "RBI outsourcing guidelines require that customer data processing stays within India. The DPDP Act adds consent-based data handling and storage locality rules. Every workspace session must enforce jurisdictional boundaries at the infrastructure level.",
           },
           {
-            title: "Regional data handling",
+            title: "Third-party vendor and BPO processor risk",
             description:
-              "Cross-border operations create residency and regulatory pressure.",
+              "Banks outsource claims processing, KYC verification, and loan servicing to vendors who access core banking data from unmanaged endpoints — creating the exposure RBI and GLBA auditors flag first.",
           },
           {
-            title: "AI governance is rising",
+            title: "Citrix and legacy VDI cost at BFSI scale",
             description:
-              "Risk models and inference workflows increasingly require the same control posture as traditional workloads.",
+              "Large banks run 5,000-50,000 Citrix seats with per-user licensing, dedicated StoreFront infrastructure, and multi-month upgrade cycles. The operational cost per seat makes digital transformation budgets impossible.",
           },
         ],
       }),
       gridSection({
-        title: "Relevant product fit",
+        title: "Desktop Workspaces for operations teams, Browser Workspaces for vendors",
         description:
-          "Financial services is one of the clearest examples of the three-product platform story.",
-        columns: 3,
+          "Trading desks and operations floors need persistent desktops with full application stacks. Third-party processors and audit firms need controlled browser access with no local data footprint.",
+        columns: 2,
         blocks: [
           {
-            title: "Secure Browser",
+            title: "Desktop Workspaces for employees and analysts",
             description:
-              "Protect browser-based access, contractors, and unmanaged endpoints.",
+              "Persistent desktops for treasury, risk, and operations teams running Bloomberg terminals, core banking thick clients, and Excel-heavy financial models. Sub-second session restore keeps trading floors operational during infrastructure events. Deploy on OCI, AWS, or on-premises to meet RBI data localization requirements.",
           },
           {
-            title: "DaaS",
+            title: "Secure Browser Workspaces for vendors and processors",
             description:
-              "Standardize secure workspaces for employees and third parties.",
-          },
-          {
-            title: "Sovereign HCI",
-            description:
-              "Extend the same control posture to sovereign AI inference and high-control infrastructure.",
+              "Browser-only access for BPO processors, KYC vendors, audit firms, and contract staff. No agent install on vendor devices, clipboard and download restrictions enforced by policy, full session recording for GLBA and SOX audit evidence. 70-80% lower cost per seat than provisioning a full desktop for every vendor user.",
           },
         ],
       }),
       statsSection({
-        title: "Regional credibility anchors",
+        title: "Deployed in regulated financial environments",
         description:
-          "This vertical benefits from explicit regulatory context rather than generic compliance language.",
+          "Neverinstall is in production at financial services organizations operating under Indian and global regulatory frameworks.",
         items: [
           {
-            label: "India",
-            value: "DPDP + RBI context",
+            label: "Customer",
+            value: "Porter",
             detail:
-              "Use residency, resilience, and third-party control language.",
+              "Porter, a logistics and financial services company, chose Neverinstall over Microsoft for secure workspace delivery across distributed operations teams.",
           },
           {
-            label: "Singapore",
-            value: "MAS TRM + PDPA",
+            label: "India compliance",
+            value: "DPDP Act + RBI Guidelines",
             detail:
-              "Tie platform controls to operational resilience and access governance.",
+              "Sovereign deployment on OCI or on-premises satisfies RBI outsourcing data localization and DPDP Act storage requirements without architectural workarounds.",
           },
           {
-            label: "US / UK / AU",
-            value: "GLBA, NYDFS, FCA, APRA",
+            label: "Global compliance",
+            value: "GLBA + SOX + NYDFS 23 NYCRR 500",
             detail:
-              "Frame Neverinstall as a cleaner control environment for regulated operations.",
+              "Session-level audit trails, centralized DLP enforcement, and zero-data-on-endpoint architecture map directly to GLBA safeguard rules, SOX IT controls, and NYDFS cybersecurity requirements.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "Deployment models for data residency compliance",
+        description:
+          "RBI data localization, DPDP Act, and cross-border banking regulations dictate where workloads run. Neverinstall supports every model without changing the control surface.",
+        columns: 3,
+        blocks: [
+          {
+            title: "Managed cloud",
+            description:
+              "Fastest path to production for fintechs and digital lenders. Neverinstall manages infrastructure in region-specific data centers while the institution retains full policy control.",
+          },
+          {
+            title: "Customer cloud (OCI, AWS, Azure)",
+            description:
+              "Deploy inside your own cloud tenancy — the preferred model for banks meeting RBI outsourcing guidelines. Available on Oracle Cloud Infrastructure for Oracle-aligned institutions.",
+          },
+          {
+            title: "On-premises deployment",
+            description:
+              "Full deployment inside bank-owned data centers for institutions with board-level mandates on data sovereignty or air-gap requirements for core banking workloads.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
-        "Secure BYOD",
-        "See the endpoint-control side of the regulated access story.",
-        "/solutions/use-case/secure-byod"
+        "Neverinstall vs Citrix",
+        "Side-by-side comparison for banks replacing Citrix XenDesktop with a cloud-native alternative.",
+        "/compare/vs-citrix"
       ),
       relatedLink(
-        "AI Inference Platform",
-        "Route AI infrastructure buyers to the sovereign inference narrative.",
-        "/solutions/use-case/ai-inference-platform"
+        "Contractor & Vendor Access",
+        "How financial institutions control BPO processor and audit firm access without provisioning full desktops.",
+        "/solutions/use-case/contractor-vendor-access"
       ),
       relatedLink(
         "Trust Center",
-        "Review the security, privacy, and compliance posture behind the BFSI story.",
+        "SOC 2 Type II, encryption standards, and data handling practices for regulated workloads.",
         "/security"
       ),
     ],
     faq: [
       {
-        question: "Does this page cover both workforce and AI use cases?",
+        question:
+          "How does Neverinstall help banks meet RBI data localization requirements?",
         answer:
-          "Yes. Financial services is a core segment where Secure Browser, DaaS, and Sovereign HCI are evaluated together rather than as isolated products.",
+          "Customer cloud and on-premises deployment options keep all workspace data — session state, application data, and user files — inside India-based infrastructure. The RBI outsourcing framework requires that customer data processing remains within Indian jurisdiction, and Neverinstall's OCI and on-prem deployment models satisfy this without routing any data through external regions.",
+      },
+      {
+        question:
+          "Can vendor and BPO teams access core banking applications without installing agents on their devices?",
+        answer:
+          "Yes. Secure Browser Workspaces provide agentless, browser-only access with enforced DLP controls including clipboard restrictions, download blocking, and watermarked session recording. Vendor devices never store bank data locally, which directly addresses the third-party access risks flagged in GLBA safeguard rules and RBI outsourcing guidelines.",
+      },
+      {
+        question:
+          "What audit evidence does Neverinstall provide for SOX and GLBA compliance?",
+        answer:
+          "Every workspace session generates timestamped audit logs covering user authentication, application access, file operations, and session duration. Session recording captures full visual evidence of user activity. These records map to SOX IT general controls and GLBA safeguard requirements for access monitoring and data handling oversight.",
       },
     ],
     bottomCtas: [],
   }),
+
   "it-services": industryPage({
     name: "IT Services",
     slug: "it-services",
     path: "/solutions/industry/it-services",
     template: "industry",
     seo: {
-      title: "Secure Developer Workspaces for IT Services - Neverinstall",
+      title:
+        "Secure Developer Workspaces & Contractor Onboarding for IT Services | Neverinstall",
       description:
-        "Secure developer and delivery environments for IT services teams working across clients, contractors, and distributed engineering organizations.",
+        "Provision pre-configured developer desktops in minutes, isolate client environments, and onboard offshore contractors without shipping laptops. SOC 2 compliant DaaS and secure browser access for IT services firms.",
     },
     summary:
-      "Developer-heavy services narrative for workspace delivery and code control.",
+      "Pre-configured developer desktops and isolated client environments for IT services firms. Eliminate hardware procurement delays, enforce client-level IP isolation, and onboard offshore contractors in minutes instead of weeks.",
     hero: {
-      eyebrow: "Industry",
-      title: "Ship code, not laptops.",
+      eyebrow: "IT Services & Outsourcing",
+      title:
+        "Your next project starts in minutes, not after procurement ships a laptop.",
       subtitle:
-        "Standardize secure developer environments across employees, contractors, and client-facing delivery teams without slowing onboarding or exposing code broadly.",
-      metric: "Developer onboarding without device drag",
+        "IT services margins depend on fast ramp-up and tight IP controls across client engagements. Neverinstall provisions pre-configured developer desktops with client-specific toolchains, isolates code at the project level, and onboards offshore contractors through browser-only access — no hardware logistics, no local code exposure.",
+      metric: "Onboard a developer in 15 minutes, not 2 weeks",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "Why is Neverinstall a fit for IT services?",
-      "Neverinstall helps IT services firms standardize developer environments, reduce contractor risk, and deliver client work without tying productivity to hardware procurement or fragile local setups."
+      "Why do IT services firms switch to Neverinstall?",
+      "Services firms lose billable days to hardware procurement, environment setup, and contractor onboarding. Neverinstall eliminates all three: golden-image developer desktops spin up in minutes with the right IDE, SDK, and VPN pre-configured per client engagement. Offshore and contract developers access code through browser workspaces with clipboard restrictions and zero local storage. When a project ends, deprovision the workspace — no laptop return logistics, no data wipe procedures, no residual IP risk."
     ),
     sections: [
       gridSection({
-        title: "What services firms struggle with",
+        title: "What slows IT services delivery and erodes margin",
         description:
-          "The industry mixes fast onboarding, client security expectations, and distributed engineering.",
+          "The services delivery model creates compounding friction from hardware dependencies, environment drift, and client IP exposure across distributed teams.",
         blocks: [
           {
-            title: "Environment inconsistency",
+            title: "Hardware procurement delays kill project ramp-up",
             description:
-              "Projects lose time when every team starts from a slightly different local machine.",
+              "Every new engagement or staffing change triggers laptop procurement, imaging, shipping, and secure configuration. A 50-person project ramp takes weeks before a single line of code ships — burning margin and client patience.",
           },
           {
-            title: "Contractor-heavy delivery",
+            title: "Client IP leaks through offshore and contractor endpoints",
             description:
-              "External developers and offshore teams increase code and access risk.",
+              "SOW terms require IP isolation, but offshore developers and subcontractors access client code from personal or shared machines. One unmanaged endpoint storing a client repo creates contractual and legal exposure that no NDA covers.",
           },
           {
-            title: "Procurement bottlenecks",
+            title: "Environment drift across projects and geographies",
             description:
-              "High-spec laptops and secure setup flows slow client-facing delivery.",
+              "Different OS versions, SDK configurations, and local dependency states across team machines create 'works on my machine' bugs that consume senior engineering time and delay client deliverables.",
           },
         ],
       }),
       gridSection({
-        title: "Best product fit",
+        title: "Developer desktops for delivery teams, browser access for contractors",
         description:
-          "This vertical is a strong DaaS entry point with security and HCI expansion potential.",
-        columns: 3,
+          "Core engineering teams need full development environments with GPU and build tooling. Short-term contractors and client-side collaborators need controlled access without a device relationship.",
+        columns: 2,
         blocks: [
           {
-            title: "DaaS",
+            title: "Desktop Workspaces for developers and project teams",
             description:
-              "Primary fit for workspace delivery and developer onboarding.",
+              "Golden-image desktops pre-loaded with client-specific IDEs, SDKs, container runtimes, and VPN configurations. Spin up 50 identical environments for a new engagement in one API call. Developers get consistent builds, IT gets centralized patching, and project managers get instant ramp-up without procurement tickets.",
           },
           {
-            title: "Secure Browser",
+            title: "Secure Browser Workspaces for contractors and offshore teams",
             description:
-              "Useful for lighter contractor and vendor access paths.",
+              "Browser-only access for subcontracted developers, QA testers, and client reviewers. Code never leaves the workspace — clipboard, download, and screen-capture restrictions enforce client IP boundaries. No agent install on contractor devices, no MDM enrollment, no laptop shipping. 70-80% lower cost per seat than provisioning a full desktop.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "How Neverinstall changes IT services economics",
+        description:
+          "Every improvement directly impacts billable utilization, hardware CapEx, and client security compliance.",
+        columns: 4,
+        blocks: [
+          {
+            title: "Minutes to first commit",
+            description:
+              "Pre-configured developer desktops eliminate the multi-day onboarding cycle. New team members write code on day one instead of waiting for hardware and environment setup.",
           },
           {
-            title: "Sovereign HCI",
+            title: "Client-level environment isolation",
             description:
-              "Future fit for firms building higher-order AI platform services.",
+              "Workspace policies, network rules, and access controls are scoped per client engagement. No cross-contamination between projects even when the same developer works across accounts.",
+          },
+          {
+            title: "Zero IP on unmanaged endpoints",
+            description:
+              "Source code, build artifacts, and client data never reach a local filesystem. DLP enforcement at the platform level satisfies the IP isolation clauses in enterprise SOWs and MSAs.",
+          },
+          {
+            title: "Elastic project scaling",
+            description:
+              "Add 30 seats for a sprint surge and deprovision them when the phase ends. No hardware return logistics, no asset tracking, no data wipe procedures.",
           },
         ],
       }),
@@ -219,297 +277,294 @@ export const industryPages: Record<string, ContentPage> = {
     relatedLinks: [
       relatedLink(
         "Developer Workspaces",
-        "See the most direct use-case page for services engineering teams.",
+        "Pre-configured development environments with IDE, SDK, and build tooling ready on first login.",
         "/solutions/use-case/developer-workspaces"
       ),
       relatedLink(
         "Contractor & Vendor Access",
-        "Add stronger control for short-term or third-party contributors.",
+        "Browser-only workspace access for offshore developers and subcontractors with enforced IP isolation.",
         "/solutions/use-case/contractor-vendor-access"
       ),
       relatedLink(
         "Desktop as a Service",
-        "Review the product page behind the services delivery story.",
+        "Full DaaS product capabilities for large-scale developer workspace fleets.",
         "/products/daas"
       ),
     ],
     faq: [
       {
-        question: "Is this industry page mostly about developers?",
+        question:
+          "Can we create different workspace templates for different client engagements?",
         answer:
-          "Yes. That is the clearest story in the revamp source material, and it is one of the strongest reasons for IT services firms to adopt Neverinstall quickly.",
+          "Yes. Each client engagement can have its own golden image with pre-configured IDEs, SDKs, VPN settings, and access policies. When you onboard a developer to a project, they get the exact environment that engagement requires — no manual setup, no configuration drift across the team.",
+      },
+      {
+        question:
+          "How does Neverinstall handle IP isolation when one developer works across multiple client projects?",
+        answer:
+          "Workspace policies enforce strict isolation at the project level. A developer switching between client engagements gets separate workspace sessions with independent network rules, file systems, and access controls. No data carries between client environments, satisfying the IP segregation requirements in enterprise master service agreements.",
+      },
+      {
+        question:
+          "What happens to workspace data when a contractor's engagement ends?",
+        answer:
+          "Deprovisioning a workspace permanently destroys all local session data, cached files, and environment state. There is no laptop to recall, no hard drive to wipe, and no residual client IP on any device. Deprovisioning is instant and auditable.",
       },
     ],
     bottomCtas: [],
   }),
+
   "bpo-call-centers": industryPage({
     name: "BPO & Call Centers",
     slug: "bpo-call-centers",
     path: "/solutions/industry/bpo-call-centers",
     template: "industry",
     seo: {
-      title: "Secure Workspaces for BPO & Call Centers - Neverinstall",
+      title:
+        "Virtual Desktops for BPO & Call Centers — Shift Resets, Thin Client Support | Neverinstall",
       description:
-        "Scale secure agent environments for BPO and contact center operations with clean shift handovers and lower device overhead.",
+        "Non-persistent desktops with clean shift resets for contact center agents. Run CRM and telephony on thin clients, enforce DLP across thousands of seats, and cut VDI costs 70-80% vs Citrix.",
     },
     summary:
-      "High-volume shift-based workspace delivery for contact center operations.",
+      "High-volume, shift-based workspace delivery purpose-built for BPO and contact center operations. Non-persistent sessions with clean resets, thin-client compatibility, and centralized DLP across thousands of agent seats. Tally Solutions runs this in production on Oracle Cloud Infrastructure.",
     hero: {
-      eyebrow: "Industry",
-      title: "Scale seats instantly. Keep every session secure.",
+      eyebrow: "BPO & Contact Centers",
+      title:
+        "3,000 agents. Three shifts. Zero data left behind between handovers.",
       subtitle:
-        "Support thousands of agents with clean shift resets, centralized controls, and lower hardware overhead across distributed operations.",
-      metric: "Shift-based workspaces at scale",
+        "Contact centers run on tight margins with high agent turnover, shared workstations, and client data flowing through every seat. Neverinstall delivers non-persistent desktops that reset cleanly at every shift boundary, run CRM and telephony stacks on thin clients, and enforce DLP policies across your entire agent population — at a fraction of Citrix per-seat cost.",
+      metric:
+        "Tally Solutions runs Neverinstall at scale across OCI-hosted operations",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "How does Neverinstall fit BPO and call center operations?",
-      "Neverinstall gives high-volume operations a cleaner workspace model with fast onboarding, shift-based reset patterns, and centralized controls that reduce data leakage risk across large agent populations."
+      "Why do BPO operators choose Neverinstall over legacy VDI?",
+      "BPO margins depend on cost per seat, speed of provisioning, and client data protection across shift-based workforces. Neverinstall replaces Citrix and VMware with non-persistent desktops that reset at every shift boundary — no residual customer data between agents, no expensive endpoint hardware, no multi-month VDI rollouts. Tally Solutions runs Neverinstall in production on OCI for their customer-facing operations teams, proving the model at contact-center scale."
     ),
     sections: [
       gridSection({
-        title: "Operational pain points",
+        title: "What breaks in contact center operations at scale",
         description:
-          "The contact-center model amplifies cost, support, and data handling issues.",
+          "The combination of high seat counts, constant agent turnover, shift-based schedules, and client data sensitivity creates operational challenges that generic workspace solutions cannot address.",
         blocks: [
           {
-            title: "Seat churn",
+            title: "Agent churn outpaces provisioning capacity",
             description:
-              "New agents and changing programs create nonstop provisioning demand.",
+              "BPO operations onboard new agent cohorts weekly for campaign launches, seasonal surges, and attrition backfill. Manual desktop provisioning and imaging cannot keep pace — every delay is unbillable seat time and missed SLA commitments to clients.",
           },
           {
-            title: "Shift handover risk",
+            title: "Shift handovers leak client data between agents",
             description:
-              "Shared or reused devices increase spillover risk between users.",
+              "When Agent B logs into the same workstation Agent A used last shift, cached credentials, browser history, CRM session tokens, and clipboard data from the previous session create data spillover. This is a PCI DSS and client contractual violation waiting to happen.",
           },
           {
-            title: "Legacy VDI drag",
+            title: "Citrix per-seat licensing erodes BPO margins",
             description:
-              "Older stacks add latency, cost, and operational burden at scale.",
+              "Legacy VDI stacks charge per named user or concurrent user with add-on licensing for NetScaler, StoreFront, and Provisioning Services. At 3,000-10,000 seats, the licensing cost alone consumes margin that should fund operations.",
           },
         ],
       }),
       gridSection({
-        title: "Why the Neverinstall model fits",
+        title: "Non-persistent desktops for agents, browser access for supervisors",
         description:
-          "The clean-room reset pattern is especially compelling in BPO and call center environments.",
+          "Agents running CRM, telephony, and client applications need full desktop sessions with clean shift resets. Supervisors and QA teams monitoring dashboards need lightweight browser access.",
+        columns: 2,
+        blocks: [
+          {
+            title: "Desktop Workspaces for contact center agents",
+            description:
+              "Non-persistent desktop sessions pre-loaded with CRM (Salesforce, Zoho, Freshdesk), telephony clients (Genesys, Five9, Avaya), and client-specific application stacks. Every shift starts from a clean golden image. When the agent logs out, the session is destroyed — no cached data, no residual credentials, no carryover between shifts. Runs on existing thin clients and low-end hardware.",
+          },
+          {
+            title: "Secure Browser Workspaces for supervisors and QA",
+            description:
+              "Browser-only access for team leads monitoring dashboards, QA analysts reviewing call recordings, and client stakeholders accessing reporting portals. No full desktop license needed. Clipboard and download restrictions prevent data extraction. 70-80% lower cost per seat than a full agent desktop — the right economics for users who only touch web applications.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "Built for contact center operational patterns",
+        description:
+          "Every capability maps to a specific BPO operational requirement — shift management, hardware economics, data protection, and scaling velocity.",
         columns: 4,
         blocks: [
           {
-            title: "Non-persistent sessions",
-            description: "Give every shift a clean starting point.",
-          },
-          {
-            title: "Low-end device compatibility",
-            description: "Reduce dependence on expensive endpoint hardware.",
-          },
-          {
-            title: "Centralized control",
+            title: "Clean shift resets",
             description:
-              "Enforce download, clipboard, and access restrictions consistently.",
+              "Non-persistent sessions destroy all user data at shift end. The next agent gets a pristine environment — no cached credentials, no clipboard remnants, no browser history from the previous shift.",
           },
           {
-            title: "Usage-based economics",
+            title: "Thin client and commodity hardware",
             description:
-              "Align platform cost more closely to active work rather than permanent seat overbuild.",
+              "All compute runs server-side. Agent endpoints only stream the session, so existing thin clients, refurbished PCs, and low-cost Chromebooks become fully capable agent workstations.",
+          },
+          {
+            title: "Centralized DLP across all seats",
+            description:
+              "USB blocking, clipboard restrictions, download prevention, and screen-capture controls enforce client data protection policies uniformly across every agent session — no endpoint-level configuration needed.",
+          },
+          {
+            title: "Provision 500 seats in an afternoon",
+            description:
+              "New campaign launches and seasonal ramps no longer wait for hardware procurement and imaging. Template-based provisioning scales agent seat counts in hours, not weeks.",
+          },
+        ],
+      }),
+      statsSection({
+        title: "In production at contact center scale",
+        description:
+          "Neverinstall is deployed in high-volume BPO operations handling thousands of concurrent agent sessions.",
+        items: [
+          {
+            label: "Customer",
+            value: "Tally Solutions",
+            detail:
+              "Tally Solutions runs Neverinstall at scale for their customer-facing operations workforce, deployed on Oracle Cloud Infrastructure.",
+          },
+          {
+            label: "Cost reduction",
+            value: "70-80% lower per-seat cost",
+            detail:
+              "Browser-first supervisor and QA seats cost 70-80% less than full desktop licenses. Agent desktops also cost significantly less than equivalent Citrix XenDesktop seats due to eliminated per-user licensing.",
+          },
+          {
+            label: "Deployment velocity",
+            value: "Production in days",
+            detail:
+              "Typical BPO deployments reach production-ready state in days to weeks, compared to the 3-6 month timelines for legacy Citrix or VMware Horizon rollouts.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
-        "Remote & Hybrid Work",
-        "See the broader workspace-delivery motion behind distributed operations.",
-        "/solutions/use-case/remote-hybrid-work"
+        "Neverinstall vs Citrix",
+        "Head-to-head comparison for BPO operators evaluating Citrix XenDesktop replacement.",
+        "/compare/vs-citrix"
       ),
       relatedLink(
         "Desktop as a Service",
-        "Review the product narrative for large workspace fleets.",
+        "Full DaaS capabilities for large non-persistent desktop fleets at contact center scale.",
         "/products/daas"
       ),
       relatedLink(
         "Business Continuity",
-        "Extend the same model into resilience and fallback planning.",
+        "Keep agent operations running during site outages with instant failover to alternate locations.",
         "/solutions/use-case/business-continuity"
       ),
     ],
     faq: [
       {
-        question: "Why is this vertical different from generic remote work?",
+        question:
+          "How does the non-persistent session model handle shift handovers?",
         answer:
-          "Because shift resets, high seat volumes, and sensitive customer data create a more operationally intense environment than typical hybrid work programs.",
+          "When an agent ends their shift and logs out, the entire desktop session is destroyed — including cached credentials, browser state, CRM session tokens, clipboard history, and any temporary files. The next agent on that shift gets a freshly provisioned session from a clean golden image. This eliminates the data spillover risk that occurs when agents share physical workstations across shifts.",
       },
-    ],
-    bottomCtas: [],
-  }),
-  "digital-natives": industryPage({
-    name: "Digital Natives",
-    slug: "digital-natives",
-    path: "/solutions/industry/digital-natives",
-    template: "industry",
-    seo: {
-      title: "Secure Workspaces for Digital Natives - Neverinstall",
-      description:
-        "Support fast-growing digital businesses with secure onboarding, contractor access, and global team infrastructure that does not depend on hardware logistics.",
-    },
-    summary:
-      "Fast-growth team onboarding, contractor access, and distributed scaling narrative.",
-    hero: {
-      eyebrow: "Industry",
-      title: "Scale your team, not your hardware.",
-      subtitle:
-        "Support global hiring, contractors, and distributed work without letting device logistics define your operating model.",
-      metric: "Hire anywhere. Work instantly.",
-      primaryCta: demoCta,
-      secondaryCta: tcoCta,
-    },
-    answerCapsule: answerCapsule(
-      "How does Neverinstall fit digital-native companies?",
-      "Neverinstall helps fast-growing companies onboard employees and contractors quickly, reduce device logistics, and keep access controlled as teams scale across regions."
-    ),
-    sections: [
-      gridSection({
-        title: "Growth-stage pain points",
-        description:
-          "Fast growth creates infrastructure strain before companies have mature IT footprints everywhere.",
-        blocks: [
-          {
-            title: "Global hiring friction",
-            description:
-              "Teams expand across countries faster than device and access processes can keep up.",
-          },
-          {
-            title: "Contractor-heavy execution",
-            description:
-              "Growth often depends on a mix of employees, vendors, and external contributors.",
-          },
-          {
-            title: "Cost sensitivity",
-            description:
-              "Hardware, shipping, and idle infrastructure create drag at startup and scale-up stages alike.",
-          },
-        ],
-      }),
-      statsSection({
-        title: "Best-fit product path",
-        description:
-          "Digital natives often start with workforce enablement and expand from there.",
-        items: [
-          {
-            label: "Primary product",
-            value: "DaaS",
-            detail: "The fastest path for distributed employee onboarding.",
-          },
-          {
-            label: "Security wedge",
-            value: "Secure Browser",
-            detail:
-              "Use it where full desktops are unnecessary or unmanaged access is the main issue.",
-          },
-          {
-            label: "Future expansion",
-            value: "AI-Native / HCI",
-            detail:
-              "As the company builds internal AI platform needs, Sovereign HCI becomes relevant.",
-          },
-        ],
-      }),
-    ],
-    relatedLinks: [
-      relatedLink(
-        "Remote & Hybrid Work",
-        "See the broad workforce delivery motion.",
-        "/solutions/use-case/remote-hybrid-work"
-      ),
-      relatedLink(
-        "Contractor & Vendor Access",
-        "Add strong third-party controls for external contributors.",
-        "/solutions/use-case/contractor-vendor-access"
-      ),
-      relatedLink(
-        "AI-Native Companies",
-        "Explore the deeper infrastructure story for AI-heavy teams.",
-        "/solutions/industry/ai-native"
-      ),
-    ],
-    faq: [
       {
-        question: "Why differentiate digital natives from AI-native companies?",
+        question:
+          "Can Neverinstall run on the thin clients and low-end PCs we already have deployed?",
         answer:
-          "Digital natives describes the broader SaaS and startup audience, while AI-native companies are a narrower infrastructure-heavy segment that maps more directly to Sovereign HCI.",
+          "Yes. All compute and application processing runs server-side in the cloud or your data center. Agent endpoints only need to stream the session, so existing thin clients, older PCs, and even Chromebooks work as fully capable agent workstations. This eliminates the endpoint hardware refresh cycles that BPO operators typically budget for every 3-4 years.",
+      },
+      {
+        question:
+          "How does Neverinstall handle rapid scaling for new campaign launches?",
+        answer:
+          "Template-based provisioning lets operations teams spin up hundreds of pre-configured agent desktops from a golden image in hours. When the campaign ends or scales down, those seats are deprovisioned instantly. You pay for active usage, not permanently allocated seat licenses — aligning infrastructure cost to actual operational demand.",
       },
     ],
     bottomCtas: [],
   }),
+
   healthcare: industryPage({
     name: "Healthcare",
     slug: "healthcare",
     path: "/solutions/industry/healthcare",
     template: "industry",
     seo: {
-      title: "Secure Workspaces & Sovereign AI for Healthcare - Neverinstall",
+      title:
+        "HIPAA Compliant Virtual Desktops for Healthcare & Hospital Systems | Neverinstall",
       description:
-        "Secure clinician access, resilient workspaces, and controlled AI infrastructure patterns for healthcare organizations handling sensitive patient data.",
+        "HIPAA-compliant virtual desktops and secure browser access for clinicians, nurses, and healthcare staff. Zero PHI on shared workstations, EHR access from any device, and ransomware-resilient infrastructure for hospital systems.",
     },
     summary:
-      "Clinical mobility, patient data control, and emerging healthcare AI infrastructure narrative.",
+      "HIPAA-compliant workspace delivery for healthcare organizations — zero PHI on shared workstations, instant clinician roaming across care locations, EHR and PACS access from any device, and ransomware-resilient infrastructure that recovers clinical operations in seconds.",
     hero: {
-      eyebrow: "Industry",
-      title: "Secure access to patient data, wherever care happens.",
+      eyebrow: "Healthcare",
+      title:
+        "A nurse logs in at three workstations per shift. PHI should never persist on any of them.",
       subtitle:
-        "Support clinicians, staff, and healthcare AI workloads with centralized control, strong auditability, and resilient workspace access.",
-      metric: "Patient data stays controlled",
+        "Healthcare runs on shared terminals, roaming clinicians, and legacy EHR systems that were never designed for modern endpoint diversity. Neverinstall delivers HIPAA-compliant virtual desktops where PHI stays inside the workspace boundary — not on the shared COW, the nurse station terminal, or the physician's personal tablet.",
+      metric: "Zero PHI on endpoints, sub-second session restore for care continuity",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "How does Neverinstall fit healthcare?",
-      "Neverinstall helps healthcare organizations centralize access to sensitive systems, reduce endpoint data exposure, and extend the same control model into resilience and emerging on-prem AI workflows."
+      "Why do healthcare organizations choose Neverinstall for HIPAA compliance?",
+      "HIPAA Security Rule requires access controls, audit trails, and transmission security for ePHI — but hospital environments run on shared workstations, roaming clinicians, and BYOD devices that make endpoint-level compliance nearly impossible. Neverinstall centralizes EHR, PACS, and clinical applications inside workspace boundaries where PHI never reaches the local device. Non-persistent sessions reset at every login, session recording provides audit evidence for HIPAA compliance officers, and sub-second restore keeps clinical workflows running through ransomware events and infrastructure failures."
     ),
     sections: [
       gridSection({
-        title: "Healthcare access challenges",
+        title: "Why traditional endpoint management fails in clinical settings",
         description:
-          "Clinical work is mobile, time-sensitive, and deeply data-sensitive.",
+          "Healthcare workflows create a uniquely hostile environment for endpoint security: shared devices, roaming users, legacy clinical applications, and life-critical uptime requirements that no other industry faces simultaneously.",
         blocks: [
           {
-            title: "Shared and unmanaged devices",
+            title: "Shared workstations expose PHI between clinicians",
             description:
-              "Clinicians often move across terminals and locations faster than traditional security models can follow.",
+              "Nurses, physicians, and allied health staff share COWs (computers on wheels), nurse station terminals, and exam room PCs across shifts. Cached EHR sessions, browser credentials, and clipboard data from the previous user create HIPAA violations that endpoint management tools cannot prevent at clinical pace.",
           },
           {
-            title: "Resilience pressure",
+            title: "HIPAA Security Rule demands technical safeguards at every access point",
             description:
-              "Ransomware and outages directly affect care delivery, not just office productivity.",
+              "The Security Rule requires unique user identification, automatic logoff, encryption, and audit controls for ePHI access. When clinicians access Epic, Cerner, or Meditech from shared devices and personal tablets, every access point becomes a compliance surface that IT must monitor and control.",
           },
           {
-            title: "Emerging AI governance",
+            title: "Ransomware shuts down clinical operations for days",
             description:
-              "Healthcare organizations increasingly want controlled environments for medical AI inference and sensitive data handling.",
+              "Hospital ransomware attacks disable EHR access, divert ambulances, and force paper-based workflows. Traditional recovery takes 3-7 days of downtime. Clinical operations need infrastructure that can restore access to patient systems in seconds, not through backup tape restoration.",
           },
         ],
       }),
       gridSection({
-        title: "Product fit",
+        title: "Clinical desktops for care teams, browser access for administrative staff",
         description:
-          "Healthcare needs both immediate workspace control and a path to more sovereign infrastructure.",
+          "Clinicians running EHR thick clients and diagnostic imaging need full desktop sessions with instant roaming. Administrative staff, telehealth coordinators, and billing teams need controlled browser access to web-based portals.",
+        columns: 2,
+        blocks: [
+          {
+            title: "Desktop Workspaces for clinicians and clinical staff",
+            description:
+              "Non-persistent desktop sessions for physicians, nurses, and allied health staff accessing Epic, Cerner, Meditech, or PACS imaging systems. Each login provisions a fresh session with the clinician's profile and application state. When they walk to the next workstation, the session follows. When they log off, PHI is destroyed from the endpoint. Sub-second restore keeps clinical workflows running through infrastructure events.",
+          },
+          {
+            title: "Secure Browser Workspaces for administration and telehealth",
+            description:
+              "Browser-only access for billing specialists, medical coders, telehealth coordinators, and contract staff accessing web-based patient portals, scheduling systems, and claims management platforms. No PHI on the local device, clipboard and download restrictions enforced by policy, and full session recording for HIPAA audit evidence. 70-80% lower cost than provisioning a full clinical desktop for administrative users.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "Deployment models for healthcare data residency and compliance",
+        description:
+          "Where PHI is processed and stored determines your HIPAA compliance posture. Neverinstall supports every deployment model health systems require.",
         columns: 3,
         blocks: [
           {
-            title: "DaaS",
+            title: "Managed cloud with BAA",
             description:
-              "Support clinical mobility and controlled workstation access.",
+              "Fastest deployment for clinics and ambulatory networks. Neverinstall manages HIPAA-aligned infrastructure with a Business Associate Agreement and customer-controlled access policies.",
           },
           {
-            title: "Secure Browser",
+            title: "Customer cloud (AWS, Azure, OCI)",
             description:
-              "Protect browser-centric access on shared or lighter endpoints.",
+              "Deploy inside your health system's own HIPAA-eligible cloud tenancy. PHI processing stays within your infrastructure boundary and your existing cloud BAA.",
           },
           {
-            title: "Sovereign HCI",
+            title: "On-premises for hospital data centers",
             description:
-              "Support on-prem or high-control AI inference patterns for sensitive healthcare workloads.",
+              "Full on-premises deployment for large hospital systems and health networks with board-level mandates on data locality or air-gap requirements for clinical workloads.",
           },
         ],
       }),
@@ -517,614 +572,497 @@ export const industryPages: Record<string, ContentPage> = {
     relatedLinks: [
       relatedLink(
         "Business Continuity",
-        "See how the platform supports resilient operations during disruption.",
+        "How Neverinstall keeps clinical systems accessible during ransomware events with sub-second session restore.",
         "/solutions/use-case/business-continuity"
       ),
       relatedLink(
-        "AI Inference Platform",
-        "Explore the healthcare-relevant sovereign inference story.",
-        "/solutions/use-case/ai-inference-platform"
+        "Secure BYOD",
+        "Let clinicians access EHR systems from personal tablets and phones without PHI touching the device.",
+        "/solutions/use-case/secure-byod"
       ),
       relatedLink(
         "Trust Center",
-        "Review security, privacy, and compliance posture for sensitive workloads.",
-        "/security"
-      ),
-    ],
-    faq: [
-      {
-        question: "Why mention AI on a healthcare page?",
-        answer:
-          "Healthcare teams increasingly evaluate controlled medical AI and inference workflows alongside workforce access, especially in regulated or on-prem environments.",
-      },
-    ],
-    bottomCtas: [],
-  }),
-  "aec-engineering": industryPage({
-    name: "AEC / Engineering",
-    slug: "aec-engineering",
-    path: "/solutions/industry/aec-engineering",
-    template: "industry",
-    seo: {
-      title: "GPU Workspaces for AEC & Engineering - Neverinstall",
-      description:
-        "Deliver secure GPU-backed design workspaces for architecture, engineering, and construction teams without workstation lock-in.",
-    },
-    summary:
-      "Design and engineering workloads delivered through GPU-backed cloud workspaces.",
-    hero: {
-      eyebrow: "Industry",
-      title: "Run heavy design workloads. Anywhere.",
-      subtitle:
-        "Support architects and engineers with GPU-backed workspaces for modeling, rendering, and collaboration without tying work to fixed hardware.",
-      metric: "Heavy workloads. No heavy hardware.",
-      primaryCta: demoCta,
-      secondaryCta: tcoCta,
-    },
-    answerCapsule: answerCapsule(
-      "How does Neverinstall fit AEC and engineering teams?",
-      "Neverinstall gives AEC and engineering teams GPU-backed cloud workspaces so they can run demanding design tools from more flexible devices while keeping models and IP inside a controlled environment."
-    ),
-    sections: [
-      gridSection({
-        title: "Why this vertical maps cleanly",
-        description:
-          "AEC combines high-performance computing needs with sensitive design IP and distributed collaboration.",
-        blocks: [
-          {
-            title: "Expensive workstations",
-            description:
-              "Design-heavy teams often overbuy hardware to guarantee local performance.",
-          },
-          {
-            title: "Site and office mobility",
-            description:
-              "Users need the same environment across job sites, offices, and home setups.",
-          },
-          {
-            title: "IP protection",
-            description:
-              "Design files and models should stay inside controlled environments instead of unmanaged devices.",
-          },
-        ],
-      }),
-      gridSection({
-        title: "Best-fit product path",
-        description:
-          "This is primarily a GPU-enabled workspace story with a path into deeper infrastructure where needed.",
-        columns: 3,
-        blocks: [
-          {
-            title: "DaaS",
-            description:
-              "Primary product for GPU-backed design workspace delivery.",
-          },
-          {
-            title: "Secure Browser",
-            description:
-              "Complementary for lighter access and collaborator workflows.",
-          },
-          {
-            title: "Sovereign HCI",
-            description:
-              "A future path for teams with deeper internal AI or acceleration infrastructure needs.",
-          },
-        ],
-      }),
-    ],
-    relatedLinks: [
-      relatedLink(
-        "GPU / High-Performance",
-        "See the direct use-case page for heavier workspace delivery.",
-        "/solutions/use-case/gpu-high-performance"
-      ),
-      relatedLink(
-        "Desktop as a Service",
-        "Review the product page behind design workspace delivery.",
-        "/products/daas"
-      ),
-      relatedLink(
-        "Developer Workspaces",
-        "See a similar motion for engineering software teams.",
-        "/solutions/use-case/developer-workspaces"
-      ),
-    ],
-    faq: [
-      {
-        question: "Is this page focused on workspaces or infrastructure?",
-        answer:
-          "Primarily workspaces. It leads with delivered compute for end users and links to Sovereign HCI when buyers shift into platform orchestration.",
-      },
-    ],
-    bottomCtas: [],
-  }),
-  "legal-professional-services": industryPage({
-    name: "Legal & Professional Services",
-    slug: "legal-professional-services",
-    path: "/solutions/industry/legal-professional-services",
-    template: "industry",
-    seo: {
-      title:
-        "Secure Workspaces for Legal & Professional Services - Neverinstall",
-      description:
-        "Protect client confidentiality with matter-based workspace isolation, controlled third-party access, and stronger document governance.",
-    },
-    summary:
-      "Matter-based workspace control for client-sensitive professional services.",
-    hero: {
-      eyebrow: "Industry",
-      title: "Work on sensitive matters, without exposing them.",
-      subtitle:
-        "Support lawyers, advisors, and external collaborators in controlled matter-based environments where documents stay inside the workspace boundary.",
-      metric: "One workspace per matter",
-      primaryCta: demoCta,
-      secondaryCta: tcoCta,
-    },
-    answerCapsule: answerCapsule(
-      "How does Neverinstall fit legal and professional services?",
-      "Neverinstall helps legal and professional services teams isolate sensitive work by matter or client, reduce data movement risk, and govern external collaboration more cleanly."
-    ),
-    sections: [
-      gridSection({
-        title: "Why this vertical responds well",
-        description:
-          "Confidentiality and external collaboration make control boundaries especially visible here.",
-        blocks: [
-          {
-            title: "Client confidentiality",
-            description:
-              "Sensitive documents often move across too many unmanaged devices and tools.",
-          },
-          {
-            title: "Matter-based separation",
-            description:
-              "Teams need cleaner isolation across clients and projects.",
-          },
-          {
-            title: "External collaborators",
-            description:
-              "Outside counsel, consultants, and partners increase governance complexity.",
-          },
-        ],
-      }),
-      gridSection({
-        title: "Product fit",
-        description:
-          "This industry combines secure access control with confidential workspace delivery.",
-        columns: 3,
-        blocks: [
-          {
-            title: "Secure Browser",
-            description:
-              "Useful for web-based collaboration and document system access.",
-          },
-          {
-            title: "DaaS",
-            description:
-              "Primary fit for matter-based environments and fuller document workflows.",
-          },
-          {
-            title: "Trust Center",
-            description:
-              "Important supporting proof because legal buyers respond strongly to governance posture.",
-          },
-        ],
-      }),
-    ],
-    relatedLinks: [
-      relatedLink(
-        "Contractor & Vendor Access",
-        "See a closely related third-party access motion.",
-        "/solutions/use-case/contractor-vendor-access"
-      ),
-      relatedLink(
-        "Secure Browser",
-        "Review browser-led control for lighter legal workflows.",
-        "/products/secure-browser"
-      ),
-      relatedLink(
-        "Trust Center",
-        "Review privacy, compliance, and policy materials.",
-        "/security"
-      ),
-    ],
-    faq: [
-      {
-        question: "Why use matter-based language on this page?",
-        answer:
-          "Because it mirrors how legal teams naturally organize sensitive work and makes the isolation model easier for buyers to understand quickly.",
-      },
-    ],
-    bottomCtas: [],
-  }),
-  government: industryPage({
-    name: "Government",
-    slug: "government",
-    path: "/solutions/industry/government",
-    template: "industry",
-    seo: {
-      title: "Secure Workspaces for Government - Neverinstall",
-      description:
-        "Secure workspace access for government teams with centralized control, data sovereignty support, and resilience-focused operations.",
-    },
-    summary:
-      "Legacy government route preserved for compatibility while guiding buyers to the expanded Government & Defense narrative.",
-    hero: {
-      eyebrow: "Industry",
-      title: "Secure access to government systems, without exposing data.",
-      subtitle:
-        "Support public-sector access, resilience, and data sovereignty with centralized control and reduced endpoint risk.",
-      metric: "Public-sector access with stronger control",
-      primaryCta: demoCta,
-      secondaryCta: tcoCta,
-    },
-    answerCapsule: answerCapsule(
-      "What is the purpose of the `/government` page?",
-      "The legacy government route preserves the original URL while routing public-sector buyers into the newer Government & Defense narrative and the broader sovereign infrastructure story."
-    ),
-    sections: [
-      gridSection({
-        title: "Compatibility route",
-        description:
-          "This route remains available for continuity while the broader narrative lives on Government & Defense.",
-        blocks: [
-          {
-            title: "Public-sector access",
-            description: "Secure access for distributed users and agencies.",
-          },
-          {
-            title: "Sovereignty",
-            description: "Keep data within jurisdictional boundaries.",
-          },
-          {
-            title: "Resilience",
-            description: "Maintain controlled operations during disruption.",
-          },
-        ],
-      }),
-    ],
-    relatedLinks: [
-      relatedLink(
-        "Government & Defense",
-        "See the expanded sovereign and defense-oriented industry page.",
-        "/solutions/industry/government-defense"
-      ),
-      relatedLink(
-        "Sovereign HCI",
-        "Review the flagship infrastructure product for sovereign deployments.",
-        "/products/sovereign-hci"
-      ),
-      relatedLink(
-        "Trust Center",
-        "Review security and compliance posture.",
+        "Security architecture, encryption standards, and compliance certifications for healthcare workloads.",
         "/security"
       ),
     ],
     faq: [
       {
         question:
-          "Should public-sector buyers use this page or Government & Defense?",
+          "How does Neverinstall address HIPAA Security Rule requirements for shared workstations?",
         answer:
-          "Government & Defense is the primary destination for new evaluations, while this route preserves continuity for existing links.",
+          "Non-persistent desktop sessions enforce unique user identification at every login, automatically destroy PHI from the endpoint at logoff, and generate timestamped audit logs for every access event. Clinicians moving between shared COWs, nurse stations, and exam room terminals get fresh sessions each time — no cached credentials, no residual patient data, no clipboard carryover from the previous user. This directly addresses the access control and audit trail requirements in the HIPAA Security Rule.",
+      },
+      {
+        question:
+          "Can clinicians roam between workstations without losing their EHR session?",
+        answer:
+          "Yes. Desktop Workspaces support session persistence across locations. A clinician can lock their session at one workstation and resume it at another within seconds. The EHR application state, open patient charts, and workflow context follow the clinician — but PHI never persists on any physical endpoint.",
+      },
+      {
+        question:
+          "How quickly can clinical operations recover from a ransomware attack with Neverinstall?",
+        answer:
+          "Because clinical applications and data run inside centralized workspace infrastructure rather than on individual endpoints, a ransomware event affecting local devices does not disable clinical access. Clinicians can resume EHR access from any unaffected endpoint with sub-second session restore. The attack surface is the endpoint display — not the clinical data or application stack.",
       },
     ],
     bottomCtas: [],
   }),
+
   "government-defense": industryPage({
     name: "Government & Defense",
     slug: "government-defense",
     path: "/solutions/industry/government-defense",
     template: "industry",
     seo: {
-      title: "Government & Defense AI Infrastructure - Neverinstall",
+      title:
+        "Sovereign Virtual Desktops for Government & Defense — Air-Gap, On-Prem, FedRAMP Ready | Neverinstall",
       description:
-        "Sovereign AI infrastructure, secure workspaces, and high-control deployment patterns for government and defense organizations.",
+        "Data sovereign virtual desktops and secure browser access for government agencies and defense contractors. On-premises, air-gapped, and GovCloud deployment with FedRAMP-readiness on the roadmap. No vendor cloud dependency.",
     },
     summary:
-      "Primary public-sector industry page for sovereign infrastructure and controlled operations.",
+      "Sovereignty-first workspace infrastructure for government agencies and defense contractors. Full on-premises and air-gapped deployment with no vendor cloud dependency, NIST 800-53 aligned controls, and FedRAMP authorization on the product roadmap.",
     hero: {
-      eyebrow: "Industry",
+      eyebrow: "Government & Defense",
       title:
-        "Sovereign infrastructure for high-control public-sector environments.",
+        "Classified work requires infrastructure where no vendor sees the data. Not even us.",
       subtitle:
-        "Support secure work, data sovereignty, and controlled AI infrastructure for agencies and defense-adjacent teams that cannot accept vendor lock-in or jurisdictional ambiguity.",
-      metric: "Sovereignty-first deployment posture",
+        "Government agencies and defense contractors cannot route workspace traffic through vendor-managed cloud infrastructure. Neverinstall deploys entirely on-premises or inside GovCloud tenancies — the full control plane and data plane run inside your security boundary, with air-gap support for classified environments and NIST 800-53 aligned access controls.",
+      metric: "Full sovereign deployment with zero vendor data access",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "How does Neverinstall fit government and defense environments?",
-      "Neverinstall gives public-sector organizations a sovereignty-first platform story that combines secure user access, centralized policy, and a path to controlled AI infrastructure in high-assurance environments."
+      "Why do government and defense organizations need sovereign workspace infrastructure?",
+      "Most commercial DaaS platforms route session data through vendor-managed infrastructure — disqualifying them for ITAR-controlled work, classified environments, and agencies with NIST 800-53 High baselines. Neverinstall is architecturally different: the entire platform — control plane, session orchestration, and data plane — deploys inside your data center, your GovCloud tenancy, or an air-gapped enclave. No telemetry leaves your boundary. Both full desktops for analysts and browser-only access for inter-agency collaborators run on the same sovereign infrastructure."
     ),
     sections: [
       gridSection({
-        title: "Why this page matters strategically",
+        title: "Requirements that eliminate most commercial vendors",
         description:
-          "Government and defense is one of the strongest vertical expressions of the new Sovereign HCI positioning.",
+          "Government and defense procurement has hard technical requirements around data sovereignty, operational independence, and supply chain risk that generic DaaS vendors cannot meet.",
         blocks: [
           {
-            title: "Data sovereignty",
+            title: "Data sovereignty under FISMA, ITAR, and national security directives",
             description:
-              "Public-sector teams need tight control over where workloads and data live.",
+              "FISMA requires that federal information systems operate within authorized boundaries. ITAR prohibits foreign access to defense articles. National security directives mandate jurisdictional control over classified workloads. Any workspace platform that routes data through shared commercial infrastructure fails these requirements at the architecture level.",
           },
           {
-            title: "Operational resilience",
+            title: "Operational independence during contested environments",
             description:
-              "Continuity and recoverability matter alongside security.",
+              "Military and intelligence operations require systems that continue functioning when commercial cloud connectivity is degraded or denied. Workspace infrastructure must operate independently of internet-dependent vendor services — including licensing servers, update channels, and management consoles.",
           },
           {
-            title: "AI infrastructure control",
+            title: "Supply chain and vendor trust boundaries",
             description:
-              "High-assurance buyers need a credible on-prem and air-gap ready infrastructure story.",
+              "NIST 800-161 supply chain risk management and Zero Trust Architecture (NIST 800-207) require that agencies control who can access infrastructure components. Vendor-managed platforms create trust boundary violations that security assessors flag during ATO reviews.",
           },
         ],
       }),
       gridSection({
-        title: "Product fit",
+        title: "Analyst desktops and inter-agency browser access on sovereign infrastructure",
         description:
-          "This vertical spans both workforce access and deeper infrastructure requirements.",
+          "Agency analysts running classified applications need full desktop sessions. Contractors, inter-agency partners, and temporary staff need controlled browser access — all deployed inside your security boundary.",
+        columns: 2,
+        blocks: [
+          {
+            title: "Desktop Workspaces for agency personnel and analysts",
+            description:
+              "Full desktop environments for intelligence analysts, program managers, and operations staff running thick-client applications, GIS tools, and data analysis platforms. Centralized policy enforcement, session recording for insider threat programs, and sub-second restore for operational continuity. Deployed entirely on-premises or in AWS GovCloud / Azure Government with no data egress to vendor infrastructure.",
+          },
+          {
+            title: "Secure Browser Workspaces for contractors and inter-agency access",
+            description:
+              "Browser-only access for defense contractors, inter-agency collaborators, and temporary personnel who need controlled entry to specific web applications without a full desktop footprint. No agent on contractor devices, enforced DLP controls, and complete session audit trails — all running on the same sovereign infrastructure as full desktops.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "Deployment models for sovereign and classified environments",
+        description:
+          "Government workspace infrastructure must run where the mission requires — from GovCloud tenancies to fully air-gapped enclaves.",
         columns: 3,
         blocks: [
           {
-            title: "Secure Browser",
+            title: "GovCloud deployment (AWS, Azure, OCI)",
             description:
-              "Use for controlled browser access on unmanaged or distributed endpoints.",
+              "Deploy inside your agency's FedRAMP-authorized cloud tenancy on AWS GovCloud, Azure Government, or OCI Government. Neverinstall operates within your existing ATO boundary without introducing new external data flows.",
           },
           {
-            title: "DaaS",
+            title: "On-premises in agency data centers",
             description:
-              "Use for secure workspace delivery across agencies, teams, and contractors.",
+              "Full deployment inside government-owned data centers with no external connectivity requirements for platform operation. The control plane, session orchestration, and data plane all run on infrastructure your agency physically controls.",
           },
           {
-            title: "Sovereign HCI",
+            title: "Air-gapped and SCIF-ready",
             description:
-              "Use for sovereign AI infrastructure, acceleration, and high-control deployment.",
+              "Architecture supports fully disconnected operation for classified environments. No license call-home, no telemetry egress, no update dependency on external servers. Designed for SCIF and compartmented facility deployment.",
           },
         ],
       }),
       statsSection({
-        title: "Why buyers care",
+        title: "Compliance alignment and certification roadmap",
         description:
-          "Sovereignty-led messaging with practical control, compliance, and resilience outcomes.",
+          "Neverinstall is building toward the compliance certifications that government procurement requires, with architecture that already supports the underlying technical controls.",
         items: [
           {
-            label: "Control priority",
-            value: "Jurisdiction + access",
+            label: "Current posture",
+            value: "NIST 800-53 aligned controls",
             detail:
-              "Data location and policy control are as important as performance.",
+              "Platform access controls, audit logging, session management, and encryption align to NIST 800-53 control families including AC, AU, SC, and SI. Formal FedRAMP authorization is on the product roadmap.",
           },
           {
-            label: "Expansion path",
-            value: "Workspaces to AI infra",
+            label: "Architecture advantage",
+            value: "Zero vendor data access",
             detail:
-              "Show how one platform supports both secure user access and infrastructure evolution.",
+              "In on-premises and air-gapped deployments, Neverinstall has no access to customer data, session content, or telemetry. This eliminates the vendor trust boundary concerns that complicate ATO assessments for SaaS-delivered platforms.",
           },
           {
-            label: "Core differentiator",
-            value: "Sovereign architecture",
+            label: "Deployment independence",
+            value: "No internet dependency for operation",
             detail:
-              "The strongest wedge is controlled deployment without single-vendor lock-in.",
+              "The platform operates without external connectivity for licensing, updates, or management. This supports mission-critical environments where commercial internet access is unavailable or denied.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
-        "Sovereign HCI",
-        "See the flagship sovereign AI infrastructure product page.",
-        "/products/sovereign-hci"
+        "Secure Browser Workspaces",
+        "Controlled browser access for defense contractors and inter-agency collaborators on sovereign infrastructure.",
+        "/products/secure-browser"
       ),
       relatedLink(
-        "AI Inference Platform",
-        "Explore the use-case page for sovereign model serving.",
-        "/solutions/use-case/ai-inference-platform"
+        "Desktop as a Service",
+        "Full DaaS capabilities for agency-wide workspace delivery with on-premises and GovCloud deployment.",
+        "/products/daas"
       ),
       relatedLink(
-        "Compare vs VMware Private AI",
-        "Position Neverinstall against legacy private AI stack buyers.",
-        "/compare/vs-vmware-private-ai"
+        "Trust Center",
+        "Security architecture, encryption standards, and compliance certifications for sovereign deployments.",
+        "/security"
       ),
     ],
     faq: [
       {
         question:
-          "Why is Government & Defense separate from the original Government page?",
+          "Can Neverinstall deploy in a SCIF or fully air-gapped classified environment?",
         answer:
-          "It gives public-sector buyers a clearer sovereignty and AI infrastructure narrative while keeping the original route compatible.",
+          "Yes. The entire Neverinstall platform — control plane, session orchestration, and data plane — runs inside your physical infrastructure boundary with no external connectivity requirements. There is no license call-home, no telemetry egress, and no update dependency on internet-connected servers. The architecture is designed for SCIF, compartmented facility, and air-gapped enclave deployment.",
+      },
+      {
+        question:
+          "What is Neverinstall's FedRAMP status?",
+        answer:
+          "FedRAMP authorization is on the Neverinstall product roadmap. The platform architecture already aligns to NIST 800-53 control families required for FedRAMP — including access control (AC), audit and accountability (AU), system and communications protection (SC), and system and information integrity (SI). For current deployments, agencies can assess the platform within their own ATO boundary using on-premises or GovCloud deployment.",
+      },
+      {
+        question:
+          "How does Neverinstall handle contractor access in defense environments without installing agents on contractor devices?",
+        answer:
+          "Secure Browser Workspaces provide agentless, browser-only access that runs entirely on sovereign infrastructure. Defense contractors access specific web applications through a controlled browser session with enforced DLP controls — clipboard restrictions, download prevention, watermarked session recording, and complete audit trails. No data reaches the contractor's device, and no agent or MDM enrollment is required on contractor-owned hardware.",
       },
     ],
     bottomCtas: [],
   }),
+
   manufacturing: industryPage({
     name: "Manufacturing & Industrial",
     slug: "manufacturing",
     path: "/solutions/industry/manufacturing",
     template: "industry",
     seo: {
-      title: "Manufacturing & Industrial AI Infrastructure - Neverinstall",
+      title:
+        "Virtual Desktops for Manufacturing — CAD, PLM & Plant-Floor Access | Neverinstall",
       description:
-        "Controlled workspaces and sovereign AI infrastructure patterns for manufacturing, industrial data, and edge-adjacent operations.",
+        "GPU-accelerated virtual desktops for CAD, PLM, and engineering teams across manufacturing plants. Citrix replacement, secure partner access, and on-prem deployment for OT-sensitive environments.",
     },
     summary:
-      "Industrial and manufacturing vertical for distributed operations and sovereign AI.",
+      "GPU-accelerated engineering desktops for CAD and PLM workloads, secure partner access for supply chain collaborators, and on-premises deployment for plant environments where OT data cannot leave the facility. Indovance is a production customer replacing Citrix.",
     hero: {
-      eyebrow: "Industry",
-      title: "Bring secure access and industrial AI under one control plane.",
+      eyebrow: "Manufacturing & Industrial",
+      title:
+        "Your engineers run SolidWorks across three continents. The IP should never leave your network.",
       subtitle:
-        "Support distributed engineering, plant-adjacent operations, and emerging inference workloads with stronger control over data, access, and infrastructure placement.",
-      metric: "Industrial control with modern delivery",
+        "Manufacturing engineering teams need GPU-accelerated desktops for CAD, PLM, and simulation tools — but distributing those workloads across plant sites, corporate offices, and partner locations creates IP exposure that Citrix was never architected to solve at modern scale. Neverinstall centralizes engineering workloads where design files, process data, and operational IP stay inside your infrastructure boundary. Indovance replaced Citrix with Neverinstall for their distributed engineering operations.",
+      metric:
+        "Indovance replaced Citrix with Neverinstall for distributed engineering access",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "How does Neverinstall fit manufacturing and industrial teams?",
-      "Neverinstall helps industrial organizations centralize sensitive workloads, support distributed engineering access, and build a stronger path toward controlled on-prem or edge-adjacent AI operations."
+      "Why do manufacturing organizations replace Citrix with Neverinstall?",
+      "Manufacturing engineering runs on GPU-heavy applications — SolidWorks, AutoCAD, Siemens NX, PTC Creo — that require expensive workstation hardware at every engineer's desk. Citrix can virtualize these workloads but at prohibitive per-seat licensing cost and with multi-month deployment timelines. Neverinstall delivers GPU-accelerated desktops that run CAD and PLM tools at full performance, with on-premises deployment for plant environments where ITAR, trade secret, or OT-network isolation requirements prohibit cloud-hosted engineering data. Indovance, a manufacturing services firm, moved from Citrix to Neverinstall for their engineering workforce."
     ),
     sections: [
       gridSection({
-        title: "Why this vertical exists in the new IA",
+        title: "What breaks in manufacturing IT at multi-site scale",
         description:
-          "Manufacturing extends the sovereignty and distributed-compute narrative into industrial environments.",
+          "Manufacturing organizations operate across plants, corporate offices, partner sites, and contractor locations — each with different network conditions, security requirements, and hardware constraints.",
         blocks: [
           {
-            title: "Distributed engineering access",
+            title: "Engineering workstations tied to physical locations",
             description:
-              "Teams need controlled access across sites, plants, and external partners.",
+              "CAD and PLM applications require GPU-accelerated hardware that costs $3,000-8,000 per workstation. Engineers at remote plants, home offices, or partner sites cannot access design tools without shipping expensive hardware or accepting degraded performance over VPN.",
           },
           {
-            title: "Sensitive operational data",
+            title: "Design IP and process data exposure across partner networks",
             description:
-              "Industrial data often cannot be treated like generic SaaS data.",
+              "Supply chain partners, contract manufacturers, and maintenance vendors need access to engineering drawings, BOMs, and process specifications — but every file shared outside your network is IP that can be copied, forwarded, or stored on unmanaged devices. ITAR-controlled designs add export compliance risk to every external access point.",
           },
           {
-            title: "Emerging AI at the edge",
+            title: "Citrix licensing costs scale faster than engineering headcount",
             description:
-              "Inference and computer vision use cases increasingly need controlled local infrastructure options.",
+              "Legacy Citrix environments require per-user licensing, StoreFront infrastructure, GPU pass-through configuration, and dedicated admin teams. At 500+ engineering seats across multiple plants, the total cost of Citrix ownership exceeds the cost of the engineering workstations it was supposed to replace.",
           },
         ],
       }),
       gridSection({
-        title: "Product fit",
+        title: "GPU desktops for engineers, browser access for supply chain partners",
         description:
-          "Manufacturing is a bridge vertical between traditional workspaces and sovereign AI infrastructure.",
+          "Engineering teams running SolidWorks and Siemens NX need full GPU-accelerated desktops. Supply chain partners reviewing drawings and BOMs need controlled browser access with zero local data footprint.",
+        columns: 2,
+        blocks: [
+          {
+            title: "Desktop Workspaces for engineers and operations teams",
+            description:
+              "GPU-accelerated desktop environments for mechanical engineers, electrical designers, and manufacturing operations teams running SolidWorks, AutoCAD, Siemens NX, PTC Creo, and PLM systems like Teamcenter and Windchill. Full workstation performance without physical workstation hardware. Deploy on-premises at plant sites or in your cloud tenancy to keep design files, simulation data, and process IP inside your infrastructure boundary.",
+          },
+          {
+            title: "Secure Browser Workspaces for partners and contractors",
+            description:
+              "Browser-only access for contract manufacturers reviewing engineering drawings, maintenance vendors accessing equipment documentation, and supply chain partners checking BOM specifications. No design files download to partner devices. Clipboard restrictions, watermarked sessions, and download prevention enforce IP containment without requiring MDM on partner hardware. 70-80% lower cost than provisioning a full engineering desktop for every external collaborator.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "Deployment models for plant environments and OT network isolation",
+        description:
+          "Manufacturing data residency requirements range from corporate cloud policies to plant-level OT network isolation and ITAR export control. Neverinstall supports every model.",
         columns: 3,
         blocks: [
           {
-            title: "DaaS",
+            title: "Managed cloud for corporate engineering",
             description:
-              "Support engineering and operations users with controlled workspaces.",
+              "Fastest deployment for corporate engineering teams and design centers without plant-level data restrictions. GPU-accelerated instances on managed infrastructure with full policy control.",
           },
           {
-            title: "Secure Browser",
+            title: "Customer cloud (OCI, AWS, Azure)",
             description:
-              "Protect lighter access paths for distributed and external users.",
+              "Deploy in your own cloud tenancy for engineering organizations that require data residency within specific regions. GPU instance types matched to CAD and simulation workload requirements.",
           },
           {
-            title: "Sovereign HCI",
+            title: "On-premises at plant sites",
             description:
-              "Support higher-control industrial inference and acceleration needs.",
+              "Full on-prem deployment for manufacturing facilities where engineering data, process specifications, or ITAR-controlled designs must remain on the plant network with no external connectivity.",
+          },
+        ],
+      }),
+      statsSection({
+        title: "In production at manufacturing organizations",
+        description:
+          "Neverinstall is deployed in manufacturing environments handling engineering workloads, partner collaboration, and multi-site operations.",
+        items: [
+          {
+            label: "Customer",
+            value: "Indovance",
+            detail:
+              "Indovance, a manufacturing engineering services firm, replaced their Citrix deployment with Neverinstall for distributed engineering access across their operations teams — reducing per-seat cost and eliminating multi-month VDI upgrade cycles.",
+          },
+          {
+            label: "Citrix replacement",
+            value: "Lower TCO, faster deployment",
+            detail:
+              "Manufacturing organizations replacing Citrix with Neverinstall see significant per-seat cost reduction by eliminating Citrix per-user licensing, StoreFront infrastructure, and dedicated VDI admin overhead.",
+          },
+          {
+            label: "GPU workload support",
+            value: "Full CAD and PLM performance",
+            detail:
+              "GPU-accelerated Desktop Workspaces run SolidWorks, AutoCAD, Siemens NX, and other engineering applications at full workstation performance — accessible from any device at any plant or office location.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
-        "GPU / High-Performance",
-        "See the heavier compute use case that often appears in industrial environments.",
-        "/solutions/use-case/gpu-high-performance"
+        "Neverinstall vs Citrix",
+        "Side-by-side comparison for manufacturing teams replacing Citrix for engineering workspace delivery.",
+        "/compare/vs-citrix"
       ),
       relatedLink(
-        "Sovereign HCI",
-        "Explore the platform product for industrial AI infrastructure.",
-        "/products/sovereign-hci"
+        "Contractor & Vendor Access",
+        "Controlled browser access for supply chain partners and maintenance contractors without exposing design IP.",
+        "/solutions/use-case/contractor-vendor-access"
       ),
       relatedLink(
-        "AI Inference Platform",
-        "Connect the vertical story to enterprise inference operations.",
-        "/solutions/use-case/ai-inference-platform"
+        "Desktop as a Service",
+        "GPU-accelerated DaaS capabilities for engineering workspace fleets across manufacturing sites.",
+        "/products/daas"
       ),
     ],
     faq: [
       {
-        question: "Is this page launch critical?",
+        question:
+          "Can Neverinstall run GPU-accelerated CAD applications like SolidWorks and Siemens NX at full performance?",
         answer:
-          "Not for day-one launch. It is a Tier 2 page that still improves coverage and keeps IA expansion clean.",
+          "Yes. Desktop Workspaces support GPU-accelerated compute configurations that deliver full workstation performance for CAD, PLM, simulation, and rendering applications. Engineers get the same SolidWorks or Siemens NX experience they would have on a $6,000 physical workstation — accessible from any device at any plant, office, or home location.",
+      },
+      {
+        question:
+          "How does Neverinstall prevent engineering IP from reaching partner and contractor devices?",
+        answer:
+          "Secure Browser Workspaces give supply chain partners and contractors controlled access to engineering drawings, BOMs, and specifications through a browser session with enforced DLP policies. Download prevention, clipboard restrictions, and watermarked session recording ensure that design files never reach the partner's local device. When the session ends, no engineering data persists outside your infrastructure.",
+      },
+      {
+        question:
+          "Can Neverinstall deploy on-premises at plant sites with OT network isolation?",
+        answer:
+          "Yes. Full on-premises deployment places the entire Neverinstall platform inside your plant network. Engineering data, process specifications, and ITAR-controlled designs never route through external infrastructure. The platform operates independently within the facility network boundary, supporting OT-adjacent deployment where engineering workloads must be isolated from internet-connected systems.",
       },
     ],
     bottomCtas: [],
   }),
-  "ai-native": industryPage({
-    name: "AI-Native Companies",
-    slug: "ai-native",
-    path: "/solutions/industry/ai-native",
+
+  education: industryPage({
+    name: "Education",
+    slug: "education",
+    path: "/solutions/industry/education",
     template: "industry",
     seo: {
-      title: "AI Infrastructure for AI-Native Companies - Neverinstall",
+      title:
+        "FERPA Compliant Virtual Desktops & BYOD Access for Education | Neverinstall",
       description:
-        "Multi-vendor GPU orchestration, inference serving, and controlled AI infrastructure for AI-native companies and ML platform teams.",
+        "FERPA-compliant virtual labs and BYOD student access for universities and K-12 districts. Replace physical computer labs, support Chromebooks and personal devices, and protect student records without MDM enrollment.",
     },
     summary:
-      "AI-native segment page centered on platform control and accelerator planning.",
+      "FERPA-compliant virtual workspace delivery for higher education and K-12 — replace physical computer labs with cloud-hosted virtual labs, support BYOD students on Chromebooks and personal devices without MDM, and give faculty standardized research environments with licensed software access from any campus or remote location.",
     hero: {
-      eyebrow: "Industry",
-      title: "Build the AI platform you actually want to own.",
+      eyebrow: "Education",
+      title:
+        "15,000 students bring their own devices. Your lab software should work on all of them.",
       subtitle:
-        "Give ML platform teams multi-vendor scheduling, production inference, and a sovereign-friendly control plane instead of stitching together another fragile stack.",
-      metric: "Platform-led AI operations",
+        "Universities and K-12 districts spend millions maintaining physical computer labs, managing device refresh cycles, and trying to enforce FERPA protections across student-owned Chromebooks, iPads, and personal laptops. Neverinstall replaces physical labs with virtual workspaces that run licensed software in the browser, give every student a clean session on any device, and keep student education records inside FERPA-compliant workspace boundaries.",
+      metric:
+        "Virtual labs on any device, zero student data on unmanaged endpoints",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "How does Neverinstall fit AI-native companies?",
-      "Neverinstall gives AI-native companies a stronger infrastructure control plane for orchestrating accelerators, serving models, and managing platform economics without locking themselves into one vendor's software tax."
+      "Why do universities and school districts choose Neverinstall?",
+      "Education IT faces a uniquely impossible combination: FERPA requires protecting student education records at every access point, but students bring unmanaged Chromebooks and personal devices that IT cannot control. Physical computer labs cost $500,000+ per refresh cycle and sit empty 60% of the time. Neverinstall delivers virtual computer labs where students access MATLAB, Adobe Creative Suite, AutoCAD, and specialized courseware through a browser on any device — no MDM, no agent install, no device requirements. Faculty and researchers get persistent desktops with licensed software access from any campus, home, or conference location."
     ),
     sections: [
       gridSection({
-        title: "Why this segment matters",
+        title: "Why traditional IT models break in education",
         description:
-          "AI-native buyers are among the most technically sophisticated audiences on the site.",
+          "Education institutions face FERPA compliance obligations, massive BYOD populations, and shrinking IT budgets — a combination that makes traditional endpoint management and physical computer labs unsustainable.",
         blocks: [
           {
-            title: "Accelerator strategy matters",
+            title: "BYOD students on unmanaged devices defeat endpoint security",
             description:
-              "They feel the pain of lock-in, utilization, and scheduling more acutely than general buyers.",
+              "Students access SIS portals, LMS platforms, and research databases from personal Chromebooks, iPads, Windows laptops, and phones. MDM enrollment is impractical for student-owned devices. Every unmanaged access point is a FERPA exposure surface where student education records can be cached, screenshotted, or stored on devices IT does not control.",
           },
           {
-            title: "Serving is a core competency",
+            title: "Physical computer labs cost $500K+ per refresh and sit empty most of the day",
             description:
-              "Inference and platform economics are central to the business, not side concerns.",
+              "A 50-seat computer lab with licensed engineering or creative software costs $250,000-500,000 per hardware refresh cycle. Labs run at peak utilization only during class hours and finals week — the rest of the time, the investment sits idle. Students who need lab software outside class hours have no access.",
           },
           {
-            title: "Developer-first credibility matters",
+            title: "FERPA compliance across decentralized access points",
             description:
-              "The site needs strong technical specificity to earn trust with this audience.",
+              "FERPA requires institutions to protect student education records wherever they are accessed. When a student accesses their academic records from a coffee shop laptop or a shared dorm-room Chromebook, the institution bears responsibility for that data. Traditional VPN-only access does not prevent local storage, clipboard copying, or screenshot capture of student data.",
           },
         ],
       }),
       gridSection({
-        title: "Best-fit product path",
+        title: "Virtual labs for students, persistent desktops for faculty and researchers",
         description:
-          "This is a Sovereign HCI-led audience with direct ties into the major AI use-case pages.",
-        columns: 3,
+          "Students need browser-based access to lab software on any device without installation. Faculty and graduate researchers need persistent desktop environments with licensed tools and research data access.",
+        columns: 2,
         blocks: [
           {
-            title: "Sovereign HCI",
-            description: "Primary product for platform teams and infra buyers.",
-          },
-          {
-            title: "AI Inference Platform",
-            description: "Primary use-case page for serving workloads.",
-          },
-          {
-            title: "GPU-as-a-Service",
+            title: "Secure Browser Workspaces for student virtual labs",
             description:
-              "Primary internal-platform operating model for scarce accelerator pools.",
+              "Students access MATLAB, Adobe Creative Suite, AutoCAD, SPSS, and specialized courseware through a browser session — from Chromebooks, personal laptops, iPads, or library terminals. No software installation on student devices, no license management per device, and no MDM enrollment. Non-persistent sessions reset between students so no academic records, research data, or login credentials persist on shared or personal devices. 70-80% lower cost per student than provisioning full virtual desktops.",
+          },
+          {
+            title: "Desktop Workspaces for faculty, staff, and graduate researchers",
+            description:
+              "Persistent desktop environments for professors running statistical analysis packages, graduate researchers accessing IRB-approved datasets, and IT staff managing campus systems. Licensed software (SAS, Stata, NVivo, specialized research tools) is available from any campus, home, or conference location. Research data and student records stay inside the workspace boundary — faculty can work from any device without transferring sensitive files to personal laptops.",
+          },
+        ],
+      }),
+      gridSection({
+        title: "Why Neverinstall fits the education budget and compliance model",
+        description:
+          "Education institutions evaluate on cost per student, FERPA compliance posture, speed to deploy before the next semester, and ability to work with the devices students already own.",
+        columns: 4,
+        blocks: [
+          {
+            title: "Deploy before next semester",
+            description:
+              "Virtual lab environments deploy in weeks, not the multi-semester rollout timeline of traditional VDI. Plan in spring, deploy over summer, and go live for fall enrollment.",
+          },
+          {
+            title: "70-80% lower cost than full VDI per student",
+            description:
+              "Browser-based virtual lab seats cost a fraction of full desktop licenses. Match the cost model to actual usage — students who only need lab software during class hours do not need permanent desktop allocations.",
+          },
+          {
+            title: "Works on every student-owned device",
+            description:
+              "Chromebooks, iPads, Windows laptops, Mac laptops, and Linux devices all access virtual labs through a standard browser. No MDM, no agent, no device requirements — eliminating the equity gap between students who can afford expensive hardware and those who cannot.",
+          },
+          {
+            title: "Clean session resets between students",
+            description:
+              "Non-persistent lab sessions destroy all student data at logout — no cached credentials, no downloaded files, no research data from the previous user. Critical for shared library terminals and open-access lab stations.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
-        "Sovereign HCI",
-        "See the flagship product for AI-native infra teams.",
-        "/products/sovereign-hci"
+        "Secure Browser Workspaces",
+        "Browser-based virtual lab access for BYOD student populations on any device.",
+        "/products/secure-browser"
       ),
       relatedLink(
-        "AI Inference Platform",
-        "Explore the production serving narrative.",
-        "/solutions/use-case/ai-inference-platform"
+        "Secure BYOD",
+        "How institutions protect student data when students bring unmanaged personal devices.",
+        "/solutions/use-case/secure-byod"
       ),
       relatedLink(
-        "Compare vs NVIDIA AI Enterprise",
-        "Review the core displacement motion for AI platform buyers.",
-        "/compare/vs-nvidia-ai-enterprise"
+        "Desktop as a Service",
+        "Persistent virtual desktops for faculty, staff, and graduate researchers with licensed software.",
+        "/products/daas"
       ),
     ],
     faq: [
       {
-        question: "Why include AI-native companies as an industry page?",
+        question:
+          "How does Neverinstall help institutions meet FERPA requirements for student data protection?",
         answer:
-          "It serves ML platform teams, research groups, and AI-heavy buyers whose evaluation paths differ from general enterprise audiences.",
+          "FERPA requires institutions to protect student education records at every access point. Neverinstall centralizes access to SIS portals, LMS platforms, and academic systems inside workspace boundaries where student data never reaches the local device. Non-persistent sessions destroy all session data at logout, access controls enforce authentication per session, and audit logs record every access event. This directly addresses FERPA's requirement to protect education records from unauthorized disclosure — even when students access systems from personal, unmanaged devices.",
+      },
+      {
+        question:
+          "Can students access virtual labs from Chromebooks, iPads, and personal laptops?",
+        answer:
+          "Yes. Secure Browser Workspaces run in any modern browser — Chrome, Safari, Firefox, Edge — with no agent install, no software download, and no MDM enrollment. Students on $200 Chromebooks get the same virtual lab experience as students on $2,000 MacBooks. This eliminates the hardware equity gap and the institutional burden of managing student-owned devices.",
+      },
+      {
+        question:
+          "How does the virtual lab model compare to maintaining physical computer labs?",
+        answer:
+          "A 50-seat physical lab costs $250,000-500,000 per hardware refresh cycle, requires dedicated space, and is available only during building hours. Virtual labs on Neverinstall cost 70-80% less per student, are accessible 24/7 from any device and location, scale elastically for finals week and peak enrollment, and eliminate hardware procurement and maintenance entirely. Students can access MATLAB or AutoCAD at 2 AM from their dorm room instead of waiting for lab hours.",
+      },
+      {
+        question:
+          "Can faculty and researchers access licensed software like SAS, Stata, or MATLAB from home?",
+        answer:
+          "Yes. Desktop Workspaces give faculty and graduate researchers persistent environments with institutionally licensed software accessible from any location. Research data and student records stay inside the workspace — faculty do not need to copy datasets to personal laptops to work remotely. License management is centralized on the workspace infrastructure rather than distributed across individual faculty devices.",
       },
     ],
     bottomCtas: [],

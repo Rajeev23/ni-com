@@ -27,7 +27,7 @@ export default function SecurityPage() {
           subtitle:
             "Use the Neverinstall Trust Center to review architecture, privacy, compliance posture, and supporting policy materials before or during security review.",
           supportingCopy:
-            "The Trust Center is the canonical hub for trust content on the site. It connects public-facing security context with the more detailed pages buyers and reviewers need during evaluation.",
+            "Everything your security team needs to evaluate Neverinstall — architecture details, compliance certifications, privacy practices, and supporting policy documents.",
           primaryCta: {
             label: "Talk to Security",
             href: "/security/security-contact",
@@ -37,7 +37,7 @@ export default function SecurityPage() {
       />
       <ResourceGrid
         title="Trust Center sections"
-        description="Start with the core trust materials most buyers and security reviewers need first."
+        description="Start with the core trust materials most security and procurement teams need first."
         cards={trustCenterCards}
       />
       <section className="border-b py-14">
@@ -55,15 +55,15 @@ export default function SecurityPage() {
                 For documentation requests
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Use the policy and security-contact routes for report requests,
-                trust workflows, and deeper review materials.
+                Visit the policy and security contact pages to request reports,
+                initiate a security review, or access detailed materials.
               </p>
             </article>
             <article className="rounded-2xl border bg-card/90 p-6 shadow-sm">
               <h2 className="text-lg font-semibold">For product buyers</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                The Trust Center complements product pages and compare pages
-                with a more precise, legally careful version of the trust story.
+                The Trust Center provides detailed security, privacy, and
+                compliance documentation to support your procurement review.
               </p>
             </article>
           </div>
@@ -72,7 +72,7 @@ export default function SecurityPage() {
               href="/platform"
               className="inline-flex items-center gap-1 text-sm font-medium"
             >
-              See the platform architecture behind the trust story
+              See the platform architecture powering these security controls
             </Link>
           </div>
         </PageContainer>

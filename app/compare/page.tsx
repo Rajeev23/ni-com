@@ -23,14 +23,14 @@ export default function CompareIndexPage() {
           eyebrow: "Compare",
           title: "Find the right architecture fit",
           subtitle:
-            "Compare Neverinstall against browser, workspace, and AI infrastructure alternatives with a more factual, buyer-friendly evaluation lens.",
+            "Compare Neverinstall against VDI, browser security, and cloud desktop alternatives on architecture, cost, and deployment speed.",
           primaryCta: { label: "Run TCO Calculator", href: "/tco-calculator" },
           secondaryCta: { label: "Get a Demo", href: "/get-demo" },
         }}
       />
       <ResourceGrid
         title="Comparison pages"
-        description="Use compare pages as commercial entry points for product, migration, and infrastructure decisions."
+        description="Side-by-side evaluations to help you make informed product, migration, and infrastructure decisions."
         cards={Object.values(comparePages).map((page) => ({
           title: page.name,
           description: page.summary,

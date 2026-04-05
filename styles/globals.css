@@ -246,6 +246,30 @@
   :root {
     --radius: 0.625rem;
 
+    /* ------------------------------------------------------------------ */
+    /* Brand palette                                                       */
+    /* ------------------------------------------------------------------ */
+    /* Deep navy from investor deck — use for hero text, brand moments     */
+    --color-brand: #0f2b46;
+    /* Deeper indigo than Tailwind indigo-500 — more confident, less toy  */
+    --color-primary-600: #4338ca; /* indigo-700 hue, richer saturation   */
+
+    /* ------------------------------------------------------------------ */
+    /* Transition durations — use as: transition-duration: var(--t-fast)  */
+    /* ------------------------------------------------------------------ */
+    --transition-fast: 150ms;
+    --transition-base: 200ms;
+    --transition-slow: 350ms;
+
+    /* ------------------------------------------------------------------ */
+    /* Subtle background texture for sections needing visual depth         */
+    /* A very fine noise-like grid; compose with section bg in CSS        */
+    /* ------------------------------------------------------------------ */
+    --bg-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23000' fill-opacity='.035'/%3E%3Crect width='1' height='1' x='2' y='2' fill='%23000' fill-opacity='.025'/%3E%3C/svg%3E");
+
+    /* ------------------------------------------------------------------ */
+    /* Core semantic tokens                                                */
+    /* ------------------------------------------------------------------ */
     --background: var(--color-zinc-50);
     --foreground: var(--color-zinc-950);
 
@@ -256,14 +280,15 @@
     --popover: var(--color-white);
     --popover-foreground: var(--color-zinc-950);
 
-    --primary: var(--color-indigo-500);
+    /* Deeper indigo — indigo-700 feels more premium than indigo-500       */
+    --primary: #4338ca;
     --primary-foreground: var(--color-white);
 
     --secondary: var(--color-sky-100);
-    --secondary-foreground: var(--color-sky-600);
+    --secondary-foreground: var(--color-sky-700);
 
     --muted: --alpha(var(--color-foreground)/5%);
-    --muted-foreground: var(--color-zinc-600);
+    --muted-foreground: var(--color-zinc-500);
 
     --accent: var(--color-zinc-100);
     --accent-foreground: var(--color-zinc-800);
@@ -271,49 +296,67 @@
     --destructive: var(--color-red-600);
     --destructive-foreground: var(--color-white);
 
-    --border: --alpha(var(--foreground)/7.5%);
-    --border-illustration: --alpha(var(--foreground)/7.5%);
-    --input: --alpha(var(--foreground)/7.5%);
-    --ring: var(--color-primary);
+    --border: --alpha(var(--foreground)/8%);
+    --border-illustration: --alpha(var(--foreground)/8%);
+    --input: --alpha(var(--foreground)/8%);
+    --ring: var(--primary);
 
-    --chart-1: var(--color-blue-500);
-    --chart-2: var(--color-indigo-500);
-    --chart-3: var(--color-purple-500);
+    --chart-1: var(--color-blue-600);
+    --chart-2: #4338ca;
+    --chart-3: var(--color-violet-500);
     --chart-4: var(--color-indigo-400);
-    --chart-5: var(--color-red-500);
+    --chart-5: var(--color-rose-500);
 
     --counter-start: 1;
   }
 
   .dark {
-    --background: var(--color-zinc-950);
-    --foreground: var(--color-white);
+    /* ------------------------------------------------------------------ */
+    /* Dark mode texture — slightly lighter dots on dark ground            */
+    /* ------------------------------------------------------------------ */
+    --bg-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23fff' fill-opacity='.03'/%3E%3Crect width='1' height='1' x='2' y='2' fill='%23fff' fill-opacity='.02'/%3E%3C/svg%3E");
 
-    --card: color-mix(in oklab, var(--color-zinc-800) 55%, #000);
-    --illustration: color-mix(in oklab, var(--color-zinc-800) 60%, #000);
-    --card-foreground: var(--color-white);
+    /* Slightly warm deep background — avoids the pure-zinc flatness       */
+    --background: color-mix(in oklab, var(--color-zinc-950) 90%, #0f2b46 10%);
+    --foreground: var(--color-zinc-50);
 
-    --popover: var(--color-zinc-950);
-    --popover-foreground: var(--color-white);
+    /* Cards sit noticeably above the page floor without being blown out   */
+    --card: color-mix(in oklab, var(--color-zinc-900) 75%, #000 25%);
+    --illustration: color-mix(in oklab, var(--color-zinc-800) 65%, #000 35%);
+    --card-foreground: var(--color-zinc-50);
 
+    /* Popover (nav dropdowns) should be slightly lighter than the bg      */
+    --popover: color-mix(in oklab, var(--color-zinc-900) 80%, #000 20%);
+    --popover-foreground: var(--color-zinc-50);
+
+    /* Keep primary vivid but not neon in dark mode — indigo-500 works    */
     --primary: var(--color-indigo-500);
     --primary-foreground: var(--color-white);
 
-    --secondary: var(--color-zinc-800);
-    --secondary-foreground: var(--color-white);
+    --secondary: color-mix(in oklab, var(--color-zinc-800) 80%, #4338ca 20%);
+    --secondary-foreground: var(--color-zinc-200);
 
-    --muted: var(--color-zinc-800);
+    /* Muted surface and text — perceptually balanced, not just inverted   */
+    --muted: color-mix(in oklab, var(--color-zinc-800) 70%, transparent 30%);
     --muted-foreground: var(--color-zinc-400);
-    --accent: var(--color-zinc-800);
-    --accent-foreground: var(--color-white);
 
-    --destructive: var(--color-red-700);
+    --accent: color-mix(in oklab, var(--color-zinc-800) 80%, transparent 20%);
+    --accent-foreground: var(--color-zinc-100);
+
+    --destructive: var(--color-red-500);
     --destructive-foreground: var(--color-white);
 
-    --border: --alpha(var(--foreground)/7.5%);
-    --border-illustration: --alpha(var(--foreground)/7.5%);
-    --input: --alpha(var(--foreground)/7.5%);
-    --ring: var(--color-zinc-600);
+    /* Borders: slightly cooler tint to echo the brand navy               */
+    --border: --alpha(var(--foreground)/9%);
+    --border-illustration: --alpha(var(--foreground)/9%);
+    --input: --alpha(var(--foreground)/9%);
+    --ring: var(--color-indigo-400);
+
+    --chart-1: var(--color-blue-400);
+    --chart-2: var(--color-indigo-400);
+    --chart-3: var(--color-violet-400);
+    --chart-4: var(--color-sky-400);
+    --chart-5: var(--color-rose-400);
   }
 
   * {

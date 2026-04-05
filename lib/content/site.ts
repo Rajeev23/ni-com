@@ -1,6 +1,8 @@
 import type { ContentPage, ResourceCard } from "@/lib/content/types"
 
 import { blogPosts, blogCards } from "@/lib/content/pages/blog"
+import { blogCategories } from "@/lib/content/pages/blog-categories"
+import { compliancePages } from "@/lib/content/pages/compliance"
 import { footerNavigation, primaryNavigation } from "@/lib/content/navigation"
 import { comparePages } from "@/lib/content/pages/compares"
 import { customerStories, customerCards } from "@/lib/content/pages/customers"
@@ -13,7 +15,9 @@ import { useCasePages } from "@/lib/content/pages/use-cases"
 export { primaryNavigation, footerNavigation }
 export {
   blogCards,
+  blogCategories,
   comparePages,
+  compliancePages,
   customerCards,
   industryPages,
   platformPage,
@@ -24,25 +28,28 @@ export {
 
 export const corePages = {
   homepage: {
-    title: "Secure Enterprise AI Workspaces - Neverinstall",
+    title:
+      "Virtual Desktop & Secure Enterprise Browser Platform | Neverinstall",
     subtitle:
-      "One platform spanning secure browser delivery, cloud workspaces, and sovereign AI infrastructure.",
-    metric: "One platform. Three products.",
+      "One platform. Two work modes. Any deployment. Replace legacy VDI with modern desktops and secure browsers.",
+    metric: "One Platform. Two Work Modes. Any Deployment.",
   },
   pricing: {
-    title: "Pricing - Secure Browser, DaaS & Sovereign HCI - Neverinstall",
+    title:
+      "DaaS & Secure Browser Pricing: Cloud, On-Prem, Hybrid | Neverinstall",
     subtitle:
-      "Compare product-aligned pricing for browser security, workspace delivery, and sovereign AI infrastructure.",
+      "Compare pricing for Desktop Workspaces and Secure Browser Workspaces across deployment models.",
   },
   resources: {
-    title: "Resources Hub | Neverinstall",
+    title: "Resources: Guides, Comparisons & Customer Stories | Neverinstall",
     subtitle:
       "Explore technical guides, comparison content, trust resources, and customer stories across the Neverinstall platform.",
   },
   trust: {
-    title: "Trust Center | Neverinstall",
+    title:
+      "Trust Center: Security, Privacy & Compliance | Neverinstall",
     subtitle:
-      "Security, privacy, compliance, architecture, and policy materials for Neverinstall buyers and customers.",
+      "Security, privacy, compliance, architecture, and policy materials for teams evaluating or using Neverinstall.",
   },
   platform: {
     title: platformPage.seo.title,
@@ -54,7 +61,7 @@ export const resourceCards: ResourceCard[] = [
   {
     title: "Platform Technology Overview",
     description:
-      "Understand the shared infrastructure behind Neverinstall Secure Browser, DaaS, and Sovereign HCI.",
+      "Understand the shared infrastructure behind Desktop Workspaces and Secure Browser Workspaces.",
     href: "/platform",
   },
   {
@@ -64,10 +71,10 @@ export const resourceCards: ResourceCard[] = [
     href: "/security",
   },
   {
-    title: "AI Infrastructure TCO Calculator",
+    title: "TCO Calculator",
     description:
-      "Start the pricing conversation around multi-vendor AI infrastructure and vendor lock-in avoidance.",
-    href: "/ai-tco-calculator",
+      "Model 3-year workspace cost and compare your current VDI stack against Neverinstall.",
+    href: "/tco-calculator",
   },
 ]
 
@@ -93,7 +100,7 @@ export const trustCenterCards: ResourceCard[] = [
   {
     title: "Infrastructure & Architecture",
     description:
-      "Trust-facing view of deployment, control, and architecture design.",
+      "Deployment, control, and architecture design for security and governance review.",
     href: "/security/infrastructure-architecture",
   },
   {
@@ -111,7 +118,7 @@ export const trustCenterCards: ResourceCard[] = [
   {
     title: "Terms & Conditions",
     description:
-      "Public legal entry point for terms, acceptable use context, and procurement review.",
+      "Service terms, acceptable use conditions, and legal context for procurement review.",
     href: "/security/terms-conditions",
   },
 ]
@@ -121,6 +128,7 @@ export const allContentPages: ContentPage[] = [
   ...Object.values(useCasePages),
   ...Object.values(industryPages),
   ...Object.values(comparePages),
+  ...Object.values(compliancePages),
   platformPage,
   ...Object.values(trustPages),
 ]
@@ -130,7 +138,6 @@ export const allRoutePaths = [
   "/platform",
   "/pricing",
   "/tco-calculator",
-  "/ai-tco-calculator",
   "/get-demo",
   "/signup",
   "/products",
@@ -142,6 +149,10 @@ export const allRoutePaths = [
   ...Object.values(industryPages).map((page) => page.path),
   "/compare",
   ...Object.values(comparePages).map((page) => page.path),
+  "/compliance",
+  ...Object.values(compliancePages).map((page) => page.path),
+  "/blog/category",
+  ...Object.keys(blogCategories).map((slug) => `/blog/category/${slug}`),
   "/resources",
   "/blog",
   ...Object.values(blogPosts).map((post) => `/blog/${post.slug}`),
@@ -162,7 +173,7 @@ export const staticRouteSeo: Record<
   "/": {
     title: corePages.homepage.title,
     description:
-      "Neverinstall unifies secure browser, DaaS, and sovereign AI infrastructure into one platform.",
+      "Replace Citrix and legacy VDI with cloud-native desktops and secure browsers. Deploy on managed cloud, your cloud, or on-prem.",
   },
   "/platform": {
     title: platformPage.seo.title,
@@ -171,43 +182,38 @@ export const staticRouteSeo: Record<
   "/pricing": {
     title: corePages.pricing.title,
     description:
-      "Compare pricing across Secure Browser, DaaS, and Sovereign HCI offerings.",
+      "Compare DaaS and Secure Browser workspace pricing across managed cloud, customer cloud, and on-prem. Start with a free trial.",
   },
   "/tco-calculator": {
     title:
-      "DaaS TCO Calculator - Compare vs Citrix, AVD, Omnissa | Neverinstall",
+      "DaaS TCO Calculator: Compare vs Citrix, AVD & Omnissa | Neverinstall",
     description:
-      "Model 3-year workspace cost and compare current stack against Neverinstall.",
-  },
-  "/ai-tco-calculator": {
-    title:
-      "AI Infrastructure TCO Calculator - Compare vs NVIDIA, Nutanix, VMware - Neverinstall",
-    description:
-      "Model AI infrastructure cost across software tax, accelerator strategy, and platform operating assumptions.",
+      "Model your 3-year workspace TCO and compare Citrix, AVD, or Omnissa costs against Neverinstall DaaS. Get results in minutes.",
   },
   "/get-demo": {
-    title: "Book a Demo | Neverinstall",
+    title: "Book a Demo: Virtual Desktop & Secure Browser | Neverinstall",
     description:
-      "Speak with Neverinstall to evaluate Secure Browser, DaaS, and Sovereign HCI.",
+      "See Desktop Workspaces and Secure Browser Workspaces in action. Get a personalized demo with deployment and compliance guidance.",
   },
   "/signup": {
-    title: "Start Free Trial | Neverinstall",
-    description: "Start your Neverinstall trial with guided onboarding.",
+    title: "Start Free Trial: Desktop & Browser Workspaces | Neverinstall",
+    description:
+      "Try Neverinstall Desktop Workspaces and Secure Browser free. Guided onboarding, instant provisioning, no infrastructure required.",
   },
   "/resources": {
-    title: "Resources | Neverinstall",
+    title: "Resources: Guides, Comparisons & Customer Stories | Neverinstall",
     description:
-      "Browse Neverinstall guides, stories, and technical resources.",
+      "Technical guides, VDI migration playbooks, compliance resources, and customer stories. Find what you need to evaluate Neverinstall.",
   },
   "/blog": {
-    title: "Blog | Neverinstall",
+    title: "Blog: VDI Modernization, Enterprise Security & DaaS | Neverinstall",
     description:
-      "Engineering, product, and thought leadership from Neverinstall.",
+      "Insights on VDI replacement, enterprise browser security, BYOD without MDM, and cloud-native workspace delivery. Read the latest.",
   },
   "/customers": {
-    title: "Customer Stories | Neverinstall",
+    title: "Customer Stories: VDI Replacement & Secure BYOD | Neverinstall",
     description:
-      "See how enterprise teams modernize secure access with Neverinstall.",
+      "See how enterprises cut onboarding time, reduced VDI costs, and secured BYOD access with Neverinstall. Read real deployment outcomes.",
   },
   ...Object.fromEntries(
     Object.values(blogPosts).map((post) => [
@@ -230,24 +236,26 @@ export const staticRouteSeo: Record<
   "/security": {
     title: corePages.trust.title,
     description:
-      "Review security, privacy, compliance, infrastructure, and policy materials in the Neverinstall Trust Center.",
+      "Session isolation, zero-trust access, compliance controls, and audit evidence. Review Neverinstall's full security and trust posture.",
   },
   "/docs": {
-    title: "Documentation | Neverinstall",
+    title: "Documentation: Desktop Workspaces & Secure Browser | Neverinstall",
     description:
-      "Find documentation for secure browser, DaaS, and sovereign HCI workflows.",
+      "Setup guides, API references, and admin docs for Desktop Workspaces and Secure Browser Workspaces. Get started in minutes.",
   },
   "/company/about": {
-    title: "About Neverinstall",
-    description: "Our mission, platform vision, and operating principles.",
+    title: "About Neverinstall: Secure Desktop & Browser Workspaces",
+    description:
+      "Neverinstall delivers DaaS and Secure Browser workspaces for regulated enterprises. Learn about our mission, team, and platform vision.",
   },
   "/company/careers": {
-    title: "Careers | Neverinstall",
+    title: "Careers: Build the Future of Secure Workspaces | Neverinstall",
     description:
-      "Join Neverinstall and help build sovereign enterprise computing.",
+      "Join Neverinstall and help enterprises replace legacy VDI with modern, secure workspace delivery. See open roles and apply today.",
   },
   "/contact": {
-    title: "Contact Neverinstall",
-    description: "Reach sales, support, and partnerships teams.",
+    title: "Contact Neverinstall: Sales, Support & Partnerships",
+    description:
+      "Talk to our team about Desktop Workspaces, Secure Browser, pricing, or deployment options. We respond within one business day.",
   },
 }

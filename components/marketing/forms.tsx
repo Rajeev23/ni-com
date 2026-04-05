@@ -98,11 +98,10 @@ export function DemoForm() {
           <option value="secure-byod">Secure BYOD</option>
           <option value="developer-workspaces">Developer Workspaces</option>
           <option value="legacy-vdi-migration">Legacy VDI Migration</option>
-          <option value="gpu-workloads">
-            GPU / High-Performance Workloads
-          </option>
           <option value="business-continuity">Business Continuity</option>
-          <option value="ai-inference-platform">AI Inference Platform</option>
+          <option value="privileged-access">Privileged User Access</option>
+          <option value="call-center">Call Center / BPO</option>
+          <option value="data-residency">Data Residency</option>
         </select>
       </label>
       <label className="grid gap-1.5 text-sm">
@@ -124,7 +123,7 @@ export function DemoForm() {
         <textarea
           name="currentStack"
           className="min-h-24 rounded-lg border bg-background px-3 py-2 text-sm"
-          placeholder="e.g., Citrix + AVD, Island, NVIDIA AI Enterprise, VMware Horizon"
+          placeholder="e.g., Citrix, AVD, Island, VMware Horizon, Windows 365"
         />
       </label>
       <Message message={state.message} ok={state.ok} />

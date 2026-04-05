@@ -29,7 +29,7 @@ export default function ResourcesPage() {
       />
       <ResourceGrid
         title="Featured resources"
-        description="Use resources to support platform discovery, trust review, and commercial evaluation."
+        description="Guides, customer stories, and security materials to help you evaluate Neverinstall."
         cards={resourceCards}
       />
       <CtaBand

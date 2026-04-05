@@ -51,8 +51,8 @@ export default function OpenGraphImage() {
             maxWidth: 980,
           }}
         >
-          One platform spanning secure browser delivery, cloud workspaces, and
-          sovereign AI infrastructure.
+          Secure enterprise desktops and browsers. One platform, two work modes,
+          any deployment.
         </p>
       </div>
     </div>,

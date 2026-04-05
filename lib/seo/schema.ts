@@ -62,12 +62,10 @@ export function faqSchema(page: ContentPage) {
 function getApplicationCategory(page: ContentPage) {
   switch (page.template) {
     case "product":
-      return page.slug === "sovereign-hci"
-        ? "DeveloperApplication"
-        : "BusinessApplication"
     case "platform":
-      return "DeveloperApplication"
+      return "BusinessApplication"
     case "compare":
+    case "compliance":
     case "core":
     case "industry":
     case "trust":

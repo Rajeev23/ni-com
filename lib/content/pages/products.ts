@@ -1,7 +1,6 @@
 import type { ContentPage } from "@/lib/content/types"
 
 import {
-  aiTcoCta,
   answerCapsule,
   defaultBottomCtas,
   demoCta,
@@ -11,588 +10,437 @@ import {
   statsSection,
   tableSection,
   tcoCta,
-  trustCta,
 } from "@/lib/content/shared"
 
 export const productPages: Record<string, ContentPage> = {
   "secure-browser": {
-    name: "Secure Enterprise Browser",
+    name: "Secure Browser Workspaces",
     slug: "secure-browser",
     path: "/products/secure-browser",
     template: "product",
     seo: {
       title:
-        "Secure Enterprise Browser - Zero-Trust Browsing, No Agent - Neverinstall",
+        "Secure Browser Workspaces - Enterprise Browsing Without Endpoint Agents - Neverinstall",
       description:
-        "Secure enterprise browser with browser-native isolation, DLP controls, and zero-trust access without managing another endpoint agent.",
+        "Isolated browser sessions with DLP controls, session recording, and zero endpoint trust for contractors, BYOD, and unmanaged devices. 70-80% lower cost than full desktop VDI for browser-first users.",
     },
     summary:
-      "Zero-trust browsing with browser-native DLP, session isolation, and policy controls for unmanaged devices, contractors, and BYOD.",
+      "Isolated browser workspaces with DLP controls, forensic session replay, and zero endpoint trust for contractors, BYOD, and unmanaged devices — at 70-80% lower cost than full desktop VDI.",
     hero: {
-      eyebrow: "Neverinstall Secure Browser",
-      title: "Secure enterprise browsing without another agent",
+      eyebrow: "Neverinstall Secure Browser Workspaces",
+      title: "Secure enterprise browsing without endpoint agents",
       subtitle:
-        "Browser-native isolation, download controls, and policy-first access for employees, contractors, and unmanaged devices.",
+        "Isolated sessions, granular DLP controls, and forensic replay for contractors, BYOD users, and unmanaged devices — no agent install required.",
       supportingCopy:
-        "Use the browser people already understand, while moving policy, inspection, and data protection into a controlled execution boundary.",
-      metric: "Zero-trust browsing. No agent required.",
+        "90% of enterprise workflows are browser-delivered. Neverinstall puts the execution boundary in the cloud, not on the device, so you get full policy control without touching the endpoint.",
+      metric: "70-80% lower cost than full desktop VDI for browser-first users",
       primaryCta: demoCta,
       secondaryCta: pricingCta,
     },
     answerCapsule: answerCapsule(
-      "What is Neverinstall Secure Browser?",
-      "Neverinstall Secure Browser is a browser-delivered secure access layer that keeps enterprise activity inside a controlled environment, enforces browser DLP policies, and eliminates the need to trust unmanaged endpoints."
+      "What is Neverinstall Secure Browser Workspaces?",
+      "Neverinstall Secure Browser Workspaces is an isolated cloud browser environment that enforces DLP policy, records sessions with forensic replay, and eliminates endpoint trust requirements — purpose-built for contractors, BYOD, and unmanaged device scenarios at a fraction of the cost of full VDI."
     ),
     sections: [
       gridSection({
-        title: "Why teams replace legacy browser security",
+        title: "The problem with securing unmanaged devices today",
         description:
-          "Most browser security stacks bolt policy onto endpoints, extensions, and VPN-era controls that are hard to scale cleanly.",
+          "Contractors, vendors, and BYOD users access sensitive data from devices IT cannot govern. Existing approaches either ship hardware that takes weeks to arrive, deploy agents onto devices you do not own, or accept the risk and hope nothing leaks.",
         blocks: [
           {
-            title: "Too many agents and extensions",
+            title: "You cannot agent your way out of BYOD",
             description:
-              "Security teams end up layering endpoint controls, browser extensions, RBI, and network policy just to secure common web workflows.",
+              "Endpoint agents require managed devices. Contractors and third parties bring their own hardware. Asking them to install corporate software creates compliance friction and rarely works.",
           },
           {
-            title: "Unmanaged devices stay risky",
+            title: "Full VDI is too expensive for browser-only work",
             description:
-              "Contractors, BYOD users, and third parties still access sensitive data from devices you cannot fully trust or govern.",
+              "Provisioning a full Windows desktop for a user who only needs web applications costs 3-5x more than it should. Most enterprises are paying Citrix or VMware per-seat pricing for workflows that never leave the browser.",
           },
           {
-            title: "Policies fragment across tools",
+            title: "Audit trails are incomplete or missing",
             description:
-              "Clipboard, download, session, and access policies are spread across products, which makes audits and operations messy.",
+              "When a data leak happens on an unmanaged device, the forensic record is often gone with the device. Security teams need session-level evidence, not network logs.",
           },
         ],
       }),
       gridSection({
-        title: "Capability pillars",
+        title: "How Secure Browser Workspaces protects every device",
         description:
-          "The secure browser product is designed to reduce endpoint trust while keeping rollout simple.",
+          "Policy enforcement moves from the endpoint to the session. If a device can run a browser, it is covered — no agent, no MDM, no hardware swap.",
         columns: 4,
         blocks: [
           {
-            title: "Session isolation by default",
+            title: "Isolated sessions",
             description:
-              "Run work inside isolated browser sessions so sensitive activity stays separate from the local endpoint.",
+              "Every browser session runs inside a controlled cloud environment. Sensitive activity never touches the local device, clipboard data stays scoped to the session, and the endpoint is not trusted.",
           },
           {
-            title: "Browser-native DLP controls",
+            title: "Granular DLP controls",
             description:
-              "Restrict downloads, printing, clipboard, USB, and file movement with controls hardened in production enterprise deployments.",
+              "Enforce copy/paste restrictions, block file downloads and uploads, disable printing, restrict USB, and apply visual watermarks — all configured centrally, not per device.",
           },
           {
-            title: "Zero-trust access",
+            title: "Session recording and forensic replay",
             description:
-              "Authenticate every session and enforce access based on identity, role, and policy instead of network location.",
+              "Record every session with full replay capability. When a security incident involves a contractor or unmanaged device, you have the complete forensic record, not a gap in your audit trail.",
           },
           {
-            title: "Fast rollout for unmanaged devices",
+            title: "Zero endpoint trust",
             description:
-              "Support contractors and BYOD without shipping hardware or asking IT to manage another full endpoint stack.",
+              "Authentication and policy enforcement happen at the session boundary. There is no agent to deploy, no MDM enrollment to chase, and no assumption that the device is clean.",
           },
         ],
       }),
       gridSection({
-        title: "How the browser product fits the platform",
+        title: "Not a point product — part of the Neverinstall platform",
         description:
-          "The browser is one of three product surfaces built on the same underlying control plane.",
+          "Unlike Island, which is browser-only, Secure Browser Workspaces shares a control plane with Desktop Workspaces. One console, one policy engine, one audit trail — not two vendors duct-taped together.",
         blocks: [
           {
-            title: "Central policy and identity",
+            title: "Unified policy management",
             description:
-              "Access policy, role mapping, and audit controls are managed centrally instead of configured per device.",
+              "Define DLP rules, access policies, and session behavior once. They apply to browser workspaces and desktop workspaces identically — no configuration drift between two separate products.",
           },
           {
-            title: "Isolation boundary for web work",
+            title: "Single identity and audit layer",
             description:
-              "User activity runs inside an isolated runtime with logging, policy enforcement, and reduced local data exposure.",
+              "One IdP integration, one audit log, one place for your SOC to investigate incidents. Whether the session was a full desktop or a browser workspace, the forensic record is in the same system.",
           },
           {
-            title: "Cross-product expansion path",
+            title: "Upgrade a user to a full desktop in minutes",
             description:
-              "Teams can start with browser security, then extend into secure workspaces or sovereign infrastructure as use cases grow.",
+              "When a contractor needs more than a browser — say, a local IDE or a legacy Windows app — flip them to Desktop Workspaces from the same admin console. No new procurement, no re-onboarding, no second vendor.",
           },
         ],
       }),
       tableSection({
-        title: "Progressive disclosure for buyers",
+        title: "Secure Browser Workspaces vs Island Browser",
         description:
-          "Lead with business outcomes, then show the technical controls that make them possible.",
-        columns: ["Layer", "Outcome", "Technical proof"],
+          "Island sells a standalone enterprise browser. Neverinstall delivers browser workspaces and full desktop workspaces from the same platform — so you never hit a ceiling when users need more than a browser.",
+        columns: ["Capability", "Neverinstall", "Island Browser"],
         rows: [
           {
-            label: "Security teams",
+            label: "Isolated session execution",
+            values: ["Cloud-isolated sessions", "Browser process isolation"],
+          },
+          {
+            label: "DLP controls",
             values: [
-              "Reduce data movement risk on unmanaged devices.",
-              "Clipboard, download, printing, and session controls enforced centrally.",
+              "Copy/paste, download, upload, print, watermark",
+              "Copy/paste, download, print",
             ],
           },
           {
-            label: "IT operations",
+            label: "Session recording and forensic replay",
+            values: ["Full session recording with replay", "Limited"],
+          },
+          {
+            label: "Full desktop delivery (same vendor)",
+            values: ["Yes — Desktop Workspaces on same platform", "No"],
+          },
+          {
+            label: "Deployment models",
             values: [
-              "Roll out secure access faster with less endpoint overhead.",
-              "No additional agent lifecycle to deploy, patch, or troubleshoot.",
+              "Managed cloud, customer cloud (OCI/AWS/Azure), sovereign on-prem",
+              "SaaS only",
             ],
           },
           {
-            label: "Business users",
-            values: [
-              "Keep familiar browser workflows without heavy friction.",
-              "Policy sits behind the session, not in a pile of user-side tools.",
-            ],
+            label: "Admin console",
+            values: ["Shared with Desktop Workspaces", "Browser-only console"],
           },
         ],
       }),
       statsSection({
-        title: "Best-fit motions",
+        title: "Built for low-trust endpoints and browser-first work",
         description:
-          "This product wins where endpoint trust is low and rollout speed matters.",
+          "Contractors on personal laptops, BYOD employees, third-party vendors accessing your SaaS apps — any scenario where you cannot trust the device but the work lives in the browser.",
         items: [
           {
-            label: "Primary buyers",
-            value: "CISO / IT security",
+            label: "Cost vs full VDI",
+            value: "70-80% lower",
             detail:
-              "Especially where unmanaged or third-party access is growing.",
+              "For users whose work stays in the browser, Secure Browser Workspaces delivers the security outcome at a fraction of the desktop VDI cost.",
+          },
+          {
+            label: "Who benefits most",
+            value: "Security and IT teams",
+            detail:
+              "Security and IT leaders responsible for third-party access — the ones fielding audit findings about unmanaged devices and contractor data exposure.",
           },
           {
             label: "Fastest time to value",
-            value: "BYOD + contractors",
+            value: "Contractors and BYOD",
             detail:
-              "The strongest wedge is removing device trust from the equation.",
-          },
-          {
-            label: "Natural expansion",
-            value: "DaaS + Trust Center",
-            detail:
-              "Secure browsing often leads into broader workspace modernization.",
+              "No hardware to ship, no agent to deploy. Users get a secure session from any device in the same day.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
+        "Desktop Workspaces",
+        "When users need a full Windows or Linux environment, the same platform delivers it.",
+        "/products/daas"
+      ),
+      relatedLink(
         "Secure BYOD",
-        "See the browser-first path for unmanaged employee devices.",
+        "See the browser-first path for unmanaged employee and contractor devices.",
         "/solutions/use-case/secure-byod"
       ),
       relatedLink(
-        "Contractor & Vendor Access",
-        "Use secure sessions for third-party users without shipping hardware.",
-        "/solutions/use-case/contractor-vendor-access"
-      ),
-      relatedLink(
         "Compare vs Island Browser",
-        "Understand the difference between browser-only positioning and the broader platform model.",
+        "Why a platform that delivers both desktops and browsers beats a browser-only product — with deployment, DLP, and pricing compared head to head.",
         "/compare/vs-island"
       ),
     ],
     faq: [
       {
-        question: "When should a team choose the Secure Browser product first?",
+        question:
+          "When should a team choose Secure Browser Workspaces over Desktop Workspaces?",
         answer:
-          "Start with Secure Browser when the immediate problem is protecting web access on unmanaged endpoints, contractors, or BYOD devices without introducing another endpoint agent.",
+          "Choose Secure Browser Workspaces when the user population is primarily browser-first — contractors, BYOD employees, or third-party vendors who access SaaS applications and internal web tools but rarely need a full OS environment. It delivers the security outcome at 70-80% lower cost than provisioning a full desktop.",
       },
       {
-        question:
-          "Does Neverinstall Secure Browser replace every desktop workflow?",
+        question: "How is this different from a SASE or SWG approach?",
         answer:
-          "Not by itself. It handles browser-based and web application access first, and the broader platform can extend into full DaaS or sovereign infrastructure when teams need richer workspace isolation.",
+          "SASE and SWG inspect traffic at the network layer. Neverinstall Secure Browser Workspaces moves execution into the cloud session, so DLP controls, copy/paste restrictions, and session recording happen inside the browser environment — not at a network choke point that can be bypassed.",
       },
       {
-        question:
-          "How is it different from bundling browser policy into a SASE stack?",
+        question: "How does Neverinstall compare to Island Browser?",
         answer:
-          "The Neverinstall approach is platform-led rather than bundle-led. The browser product stands on its own, but it also shares architecture, policy, and expansion paths with DaaS and Sovereign HCI.",
+          "Island is a browser-only product — it cannot deliver a full desktop when a user needs one. Neverinstall gives you browser workspaces and desktop workspaces on the same platform with the same admin console and the same policies. When a contractor outgrows browser access and needs a Windows environment, that is a policy change, not a new vendor procurement.",
+      },
+      {
+        question: "What deployment models are available?",
+        answer:
+          "Three options: Neverinstall-managed cloud for the fastest deployment, customer cloud on OCI, AWS, or Azure for teams that need to keep data inside their own tenancy, and sovereign on-premises for regulated industries or air-gapped environments.",
+      },
+      {
+        question: "Does Secure Browser Workspaces require an endpoint agent?",
+        answer:
+          "No. The user opens a browser, authenticates, and their session runs in the cloud. There is nothing to install on the device, which is why it works for contractors and BYOD scenarios where you cannot mandate software installs.",
       },
     ],
     bottomCtas: defaultBottomCtas("product"),
   },
   daas: {
-    name: "Desktop as a Service",
+    name: "Desktop Workspaces",
     slug: "daas",
     path: "/products/daas",
     template: "product",
     seo: {
       title:
-        "Desktop as a Service - Sub-Second Workspace Restore, OCI-Native - Neverinstall",
+        "Desktop Workspaces - Replace Legacy VDI with Cloud Desktops That Work - Neverinstall",
       description:
-        "Cloud-native DaaS with sub-second workspace restore, policy-driven access, Windows and Linux support, and OCI-native flexibility.",
+        "Cloud-native VDI replacement with sub-second session restore, Windows and Linux support, and deployment in days — not months. Citrix and VMware alternative without the Broadcom cost increase.",
     },
     summary:
-      "Secure cloud desktops with sub-second restore, Windows and Linux support, and a rollout model built for remote teams, developers, and GPU-enabled work.",
+      "Cloud-native desktop delivery that replaces Citrix and VMware VDI with sub-second restore, any-device access, and deployment measured in days rather than months.",
     hero: {
-      eyebrow: "Neverinstall DaaS",
-      title: "Cloud desktops built for speed, not legacy VDI drag",
+      eyebrow: "Neverinstall Desktop Workspaces",
+      title: "Replace legacy VDI with cloud desktops that actually work",
       subtitle:
-        "Deliver secure Windows and Linux workspaces with sub-second restore, policy controls, and OCI-native deployment flexibility.",
+        "Sub-second session restore, Windows and Linux support, and a rollout measured in days — not the months Citrix and VMware required.",
       supportingCopy:
-        "Neverinstall DaaS is designed for teams escaping complex VDI stacks, shipping delays, and slow onboarding while keeping enterprise controls intact.",
-      metric: "Sub-second workspace restore",
+        "Broadcom's acquisition of VMware caused 3-5x cost increases overnight. Citrix complexity has been a drag for years. Desktop Workspaces gives enterprise IT a clean migration path that does not require a six-month project.",
+      metric: "Sub-second session restore. Days to deploy, not months.",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
-      "What is Neverinstall DaaS?",
-      "Neverinstall DaaS is a cloud-native desktop platform that delivers controlled Windows and Linux workspaces with fast restore, policy-driven access, and a rollout model built for modern distributed teams."
+      "What is Neverinstall Desktop Workspaces?",
+      "Neverinstall Desktop Workspaces is a cloud-native VDI replacement that delivers secure Windows and Linux desktops with sub-second session restore, persistent and ephemeral modes, and flexible deployment across managed cloud, customer cloud, or sovereign on-premises environments."
     ),
     sections: [
       gridSection({
-        title: "Why teams move off legacy VDI",
+        title: "Why enterprises are replacing VDI now",
         description:
-          "Legacy desktop stacks were built for a different operating model: fixed devices, long rollout cycles, and expensive complexity.",
+          "Citrix and VMware have been the default for decades. Broadcom changed the math. IT leaders who stayed on legacy VDI through the pandemic are now facing a compounding set of problems that make the status quo untenable.",
         blocks: [
           {
-            title: "Provisioning takes too long",
+            title: "Broadcom's acquisition made VMware unaffordable",
             description:
-              "Shipping devices, imaging laptops, and configuring secure access slows down onboarding and recovery.",
+              "Broadcom's VMware acquisition drove 3-5x licensing cost increases for existing customers. Teams that built their infrastructure around VMware Horizon are repricing multi-year renewals they cannot absorb.",
           },
           {
-            title: "VDI complexity keeps growing",
+            title: "Citrix complexity has a cost of its own",
             description:
-              "Too many teams are still carrying VDI-era infrastructure, licensing overhead, and consultant-heavy change management.",
+              "Citrix environments require consultant-heavy change management, long deployment cycles, and a support overhead that grows with scale. Most teams are running versions that lag behind by years.",
           },
           {
-            title: "Policy and performance trade off",
+            title: "Deployment still takes months",
             description:
-              "Older stacks force teams to choose between security, speed, and a usable end-user experience.",
+              "Legacy VDI rollouts involve hardware procurement, image management, network configuration, and testing cycles that stretch across quarters. Teams that need to onboard fast cannot wait.",
           },
         ],
       }),
       gridSection({
-        title: "Capability pillars",
+        title: "Enterprise VDI capabilities without the legacy overhead",
         description:
-          "Neverinstall DaaS is designed to simplify the operating model while improving the user experience.",
+          "Everything Citrix and VMware deliver — persistent desktops, session isolation, DLP, multi-OS support — without the consultant-heavy deployments, months-long rollouts, and unpredictable licensing.",
         columns: 4,
         blocks: [
           {
-            title: "Sub-second restore",
+            title: "Sub-second session restore",
             description:
-              "Resume workspaces in under one second for validated flows so users recover quickly without long rebuild cycles.",
+              "Resume workspaces in under one second for validated desktop workflows. Users recover from interruptions without rebuilding context, and IT does not field complaints about session lag.",
           },
           {
             title: "Windows and Linux support",
             description:
-              "Run the environments different teams need, from standard office workflows to developer workstations.",
+              "Deliver standard Windows desktops for office workflows and Linux environments for developers on the same platform, managed through the same admin console.",
           },
           {
             title: "Persistent and ephemeral modes",
             description:
-              "Support shift-based operations, clean-room sessions, or persistent developer environments within one platform.",
+              "Support persistent developer environments, clean-room ephemeral sessions for shift workers or contractors, and everything in between — configured per user group, not per deployment.",
           },
           {
-            title: "OCI-native and region-aware",
+            title: "Any-device access",
             description:
-              "Align deployment location, data residency, and commercial flexibility with how modern enterprises actually buy and operate cloud infrastructure.",
+              "Users access their desktop from any device with a browser. No managed endpoint required, no VPN dependency, no hardware to ship before someone can start work.",
           },
         ],
       }),
       gridSection({
-        title: "How it works",
+        title: "Deploy anywhere — three models, one platform",
         description:
-          "The DaaS product uses shared platform primitives but packages them for workspace delivery and operations teams.",
+          "Deployment model is a configuration choice, not a product change. The same Desktop Workspaces platform runs across all three options.",
         blocks: [
           {
-            title: "Central workspace control plane",
+            title: "Neverinstall-managed cloud",
             description:
-              "Provision, secure, and govern workspaces from a unified control layer instead of stitching together desktop, identity, and network tools.",
+              "Fastest path to production. Neverinstall operates the infrastructure. Customers provision workspaces, set policies, and onboard users without managing the underlying stack.",
           },
           {
-            title: "Isolation and policy enforcement",
+            title: "Customer cloud (OCI, AWS, Azure)",
             description:
-              "Each workspace runs with isolation boundaries and role-based controls for access, data movement, and session behavior.",
+              "Deploy inside your own cloud tenancy for data residency, compliance, or existing cloud commitments. Tally Solutions runs Desktop Workspaces on Oracle Cloud Infrastructure — their users get cloud desktops without data leaving the Tally tenancy.",
           },
           {
-            title: "Migration-friendly rollout",
+            title: "Sovereign on-premises",
             description:
-              "Pilot by cohort, benchmark user experience, and expand without forcing a big-bang rip-and-replace migration.",
-          },
-        ],
-      }),
-      statsSection({
-        title: "Where DaaS lands best",
-        description:
-          "The strongest DaaS motions combine speed, security, and hardware simplification.",
-        items: [
-          {
-            label: "High-intent searches",
-            value: "Citrix / VMware alternatives",
-            detail:
-              "Modernize from legacy VDI with a cleaner operating model and faster rollout.",
-          },
-          {
-            label: "Fastest customer proof",
-            value: "Remote work + contractors",
-            detail:
-              "Onboarding and access speed are easy to measure and easy to sell.",
-          },
-          {
-            label: "Expansion motion",
-            value: "Developer + GPU workspaces",
-            detail:
-              "DaaS creates the bridge into higher-value engineering and performance workloads.",
+              "For regulated industries, air-gapped environments, or organizations with strict data sovereignty requirements, Desktop Workspaces deploys on-premises without losing platform capabilities.",
           },
         ],
       }),
       tableSection({
-        title: "Messaging ladder",
+        title: "Desktop Workspaces vs legacy VDI",
         description:
-          "Use outcome-first copy on the page, then layer in technical credibility for evaluators.",
-        columns: ["Audience", "Primary message", "Proof point"],
+          "A direct comparison for IT leaders evaluating migration from Citrix or VMware Horizon.",
+        columns: ["Capability", "Neverinstall", "Citrix / VMware"],
         rows: [
           {
-            label: "IT leadership",
+            label: "Deployment time",
+            values: ["Days to weeks", "Months"],
+          },
+          {
+            label: "Session restore speed",
+            values: ["Sub-second (validated)", "Minutes in most deployments"],
+          },
+          {
+            label: "Licensing cost trajectory",
             values: [
-              "Replace complex legacy VDI with a simpler operating model.",
-              "Cloud-native architecture with faster rollout and less infrastructure drag.",
+              "Predictable per-seat pricing",
+              "3-5x increases post-Broadcom acquisition",
             ],
           },
           {
-            label: "Security teams",
+            label: "Deployment models",
             values: [
-              "Keep data and policy in controlled workspaces instead of endpoints.",
-              "Role-based controls, auditable sessions, and isolated environments.",
+              "Managed cloud, customer cloud, sovereign on-prem",
+              "On-prem or select cloud (complex setup)",
             ],
           },
           {
-            label: "End users",
+            label: "Browser-first users",
             values: [
-              "Get a fast, consistent environment from any device.",
-              "Sub-second restore and better continuity during device or office disruptions.",
+              "Secure Browser Workspaces at 70-80% lower cost on same platform",
+              "Full VDI seat cost regardless of usage",
             ],
+          },
+          {
+            label: "Admin console",
+            values: [
+              "Shared with Secure Browser Workspaces",
+              "Separate product, separate console",
+            ],
+          },
+        ],
+      }),
+      statsSection({
+        title: "Customer results",
+        description:
+          "Desktop Workspaces has replaced legacy VDI at enterprises that evaluated multiple alternatives before choosing Neverinstall.",
+        items: [
+          {
+            label: "Porter",
+            value: "Chose Neverinstall over AVD",
+            detail:
+              "Porter evaluated Neverinstall against Azure Virtual Desktop and Windows 365, then chose Neverinstall for faster deployment and better session restore performance.",
+          },
+          {
+            label: "Citrix replacement (Indovance)",
+            value: "Full Citrix rip-and-replace",
+            detail:
+              "Indovance migrated off Citrix Virtual Apps and Desktops entirely — eliminating the consultant dependency, cutting licensing costs, and going live in weeks instead of the quarter-long upgrade cycles Citrix required.",
+          },
+          {
+            label: "For browser-first users",
+            value: "70-80% lower cost",
+            detail:
+              "Users who work primarily in the browser do not need a full desktop seat. The same platform delivers Secure Browser Workspaces at a fraction of the cost.",
           },
         ],
       }),
     ],
     relatedLinks: [
       relatedLink(
-        "Remote & Hybrid Work",
-        "See the core DaaS use case for remote onboarding and secure access.",
-        "/solutions/use-case/remote-hybrid-work"
-      ),
-      relatedLink(
-        "Developer Workspaces",
-        "Use DaaS as the bridge into secure engineering environments.",
-        "/solutions/use-case/developer-workspaces"
+        "Secure Browser Workspaces",
+        "For browser-first users, the same platform delivers isolated sessions at 70-80% lower cost than a full desktop seat.",
+        "/products/secure-browser"
       ),
       relatedLink(
         "Compare vs Citrix",
-        "Review architecture, migration, and TCO positioning side by side.",
+        "Deployment time, licensing cost, and migration path for teams replacing Citrix Virtual Apps and Desktops — including what Indovance learned doing the switch.",
         "/compare/vs-citrix"
+      ),
+      relatedLink(
+        "Remote and Hybrid Work",
+        "How distributed teams use Desktop Workspaces to onboard remote employees in hours instead of waiting weeks for shipped hardware.",
+        "/solutions/use-case/remote-hybrid-work"
       ),
     ],
     faq: [
       {
-        question: "Who should evaluate Neverinstall DaaS first?",
+        question:
+          "Is this a direct replacement for Citrix Virtual Apps and Desktops?",
         answer:
-          "DaaS is the right entry point for teams modernizing remote work, replacing legacy VDI, or standardizing workspace access across distributed employees and contractors.",
+          "Yes. Desktop Workspaces replaces Citrix Virtual Apps and Desktops and VMware Horizon. Indovance did a full Citrix rip-and-replace and went live in weeks. You get persistent and ephemeral Windows and Linux desktops, the same DLP and session controls enterprise IT requires, and predictable per-seat pricing instead of Broadcom-era cost surprises.",
       },
       {
-        question: "How does Neverinstall position against legacy VDI?",
+        question: "How long does a typical migration take?",
         answer:
-          "The product is positioned around a cloud-native operating model, faster restore, simpler rollout, and lower operational drag compared with legacy Citrix or VMware-era stacks.",
+          "Most deployments reach production in days to weeks rather than the months typical of Citrix or VMware rollouts. The approach is cohort-based — migrate a pilot group, benchmark performance and user experience, then expand without a big-bang cutover.",
       },
       {
-        question: "Can DaaS support heavier workloads?",
+        question: "Which deployment model should we choose?",
         answer:
-          "Yes. DaaS covers standard desktop delivery first, then extends into developer and GPU-backed workspaces, while Sovereign HCI takes over for larger AI infrastructure and on-prem acceleration needs.",
+          "If speed is the priority, Neverinstall-managed cloud gets you to production in days. If you have data residency requirements or existing cloud spend commitments, deploy in your own OCI, AWS, or Azure tenancy — Tally Solutions runs this way on OCI. For regulated industries or air-gapped environments, sovereign on-premises runs the full platform in your data center.",
+      },
+      {
+        question: "What about users who only need browser access?",
+        answer:
+          "The same platform includes Secure Browser Workspaces for users whose workflows are entirely browser-based. You do not need to provision a full desktop seat for those users — the cost savings are typically 70-80% compared to a full VDI seat, and both work modes are managed from the same admin console.",
+      },
+      {
+        question: "Does Desktop Workspaces support GPU-accelerated workloads?",
+        answer:
+          "Yes. Desktop Workspaces supports GPU-backed environments for engineering workstations, rendering workflows, and other performance-intensive use cases. Deployment model determines whether GPUs come from Neverinstall's managed infrastructure or your own cloud or on-premises hardware.",
       },
     ],
     bottomCtas: defaultBottomCtas("product"),
-  },
-  "sovereign-hci": {
-    name: "Sovereign HCI",
-    slug: "sovereign-hci",
-    path: "/products/sovereign-hci",
-    template: "product",
-    seo: {
-      title:
-        "Sovereign HCI - Multi-Vendor AI Infrastructure Platform - Neverinstall",
-      description:
-        "Multi-vendor AI infrastructure platform for sovereign, on-prem, and high-control environments with GPU orchestration, inference serving, and agentic sandboxing.",
-    },
-    summary:
-      "Multi-vendor AI infrastructure for sovereign and on-prem environments, combining GPU orchestration, inference serving, sandboxing, and full-stack HCI under one control plane.",
-    hero: {
-      eyebrow: "Neverinstall Sovereign HCI",
-      title: "The AI infrastructure platform enterprises pay more for",
-      subtitle:
-        "Multi-vendor GPU orchestration across NVIDIA, AMD, and Intel. Built-in inference serving. Agentic sandboxing. General compute HCI included.",
-      supportingCopy:
-        "Sovereign HCI gives enterprise teams a premium control plane for sovereign deployment, developer-first operations, and multi-vendor freedom.",
-      metric: "Multi-vendor AI infrastructure. No NVIDIA tax.",
-      primaryCta: demoCta,
-      secondaryCta: aiTcoCta,
-    },
-    answerCapsule: answerCapsule(
-      "What is Neverinstall Sovereign HCI?",
-      "Neverinstall Sovereign HCI is a multi-vendor AI infrastructure platform for on-prem and sovereign environments, combining GPU orchestration, inference serving, secure sandboxing, and integrated HCI under one control plane."
-    ),
-    sections: [
-      gridSection({
-        title: "Why the market is broken",
-        description:
-          "Current enterprise AI infrastructure choices force buyers into vendor taxes, bolt-on architectures, or long DIY build cycles.",
-        blocks: [
-          {
-            title: "NVIDIA lock-in is expensive",
-            description:
-              "Too many platforms inherit the NVIDIA AI Enterprise tax even when customers already own the underlying hardware.",
-          },
-          {
-            title: "General HCI vendors bolt AI on later",
-            description:
-              "Legacy infrastructure vendors add AI features as an extension of older virtualization stacks rather than designing for GPU-first operations.",
-          },
-          {
-            title: "DIY open source takes too long",
-            description:
-              "Building GPU scheduling, observability, storage, networking, and serving from scratch can consume a platform team for months.",
-          },
-        ],
-      }),
-      gridSection({
-        title: "Capability pillars",
-        description:
-          "Sovereign HCI is the flagship expression of the Neverinstall platform and carries the heaviest technical story on the site.",
-        columns: 4,
-        blocks: [
-          {
-            title: "Multi-vendor GPU orchestration",
-            description:
-              "Schedule workloads across NVIDIA, AMD, and Intel accelerators from one control plane and route work to the best-value hardware.",
-          },
-          {
-            title: "Inference serving built in",
-            description:
-              "Use KServe and vLLM integration for model serving, lifecycle management, canary rollout, and autoscaling.",
-          },
-          {
-            title: "Agentic workload sandboxing",
-            description:
-              "Run AI agents inside Firecracker-style isolated boundaries with auditable execution and policy enforcement.",
-          },
-          {
-            title: "Sovereignty by architecture",
-            description:
-              "Keep workloads inside your jurisdiction with VM isolation, air-gap capable deployment patterns, and enterprise control surfaces.",
-          },
-        ],
-      }),
-      gridSection({
-        title: "How the platform stacks up",
-        description:
-          "One shared platform foundation expressed through secure browser, DaaS, and sovereign AI infrastructure.",
-        blocks: [
-          {
-            title: "Platform primitives",
-            description:
-              "KubeVirt virtualization, scheduler intelligence, storage, networking, sandboxing, checkpointing, and observability share one architectural foundation.",
-          },
-          {
-            title: "AI services layer",
-            description:
-              "Inference serving, model lifecycle, GPU telemetry, and policy controls sit on top of the shared infrastructure stack.",
-          },
-          {
-            title: "Enterprise operating layer",
-            description:
-              "Chargeback, multi-tenancy, RBAC, audit, and design-partner deployment support make the platform practical for real enterprise rollout.",
-          },
-        ],
-      }),
-      tableSection({
-        title: "Feature to outcome ladder",
-        description:
-          "Translate architecture depth into clear business outcomes without sacrificing technical precision.",
-        columns: ["Capability", "Buyer benefit", "Business outcome"],
-        rows: [
-          {
-            label: "Multi-vendor GPU scheduling",
-            values: [
-              "Avoid accelerator lock-in and use the best-value silicon for the job.",
-              "Reduce AI infrastructure cost versus NVIDIA-only procurement patterns.",
-            ],
-          },
-          {
-            label: "GPU checkpointing and sandboxing",
-            values: [
-              "Resume complex workloads safely and run autonomous workloads under tighter control.",
-              "Improve utilization while making agentic execution more production-ready.",
-            ],
-          },
-          {
-            label: "Built-in inference serving",
-            values: [
-              "Reach production inference sooner without stitching together multiple serving layers.",
-              "Accelerate time to business value for internal AI platform teams.",
-            ],
-          },
-        ],
-      }),
-      statsSection({
-        title: "Primary buying motions",
-        description:
-          "Sovereign HCI is positioned against AI infrastructure incumbents, not just generic private cloud products.",
-        items: [
-          {
-            label: "Primary comparison",
-            value: "NVIDIA AI Enterprise",
-            detail:
-              "The flagship displacement motion is multi-vendor control without the annual GPU tax.",
-          },
-          {
-            label: "Secondary comparison",
-            value: "Nutanix / VMware / OpenShift AI",
-            detail:
-              "The narrative emphasizes full-stack HCI plus serving and sandboxing, not software-only orchestration.",
-          },
-          {
-            label: "Best-fit buyers",
-            value: "CTO / ML platform / infra",
-            detail:
-              "Especially teams facing sovereignty, cost, or accelerator strategy constraints.",
-          },
-        ],
-      }),
-    ],
-    relatedLinks: [
-      relatedLink(
-        "Platform Technology",
-        "See the shared infrastructure story behind all three Neverinstall products.",
-        "/platform"
-      ),
-      relatedLink(
-        "AI Inference Platform",
-        "Explore the primary use case page for enterprise inference workloads.",
-        "/solutions/use-case/ai-inference-platform"
-      ),
-      relatedLink(
-        "Compare vs NVIDIA AI Enterprise",
-        "Review the core HCI displacement motion and TCO story.",
-        "/compare/vs-nvidia-ai-enterprise"
-      ),
-    ],
-    faq: [
-      {
-        question: "Is Sovereign HCI only for NVIDIA environments?",
-        answer:
-          "No. The product is explicitly positioned around multi-vendor orchestration across NVIDIA, AMD, and Intel so infrastructure teams can avoid single-vendor lock-in.",
-      },
-      {
-        question:
-          "Why does the site frame Sovereign HCI differently from legacy private cloud?",
-        answer:
-          "Because the product is no longer pitched as generic KubeVirt private cloud. It is positioned as a premium AI infrastructure platform with integrated orchestration, serving, and secure sandboxing.",
-      },
-      {
-        question:
-          "How does Sovereign HCI relate to the other Neverinstall products?",
-        answer:
-          "It is built on the same platform primitives as Secure Browser and DaaS, but it exposes the deepest technical layer and addresses a different buyer and budget tier.",
-      },
-    ],
-    bottomCtas: [demoCta, aiTcoCta, trustCta],
   },
 }

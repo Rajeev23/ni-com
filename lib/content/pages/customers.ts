@@ -19,7 +19,7 @@ export const customerStories: Record<string, CustomerStory> = {
     industry: "Financial Services",
     outcome: "41% faster onboarding for external users",
     summary:
-      "The customer needed to onboard contractors quickly while reducing endpoint trust. They deployed a browser-first motion with centralized data movement policies and expanded to controlled workspaces for high-risk roles.",
+      "The customer needed to onboard contractors quickly while reducing endpoint trust. They started with browser-based workspaces with centralized data movement policies and expanded to controlled desktop workspaces for high-risk roles.",
     highlights: [
       "Reduced contractor onboarding time from 10 days to under 6 days.",
       "Applied one policy model for downloads, clipboard, and session controls.",

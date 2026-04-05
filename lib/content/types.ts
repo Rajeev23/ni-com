@@ -92,6 +92,7 @@ export type PageTemplate =
   | "compare"
   | "platform"
   | "trust"
+  | "compliance"
 
 export type ContentPage = {
   name: string

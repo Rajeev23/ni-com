@@ -11,7 +11,7 @@ import { getBaseMetadata } from "@/lib/seo/metadata"
 export const metadata: Metadata = getBaseMetadata({
   title: "Products | Neverinstall",
   description:
-    "Explore Neverinstall secure browser, DaaS, and sovereign HCI products.",
+    "Explore Neverinstall Desktop Workspaces and Secure Browser Workspaces.",
   path: "/products",
 })
 
@@ -21,16 +21,16 @@ export default function ProductsIndexPage() {
       <HeroSection
         hero={{
           eyebrow: "Products",
-          title: "Three product surfaces. One platform underneath.",
+          title: "Two work modes. One platform underneath.",
           subtitle:
-            "Choose Secure Browser, DaaS, or Sovereign HCI based on the workload, buyer, and control requirement while keeping the shared platform story intact.",
+            "Choose Desktop Workspaces or Secure Browser Workspaces based on your workload, team, and control requirements — both run on the same platform.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "See the Platform", href: "/platform" },
         }}
       />
       <ResourceGrid
         title="Product portfolio"
-        description="Each product solves a different buyer problem while sharing one infrastructure and control model."
+        description="Each product addresses a different workload while sharing one infrastructure and control model."
         cards={Object.values(productPages).map((page) => ({
           title: page.name,
           description: page.summary,
@@ -38,8 +38,8 @@ export default function ProductsIndexPage() {
         }))}
       />
       <ResourceGrid
-        title="Why the platform page matters"
-        description="Use the platform route to explain the shared architecture without overloading every product page."
+        title="Shared platform architecture"
+        description="Learn how one control plane powers both Desktop Workspaces and Secure Browser Workspaces."
         cards={[
           {
             title: platformPage.name,

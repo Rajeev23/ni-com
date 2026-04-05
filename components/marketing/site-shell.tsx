@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import FooterSection from "@/components/footer"
-import Header from "@/components/header"
+import { HeroHeader as Header } from "@/components/header"
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   return (

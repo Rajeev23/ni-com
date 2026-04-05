@@ -23,9 +23,9 @@ export default function GetDemoPage() {
           eyebrow: "Get Demo",
           title: "Book a guided Neverinstall demo",
           subtitle:
-            "Share your use case, current stack, and rollout goals across Secure Browser, DaaS, or Sovereign HCI. We will tailor the walkthrough to the right product surface.",
+            "Share your use case, current stack, and rollout goals across Desktop Workspaces or Secure Browser Workspaces. We will tailor the walkthrough to the right work mode.",
           supportingCopy:
-            "One evaluation entry point for browser security, workspace modernization, and sovereign AI infrastructure discussions.",
+            "One conversation to cover browser security and workspace modernization.",
           primaryCta: { label: "Submit Request", href: "#demo-form" },
           secondaryCta: { label: "See Pricing", href: "/pricing" },
         }}
@@ -41,7 +41,6 @@ export default function GetDemoPage() {
         ctas={[
           { label: "Start Free Trial", href: "/signup" },
           { label: "Calculate TCO", href: "/tco-calculator" },
-          { label: "AI Infrastructure TCO", href: "/ai-tco-calculator" },
         ]}
       />
     </>

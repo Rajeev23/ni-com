@@ -10,7 +10,7 @@ import { getBaseMetadata } from "@/lib/seo/metadata"
 export const metadata: Metadata = getBaseMetadata({
   title: "About Neverinstall",
   description:
-    "Company story, leadership, and platform vision for sovereign enterprise computing.",
+    "Company story, leadership, and platform vision for secure enterprise workspaces.",
   path: "/company/about",
 })
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
           eyebrow: "Company",
           title: "Enterprise computing, re-architected",
           subtitle:
-            "Neverinstall helps organizations modernize secure access and AI infrastructure with a cloud-native platform built for control, speed, and sovereignty.",
+            "Neverinstall helps organizations modernize secure access with cloud-native desktops and browsers built for control, speed, and deployment flexibility.",
           supportingCopy:
             "Headquartered in Bengaluru with production-hardened platform infrastructure refined over five years.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
@@ -31,20 +31,20 @@ export default function AboutPage() {
       />
       <BlockGrid
         title="Our story"
-        description="From virtual desktop origins to a full secure enterprise platform spanning browser, workspaces, and sovereign AI infrastructure."
+        description="From virtual desktop origins to a full secure enterprise platform spanning browser and workspace delivery."
         blocks={[
           {
             title: "Built in production first",
             description:
-              "Our core scheduler, checkpointing, and policy model were shaped by years of real customer workloads before this platform narrative reached the market.",
+              "Our core scheduler, checkpointing, and policy model were shaped by years of real customer workloads before the platform launched publicly.",
           },
           {
-            title: "One platform, three products",
+            title: "One platform, two work modes",
             description:
-              "Secure Browser, DaaS, and Sovereign HCI are commercial surfaces built on one shared control plane.",
+              "Desktop Workspaces and Secure Browser Workspaces are two products built on one shared control plane.",
           },
           {
-            title: "Sovereignty as design principle",
+            title: "Control as design principle",
             description:
               "We design for regional control, regulated operations, and enterprise-grade auditability from day one.",
           },
@@ -52,7 +52,7 @@ export default function AboutPage() {
       />
       <BlockGrid
         title="Leadership"
-        description="Experienced operators across enterprise software, cloud platforms, and go-to-market execution."
+        description="Experienced operators across enterprise software, cloud platforms, and global sales."
         blocks={[
           {
             title: "Ram Pasala - CEO",
@@ -62,7 +62,7 @@ export default function AboutPage() {
           {
             title: "Lakshman Pasala - CTO",
             description:
-              "Drives platform architecture across security, workspace delivery, and sovereign infrastructure controls.",
+              "Drives platform architecture across security, workspace delivery, and deployment infrastructure.",
           },
           {
             title: "Ramesh Gopal Krishna - CRO",

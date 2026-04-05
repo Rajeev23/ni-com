@@ -39,7 +39,7 @@ export default function TwitterImage() {
         <p
           style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.12, margin: 0 }}
         >
-          Sovereign Enterprise Platform
+          Secure Enterprise Workspaces
         </p>
         <p
           style={{
@@ -50,7 +50,8 @@ export default function TwitterImage() {
             maxWidth: 930,
           }}
         >
-          Secure Browser, DaaS, and Sovereign HCI across one control plane.
+          Desktop Workspaces and Secure Browser Workspaces across one control
+          plane.
         </p>
       </div>
     </div>,
