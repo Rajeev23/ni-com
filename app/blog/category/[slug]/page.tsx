@@ -1,16 +1,48 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { notFound } from "next/navigation"
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { getPayload } from 'payload'
+import config from '@payload-config'
 
-import { blogCategories } from "@/lib/content/pages/blog-categories"
-import { getBaseMetadata } from "@/lib/seo/metadata"
+import { PageContainer } from '@/components/marketing/sections'
+import { BlogCard } from '@/components/blog/blog-card'
+import { getBaseMetadata } from '@/lib/seo/metadata'
 
-type Params = {
-  slug: string
+type Params = { slug: string }
+
+async function getCategory(slug: string) {
+  const payload = await getPayload({ config })
+  const result = await payload.find({
+    collection: 'categories',
+    where: { slug: { equals: slug } },
+    limit: 1,
+  })
+  return result.docs[0] || null
 }
 
-export function generateStaticParams() {
-  return Object.keys(blogCategories).map((slug) => ({ slug }))
+async function getCategoryPosts(categoryId: number | string) {
+  const payload = await getPayload({ config })
+  const result = await payload.find({
+    collection: 'posts',
+    where: {
+      category: { equals: categoryId },
+      status: { equals: 'published' },
+    },
+    sort: '-publishedAt',
+    depth: 1,
+    limit: 50,
+  })
+  return result.docs
+}
+
+export async function generateStaticParams() {
+  const payload = await getPayload({ config })
+  const categories = await payload.find({
+    collection: 'categories',
+    limit: 100,
+    select: { slug: true },
+  })
+  return categories.docs.map((cat) => ({ slug: cat.slug }))
 }
 
 export async function generateMetadata({
@@ -19,14 +51,12 @@ export async function generateMetadata({
   params: Promise<Params>
 }): Promise<Metadata> {
   const { slug } = await params
-  const category = blogCategories[slug]
-  if (!category) {
-    return {}
-  }
+  const category = await getCategory(slug)
+  if (!category) return {}
 
   return getBaseMetadata({
-    title: category.seo.title,
-    description: category.seo.description,
+    title: category.seo?.title || `${category.name} | Neverinstall Blog`,
+    description: category.seo?.description || category.description || '',
     path: `/blog/category/${slug}`,
   })
 }
@@ -37,40 +67,53 @@ export default async function BlogCategoryPage({
   params: Promise<Params>
 }) {
   const { slug } = await params
-  const category = blogCategories[slug]
-  if (!category) {
-    notFound()
-  }
+  const category = await getCategory(slug)
+  if (!category) notFound()
+
+  const posts = await getCategoryPosts(category.id)
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <p className="mb-3 text-sm font-medium tracking-widest text-neutral-500 uppercase">
-        Blog Category
-      </p>
-      <h1 className="mb-4 text-4xl font-bold tracking-tight text-neutral-900">
-        {category.name}
-      </h1>
-      <p className="mb-12 text-lg text-neutral-600">{category.description}</p>
+    <section className="py-14 md:py-20">
+      <PageContainer>
+        <div className="mx-auto max-w-4xl">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
+            <span>/</span>
+            <span>{category.name}</span>
+          </div>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            {category.name}
+          </h1>
+          {category.description && (
+            <p className="mt-3 text-lg text-muted-foreground">{category.description}</p>
+          )}
 
-      <section className="mb-12">
-        <h2 className="mb-4 text-xl font-semibold text-neutral-800">
-          Related resources
-        </h2>
-        <ul className="space-y-2">
-          {category.relatedPages.map((page) => (
-            <li key={page.href}>
-              <Link
-                href={page.href}
-                className="text-blue-600 underline-offset-2 hover:underline"
-              >
-                {page.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+          {posts.length > 0 ? (
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {posts.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+          ) : (
+            <p className="mt-10 text-sm text-muted-foreground">No posts in this category yet.</p>
+          )}
 
-      <p className="text-sm text-neutral-400">More content coming soon.</p>
-    </main>
+          {category.relatedPages && category.relatedPages.length > 0 && (
+            <div className="mt-14">
+              <h2 className="text-xl font-semibold">Related resources</h2>
+              <ul className="mt-4 space-y-2">
+                {category.relatedPages.map((page) => (
+                  <li key={page.href}>
+                    <Link href={page.href} className="text-primary underline-offset-2 hover:underline">
+                      {page.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </PageContainer>
+    </section>
   )
 }
