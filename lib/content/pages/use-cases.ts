@@ -590,8 +590,7 @@ export const useCasePages: Record<string, ContentPage> = {
           "Cloud workspaces are always available. There is no activation delay — users log in from any available device and their environment is ready. For organizations that keep standby workspaces pre-provisioned, the switch is immediate.",
       },
       {
-        question:
-          "Does this require maintaining a separate DR infrastructure?",
+        question: "Does this require maintaining a separate DR infrastructure?",
         answer:
           "No. Cloud workspaces serve as both the primary work environment and the continuity fallback. There is no duplicate hardware stack to procure, maintain, or test quarterly. The DR environment is the production environment.",
       },
@@ -607,8 +606,7 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/contractor-vendor-access",
     template: "useCase",
     seo: {
-      title:
-        "Secure Third-Party Contractor & Vendor Access | Neverinstall",
+      title: "Secure Third-Party Contractor & Vendor Access | Neverinstall",
       description:
         "Provision isolated, time-bound workspaces for contractors in minutes. Session recording, instant offboarding, zero endpoint trust. No hardware required.",
     },
@@ -735,7 +733,8 @@ export const useCasePages: Record<string, ContentPage> = {
           "The workspace and all associated access are revoked in seconds from a single control plane. There are no devices to recover, no VPN accounts to disable across systems, and no risk of residual access. The contractor's session data is retained for audit purposes but the access path is immediately closed.",
       },
       {
-        question: "Can we restrict what contractors can access within the session?",
+        question:
+          "Can we restrict what contractors can access within the session?",
         answer:
           "Yes. Policy controls are granular — you can restrict clipboard copy/paste, block downloads, limit which URLs and applications are accessible, and enforce session time limits. Each contractor group can have distinct policies based on the sensitivity of their work.",
       },
@@ -749,8 +748,7 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/secure-byod",
     template: "useCase",
     seo: {
-      title:
-        "Secure BYOD Access Without MDM or VPN | Neverinstall",
+      title: "Secure BYOD Access Without MDM or VPN | Neverinstall",
       description:
         "Enable BYOD without MDM enrollment or VPN. Enterprise data stays in the cloud session, never on the personal device. Policy controls at the session layer.",
     },
@@ -846,7 +844,8 @@ export const useCasePages: Record<string, ContentPage> = {
           "Secure Browser Workspaces cover the majority of BYOD use cases — SaaS, internal portals, customer systems, and web applications. When an employee on a personal device needs a full Windows or Linux desktop environment, that same user can be provisioned on Desktop Workspaces from the same platform.",
       },
       {
-        question: "Do employees have to install anything on their personal device?",
+        question:
+          "Do employees have to install anything on their personal device?",
         answer:
           "No. Access is through a standard web browser. There is no agent, no MDM profile, and no VPN client. This is what eliminates employee pushback — their personal device is never enrolled or modified.",
       },
@@ -996,8 +995,7 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/call-center-access",
     template: "useCase",
     seo: {
-      title:
-        "Secure Call Center & BPO Workspaces with DLP | Neverinstall",
+      title: "Secure Call Center & BPO Workspaces with DLP | Neverinstall",
       description:
         "Shift-based clean sessions for call center agents. Central DLP, instant scaling, no hardware refresh. Used by Tally Solutions on OCI in production.",
     },
@@ -1122,8 +1120,7 @@ export const useCasePages: Record<string, ContentPage> = {
           "Scaling is software-based, not hardware-based. Adding hundreds of agent seats takes hours, not the weeks required for hardware procurement and imaging. There is no practical ceiling — capacity scales with your cloud infrastructure allocation.",
       },
       {
-        question:
-          "What happens to session data when an agent's shift ends?",
+        question: "What happens to session data when an agent's shift ends?",
         answer:
           "Sessions reset cleanly between shifts. No data, credentials, browsing history, or application state carries over to the next agent. This eliminates the risk of data leakage between shifts without relying on manual cleanup procedures.",
       },
@@ -1270,8 +1267,7 @@ export const useCasePages: Record<string, ContentPage> = {
           "Yes. The platform architecture is deployment-agnostic. Customers can begin on a public cloud tenancy and migrate to on-prem or a different cloud provider without re-architecting the workspace layer.",
       },
       {
-        question:
-          "Which cloud providers and regions are supported?",
+        question: "Which cloud providers and regions are supported?",
         answer:
           "Neverinstall deploys on AWS, Azure, GCP, and OCI in any region those providers offer, as well as on private cloud and on-prem infrastructure including co-location facilities and air-gapped environments. Indovance runs on Yotta/OCI infrastructure in India. The deployment region is your choice.",
       },

@@ -443,8 +443,7 @@ export const trustPages: Record<string, ContentPage> = {
     path: "/security/policies-legal-documents",
     template: "trust",
     seo: {
-      title:
-        "Policies & Legal Documents: DPA, Privacy & Terms | Neverinstall",
+      title: "Policies & Legal Documents: DPA, Privacy & Terms | Neverinstall",
       description:
         "Access privacy policies, DPAs, security reports, and legal terms. Request sensitive trust documents through our security contact page.",
     },
@@ -688,8 +687,7 @@ export const trustPages: Record<string, ContentPage> = {
     path: "/security/security-contact",
     template: "trust",
     seo: {
-      title:
-        "Security Contact: Trust Reviews & Disclosure | Neverinstall",
+      title: "Security Contact: Trust Reviews & Disclosure | Neverinstall",
       description:
         "Request security questionnaire support, trust documentation, or report responsible disclosures. Reach our security team directly.",
     },
@@ -860,8 +858,7 @@ export const trustPages: Record<string, ContentPage> = {
     path: "/security/terms-conditions",
     template: "trust",
     seo: {
-      title:
-        "Terms & Conditions: Service Usage & Legal Terms | Neverinstall",
+      title: "Terms & Conditions: Service Usage & Legal Terms | Neverinstall",
       description:
         "Review service terms, acceptable use policies, and legal context for procurement. Contact us with deeper questions through the security contact page.",
     },

@@ -63,50 +63,53 @@ payload.config.ts                 ← Root Payload config
 
 ### Posts Collection
 
-| Field | Type | Notes |
-|-------|------|-------|
-| title | text | Required |
-| slug | text | Auto-generated from title, unique, indexed |
-| description | textarea | Short summary for cards and SEO meta |
-| coverImage | upload → Media | Featured image |
-| category | relationship → Categories | Single select |
-| author | relationship → Authors | Single select |
-| publishedAt | date | Controls display date, used for sort order |
-| status | select: draft / published | Only published posts visible on frontend |
-| content | blocks[] | Ordered array of content blocks (see Blocks section) |
-| seo.title | text | Optional override for `<title>` tag |
-| seo.description | textarea | Optional override for meta description |
+| Field           | Type                      | Notes                                                |
+| --------------- | ------------------------- | ---------------------------------------------------- |
+| title           | text                      | Required                                             |
+| slug            | text                      | Auto-generated from title, unique, indexed           |
+| description     | textarea                  | Short summary for cards and SEO meta                 |
+| coverImage      | upload → Media            | Featured image                                       |
+| category        | relationship → Categories | Single select                                        |
+| author          | relationship → Authors    | Single select                                        |
+| publishedAt     | date                      | Controls display date, used for sort order           |
+| status          | select: draft / published | Only published posts visible on frontend             |
+| content         | blocks[]                  | Ordered array of content blocks (see Blocks section) |
+| seo.title       | text                      | Optional override for `<title>` tag                  |
+| seo.description | textarea                  | Optional override for meta description               |
 
 **Hooks:**
+
 - `beforeChange`: auto-generate slug from title if not manually set
 - `beforeChange`: auto-calculate `readTime` from block content length
 
 **Access control:**
+
 - Public read (where status = published)
 - Authenticated create/update/delete
 
 ### Categories Collection
 
-| Field | Type | Notes |
-|-------|------|-------|
-| name | text | Required, e.g. "VDI Modernization" |
-| slug | text | Auto-generated from name, unique |
-| description | textarea | Category description |
-| seo.title | text | SEO title for category page |
-| seo.description | textarea | SEO description for category page |
-| relatedPages | array | Array of { title: text, href: text } |
+| Field           | Type     | Notes                                |
+| --------------- | -------- | ------------------------------------ |
+| name            | text     | Required, e.g. "VDI Modernization"   |
+| slug            | text     | Auto-generated from name, unique     |
+| description     | textarea | Category description                 |
+| seo.title       | text     | SEO title for category page          |
+| seo.description | textarea | SEO description for category page    |
+| relatedPages    | array    | Array of { title: text, href: text } |
 
 ### Authors Collection
 
-| Field | Type | Notes |
-|-------|------|-------|
-| name | text | Required, display name |
-| role | text | e.g. "Head of Product" |
-| avatar | upload → Media | Profile image |
+| Field  | Type           | Notes                  |
+| ------ | -------------- | ---------------------- |
+| name   | text           | Required, display name |
+| role   | text           | e.g. "Head of Product" |
+| avatar | upload → Media | Profile image          |
 
 ### Media Collection
 
 Payload's built-in upload collection, configured with:
+
 - Storage: local disk (can migrate to R2 later via Payload cloud storage plugin)
 - Alt text: required field
 - Image sizes: thumbnail (400w), card (800w), hero (1600w) auto-generated
@@ -116,39 +119,48 @@ Payload's built-in upload collection, configured with:
 Each block has a Payload field schema (defines editor UI) and a React component (defines frontend rendering).
 
 ### RichText
+
 - **Editor fields:** Lexical rich text editor (Payload default) — headings (h2-h4), bold, italic, links, ordered/unordered lists, inline images
 - **Renders as:** Prose-styled HTML with Tailwind typography classes
 - **Primary block** — most post content lives here
 
 ### Callout
+
 - **Editor fields:** type (select: info / warning / tip / note), body (textarea)
 - **Renders as:** Colored box with icon — blue/info, amber/warning, green/tip, gray/note
 
 ### ComparisonTable
+
 - **Editor fields:** columns (array of 3 text fields), rows (array of { label, value1, value2 })
 - **Renders as:** Reuses existing `TableSection` styles from `components/marketing/sections.tsx`
 
 ### StatHighlight
+
 - **Editor fields:** title (text), items (array of { label, value, detail })
 - **Renders as:** Reuses existing `StatsSection` styles from `components/marketing/sections.tsx`
 
 ### ImageBlock
+
 - **Editor fields:** image (upload → Media), caption (text, optional), fullWidth (checkbox)
 - **Renders as:** Responsive `<figure>` with `<figcaption>`, max-width constrained unless fullWidth
 
 ### CodeBlock
+
 - **Editor fields:** language (select: common languages), code (code textarea)
 - **Renders as:** Syntax-highlighted `<pre>` block with language badge
 
 ### CtaCard
+
 - **Editor fields:** heading (text), description (textarea), buttonLabel (text), buttonHref (text)
 - **Renders as:** Styled card with button, consistent with site CTA patterns
 
 ### EmbedBlock
+
 - **Editor fields:** url (text), caption (text, optional)
 - **Renders as:** Responsive iframe (YouTube, Loom auto-detected), fallback link for unsupported URLs
 
 ### QuoteBlock
+
 - **Editor fields:** quote (textarea), attribution (text), role (text, optional)
 - **Renders as:** Styled blockquote with attribution line
 
@@ -159,9 +171,9 @@ Each block has a Payload field schema (defines editor UI) and a React component 
 ```tsx
 // Queries Payload for published posts, ordered by publishedAt desc
 const posts = await payload.find({
-  collection: 'posts',
-  where: { status: { equals: 'published' } },
-  sort: '-publishedAt',
+  collection: "posts",
+  where: { status: { equals: "published" } },
+  sort: "-publishedAt",
   limit: 20,
   depth: 1, // populates category and author
 })
@@ -173,10 +185,10 @@ Renders using existing `HeroSection` + `ResourceGrid` pattern. Cards built from 
 
 ```tsx
 const result = await payload.find({
-  collection: 'posts',
+  collection: "posts",
   where: {
     slug: { equals: slug },
-    status: { equals: 'published' },
+    status: { equals: "published" },
   },
   depth: 2,
 })
@@ -214,15 +226,15 @@ Blog post metadata uses `post.seo.title ?? post.title` and `post.seo.description
 
 ```ts
 // payload.config.ts (simplified)
-import { buildConfig } from 'payload'
-import { postgresAdapter } from '@payloadcms/db-postgres'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import { Posts, Categories, Authors, Media } from './collections'
+import { buildConfig } from "payload"
+import { postgresAdapter } from "@payloadcms/db-postgres"
+import { lexicalEditor } from "@payloadcms/richtext-lexical"
+import { Posts, Categories, Authors, Media } from "./collections"
 
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET,
   admin: {
-    user: 'users', // Payload's built-in users collection for admin auth
+    user: "users", // Payload's built-in users collection for admin auth
   },
   collections: [Posts, Categories, Authors, Media],
   editor: lexicalEditor(),
@@ -230,7 +242,7 @@ export default buildConfig({
     pool: { connectionString: process.env.DATABASE_URI },
   }),
   typescript: {
-    outputFile: 'payload-types.ts', // auto-generated types
+    outputFile: "payload-types.ts", // auto-generated types
   },
 })
 ```
@@ -267,6 +279,7 @@ sharp                            — image processing (required by Payload for m
 ## Migration of Existing Blog Content
 
 The 3 existing blog posts in `blog.ts` and 6 categories in `blog-categories.ts` will be seeded into Payload via a seed script (`lib/seed.ts`). After seeding is verified:
+
 - `lib/content/pages/blog.ts` — deleted
 - `lib/content/pages/blog-categories.ts` — deleted
 - `blogCards` export in `site.ts` — removed or replaced with a server-side Payload query helper

@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig } from "payload"
 
 import {
   RichTextBlock,
@@ -10,27 +10,28 @@ import {
   CtaCardBlock,
   EmbedBlock,
   QuoteBlock,
-} from '../blocks'
+} from "../blocks"
 
 export const Posts: CollectionConfig = {
-  slug: 'posts',
+  slug: "posts",
   admin: {
-    useAsTitle: 'title',
-    defaultColumns: ['title', 'category', 'status', 'publishedAt'],
+    useAsTitle: "title",
+    defaultColumns: ["title", "category", "status", "publishedAt"],
   },
   access: {
     read: () => true,
   },
   fields: [
-    { name: 'title', type: 'text', required: true },
+    { name: "title", type: "text", required: true },
     {
-      name: 'slug',
-      type: 'text',
+      name: "slug",
+      type: "text",
       required: true,
       unique: true,
       index: true,
       admin: {
-        description: 'URL-friendly identifier. Auto-generated from title if left blank.',
+        description:
+          "URL-friendly identifier. Auto-generated from title if left blank.",
       },
       hooks: {
         beforeValidate: [
@@ -38,8 +39,8 @@ export const Posts: CollectionConfig = {
             if (!value && siblingData?.title) {
               return siblingData.title
                 .toLowerCase()
-                .replace(/[^a-z0-9]+/g, '-')
-                .replace(/(^-|-$)/g, '')
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/(^-|-$)/g, "")
             }
             return value
           },
@@ -47,34 +48,36 @@ export const Posts: CollectionConfig = {
       },
     },
     {
-      name: 'description',
-      type: 'textarea',
+      name: "description",
+      type: "textarea",
       required: true,
-      admin: { description: 'Short summary shown on blog cards and in SEO meta.' },
-    },
-    { name: 'coverImage', type: 'upload', relationTo: 'media' },
-    { name: 'category', type: 'relationship', relationTo: 'categories' },
-    { name: 'author', type: 'relationship', relationTo: 'authors' },
-    {
-      name: 'publishedAt',
-      type: 'date',
       admin: {
-        date: { pickerAppearance: 'dayOnly', displayFormat: 'MMM d, yyyy' },
+        description: "Short summary shown on blog cards and in SEO meta.",
+      },
+    },
+    { name: "coverImage", type: "upload", relationTo: "media" },
+    { name: "category", type: "relationship", relationTo: "categories" },
+    { name: "author", type: "relationship", relationTo: "authors" },
+    {
+      name: "publishedAt",
+      type: "date",
+      admin: {
+        date: { pickerAppearance: "dayOnly", displayFormat: "MMM d, yyyy" },
       },
     },
     {
-      name: 'status',
-      type: 'select',
-      defaultValue: 'draft',
+      name: "status",
+      type: "select",
+      defaultValue: "draft",
       options: [
-        { label: 'Draft', value: 'draft' },
-        { label: 'Published', value: 'published' },
+        { label: "Draft", value: "draft" },
+        { label: "Published", value: "published" },
       ],
       required: true,
     },
     {
-      name: 'content',
-      type: 'blocks',
+      name: "content",
+      type: "blocks",
       blocks: [
         RichTextBlock,
         CalloutBlock,
@@ -88,11 +91,23 @@ export const Posts: CollectionConfig = {
       ],
     },
     {
-      name: 'seo',
-      type: 'group',
+      name: "seo",
+      type: "group",
       fields: [
-        { name: 'title', type: 'text', admin: { description: 'Optional. Overrides post title in <title> tag.' } },
-        { name: 'description', type: 'textarea', admin: { description: 'Optional. Overrides post description in meta tag.' } },
+        {
+          name: "title",
+          type: "text",
+          admin: {
+            description: "Optional. Overrides post title in <title> tag.",
+          },
+        },
+        {
+          name: "description",
+          type: "textarea",
+          admin: {
+            description: "Optional. Overrides post description in meta tag.",
+          },
+        },
       ],
     },
   ],

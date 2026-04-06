@@ -1,19 +1,19 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import type { Metadata } from "next"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { getPayload } from "payload"
+import config from "@payload-config"
 
-import { PageContainer } from '@/components/marketing/sections'
-import { BlogCard } from '@/components/blog/blog-card'
-import { getBaseMetadata } from '@/lib/seo/metadata'
+import { PageContainer } from "@/components/marketing/sections"
+import { BlogCard } from "@/components/blog/blog-card"
+import { getBaseMetadata } from "@/lib/seo/metadata"
 
 type Params = { slug: string }
 
 async function getCategory(slug: string) {
   const payload = await getPayload({ config })
   const result = await payload.find({
-    collection: 'categories',
+    collection: "categories",
     where: { slug: { equals: slug } },
     limit: 1,
   })
@@ -23,12 +23,12 @@ async function getCategory(slug: string) {
 async function getCategoryPosts(categoryId: number | string) {
   const payload = await getPayload({ config })
   const result = await payload.find({
-    collection: 'posts',
+    collection: "posts",
     where: {
       category: { equals: categoryId },
-      status: { equals: 'published' },
+      status: { equals: "published" },
     },
-    sort: '-publishedAt',
+    sort: "-publishedAt",
     depth: 1,
     limit: 50,
   })
@@ -38,7 +38,7 @@ async function getCategoryPosts(categoryId: number | string) {
 export async function generateStaticParams() {
   const payload = await getPayload({ config })
   const categories = await payload.find({
-    collection: 'categories',
+    collection: "categories",
     limit: 100,
     select: { slug: true },
   })
@@ -56,7 +56,7 @@ export async function generateMetadata({
 
   return getBaseMetadata({
     title: category.seo?.title || `${category.name} | Neverinstall Blog`,
-    description: category.seo?.description || category.description || '',
+    description: category.seo?.description || category.description || "",
     path: `/blog/category/${slug}`,
   })
 }
@@ -77,7 +77,9 @@ export default async function BlogCategoryPage({
       <PageContainer>
         <div className="mx-auto max-w-4xl">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link href="/blog" className="hover:text-foreground">Blog</Link>
+            <Link href="/blog" className="hover:text-foreground">
+              Blog
+            </Link>
             <span>/</span>
             <span>{category.name}</span>
           </div>
@@ -85,7 +87,9 @@ export default async function BlogCategoryPage({
             {category.name}
           </h1>
           {category.description && (
-            <p className="mt-3 text-lg text-muted-foreground">{category.description}</p>
+            <p className="mt-3 text-lg text-muted-foreground">
+              {category.description}
+            </p>
           )}
 
           {posts.length > 0 ? (
@@ -95,7 +99,9 @@ export default async function BlogCategoryPage({
               ))}
             </div>
           ) : (
-            <p className="mt-10 text-sm text-muted-foreground">No posts in this category yet.</p>
+            <p className="mt-10 text-sm text-muted-foreground">
+              No posts in this category yet.
+            </p>
           )}
 
           {category.relatedPages && category.relatedPages.length > 0 && (
@@ -104,7 +110,10 @@ export default async function BlogCategoryPage({
               <ul className="mt-4 space-y-2">
                 {category.relatedPages.map((page) => (
                   <li key={page.href}>
-                    <Link href={page.href} className="text-primary underline-offset-2 hover:underline">
+                    <Link
+                      href={page.href}
+                      className="text-primary underline-offset-2 hover:underline"
+                    >
                       {page.title}
                     </Link>
                   </li>

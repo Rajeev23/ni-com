@@ -170,8 +170,7 @@ export const compliancePages: Record<string, ContentPage> = {
     path: "/compliance/hipaa",
     template: "compliance",
     seo: {
-      title:
-        "HIPAA Compliant Virtual Desktop & Secure Browser | Neverinstall",
+      title: "HIPAA Compliant Virtual Desktop & Secure Browser | Neverinstall",
       description:
         "Protect ePHI with session isolation, DLP controls, and audit trails. BAA available. Deploy on managed cloud, your cloud, or on-prem.",
     },
@@ -608,8 +607,7 @@ export const compliancePages: Record<string, ContentPage> = {
     path: "/compliance/rbi-data-localization",
     template: "compliance",
     seo: {
-      title:
-        "RBI Data Localization Compliant Virtual Desktop | Neverinstall",
+      title: "RBI Data Localization Compliant Virtual Desktop | Neverinstall",
       description:
         "Keep payment data in India with sovereign on-prem or in-country cloud deployment. Session isolation and audit logs for RBI compliance.",
     },

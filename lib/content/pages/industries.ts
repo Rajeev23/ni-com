@@ -71,7 +71,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Desktop Workspaces for operations teams, Browser Workspaces for vendors",
+        title:
+          "Desktop Workspaces for operations teams, Browser Workspaces for vendors",
         description:
           "Trading desks and operations floors need persistent desktops with full application stacks. Third-party processors and audit firms need controlled browser access with no local data footprint.",
         columns: 2,
@@ -228,7 +229,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Developer desktops for delivery teams, browser access for contractors",
+        title:
+          "Developer desktops for delivery teams, browser access for contractors",
         description:
           "Core engineering teams need full development environments with GPU and build tooling. Short-term contractors and client-side collaborators need controlled access without a device relationship.",
         columns: 2,
@@ -239,7 +241,8 @@ export const industryPages: Record<string, ContentPage> = {
               "Golden-image desktops pre-loaded with client-specific IDEs, SDKs, container runtimes, and VPN configurations. Spin up 50 identical environments for a new engagement in one API call. Developers get consistent builds, IT gets centralized patching, and project managers get instant ramp-up without procurement tickets.",
           },
           {
-            title: "Secure Browser Workspaces for contractors and offshore teams",
+            title:
+              "Secure Browser Workspaces for contractors and offshore teams",
             description:
               "Browser-only access for subcontracted developers, QA testers, and client reviewers. Code never leaves the workspace — clipboard, download, and screen-capture restrictions enforce client IP boundaries. No agent install on contractor devices, no MDM enrollment, no laptop shipping. 70-80% lower cost per seat than provisioning a full desktop.",
           },
@@ -366,7 +369,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Non-persistent desktops for agents, browser access for supervisors",
+        title:
+          "Non-persistent desktops for agents, browser access for supervisors",
         description:
           "Agents running CRM, telephony, and client applications need full desktop sessions with clean shift resets. Supervisors and QA teams monitoring dashboards need lightweight browser access.",
         columns: 2,
@@ -496,7 +500,8 @@ export const industryPages: Record<string, ContentPage> = {
         "A nurse logs in at three workstations per shift. PHI should never persist on any of them.",
       subtitle:
         "Healthcare runs on shared terminals, roaming clinicians, and legacy EHR systems that were never designed for modern endpoint diversity. Neverinstall delivers HIPAA-compliant virtual desktops where PHI stays inside the workspace boundary — not on the shared COW, the nurse station terminal, or the physician's personal tablet.",
-      metric: "Zero PHI on endpoints, sub-second session restore for care continuity",
+      metric:
+        "Zero PHI on endpoints, sub-second session restore for care continuity",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
@@ -516,7 +521,8 @@ export const industryPages: Record<string, ContentPage> = {
               "Nurses, physicians, and allied health staff share COWs (computers on wheels), nurse station terminals, and exam room PCs across shifts. Cached EHR sessions, browser credentials, and clipboard data from the previous user create HIPAA violations that endpoint management tools cannot prevent at clinical pace.",
           },
           {
-            title: "HIPAA Security Rule demands technical safeguards at every access point",
+            title:
+              "HIPAA Security Rule demands technical safeguards at every access point",
             description:
               "The Security Rule requires unique user identification, automatic logoff, encryption, and audit controls for ePHI access. When clinicians access Epic, Cerner, or Meditech from shared devices and personal tablets, every access point becomes a compliance surface that IT must monitor and control.",
           },
@@ -528,7 +534,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Clinical desktops for care teams, browser access for administrative staff",
+        title:
+          "Clinical desktops for care teams, browser access for administrative staff",
         description:
           "Clinicians running EHR thick clients and diagnostic imaging need full desktop sessions with instant roaming. Administrative staff, telehealth coordinators, and billing teams need controlled browser access to web-based portals.",
         columns: 2,
@@ -539,7 +546,8 @@ export const industryPages: Record<string, ContentPage> = {
               "Non-persistent desktop sessions for physicians, nurses, and allied health staff accessing Epic, Cerner, Meditech, or PACS imaging systems. Each login provisions a fresh session with the clinician's profile and application state. When they walk to the next workstation, the session follows. When they log off, PHI is destroyed from the endpoint. Sub-second restore keeps clinical workflows running through infrastructure events.",
           },
           {
-            title: "Secure Browser Workspaces for administration and telehealth",
+            title:
+              "Secure Browser Workspaces for administration and telehealth",
             description:
               "Browser-only access for billing specialists, medical coders, telehealth coordinators, and contract staff accessing web-based patient portals, scheduling systems, and claims management platforms. No PHI on the local device, clipboard and download restrictions enforced by policy, and full session recording for HIPAA audit evidence. 70-80% lower cost than provisioning a full clinical desktop for administrative users.",
           },
@@ -643,7 +651,8 @@ export const industryPages: Record<string, ContentPage> = {
           "Government and defense procurement has hard technical requirements around data sovereignty, operational independence, and supply chain risk that generic DaaS vendors cannot meet.",
         blocks: [
           {
-            title: "Data sovereignty under FISMA, ITAR, and national security directives",
+            title:
+              "Data sovereignty under FISMA, ITAR, and national security directives",
             description:
               "FISMA requires that federal information systems operate within authorized boundaries. ITAR prohibits foreign access to defense articles. National security directives mandate jurisdictional control over classified workloads. Any workspace platform that routes data through shared commercial infrastructure fails these requirements at the architecture level.",
           },
@@ -660,7 +669,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Analyst desktops and inter-agency browser access on sovereign infrastructure",
+        title:
+          "Analyst desktops and inter-agency browser access on sovereign infrastructure",
         description:
           "Agency analysts running classified applications need full desktop sessions. Contractors, inter-agency partners, and temporary staff need controlled browser access — all deployed inside your security boundary.",
         columns: 2,
@@ -671,7 +681,8 @@ export const industryPages: Record<string, ContentPage> = {
               "Full desktop environments for intelligence analysts, program managers, and operations staff running thick-client applications, GIS tools, and data analysis platforms. Centralized policy enforcement, session recording for insider threat programs, and sub-second restore for operational continuity. Deployed entirely on-premises or in AWS GovCloud / Azure Government with no data egress to vendor infrastructure.",
           },
           {
-            title: "Secure Browser Workspaces for contractors and inter-agency access",
+            title:
+              "Secure Browser Workspaces for contractors and inter-agency access",
             description:
               "Browser-only access for defense contractors, inter-agency collaborators, and temporary personnel who need controlled entry to specific web applications without a full desktop footprint. No agent on contractor devices, enforced DLP controls, and complete session audit trails — all running on the same sovereign infrastructure as full desktops.",
           },
@@ -751,8 +762,7 @@ export const industryPages: Record<string, ContentPage> = {
           "Yes. The entire Neverinstall platform — control plane, session orchestration, and data plane — runs inside your physical infrastructure boundary with no external connectivity requirements. There is no license call-home, no telemetry egress, and no update dependency on internet-connected servers. The architecture is designed for SCIF, compartmented facility, and air-gapped enclave deployment.",
       },
       {
-        question:
-          "What is Neverinstall's FedRAMP status?",
+        question: "What is Neverinstall's FedRAMP status?",
         answer:
           "FedRAMP authorization is on the Neverinstall product roadmap. The platform architecture already aligns to NIST 800-53 control families required for FedRAMP — including access control (AC), audit and accountability (AU), system and communications protection (SC), and system and information integrity (SI). For current deployments, agencies can assess the platform within their own ATO boundary using on-premises or GovCloud deployment.",
       },
@@ -806,19 +816,22 @@ export const industryPages: Record<string, ContentPage> = {
               "CAD and PLM applications require GPU-accelerated hardware that costs $3,000-8,000 per workstation. Engineers at remote plants, home offices, or partner sites cannot access design tools without shipping expensive hardware or accepting degraded performance over VPN.",
           },
           {
-            title: "Design IP and process data exposure across partner networks",
+            title:
+              "Design IP and process data exposure across partner networks",
             description:
               "Supply chain partners, contract manufacturers, and maintenance vendors need access to engineering drawings, BOMs, and process specifications — but every file shared outside your network is IP that can be copied, forwarded, or stored on unmanaged devices. ITAR-controlled designs add export compliance risk to every external access point.",
           },
           {
-            title: "Citrix licensing costs scale faster than engineering headcount",
+            title:
+              "Citrix licensing costs scale faster than engineering headcount",
             description:
               "Legacy Citrix environments require per-user licensing, StoreFront infrastructure, GPU pass-through configuration, and dedicated admin teams. At 500+ engineering seats across multiple plants, the total cost of Citrix ownership exceeds the cost of the engineering workstations it was supposed to replace.",
           },
         ],
       }),
       gridSection({
-        title: "GPU desktops for engineers, browser access for supply chain partners",
+        title:
+          "GPU desktops for engineers, browser access for supply chain partners",
         description:
           "Engineering teams running SolidWorks and Siemens NX need full GPU-accelerated desktops. Supply chain partners reviewing drawings and BOMs need controlled browser access with zero local data footprint.",
         columns: 2,
@@ -836,7 +849,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Deployment models for plant environments and OT network isolation",
+        title:
+          "Deployment models for plant environments and OT network isolation",
         description:
           "Manufacturing data residency requirements range from corporate cloud policies to plant-level OT network isolation and ITAR export control. Neverinstall supports every model.",
         columns: 3,
@@ -959,12 +973,14 @@ export const industryPages: Record<string, ContentPage> = {
           "Education institutions face FERPA compliance obligations, massive BYOD populations, and shrinking IT budgets — a combination that makes traditional endpoint management and physical computer labs unsustainable.",
         blocks: [
           {
-            title: "BYOD students on unmanaged devices defeat endpoint security",
+            title:
+              "BYOD students on unmanaged devices defeat endpoint security",
             description:
               "Students access SIS portals, LMS platforms, and research databases from personal Chromebooks, iPads, Windows laptops, and phones. MDM enrollment is impractical for student-owned devices. Every unmanaged access point is a FERPA exposure surface where student education records can be cached, screenshotted, or stored on devices IT does not control.",
           },
           {
-            title: "Physical computer labs cost $500K+ per refresh and sit empty most of the day",
+            title:
+              "Physical computer labs cost $500K+ per refresh and sit empty most of the day",
             description:
               "A 50-seat computer lab with licensed engineering or creative software costs $250,000-500,000 per hardware refresh cycle. Labs run at peak utilization only during class hours and finals week — the rest of the time, the investment sits idle. Students who need lab software outside class hours have no access.",
           },
@@ -976,7 +992,8 @@ export const industryPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Virtual labs for students, persistent desktops for faculty and researchers",
+        title:
+          "Virtual labs for students, persistent desktops for faculty and researchers",
         description:
           "Students need browser-based access to lab software on any device without installation. Faculty and graduate researchers need persistent desktop environments with licensed tools and research data access.",
         columns: 2,
@@ -987,14 +1004,16 @@ export const industryPages: Record<string, ContentPage> = {
               "Students access MATLAB, Adobe Creative Suite, AutoCAD, SPSS, and specialized courseware through a browser session — from Chromebooks, personal laptops, iPads, or library terminals. No software installation on student devices, no license management per device, and no MDM enrollment. Non-persistent sessions reset between students so no academic records, research data, or login credentials persist on shared or personal devices. 70-80% lower cost per student than provisioning full virtual desktops.",
           },
           {
-            title: "Desktop Workspaces for faculty, staff, and graduate researchers",
+            title:
+              "Desktop Workspaces for faculty, staff, and graduate researchers",
             description:
               "Persistent desktop environments for professors running statistical analysis packages, graduate researchers accessing IRB-approved datasets, and IT staff managing campus systems. Licensed software (SAS, Stata, NVivo, specialized research tools) is available from any campus, home, or conference location. Research data and student records stay inside the workspace boundary — faculty can work from any device without transferring sensitive files to personal laptops.",
           },
         ],
       }),
       gridSection({
-        title: "Why Neverinstall fits the education budget and compliance model",
+        title:
+          "Why Neverinstall fits the education budget and compliance model",
         description:
           "Education institutions evaluate on cost per student, FERPA compliance posture, speed to deploy before the next semester, and ability to work with the devices students already own.",
         columns: 4,

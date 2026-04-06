@@ -413,8 +413,8 @@ export function WhyNow() {
             Enterprise work delivery is broken.
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Three compounding forces are driving the largest shift in
-            enterprise desktop infrastructure in a decade.
+            Three compounding forces are driving the largest shift in enterprise
+            desktop infrastructure in a decade.
           </p>
         </FadeUp>
 

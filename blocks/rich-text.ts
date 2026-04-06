@@ -1,12 +1,12 @@
-import type { Block } from 'payload'
+import type { Block } from "payload"
 
 export const RichTextBlock: Block = {
-  slug: 'richText',
-  interfaceName: 'RichTextBlock',
+  slug: "richText",
+  interfaceName: "RichTextBlock",
   fields: [
     {
-      name: 'content',
-      type: 'richText',
+      name: "content",
+      type: "richText",
       required: true,
     },
   ],

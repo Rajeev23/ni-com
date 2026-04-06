@@ -1,4 +1,4 @@
-import { withPayload } from '@payloadcms/next/withPayload'
+import { withPayload } from "@payloadcms/next/withPayload"
 
 /** @type {import('next').NextConfig} */
 const cloudflareImageHost = process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGE_HOSTNAME

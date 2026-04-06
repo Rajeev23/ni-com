@@ -1,22 +1,22 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { getPayload } from "payload"
+import config from "@payload-config"
 
-import { CtaBand, PageContainer } from '@/components/marketing/sections'
-import { BlogHero } from '@/components/blog/blog-hero'
-import { BlockRenderer } from '@/components/blog/block-renderer'
-import { getBaseMetadata } from '@/lib/seo/metadata'
+import { CtaBand, PageContainer } from "@/components/marketing/sections"
+import { BlogHero } from "@/components/blog/blog-hero"
+import { BlockRenderer } from "@/components/blog/block-renderer"
+import { getBaseMetadata } from "@/lib/seo/metadata"
 
 type Params = { slug: string }
 
 async function getPost(slug: string) {
   const payload = await getPayload({ config })
   const result = await payload.find({
-    collection: 'posts',
+    collection: "posts",
     where: {
       slug: { equals: slug },
-      status: { equals: 'published' },
+      status: { equals: "published" },
     },
     depth: 2,
     limit: 1,
@@ -27,8 +27,8 @@ async function getPost(slug: string) {
 export async function generateStaticParams() {
   const payload = await getPayload({ config })
   const posts = await payload.find({
-    collection: 'posts',
-    where: { status: { equals: 'published' } },
+    collection: "posts",
+    where: { status: { equals: "published" } },
     limit: 1000,
     select: { slug: true },
   })
@@ -74,9 +74,9 @@ export default async function BlogPostPage({
       </section>
       <CtaBand
         ctas={[
-          { label: 'Get a Demo', href: '/get-demo' },
-          { label: 'Compare Alternatives', href: '/compare' },
-          { label: 'Explore Resources', href: '/resources' },
+          { label: "Get a Demo", href: "/get-demo" },
+          { label: "Compare Alternatives", href: "/compare" },
+          { label: "Explore Resources", href: "/resources" },
         ]}
       />
     </>

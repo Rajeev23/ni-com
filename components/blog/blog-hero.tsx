@@ -1,7 +1,7 @@
-import type { Post, Media, Author, Category } from '@/payload-types'
-import Image from 'next/image'
-import Link from 'next/link'
-import { PageContainer } from '@/components/marketing/sections'
+import type { Post, Media, Author, Category } from "@/payload-types"
+import Image from "next/image"
+import Link from "next/link"
+import { PageContainer } from "@/components/marketing/sections"
 
 export function BlogHero({ post }: { post: Post }) {
   const author = post.author as Author | null | undefined
@@ -9,10 +9,10 @@ export function BlogHero({ post }: { post: Post }) {
   const cover = post.coverImage as Media | null | undefined
 
   const publishedDate = post.publishedAt
-    ? new Date(post.publishedAt).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+    ? new Date(post.publishedAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
       })
     : null
 
@@ -21,11 +21,16 @@ export function BlogHero({ post }: { post: Post }) {
       <PageContainer>
         <div className="mx-auto max-w-3xl space-y-6">
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <Link href="/blog" className="hover:text-foreground">Blog</Link>
+            <Link href="/blog" className="hover:text-foreground">
+              Blog
+            </Link>
             {category && (
               <>
                 <span>/</span>
-                <Link href={`/blog/category/${category.slug}`} className="hover:text-foreground">
+                <Link
+                  href={`/blog/category/${category.slug}`}
+                  className="hover:text-foreground"
+                >
                   {category.name}
                 </Link>
               </>
@@ -40,7 +45,7 @@ export function BlogHero({ post }: { post: Post }) {
             {author && publishedDate && <span>·</span>}
             {publishedDate && <span>{publishedDate}</span>}
           </div>
-          {cover && typeof cover !== 'number' && cover.url && (
+          {cover && typeof cover !== "number" && cover.url && (
             <Image
               src={cover.url}
               alt={cover.alt}
