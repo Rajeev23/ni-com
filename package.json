@@ -10,7 +10,8 @@
     "lint": "oxlint .",
     "format": "oxfmt .",
     "typecheck": "tsc --noEmit",
-    "seed": "node --env-file=.env.local --import=tsx/esm lib/seed.ts"
+    "seed": "node --env-file=.env.local --import=tsx/esm lib/seed.ts",
+    "prepare": "husky"
   },
   "dependencies": {
     "@number-flow/react": "^0.6.0",
@@ -45,12 +46,23 @@
     "@types/node": "^25.1.0",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "oxfmt": "^0.41.0",
     "oxlint": "^1.56.0",
     "shadcn": "^4.1.2",
     "tailwindcss": "^4.1.18",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "oxlint",
+      "oxfmt"
+    ],
+    "*.{json,css,md}": [
+      "oxfmt"
+    ]
   },
   "packageManager": "pnpm@9.15.9",
   "engines": {
