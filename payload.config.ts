@@ -1,6 +1,9 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
+import { Media } from './collections/media'
+import { Authors } from './collections/authors'
+import { Categories } from './collections/categories'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
@@ -22,6 +25,9 @@ export default buildConfig({
       admin: { useAsTitle: 'email' },
       fields: [],
     },
+    Media,
+    Authors,
+    Categories,
   ],
   editor: lexicalEditor(),
   db: postgresAdapter({
