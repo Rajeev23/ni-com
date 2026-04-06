@@ -1,5 +1,6 @@
 import path from "path"
 import { fileURLToPath } from "url"
+import sharp from "sharp"
 import { buildConfig } from "payload"
 import { Media, Authors, Categories, Posts } from "./collections"
 import { postgresAdapter } from "@payloadcms/db-postgres"
@@ -32,6 +33,7 @@ export default buildConfig({
   db: postgresAdapter({
     pool: { connectionString: process.env.DATABASE_URI || "" },
   }),
+  sharp,
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
