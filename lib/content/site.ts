@@ -1,7 +1,5 @@
 import type { ContentPage, ResourceCard } from "@/lib/content/types"
 
-import { blogPosts, blogCards } from "@/lib/content/pages/blog"
-import { blogCategories } from "@/lib/content/pages/blog-categories"
 import { compliancePages } from "@/lib/content/pages/compliance"
 import { footerNavigation, primaryNavigation } from "@/lib/content/navigation"
 import { comparePages } from "@/lib/content/pages/compares"
@@ -14,8 +12,6 @@ import { useCasePages } from "@/lib/content/pages/use-cases"
 
 export { primaryNavigation, footerNavigation }
 export {
-  blogCards,
-  blogCategories,
   comparePages,
   compliancePages,
   customerCards,
@@ -46,8 +42,7 @@ export const corePages = {
       "Explore technical guides, comparison content, trust resources, and customer stories across the Neverinstall platform.",
   },
   trust: {
-    title:
-      "Trust Center: Security, Privacy & Compliance | Neverinstall",
+    title: "Trust Center: Security, Privacy & Compliance | Neverinstall",
     subtitle:
       "Security, privacy, compliance, architecture, and policy materials for teams evaluating or using Neverinstall.",
   },
@@ -151,11 +146,9 @@ export const allRoutePaths = [
   ...Object.values(comparePages).map((page) => page.path),
   "/compliance",
   ...Object.values(compliancePages).map((page) => page.path),
-  "/blog/category",
-  ...Object.keys(blogCategories).map((slug) => `/blog/category/${slug}`),
-  "/resources",
   "/blog",
-  ...Object.values(blogPosts).map((post) => `/blog/${post.slug}`),
+  "/blog/category",
+  "/resources",
   "/customers",
   ...Object.values(customerStories).map((story) => `/customers/${story.slug}`),
   "/security",
@@ -215,15 +208,6 @@ export const staticRouteSeo: Record<
     description:
       "See how enterprises cut onboarding time, reduced VDI costs, and secured BYOD access with Neverinstall. Read real deployment outcomes.",
   },
-  ...Object.fromEntries(
-    Object.values(blogPosts).map((post) => [
-      `/blog/${post.slug}`,
-      {
-        title: `${post.title} | Neverinstall`,
-        description: post.description,
-      },
-    ])
-  ),
   ...Object.fromEntries(
     Object.values(customerStories).map((story) => [
       `/customers/${story.slug}`,
