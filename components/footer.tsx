@@ -1,5 +1,7 @@
-import { Logo } from "@/components/logo"
+import { Shield } from "lucide-react"
 import Link from "next/link"
+
+import { Logo } from "@/components/logo"
 import { footerNavigation } from "@/lib/content/navigation"
 
 export default function FooterSection() {
@@ -102,27 +104,26 @@ export default function FooterSection() {
               reserved.
             </span>
             <Link
-              href="/privacy"
+              href="/security/privacy-data-protection"
               className="transition-colors duration-[var(--transition-fast,150ms)] hover:text-primary"
             >
               Privacy
             </Link>
             <Link
-              href="/terms"
+              href="/security/terms-conditions"
               className="transition-colors duration-[var(--transition-fast,150ms)] hover:text-primary"
             >
               Terms
             </Link>
           </div>
 
-          {/* All Systems Normal status indicator */}
-          <div className="flex items-center gap-2 rounded-full border border-transparent bg-card py-1 pr-4 pl-2 shadow ring-1 ring-foreground/5">
-            <div className="relative flex size-3">
-              <span className="absolute inset-0 block size-full animate-pulse rounded-full bg-emerald-100 duration-1500" />
-              <span className="relative m-auto block size-1 rounded-full bg-emerald-500" />
-            </div>
-            <span className="text-sm">All Systems Normal</span>
-          </div>
+          <Link
+            href="/security"
+            className="flex items-center gap-2 rounded-full border border-transparent bg-card py-1 pr-4 pl-2 text-sm text-muted-foreground shadow ring-1 ring-foreground/5 transition-colors hover:text-primary"
+          >
+            <Shield className="size-3.5" />
+            Trust Center
+          </Link>
         </div>
       </div>
     </footer>

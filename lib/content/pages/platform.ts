@@ -49,16 +49,19 @@ export const platformPage: ContentPage = {
           title: "Unified admin console",
           description:
             "Provision desktop and browser workspaces, set DLP rules, manage user groups, and investigate incidents from one interface. No toggling between a Citrix console and an Island dashboard.",
+          icon: "Settings",
         },
         {
           title: "Consistent policy across work modes",
           description:
             "Copy/paste restrictions, download controls, session recording, and access rules are defined once and enforced identically across desktop and browser workspaces. Configuration does not drift between two separate products.",
+          icon: "Layers",
         },
         {
           title: "Single audit trail",
           description:
             "Your SOC works from one log. Whether the incident involved a developer's persistent Linux desktop or a contractor's ephemeral browser session, the forensic record is in the same system — not split across vendors.",
+          icon: "Eye",
         },
       ],
     }),
@@ -134,18 +137,21 @@ export const platformPage: ContentPage = {
           description:
             "Fastest path to production. Neverinstall operates the infrastructure; you provision workspaces, set policies, and onboard users. Alliance Broadband went live this way in days, not months.",
           metric: "Days to production",
+          icon: "Cloud",
         },
         {
           title: "Customer cloud (OCI, AWS, Azure)",
           description:
             "Deploy inside your own cloud tenancy for data residency, compliance, or existing cloud spend commitments. Tally Solutions runs on Oracle Cloud Infrastructure — their data never leaves their tenancy.",
           metric: "Your cloud, your data tenancy",
+          icon: "Server",
         },
         {
           title: "Sovereign on-premises",
           description:
             "For regulated industries, government customers, or air-gapped environments. The full platform runs in your data center — not a stripped-down version, the same product with the same admin console.",
           metric: "Air-gap capable",
+          icon: "Building2",
         },
       ],
     }),

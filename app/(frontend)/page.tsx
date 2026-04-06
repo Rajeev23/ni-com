@@ -9,9 +9,9 @@ import {
   WhyNow,
   DeploymentFlexibility,
   CompetitiveMatrix,
-  CustomerProof,
   FinalCta,
 } from "@/components/marketing/animated-sections"
+import { CustomerLogoCloud } from "@/components/marketing/customer-logos"
 
 export const metadata: Metadata = getBaseMetadata({
   title: corePages.homepage.title,
@@ -41,8 +41,8 @@ export default function Page() {
       {/* 6. Competitive matrix — legacy VDI vs browser-only vs hyperscaler vs Neverinstall */}
       <CompetitiveMatrix />
 
-      {/* 7. Customer logos + proof — Tally, Porter, Indovance, Alliance Broadband */}
-      <CustomerProof />
+      {/* 7. Customer logos — infinite slider */}
+      <CustomerLogoCloud />
 
       {/* 8. Final CTA — Get Demo + TCO Calculator */}
       <FinalCta />

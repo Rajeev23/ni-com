@@ -178,6 +178,19 @@ export function ContactForm() {
       />
       <Field label="Company" name="company" placeholder="Acme Corp" />
       <label className="grid gap-1.5 text-sm">
+        <span className="font-medium">Inquiry type</span>
+        <select
+          name="inquiryType"
+          className="h-10 rounded-lg border bg-background px-3 text-sm"
+        >
+          <option value="sales">Sales inquiry</option>
+          <option value="support">Technical support</option>
+          <option value="partnerships">Partnerships</option>
+          <option value="security">Security review</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label className="grid gap-1.5 text-sm">
         <span className="font-medium">Message</span>
         <textarea
           name="message"

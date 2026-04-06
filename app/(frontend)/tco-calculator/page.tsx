@@ -68,6 +68,8 @@ export default function TcoCalculatorPage() {
         </PageContainer>
       </section>
       <CtaBand
+        headline="Want to validate these numbers with an expert?"
+        description="Book a session to walk through your TCO model with the Neverinstall team and get deployment-specific pricing."
         ctas={[
           { label: "Talk through your numbers", href: "/get-demo" },
           { label: "View Pricing", href: "/pricing" },

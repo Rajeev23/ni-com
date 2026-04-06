@@ -51,16 +51,19 @@ export const productPages: Record<string, ContentPage> = {
             title: "You cannot agent your way out of BYOD",
             description:
               "Endpoint agents require managed devices. Contractors and third parties bring their own hardware. Asking them to install corporate software creates compliance friction and rarely works.",
+            icon: "Lock",
           },
           {
             title: "Full VDI is too expensive for browser-only work",
             description:
               "Provisioning a full Windows desktop for a user who only needs web applications costs 3-5x more than it should. Most enterprises are paying Citrix or VMware per-seat pricing for workflows that never leave the browser.",
+            icon: "DollarSign",
           },
           {
             title: "Audit trails are incomplete or missing",
             description:
               "When a data leak happens on an unmanaged device, the forensic record is often gone with the device. Security teams need session-level evidence, not network logs.",
+            icon: "Eye",
           },
         ],
       }),
@@ -74,21 +77,25 @@ export const productPages: Record<string, ContentPage> = {
             title: "Isolated sessions",
             description:
               "Every browser session runs inside a controlled cloud environment. Sensitive activity never touches the local device, clipboard data stays scoped to the session, and the endpoint is not trusted.",
+            icon: "Shield",
           },
           {
             title: "Granular DLP controls",
             description:
               "Enforce copy/paste restrictions, block file downloads and uploads, disable printing, restrict USB, and apply visual watermarks — all configured centrally, not per device.",
+            icon: "Settings",
           },
           {
             title: "Session recording and forensic replay",
             description:
               "Record every session with full replay capability. When a security incident involves a contractor or unmanaged device, you have the complete forensic record, not a gap in your audit trail.",
+            icon: "Eye",
           },
           {
             title: "Zero endpoint trust",
             description:
               "Authentication and policy enforcement happen at the session boundary. There is no agent to deploy, no MDM enrollment to chase, and no assumption that the device is clean.",
+            icon: "Fingerprint",
           },
         ],
       }),
@@ -101,16 +108,19 @@ export const productPages: Record<string, ContentPage> = {
             title: "Unified policy management",
             description:
               "Define DLP rules, access policies, and session behavior once. They apply to browser workspaces and desktop workspaces identically — no configuration drift between two separate products.",
+            icon: "Layers",
           },
           {
             title: "Single identity and audit layer",
             description:
               "One IdP integration, one audit log, one place for your SOC to investigate incidents. Whether the session was a full desktop or a browser workspace, the forensic record is in the same system.",
+            icon: "Users",
           },
           {
             title: "Upgrade a user to a full desktop in minutes",
             description:
               "When a contractor needs more than a browser — say, a local IDE or a legacy Windows app — flip them to Desktop Workspaces from the same admin console. No new procurement, no re-onboarding, no second vendor.",
+            icon: "Monitor",
           },
         ],
       }),
@@ -263,16 +273,19 @@ export const productPages: Record<string, ContentPage> = {
             title: "Broadcom's acquisition made VMware unaffordable",
             description:
               "Broadcom's VMware acquisition drove 3-5x licensing cost increases for existing customers. Teams that built their infrastructure around VMware Horizon are repricing multi-year renewals they cannot absorb.",
+            icon: "DollarSign",
           },
           {
             title: "Citrix complexity has a cost of its own",
             description:
               "Citrix environments require consultant-heavy change management, long deployment cycles, and a support overhead that grows with scale. Most teams are running versions that lag behind by years.",
+            icon: "AlertTriangle",
           },
           {
             title: "Deployment still takes months",
             description:
               "Legacy VDI rollouts involve hardware procurement, image management, network configuration, and testing cycles that stretch across quarters. Teams that need to onboard fast cannot wait.",
+            icon: "Clock",
           },
         ],
       }),
@@ -286,21 +299,25 @@ export const productPages: Record<string, ContentPage> = {
             title: "Sub-second session restore",
             description:
               "Resume workspaces in under one second for validated desktop workflows. Users recover from interruptions without rebuilding context, and IT does not field complaints about session lag.",
+            icon: "Zap",
           },
           {
             title: "Windows and Linux support",
             description:
               "Deliver standard Windows desktops for office workflows and Linux environments for developers on the same platform, managed through the same admin console.",
+            icon: "Monitor",
           },
           {
             title: "Persistent and ephemeral modes",
             description:
               "Support persistent developer environments, clean-room ephemeral sessions for shift workers or contractors, and everything in between — configured per user group, not per deployment.",
+            icon: "Layers",
           },
           {
             title: "Any-device access",
             description:
               "Users access their desktop from any device with a browser. No managed endpoint required, no VPN dependency, no hardware to ship before someone can start work.",
+            icon: "Globe",
           },
         ],
       }),
@@ -313,16 +330,19 @@ export const productPages: Record<string, ContentPage> = {
             title: "Neverinstall-managed cloud",
             description:
               "Fastest path to production. Neverinstall operates the infrastructure. Customers provision workspaces, set policies, and onboard users without managing the underlying stack.",
+            icon: "Cloud",
           },
           {
             title: "Customer cloud (OCI, AWS, Azure)",
             description:
               "Deploy inside your own cloud tenancy for data residency, compliance, or existing cloud commitments. Tally Solutions runs Desktop Workspaces on Oracle Cloud Infrastructure — their users get cloud desktops without data leaving the Tally tenancy.",
+            icon: "Server",
           },
           {
             title: "Sovereign on-premises",
             description:
               "For regulated industries, air-gapped environments, or organizations with strict data sovereignty requirements, Desktop Workspaces deploys on-premises without losing platform capabilities.",
+            icon: "Building2",
           },
         ],
       }),

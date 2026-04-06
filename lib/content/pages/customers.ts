@@ -11,49 +11,64 @@ export type CustomerStory = {
 }
 
 export const customerStories: Record<string, CustomerStory> = {
-  "fintech-secure-byod-rollout": {
-    slug: "fintech-secure-byod-rollout",
-    title: "Fintech team scaled secure BYOD in six weeks",
+  tally: {
+    slug: "tally",
+    title: "Tally Solutions delivers cloud desktops on Oracle Cloud",
     description:
-      "A regulated financial services team standardized secure contractor and BYOD access without adding endpoint agents.",
-    industry: "Financial Services",
-    outcome: "41% faster onboarding for external users",
+      "Tally Solutions uses Neverinstall Desktop Workspaces to deliver their flagship accounting product to enterprise end users through secure cloud desktops on OCI.",
+    industry: "Enterprise Software",
+    outcome: "Live on Oracle Cloud Infrastructure",
     summary:
-      "The customer needed to onboard contractors quickly while reducing endpoint trust. They started with browser-based workspaces with centralized data movement policies and expanded to controlled desktop workspaces for high-risk roles.",
+      "Tally Solutions needed a way to deliver their desktop accounting application to enterprise customers without endpoint dependencies. They deployed Desktop Workspaces on Oracle Cloud Infrastructure, giving users instant access to Tally through any browser while keeping all data within their OCI tenancy.",
     highlights: [
-      "Reduced contractor onboarding time from 10 days to under 6 days.",
-      "Applied one policy model for downloads, clipboard, and session controls.",
-      "Passed internal access-control review without expanding endpoint tooling.",
+      "Deployed Tally as a cloud desktop service on Oracle Cloud Infrastructure.",
+      "Zero endpoint dependencies — users access Tally through any browser.",
+      "Data residency maintained within the customer's OCI tenancy.",
     ],
   },
-  "it-services-vdi-modernization": {
-    slug: "it-services-vdi-modernization",
-    title: "IT services firm modernized legacy VDI operations",
+  porter: {
+    slug: "porter",
+    title: "Porter chose Neverinstall over Azure Virtual Desktop",
     description:
-      "A distributed delivery organization replaced a complex VDI stack with phased cloud-native DaaS rollouts.",
-    industry: "IT Services",
-    outcome: "33% lower 3-year projected workspace TCO",
+      "After evaluating Neverinstall against Microsoft AVD and Windows 365, Porter selected Neverinstall for faster deployment and better session performance.",
+    industry: "Logistics",
+    outcome: "Selected over Azure Virtual Desktop",
     summary:
-      "The team moved in cohorts rather than a single migration event. They prioritized helpdesk-heavy personas first, then expanded to developer and partner workflows after proving user experience and policy consistency.",
+      "Porter's operations teams needed reliable virtual desktops with fast session restore. They evaluated Neverinstall head-to-head against Azure Virtual Desktop and Windows 365, ultimately choosing Neverinstall for superior deployment speed, lower operational overhead, and better session restore performance.",
     highlights: [
-      "Cut ticket volume related to desktop provisioning and session failures.",
-      "Improved recovery readiness with fast environment restore paths.",
-      "Created a clear migration runway away from legacy VDI dependencies.",
+      "Evaluated Neverinstall against Azure Virtual Desktop and Windows 365.",
+      "Chose Neverinstall for deployment speed and session restore performance.",
+      "Reduced desktop provisioning time for operations teams.",
     ],
   },
-  "global-delivery-resilience-playbook": {
-    slug: "global-delivery-resilience-playbook",
-    title: "Global delivery team strengthened recovery readiness",
+  indovance: {
+    slug: "indovance",
+    title: "Indovance completed a full Citrix rip-and-replace",
     description:
-      "A cross-region operations team improved continuity planning with role-based workspace policies and centralized control.",
-    industry: "Global Services",
-    outcome: "Recovered critical workflows in under one hour during drills",
+      "Indovance migrated off Citrix Virtual Apps and Desktops entirely, eliminating consultant dependency and cutting licensing costs.",
+    industry: "Engineering Services",
+    outcome: "Full Citrix migration complete",
     summary:
-      "The organization needed continuity options for high-variance operating conditions. They standardized workspace templates, added role-based access policies, and validated failover procedures through quarterly simulations.",
+      "Indovance was running Citrix Virtual Apps and Desktops for their engineering teams but faced compounding costs from licensing, consultants, and months-long upgrade cycles. They migrated completely to Neverinstall Desktop Workspaces, going live in weeks instead of the quarter-long timeline Citrix required.",
     highlights: [
-      "Built role-specific recovery runbooks across three regions.",
-      "Improved audit evidence collection for resilience controls.",
-      "Reduced dependence on physical office and endpoint recovery workflows.",
+      "Replaced Citrix Virtual Apps and Desktops entirely.",
+      "Eliminated consultant dependency and multi-quarter upgrade cycles.",
+      "Went live with Desktop Workspaces in weeks, not months.",
+    ],
+  },
+  "alliance-broadband": {
+    slug: "alliance-broadband",
+    title: "Alliance Broadband launched cloud desktops as a subscriber service",
+    description:
+      "Alliance Broadband bundles Neverinstall cloud desktops as a value-added service for their broadband subscribers, creating a new revenue line.",
+    industry: "Telecom",
+    outcome: "New subscriber offering launched",
+    summary:
+      "Alliance Broadband saw an opportunity to differentiate their broadband service by bundling cloud desktops for subscribers. Using Neverinstall Desktop Workspaces, they launched a cloud desktop offering that turns workspace delivery into a recurring revenue line for their telecom business.",
+    highlights: [
+      "Launched cloud desktops as a value-added broadband service.",
+      "Turned workspace delivery into a new subscriber revenue line.",
+      "Leveraged Neverinstall infrastructure without building their own VDI stack.",
     ],
   },
 }

@@ -16,18 +16,6 @@ export type NavGroup = {
 
 export const primaryNavigation: NavGroup[] = [
   {
-    label: "Platform",
-    href: "/platform",
-    featured: [
-      {
-        label: "Platform Technology",
-        href: "/platform",
-        description:
-          "The shared infrastructure behind Desktop Workspaces and Secure Browser Workspaces.",
-      },
-    ],
-  },
-  {
     label: "Products",
     columns: [
       {

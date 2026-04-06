@@ -28,7 +28,8 @@ export const corePages = {
       "Virtual Desktop & Secure Enterprise Browser Platform | Neverinstall",
     subtitle:
       "One platform. Two work modes. Any deployment. Replace legacy VDI with modern desktops and secure browsers.",
-    metric: "One Platform. Two Work Modes. Any Deployment.",
+    metric:
+      "Live in production with enterprise customers across logistics, financial software, engineering, and telecom.",
   },
   pricing: {
     title:

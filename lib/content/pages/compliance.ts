@@ -55,16 +55,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Access control (CC6)",
             description:
               "Logical access to systems must be restricted to authorized users through defined role and policy mechanisms, with documented provisioning and de-provisioning.",
+            icon: "Lock",
           },
           {
             title: "Audit and monitoring (CC7)",
             description:
               "Systems must generate logs that capture user activity, access events, and anomalies, with defined review and retention processes.",
+            icon: "Eye",
           },
           {
             title: "Confidentiality and data movement",
             description:
               "Confidential data must be protected from unauthorized access or exfiltration through controls that limit how data is copied, transferred, or exported.",
+            icon: "Shield",
           },
         ],
       }),
@@ -78,31 +81,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Centralized access governance",
             description:
               "Role-based policies and centrally managed identity controls define and enforce who can access which workspaces, reducing fragmented access management.",
+            icon: "Users",
           },
           {
             title: "Session isolation",
             description:
               "Each user session runs in a dedicated environment, limiting lateral movement and reducing the blast radius of a compromised account.",
+            icon: "Shield",
           },
           {
             title: "Audit logging",
             description:
               "Session-level activity, access events, and policy changes generate evidence that supports auditor review and internal compliance workflows.",
+            icon: "Eye",
           },
           {
             title: "DLP controls",
             description:
               "Clipboard restrictions, download controls, and print restrictions limit data exfiltration paths — a key confidentiality control auditors test.",
+            icon: "Lock",
           },
           {
             title: "No data on endpoints",
             description:
               "Work and data remain inside the controlled environment, shrinking the attack surface auditors must reason about during CC6 and CC7 review.",
+            icon: "Monitor",
           },
           {
             title: "Session recording",
             description:
               "Optional session recording provides deeper audit evidence for high-risk roles, contractor access, or privileged operations.",
+            icon: "Eye",
           },
         ],
       }),
@@ -199,16 +208,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Access controls (§164.312(a))",
             description:
               "Unique user identification, emergency access procedures, and automatic logoff are required. Each user must have verifiable, auditable access to ePHI systems.",
+            icon: "Fingerprint",
           },
           {
             title: "Audit controls (§164.312(b))",
             description:
               "Covered entities must implement hardware, software, and procedural mechanisms that record and examine access to ePHI-containing systems.",
+            icon: "Eye",
           },
           {
             title: "Transmission security (§164.312(e))",
             description:
               "ePHI transmitted over networks must be protected through encryption or equivalent safeguards that prevent unauthorized interception.",
+            icon: "Lock",
           },
         ],
       }),
@@ -222,31 +234,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Role-based access to ePHI workspaces",
             description:
               "Centrally define which roles can access which clinical or administrative workspaces, with identity-led enforcement and documented provisioning.",
+            icon: "Users",
           },
           {
             title: "Session audit logs",
             description:
               "Activity and access events are logged at the session level, providing the audit trail required by §164.312(b) for ePHI system access.",
+            icon: "Eye",
           },
           {
             title: "No ePHI on endpoints",
             description:
               "Patient data stays inside the controlled workspace environment and never reaches local device storage, addressing a major HIPAA physical safeguard gap.",
+            icon: "Shield",
           },
           {
             title: "DLP and data movement controls",
             description:
               "Restrict downloads, clipboard transfers, and printing to limit unauthorized ePHI exfiltration paths.",
+            icon: "Lock",
           },
           {
             title: "Session isolation",
             description:
               "Each clinician or administrator accesses work in an isolated environment, reducing cross-session exposure risk.",
+            icon: "Layers",
           },
           {
             title: "BAA availability",
             description:
               "Neverinstall can execute Business Associate Agreements with covered entities and business associates handling ePHI. Contact us to initiate.",
+            icon: "FileText",
           },
         ],
       }),
@@ -345,16 +363,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Data residency and transfer restrictions",
             description:
               "Personal data on EU residents must not be transferred to third countries without adequate safeguards. Controllers must know where data lives and have documented transfer mechanisms.",
+            icon: "Globe",
           },
           {
             title: "Technical and organizational measures (Article 32)",
             description:
               "Controllers and processors must implement appropriate technical measures to ensure data security, including access control, pseudonymization, and resilience.",
+            icon: "Shield",
           },
           {
             title: "Accountability and processor obligations",
             description:
               "Organizations must document processing activities, appoint a DPO where required, and execute Data Processing Agreements with processors.",
+            icon: "FileText",
           },
         ],
       }),
@@ -368,31 +389,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "EU and regional deployment",
             description:
               "Deploy Neverinstall workspaces on EU-region cloud infrastructure or customer-controlled environments to keep personal data within required boundaries.",
+            icon: "Globe",
           },
           {
             title: "No data on endpoints",
             description:
               "Personal data remains inside the workspace environment and never persists on user devices — reducing the controller's exposure surface for Article 32 purposes.",
+            icon: "Shield",
           },
           {
             title: "Centralized access control",
             description:
               "Define and enforce data access policies centrally so only authorized roles process personal data in any given workspace.",
+            icon: "Users",
           },
           {
             title: "Audit logging",
             description:
               "Session and access logs provide the accountability evidence that GDPR compliance programs require.",
+            icon: "Eye",
           },
           {
             title: "Data Processing Agreement",
             description:
               "Neverinstall executes DPAs with customers as required under Article 28, documenting processor obligations and sub-processor management.",
+            icon: "FileText",
           },
           {
             title: "Sovereign on-prem deployment",
             description:
               "For organizations with strict data sovereignty requirements, Neverinstall supports fully on-prem deployment where all processing occurs inside customer-controlled infrastructure.",
+            icon: "Building2",
           },
         ],
       }),
@@ -491,16 +518,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Consent and purpose limitation",
             description:
               "Data fiduciaries must collect personal data only for specified, lawful purposes with verifiable consent and must not use data beyond those purposes.",
+            icon: "FileText",
           },
           {
             title: "Data localization implications",
             description:
               "The DPDP Act empowers the Central Government to restrict cross-border transfer of personal data to certain countries. Organizations must be prepared to localize data when required.",
+            icon: "Database",
           },
           {
             title: "Security safeguards and breach notification",
             description:
               "Data fiduciaries must implement reasonable security safeguards and notify the Data Protection Board and affected individuals in the event of a personal data breach.",
+            icon: "AlertTriangle",
           },
         ],
       }),
@@ -514,31 +544,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "In-country deployment",
             description:
               "Deploy Neverinstall on Indian cloud regions (OCI India, AWS Mumbai, Azure India) or on customer-owned data center infrastructure to keep personal data within India.",
+            icon: "Globe",
           },
           {
             title: "Sovereign on-prem for strict localization",
             description:
               "For organizations that need complete data sovereignty, the on-prem deployment model ensures no personal data leaves customer-controlled infrastructure.",
+            icon: "Building2",
           },
           {
             title: "No data on endpoints",
             description:
               "Work stays inside the controlled workspace — personal data never persists on user devices, reducing the risk of cross-border exposure through device loss or sync.",
+            icon: "Shield",
           },
           {
             title: "Centralized access governance",
             description:
               "Define who can process which personal data through central policy, supporting the purpose limitation and access accountability the DPDP Act requires.",
+            icon: "Users",
           },
           {
             title: "Audit logging",
             description:
               "Session-level logs provide evidence of who accessed what personal data and when — supporting breach investigation and accountability reporting.",
+            icon: "Eye",
           },
           {
             title: "DLP controls",
             description:
               "Restrict clipboard, download, and file transfer paths to limit how personal data moves outside the governed workspace.",
+            icon: "Lock",
           },
         ],
       }),
@@ -636,16 +672,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Exclusive storage in India",
             description:
               "Payment system operators must ensure that all transaction, settlement, and system data related to domestic payment activities is stored on servers physically located within India.",
+            icon: "Database",
           },
           {
             title: "No offshore mirroring without approval",
             description:
               "Foreign copies or mirrors of payment data are restricted. Processing that takes data outside India requires explicit RBI approval.",
+            icon: "Lock",
           },
           {
             title: "Audit and reporting obligations",
             description:
               "Payment operators must submit a systems audit report certifying compliance with data localization requirements and maintain audit trails to demonstrate adherence.",
+            icon: "BadgeCheck",
           },
         ],
       }),
@@ -659,31 +698,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Sovereign on-prem deployment",
             description:
               "Run Neverinstall entirely on customer-owned servers in India. All workspace processing, session data, and logs remain on infrastructure the organization controls.",
+            icon: "Building2",
           },
           {
             title: "In-country customer cloud",
             description:
               "Deploy on AWS Mumbai, OCI Mumbai, or Azure India within your own cloud account to meet localization requirements while using cloud infrastructure.",
+            icon: "Cloud",
           },
           {
             title: "No data on endpoints",
             description:
               "Payment data processed in workspace sessions never reaches user endpoint devices, preventing accidental cross-border exposure through device sync or loss.",
+            icon: "Shield",
           },
           {
             title: "Session isolation for payment workflows",
             description:
               "Payment operations run in isolated workspace sessions, reducing cross-contamination risk and providing cleaner audit boundaries.",
+            icon: "Layers",
           },
           {
             title: "Session recording and audit logs",
             description:
               "Detailed session logs and optional recording provide the audit evidence needed for the RBI's systems audit reporting requirement.",
+            icon: "Eye",
           },
           {
             title: "DLP controls",
             description:
               "Restrict data movement from payment workspaces to prevent unauthorized transfer of transaction data outside governed environments.",
+            icon: "Lock",
           },
         ],
       }),
@@ -783,16 +828,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Access control (A.9)",
             description:
               "User access must be managed through a formal provisioning process with role-based privileges, regular review, and documented de-provisioning procedures.",
+            icon: "Users",
           },
           {
             title: "Operations security (A.12)",
             description:
               "Malware controls, logging, monitoring, and vulnerability management are required. Log retention and review procedures must be formally documented.",
+            icon: "Eye",
           },
           {
             title: "Supplier relationships (A.15)",
             description:
               "Organizations must manage information security in supplier and service provider relationships, with contractual obligations and regular assessment.",
+            icon: "FileText",
           },
         ],
       }),
@@ -806,31 +854,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Centralized access governance (A.9)",
             description:
               "Role-based policies, identity-led access, and documented provisioning workflows support formal access control procedures required by Annex A.9.",
+            icon: "Users",
           },
           {
             title: "Session and audit logging (A.12.4)",
             description:
               "Session-level activity logs and configurable retention provide the monitoring and log review evidence ISO 27001 Operations Security requires.",
+            icon: "Eye",
           },
           {
             title: "Reduced endpoint scope",
             description:
               "When work stays inside controlled workspace environments, the number of endpoints in ISMS scope shrinks — simplifying risk assessment and control coverage.",
+            icon: "Monitor",
           },
           {
             title: "DLP and data movement controls",
             description:
               "Clipboard, download, and transfer controls address data handling requirements across multiple Annex A domains including A.8 (asset management) and A.13 (communications).",
+            icon: "Lock",
           },
           {
             title: "Session isolation",
             description:
               "Logical separation between user workspaces supports the separation of duties and isolation principles embedded in ISO 27001 access and operations controls.",
+            icon: "Layers",
           },
           {
             title: "Supplier security documentation",
             description:
               "Neverinstall provides trust documentation, DPAs, and security review materials that support customer ISMS supplier management (A.15) obligations.",
+            icon: "FileText",
           },
         ],
       }),
@@ -928,16 +982,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Access Control (AC)",
             description:
               "Establish access policies, manage user accounts, enforce least privilege, and control remote access. AC-2 (account management) and AC-17 (remote access) are among the most examined.",
+            icon: "Lock",
           },
           {
             title: "Audit and Accountability (AU)",
             description:
               "Create and maintain audit logs of security-relevant events, protect audit information, and review logs regularly. AU-2 (event logging) and AU-9 (audit record protection) are core requirements.",
+            icon: "Eye",
           },
           {
             title: "System and Communications Protection (SC)",
             description:
               "Protect system boundaries, implement network segmentation, and use cryptographic controls. SC-7 (boundary protection) and SC-28 (protection of information at rest) are frequently assessed.",
+            icon: "Shield",
           },
         ],
       }),
@@ -951,31 +1008,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "Access control (AC family)",
             description:
               "Identity-led access, role-based permissions, session timeout, and remote access governance address AC-2, AC-3, AC-17, and related controls.",
+            icon: "Users",
           },
           {
             title: "Audit logging (AU family)",
             description:
               "Session-level audit logs capture security-relevant events and access activity, supporting AU-2 event logging and AU-12 audit record generation requirements.",
+            icon: "Eye",
           },
           {
             title: "System protection (SC family)",
             description:
               "Session isolation and workspace boundary enforcement address SC-7 boundary protection. Data-off-endpoints reduces SC-28 at-rest exposure on user devices.",
+            icon: "Shield",
           },
           {
             title: "Configuration management (CM family)",
             description:
               "Centralized workspace provisioning and policy enforcement support documented baseline configurations and change management controls.",
+            icon: "Settings",
           },
           {
             title: "Identification and authentication (IA family)",
             description:
               "Identity-based access enforcement and integration with enterprise identity providers support IA-2 user identification and IA-5 authenticator management.",
+            icon: "Fingerprint",
           },
           {
             title: "Session recording",
             description:
               "Optional session recording provides deeper AU-family evidence for privileged access and high-sensitivity roles, supporting auditor review workflows.",
+            icon: "Eye",
           },
         ],
       }),
@@ -1074,16 +1137,19 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "NIST 800-53 control implementation",
             description:
               "FedRAMP requires cloud service providers to implement and document NIST 800-53 controls at the Low, Moderate, or High baseline depending on the data sensitivity.",
+            icon: "BadgeCheck",
           },
           {
             title: "Third-party assessment (3PAO)",
             description:
               "An accredited Third Party Assessment Organization must independently assess and validate the CSP's control implementation before authorization is granted.",
+            icon: "Users",
           },
           {
             title: "Continuous monitoring",
             description:
               "FedRAMP-authorized systems must maintain ongoing compliance through regular vulnerability scanning, POA&M management, and annual assessments.",
+            icon: "Eye",
           },
         ],
       }),
@@ -1097,31 +1163,37 @@ export const compliancePages: Record<string, ContentPage> = {
             title: "NIST 800-53 control alignment",
             description:
               "Neverinstall's access control, audit logging, session isolation, and boundary protection capabilities map to the core NIST 800-53 control families FedRAMP assesses.",
+            icon: "BadgeCheck",
           },
           {
             title: "Sovereign on-prem deployment",
             description:
               "The on-prem deployment model allows federal agencies or contractors to run Neverinstall inside their own authorization boundary while FedRAMP authorization progresses.",
+            icon: "Building2",
           },
           {
             title: "Audit-ready evidence",
             description:
               "Session logs, access governance documentation, and architecture materials are structured to support the evidence requirements of a FedRAMP assessment.",
+            icon: "FileText",
           },
           {
             title: "No data on endpoints",
             description:
               "Data-off-endpoints architecture reduces the attack surface and simplifies the scope of FIPS-validated cryptography requirements for data at rest.",
+            icon: "Shield",
           },
           {
             title: "Session isolation and recording",
             description:
               "Strong session boundary controls and optional recording support Privileged Access Management and continuous monitoring requirements.",
+            icon: "Eye",
           },
           {
             title: "Active pursuit — not a claimed certification",
             description:
               "Neverinstall is actively working toward FedRAMP authorization. We do not currently hold a FedRAMP authorization. Federal agencies should evaluate on current posture and roadmap.",
+            icon: "Clock",
           },
         ],
       }),

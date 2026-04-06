@@ -34,6 +34,8 @@ export default function CustomersPage() {
         cards={customerCards}
       />
       <CtaBand
+        headline="See similar results for your team"
+        description="Walk through a deployment scenario based on your industry, user mix, and current stack."
         ctas={[
           { label: "Book a Demo", href: "/get-demo" },
           { label: "Calculate TCO", href: "/tco-calculator" },

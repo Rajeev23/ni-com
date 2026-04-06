@@ -33,6 +33,8 @@ export default function ResourcesPage() {
         cards={resourceCards}
       />
       <CtaBand
+        headline="Ready to go deeper?"
+        description="See the platform in action, read the technical docs, or learn how other teams deployed."
         ctas={[
           { label: "Book a Demo", href: "/get-demo" },
           { label: "Read Docs", href: "/docs" },

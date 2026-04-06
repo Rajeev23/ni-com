@@ -160,18 +160,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Deep enterprise history and installed base across thousands of large organizations",
         description:
           "Citrix has been in the VDI market for over 30 years. For organizations with decades of Citrix investment, the switching cost is real — not just licensing, but staff training, integrations, and operational muscle memory.",
+        icon: "Building2",
       },
       {
         title:
           "Extensive ecosystem of integrations, ISV certifications, and channel partners",
         description:
           "The Citrix partner and ISV ecosystem is larger than any other VDI vendor's. If your organization depends on third-party tools that are certified specifically for Citrix, that ecosystem depth has genuine value.",
+        icon: "Layers",
       },
       {
         title:
           "Familiar operational model for IT teams with years of Citrix administration experience",
         description:
           "Many IT teams have built their careers around Citrix administration. That institutional knowledge is a real asset — retraining staff on a new platform has a cost, even when the new platform is simpler.",
+        icon: "Users",
       },
     ],
     neverinstallWins: [
@@ -180,30 +183,35 @@ export const comparePages: Record<string, ContentPage> = {
           "Deployment in days to weeks, not the months Citrix typically requires",
         description:
           "Citrix deployments commonly run 3-6 months with dedicated project teams. Neverinstall's cloud-native architecture eliminates the StoreFront, NetScaler, and hypervisor layer buildout — customers like Indovance went live in days.",
+        icon: "Zap",
       },
       {
         title:
           "Sub-second session restore vs Citrix's multi-second reconnect lag",
         description:
           "Citrix session reconnection typically takes 5-15 seconds depending on infrastructure load and session persistence configuration. Neverinstall restores sessions in under a second — no other DaaS vendor matches this.",
+        icon: "Clock",
       },
       {
         title:
           "70-80% lower cost for browser-first users who do not need a full VDI seat",
         description:
           "Citrix prices every user as a full VDI seat regardless of workload. Neverinstall's Secure Browser Workspaces serve contractors, vendors, and light-access users at a fraction of the per-seat cost — without a separate product.",
+        icon: "DollarSign",
       },
       {
         title:
           "Both desktop AND browser workspaces from one platform — no second product needed",
         description:
           "Citrix requires a separate enterprise browser product for browser-only users. Neverinstall delivers both work modes from a single control plane with unified policy, identity, and DLP — one vendor, one contract, one admin experience.",
+        icon: "Layers",
       },
       {
         title:
           "Sovereign on-prem deployment without Broadcom-era licensing constraints",
         description:
           "Citrix on-prem licensing has become significantly more expensive and restrictive post-Broadcom. Neverinstall offers sovereign on-prem deployment with straightforward licensing — no forced cloud migration or bundled upsells.",
+        icon: "Building2",
       },
     ],
     biggerPicture: {
@@ -214,11 +222,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for power users and employees who need native applications, GPU workloads, or multi-monitor setups. Sub-second restore means no more Citrix reconnect lag.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access for contractors, vendors, and BYOD users who are currently over-provisioned on Citrix full-desktop seats. 70-80% lower cost per seat with full DLP controls.",
+          icon: "Globe",
         },
       ],
     },
@@ -300,18 +310,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Deep Azure ecosystem integration with native Entra ID, Intune, and Microsoft 365 tie-ins",
         description:
           "AVD's integration with the broader Microsoft stack is seamless — if your organization has standardized on Azure, Entra ID, and Intune, AVD slots in with minimal identity and management friction.",
+        icon: "Layers",
       },
       {
         title:
           "Natural fit for organizations already fully committed to Azure infrastructure spend",
         description:
           "If your enterprise has an existing Azure EA or MACC commitment, AVD can draw from that spend pool. For teams with no multi-cloud strategy, keeping desktops inside Azure simplifies procurement.",
+        icon: "Cloud",
       },
       {
         title:
           "Familiar Microsoft procurement and support model with established licensing paths",
         description:
           "Microsoft's enterprise sales and licensing model is well-understood by IT procurement teams. AVD can be bundled with existing Microsoft agreements, which reduces procurement friction for Microsoft-centric shops.",
+        icon: "FileText",
       },
     ],
     neverinstallWins: [
@@ -319,23 +332,27 @@ export const comparePages: Record<string, ContentPage> = {
         title: "No Azure lock-in — deploy on OCI, AWS, Azure, or fully on-prem",
         description:
           "AVD requires Azure infrastructure for every session. Neverinstall supports multiple cloud providers and sovereign on-prem deployment, so your workspace strategy is not captive to a single provider's pricing decisions or regional availability.",
+        icon: "Server",
       },
       {
         title: "Browser workspace mode included — AVD delivers desktops only",
         description:
           "AVD has no browser workspace offering. Contractors, vendors, and BYOD users who only need browser access must be provisioned as full desktop seats or handled by a separate vendor. Neverinstall serves them at 70-80% lower cost per seat.",
+        icon: "Globe",
       },
       {
         title:
           "Sovereign on-prem deployment for regulated and air-gapped environments",
         description:
           "AVD is a cloud-only service with no on-prem option. For government, defense, financial services, and healthcare organizations that require data to remain on-premises, AVD is simply not viable. Neverinstall deploys fully on-prem.",
+        icon: "Building2",
       },
       {
         title:
           "Predictable pricing without Azure consumption metering surprises",
         description:
           "AVD's consumption-based pricing model can produce unexpected costs at scale, especially when session hosts auto-scale during peak periods. Neverinstall offers predictable per-seat pricing without infrastructure consumption variables.",
+        icon: "DollarSign",
       },
     ],
     biggerPicture: {
@@ -346,11 +363,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for employees and power users — deployable on Azure, AWS, OCI, or on-prem. Sub-second restore and no Azure consumption lock-in.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access for contractors, vendors, and BYOD users who do not need a full AVD desktop. 70-80% lower cost per seat, with full DLP controls and no Azure dependency.",
+          icon: "Globe",
         },
       ],
     },
@@ -427,18 +446,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Massive installed base familiarity across enterprise VMware estates",
         description:
           "VMware Horizon is deployed across thousands of enterprises. For organizations with large VMware estates, the staff expertise and operational playbooks are deeply embedded — that is a real migration barrier, even when pricing becomes painful.",
+        icon: "Building2",
       },
       {
         title:
           "Deep VMware ecosystem integrations — vSphere, NSX, vSAN, Workspace ONE",
         description:
           "Horizon's integration with the broader VMware stack (vSphere, NSX, vSAN, Workspace ONE) is tight and mature. If your organization has invested heavily in these components, Horizon fits natively in ways a cloud-native platform must integrate into.",
+        icon: "Layers",
       },
       {
         title:
           "Fit for organizations where migration cost still exceeds Broadcom's price increase",
         description:
           "For some very large enterprises, the total cost of migrating off Horizon — including retraining, re-integration, and operational disruption — may still exceed the Broadcom price increase in the short term. The math changes over a 3-year horizon, but the short-term calculus is real.",
+        icon: "DollarSign",
       },
     ],
     neverinstallWins: [
@@ -447,28 +469,33 @@ export const comparePages: Record<string, ContentPage> = {
           "No Broadcom-era 3-5x license increases — predictable pricing without acquisition baggage",
         description:
           "Broadcom's licensing changes have increased costs 3-5x for many Horizon customers, often by bundling components they do not need. Neverinstall's pricing is transparent and predictable, with no forced bundles or acquisition-driven price shocks.",
+        icon: "DollarSign",
       },
       {
         title:
           "Simpler cloud-native architecture replaces Horizon's server-side complexity",
         description:
           "Horizon requires vSphere, vCenter, Connection Server, UAG, and often App Volumes and DEM. Neverinstall eliminates this multi-component server-side stack with a cloud-native architecture that deploys in days — not the months a Horizon environment takes.",
+        icon: "Cloud",
       },
       {
         title: "Browser workspaces included — Horizon has no equivalent",
         description:
           "Horizon delivers desktops only. Contractors, vendors, and browser-first users either get over-provisioned with a full desktop seat or require a separate product. Neverinstall's Secure Browser Workspaces serve them at 70-80% lower cost on the same platform.",
+        icon: "Globe",
       },
       {
         title: "Days-to-weeks deployment vs months for Horizon migrations",
         description:
           "VMware Horizon deployments are notoriously complex and time-consuming, often requiring 3-6 months of planning and infrastructure buildout. Neverinstall's cloud-native model eliminates the hypervisor and connection broker layers, cutting deployment time to days.",
+        icon: "Zap",
       },
       {
         title:
           "Sovereign on-prem deployment without VMware infrastructure dependency",
         description:
           "Neverinstall deploys on-prem without requiring vSphere, vCenter, or any VMware component. For organizations exiting the VMware ecosystem entirely, this means sovereign deployment without residual VMware licensing obligations.",
+        icon: "Building2",
       },
     ],
     biggerPicture: {
@@ -479,11 +506,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for power users — replacing Horizon's server-side complexity with cloud-native delivery. Sub-second restore, no vSphere dependency, no Connection Server overhead.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access for the 40-60% of Horizon users who are over-provisioned on full desktop seats. 70-80% lower per-seat cost, same platform, same policy model — no second vendor.",
+          icon: "Globe",
         },
       ],
     },
@@ -561,18 +590,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Exceptional messaging simplicity — Cloud PC is easy to explain, procure, and set up",
         description:
           "Windows 365 is one of the simplest DaaS products to buy and deploy. For teams that value speed-to-first-session above everything else and have no complex requirements, that simplicity is a genuine advantage.",
+        icon: "Sparkles",
       },
       {
         title:
           "Strong fit when the entire organization is standardized on Microsoft 365 and Azure",
         description:
           "If every user is on Windows, every app is a Microsoft 365 app, and every infrastructure decision goes through Azure, Windows 365 is the path of least resistance. The integration with Intune and Entra ID is seamless within that stack.",
+        icon: "Layers",
       },
       {
         title:
           "Predictable per-user pricing with familiar Microsoft procurement paths",
         description:
           "Cloud PC's fixed monthly per-user price is easy to budget for, and it can be bundled into existing Microsoft enterprise agreements. For teams optimizing for procurement simplicity over capability, this matters.",
+        icon: "DollarSign",
       },
     ],
     neverinstallWins: [
@@ -581,23 +613,27 @@ export const comparePages: Record<string, ContentPage> = {
           "Browser workspace mode included — Windows 365 delivers desktops only",
         description:
           "Cloud PC provisions every user as a full Windows desktop, even if they only need browser access. Neverinstall's Secure Browser Workspaces serve contractors and light-access users at 70-80% lower cost — eliminating the waste of over-provisioning every user as a Cloud PC seat.",
+        icon: "Globe",
       },
       {
         title: "Multi-OS support including Linux — Cloud PC is Windows-only",
         description:
           "Windows 365 cannot deliver Linux desktops. Development teams, data engineering groups, and organizations with mixed-OS requirements need a platform that supports more than Windows. Neverinstall delivers both Windows and Linux desktops.",
+        icon: "Monitor",
       },
       {
         title:
           "Sovereign on-prem deployment — Cloud PC is Azure-bound with no on-prem option",
         description:
           "Windows 365 runs only on Azure with no path to on-prem deployment. For government, defense, financial services, and healthcare organizations with data sovereignty or air-gap requirements, Cloud PC is not viable. Neverinstall deploys fully on-prem.",
+        icon: "Building2",
       },
       {
         title:
           "Deeper policy controls and session management for regulated environments",
         description:
           "Cloud PC's policy model is limited to what Intune provides, which is designed for device management rather than workspace-level session control. Neverinstall offers granular DLP, session recording, clipboard controls, and file transfer policies that regulated industries require.",
+        icon: "Settings",
       },
     ],
     biggerPicture: {
@@ -608,11 +644,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for employees and power users — Windows and Linux. Sub-second restore, multi-cloud deployment, and policy depth that goes far beyond what Cloud PC and Intune can offer.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access for the contractors, vendors, and BYOD users that Cloud PC serves with expensive full-desktop seats. 70-80% lower cost per seat with the same DLP controls and policy model.",
+          icon: "Globe",
         },
       ],
     },
@@ -688,17 +726,20 @@ export const comparePages: Record<string, ContentPage> = {
           "Strong ecosystem fit for organizations already committed to AWS infrastructure",
         description:
           "If your enterprise runs on AWS and all infrastructure procurement flows through an AWS account, WorkSpaces is easy to spin up inside that existing relationship. VPC integration, AWS Directory Service, and IAM tie-ins are native.",
+        icon: "Cloud",
       },
       {
         title:
           "Simple provider-native procurement through existing AWS contracts and EDPs",
         description:
           "WorkSpaces spend can draw from existing AWS Enterprise Discount Programs (EDPs) and consolidated billing. For AWS-first organizations, this reduces procurement friction compared to onboarding a new vendor.",
+        icon: "FileText",
       },
       {
         title: "Broad regional availability across the AWS global footprint",
         description:
           "AWS operates regions worldwide, and WorkSpaces is available in most of them. For organizations that need desktops in specific AWS regions where they already have infrastructure, this regional coverage has value.",
+        icon: "Globe",
       },
     ],
     neverinstallWins: [
@@ -706,22 +747,26 @@ export const comparePages: Record<string, ContentPage> = {
         title: "No AWS lock-in — deploy on OCI, AWS, Azure, or fully on-prem",
         description:
           "WorkSpaces is captive to AWS infrastructure. If AWS raises prices, limits features, or lacks a region you need, you have no alternative. Neverinstall's multi-cloud architecture means you can deploy on any major cloud provider or on-prem — with the freedom to move between them.",
+        icon: "Server",
       },
       {
         title: "Browser workspace mode included — WorkSpaces is desktop-only",
         description:
           "WorkSpaces provisions every user as a full desktop, even contractors who only need browser access. AWS does offer WorkSpaces Secure Browser, but it is a separate service with separate management. Neverinstall delivers both modes from one platform at 70-80% lower cost for browser-only users.",
+        icon: "Globe",
       },
       {
         title:
           "Sovereign on-prem deployment for regulated or air-gapped environments",
         description:
           "WorkSpaces has no on-prem deployment option. For government, defense, and financial services organizations that require data to remain in their own data centers, WorkSpaces is not viable. Neverinstall deploys fully on-prem with the same feature set.",
+        icon: "Building2",
       },
       {
         title: "Deeper DLP, session recording, and policy controls built in",
         description:
           "WorkSpaces offers basic session management but lacks the depth of DLP, session recording, clipboard controls, and file transfer policies that regulated industries require. Neverinstall provides these natively across both desktop and browser workspaces — no AWS add-on services needed.",
+        icon: "Shield",
       },
     ],
     biggerPicture: {
@@ -732,11 +777,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for employees and power users — deployable on AWS, Azure, OCI, or on-prem. Sub-second restore, no AWS lock-in, and policy depth beyond what native WorkSpaces offers.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access for contractors, vendors, and BYOD users — without provisioning expensive WorkSpaces desktop bundles. 70-80% lower cost per seat, unified with desktop policy and management.",
+          icon: "Globe",
         },
       ],
     },
@@ -815,18 +862,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Clear enterprise browser category leadership with strong market narrative",
         description:
           "Island created the enterprise browser category and has built strong market recognition. For organizations evaluating browser-only solutions with no desktop requirement today or in the future, Island's category focus is a genuine advantage.",
+        icon: "Globe",
       },
       {
         title:
           "Purpose-built browser security architecture with deep Chromium customization",
         description:
           "Island's browser is a deeply customized Chromium build, purpose-engineered for enterprise security. The depth of browser-level controls — watermarking, paste restrictions, screenshot prevention — reflects a team that has focused exclusively on the browser surface.",
+        icon: "Shield",
       },
       {
         title:
           "Strong fit for organizations solving a pure browser-access problem with no desktop requirement",
         description:
           "If your organization needs secure browser access and nothing more — no desktops, no sovereign deployment, no multi-mode users — Island is a credible, category-leading choice. The comparison only sharpens when users need more than a browser.",
+        icon: "Lock",
       },
     ],
     neverinstallWins: [
@@ -835,24 +885,28 @@ export const comparePages: Record<string, ContentPage> = {
           "Full desktop workspaces included — Island cannot deliver a desktop when users need one",
         description:
           "This is the architectural gap that defines the comparison. When a contractor needs to run a native application, when a developer needs a multi-monitor desktop, or when an employee needs GPU-accelerated software — Island has no answer. Neverinstall delivers full desktops from the same platform.",
+        icon: "Monitor",
       },
       {
         title:
           "One platform for both work modes — no second vendor when needs expand",
         description:
           "Organizations that start with browser-only access often discover that 20-40% of users eventually need a desktop. With Island, that means procuring a separate VDI/DaaS platform. With Neverinstall, you enable desktop workspaces on the same platform — same policy, same identity, same admin.",
+        icon: "Layers",
       },
       {
         title:
           "Sovereign on-prem deployment for regulated environments — Island has no equivalent",
         description:
           "Island operates as a cloud-delivered browser with no sovereign on-prem deployment model. For government, defense, healthcare, and financial services organizations that require data to remain on-premises, Island is not viable. Neverinstall deploys fully on-prem.",
+        icon: "Building2",
       },
       {
         title:
           "Unified DLP, session recording, and policy controls across both browser and desktop",
         description:
           "Island's DLP and policy controls apply only to the browser. Neverinstall enforces the same policy model across both browser and desktop workspaces — clipboard controls, file transfer restrictions, session recording, and watermarking work identically in both modes.",
+        icon: "Settings",
       },
     ],
     biggerPicture: {
@@ -863,11 +917,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for the users Island cannot serve — power users, developers, employees who need native applications. Sub-second restore, sovereign deployment, and the same policy model as browser workspaces.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access that competes directly with Island's core offering — with the added advantage of unified management alongside desktop workspaces, sovereign deployment, and 70-80% lower cost than provisioning these users as full desktop seats.",
+          icon: "Globe",
         },
       ],
     },
@@ -944,18 +1000,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Strong RBI credibility with a mature, battle-tested isolation architecture",
         description:
           "Menlo has been doing remote browser isolation longer than most competitors. Their isolation engine is mature and well-regarded by security teams who specifically need web threat isolation as a control — that technical depth in the isolation layer is real.",
+        icon: "Shield",
       },
       {
         title:
           "Established category recognition among security teams evaluating RBI specifically",
         description:
           "When CISOs and security architects evaluate remote browser isolation, Menlo is consistently on the shortlist. That category awareness and brand trust within the security community is a genuine competitive asset.",
+        icon: "BadgeCheck",
       },
       {
         title:
           "Clean security posture for teams that only need web threat isolation and nothing more",
         description:
           "If your requirement is specifically and only to isolate web-borne threats in the browser — no desktop workspaces, no sovereign deployment, no unified DLP across work modes — Menlo's focused RBI approach does that job well without the overhead of a broader platform.",
+        icon: "Lock",
       },
     ],
     neverinstallWins: [
@@ -964,24 +1023,28 @@ export const comparePages: Record<string, ContentPage> = {
           "Full desktop workspaces included — Menlo is browser isolation only",
         description:
           "Menlo's architecture ends at the browser. When users need native applications, multi-monitor setups, or GPU workloads, Menlo cannot help. Neverinstall delivers full desktop workspaces from the same platform — the browser is one surface, not the whole product.",
+        icon: "Monitor",
       },
       {
         title:
           "Native DLP and session recording across both browser and desktop work modes",
         description:
           "Menlo's DLP controls are limited to the browser isolation layer. Neverinstall enforces DLP — clipboard controls, file transfer restrictions, upload/download policies, and full session recording — natively across both browser and desktop workspaces. No separate DLP product required.",
+        icon: "Eye",
       },
       {
         title:
           "Sovereign on-prem deployment — Menlo is cloud-delivered with no on-prem model",
         description:
           "Menlo operates as a cloud-delivered isolation service with no on-prem deployment option. For government, defense, healthcare, and financial services organizations with data sovereignty requirements, Menlo is not viable. Neverinstall deploys fully on-prem.",
+        icon: "Building2",
       },
       {
         title:
           "One platform for both work modes — reducing the vendor stack for secure access",
         description:
           "Organizations evaluating browser isolation often discover they also need desktop workspaces, unified DLP, and session recording — which means adding more vendors alongside Menlo. Neverinstall consolidates browser workspaces, desktop workspaces, DLP, and session recording into one platform, reducing vendor complexity.",
+        icon: "Layers",
       },
     ],
     biggerPicture: {
@@ -992,11 +1055,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops for users who need more than browser isolation — power users, developers, and employees who need native applications. Sub-second restore, sovereign deployment, and unified policy with browser workspaces.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access that goes beyond Menlo's isolation approach — with native DLP, session recording, and the ability to scale into desktop workspaces when users need more. 70-80% lower cost than provisioning full desktop seats for browser-only users.",
+          icon: "Globe",
         },
       ],
     },
@@ -1072,18 +1137,21 @@ export const comparePages: Record<string, ContentPage> = {
           "Strong fit for existing Palo Alto Prisma customers already inside the SASE estate",
         description:
           "If your organization has already invested in Prisma Access for SASE, adding the browser module is operationally simple and contractually convenient. The integration with Prisma's policy engine and the unified Palo Alto management console is genuine value for existing customers.",
+        icon: "Layers",
       },
       {
         title:
           "Bundle economics make the browser feel low-cost inside an existing SASE commitment",
         description:
           "Palo Alto often includes or discounts Prisma Access Browser as part of broader SASE deals. For customers who are already paying for Prisma Access, the incremental cost of adding the browser can be very low — even if standalone pricing would not be competitive.",
+        icon: "DollarSign",
       },
       {
         title:
           "Brand credibility from one of the largest enterprise security platforms in the market",
         description:
           "Palo Alto Networks is a well-known, publicly traded security company. For risk-averse organizations that default to large platform vendors, the brand trust and perceived stability of Palo Alto is a factor in procurement decisions — especially in large enterprise deals.",
+        icon: "Building2",
       },
     ],
     neverinstallWins: [
@@ -1092,24 +1160,28 @@ export const comparePages: Record<string, ContentPage> = {
           "Standalone value without SASE bundle dependency — works with any network security stack",
         description:
           "Prisma Access Browser's economics depend on an existing Palo Alto SASE relationship. Without that relationship, the browser is hard to justify on its own. Neverinstall delivers full platform value independently — it works with Palo Alto, Zscaler, Cloudflare, or no SASE vendor at all.",
+        icon: "Sparkles",
       },
       {
         title:
           "Full desktop workspaces included — Prisma Access Browser is browser-only",
         description:
           "Prisma Access Browser delivers browser security only. When users need native applications, multi-monitor desktops, or GPU workloads, Palo Alto has no workspace answer. Neverinstall delivers both browser and desktop workspaces from one platform — the SASE vendor does not need to be your workspace vendor.",
+        icon: "Monitor",
       },
       {
         title:
           "Sovereign on-prem deployment for regulated environments — SASE-bundled products cannot reach",
         description:
           "Prisma Access Browser is cloud-delivered through Palo Alto's SASE infrastructure with no on-prem option. For government, defense, and financial services organizations with sovereign deployment requirements, a SASE-bundled browser is not viable. Neverinstall deploys fully on-prem.",
+        icon: "Building2",
       },
       {
         title:
           "Cleaner TCO for organizations not already inside the Palo Alto ecosystem",
         description:
           "For organizations that are not existing Palo Alto customers, Prisma Access Browser's pricing is not competitive on a standalone basis. Neverinstall's platform pricing is transparent and does not depend on bundling with a network security purchase to make the economics work.",
+        icon: "DollarSign",
       },
     ],
     biggerPicture: {
@@ -1120,11 +1192,13 @@ export const comparePages: Record<string, ContentPage> = {
           title: "Desktop Workspaces (DaaS)",
           description:
             "Full persistent or non-persistent desktops that Prisma Access Browser cannot deliver — for power users, developers, and employees who need native applications. Sub-second restore, sovereign deployment, and no SASE vendor dependency.",
+          icon: "Monitor",
         },
         {
           title: "Secure Browser Workspaces",
           description:
             "Browser-based access that competes with Prisma Access Browser's core offering — but as a standalone product with its own value, not a bundle add-on. Native DLP, session recording, and the ability to scale into desktop workspaces when users need more.",
+          icon: "Globe",
         },
       ],
     },

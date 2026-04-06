@@ -7,7 +7,30 @@
  */
 
 import Link from "next/link"
-import { ArrowRight, Sparkles } from "lucide-react"
+import {
+  ArrowRight,
+  Sparkles,
+  Shield,
+  Globe,
+  Monitor,
+  Zap,
+  Lock,
+  Cloud,
+  Server,
+  Database,
+  Eye,
+  FileText,
+  Users,
+  Settings,
+  BadgeCheck,
+  AlertTriangle,
+  DollarSign,
+  Clock,
+  Layers,
+  Fingerprint,
+  Building2,
+  type LucideIcon,
+} from "lucide-react"
 
 import {
   Accordion,
@@ -196,23 +219,51 @@ export function AnswerCapsuleSection({
 // GridSection (kind: "grid")
 // ---------------------------------------------------------------------------
 
-function GridCardIcon() {
+const iconMap: Record<string, LucideIcon> = {
+  Shield,
+  Globe,
+  Monitor,
+  Zap,
+  Lock,
+  Cloud,
+  Server,
+  Database,
+  Eye,
+  FileText,
+  Users,
+  Settings,
+  BadgeCheck,
+  AlertTriangle,
+  DollarSign,
+  Clock,
+  Layers,
+  Fingerprint,
+  Building2,
+  Sparkles,
+}
+
+function GridCardIcon({ iconName }: { iconName?: string }) {
+  const Icon = iconName ? iconMap[iconName] : undefined
   return (
     <div className="mb-3 inline-flex size-8 items-center justify-center rounded-lg border border-indigo-500/20 bg-indigo-500/10 text-indigo-400">
-      <svg
-        viewBox="0 0 16 16"
-        fill="none"
-        className="size-3.5"
-        aria-hidden="true"
-      >
-        <path
-          d="M3 8l3.5 3.5L13 4.5"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      {Icon ? (
+        <Icon className="size-3.5" aria-hidden />
+      ) : (
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          className="size-3.5"
+          aria-hidden="true"
+        >
+          <path
+            d="M3 8l3.5 3.5L13 4.5"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
     </div>
   )
 }
@@ -251,7 +302,7 @@ export function BlockGrid({
             <StaggerItem key={item.title}>
               <Card className="group h-full rounded-2xl border-border/60 bg-card/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-md hover:shadow-indigo-500/5">
                 <CardHeader className="pb-0">
-                  <GridCardIcon />
+                  <GridCardIcon iconName={item.icon} />
                   <CardTitle className="text-sm font-semibold sm:text-base">
                     {item.title}
                   </CardTitle>
@@ -678,7 +729,15 @@ export function ProductBridge({ bridge }: { bridge: BridgeConfig }) {
 // CtaBand
 // ---------------------------------------------------------------------------
 
-export function CtaBand({ ctas }: { ctas: CtaLink[] }) {
+export function CtaBand({
+  ctas,
+  headline = "Ready to evaluate Neverinstall?",
+  description = "Book a guided evaluation, launch a pilot, or run a transparent cost comparison with your current stack.",
+}: {
+  ctas: CtaLink[]
+  headline?: string
+  description?: string
+}) {
   return (
     <section className="py-14 sm:py-20">
       <PageContainer>
@@ -696,11 +755,10 @@ export function CtaBand({ ctas }: { ctas: CtaLink[] }) {
 
             <div className="relative max-w-xl space-y-2">
               <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                Ready to evaluate Neverinstall?
+                {headline}
               </h2>
               <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-                Book a guided evaluation, launch a pilot, or run a transparent
-                cost comparison with your current stack.
+                {description}
               </p>
             </div>
 

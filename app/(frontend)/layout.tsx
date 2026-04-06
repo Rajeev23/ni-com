@@ -7,7 +7,10 @@ import { SchemaScript } from "@/components/marketing/schema-script"
 import { SiteShell } from "@/components/marketing/site-shell"
 import { ThemeProvider } from "@/components/theme-provider"
 import { PostHogProvider } from "@/components/analytics/posthog-provider"
-import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/analytics/google-tag-manager"
+import {
+  GoogleTagManager,
+  GoogleTagManagerNoscript,
+} from "@/components/analytics/google-tag-manager"
 import { GoogleAnalytics } from "@/components/analytics/gtag"
 import { LinkedInInsight } from "@/components/analytics/linkedin-insight"
 import { MicrosoftClarity } from "@/components/analytics/clarity"
@@ -33,7 +36,6 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#0a0a0a",
   },
 }
-
 
 export default function RootLayout({
   children,

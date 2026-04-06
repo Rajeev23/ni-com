@@ -55,16 +55,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "No data on endpoints",
             description:
               "Keep applications and data inside the controlled environment instead of local devices.",
+            icon: "Shield",
           },
           {
             title: "Zero-trust access",
             description:
               "Authenticate and authorize every session based on identity and policy.",
+            icon: "Fingerprint",
           },
           {
             title: "Session isolation",
             description:
               "Separate users and workloads more clearly than traditional endpoint-centric models.",
+            icon: "Lock",
           },
         ],
       }),
@@ -78,21 +81,25 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Access control",
             description:
               "Role-based policies and conditional restrictions for who can do what.",
+            icon: "Users",
           },
           {
             title: "Data movement controls",
             description:
               "Downloads, printing, clipboard, and file transfer restrictions when needed.",
+            icon: "Lock",
           },
           {
             title: "Logging and audit",
             description:
               "Session visibility, user activity context, and evidence for investigations.",
+            icon: "Eye",
           },
           {
             title: "Incident readiness",
             description:
               "Containment and response are easier when the workspace boundary is already centralized.",
+            icon: "AlertTriangle",
           },
         ],
       }),
@@ -158,16 +165,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Data stays in the workspace",
             description:
               "Applications, files, and processing remain inside the controlled environment.",
+            icon: "Database",
           },
           {
             title: "Centralized access controls",
             description:
               "Identity, policy, and role definitions govern who can access what.",
+            icon: "Users",
           },
           {
             title: "Controlled movement",
             description:
               "Limit downloads, clipboard, sharing, and transfer paths as needed.",
+            icon: "Lock",
           },
         ],
       }),
@@ -263,16 +273,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Centralized audit visibility",
             description:
               "Logging, activity context, and policy evidence are easier to manage from one control layer.",
+            icon: "Eye",
           },
           {
             title: "Reduced endpoint exposure",
             description:
               "Keeping work off endpoints lowers the surface area compliance teams must reason about.",
+            icon: "Shield",
           },
           {
             title: "Regional alignment",
             description:
               "Support data and workload placement choices required by local regimes and customer expectations.",
+            icon: "Globe",
           },
         ],
       }),
@@ -369,16 +382,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Centralized workspaces",
             description:
               "Applications, data, and compute remain inside the controlled environment.",
+            icon: "Cloud",
           },
           {
             title: "Browser-access model",
             description:
               "Users reach work through secure access paths rather than thick local dependencies.",
+            icon: "Globe",
           },
           {
             title: "Regional deployment control",
             description:
               "Teams can align infrastructure placement with business and regulatory needs.",
+            icon: "Server",
           },
         ],
       }),
@@ -392,21 +408,25 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Reduced endpoint dependency",
             description:
               "The device becomes less central to the trust boundary.",
+            icon: "Monitor",
           },
           {
             title: "Policy-led control",
             description:
               "Access, data movement, and visibility are handled centrally.",
+            icon: "Settings",
           },
           {
             title: "Resilience options",
             description:
               "A centralized model makes continuity and failover planning easier to reason about.",
+            icon: "Shield",
           },
           {
             title: "Provider flexibility",
             description:
               "Neverinstall can support cloud, hybrid, and sovereignty-driven deployment needs.",
+            icon: "Layers",
           },
         ],
       }),
@@ -472,16 +492,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Privacy and data terms",
             description:
               "Privacy policy, DPA, subprocessor list, and data retention references.",
+            icon: "FileText",
           },
           {
             title: "Service terms",
             description:
               "Terms of service, acceptable use policy, and related contractual materials.",
+            icon: "FileText",
           },
           {
             title: "Security policy documents",
             description:
               "Security policy, vulnerability disclosure policy, and incident-response references.",
+            icon: "Shield",
           },
         ],
       }),
@@ -571,15 +594,18 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Access controls",
             description:
               "Identity-led access, role-aware permissions, and policy enforcement.",
+            icon: "Lock",
           },
           {
             title: "Session controls",
             description: "Restrictions on data movement and session behavior.",
+            icon: "Settings",
           },
           {
             title: "Audit visibility",
             description:
               "Logging and evidence helpful for security operations and compliance workflows.",
+            icon: "Eye",
           },
         ],
       }),
@@ -641,16 +667,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Centralized visibility",
             description:
               "A controlled environment helps reduce fragmentation during investigation and containment.",
+            icon: "Eye",
           },
           {
             title: "Defined workflows",
             description:
               "Defined response procedures and customer notification workflows support predictable incident handling.",
+            icon: "FileText",
           },
           {
             title: "Follow-up and remediation",
             description:
               "Post-incident analysis and control improvement are part of our response process.",
+            icon: "Shield",
           },
         ],
       }),
@@ -709,16 +738,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Security questionnaire support",
             description:
               "Submit security questionnaires or schedule a trust review call with our team.",
+            icon: "FileText",
           },
           {
             title: "Documentation requests",
             description:
               "Request SOC reports, architecture summaries, pen test results, or other trust materials.",
+            icon: "BadgeCheck",
           },
           {
             title: "Responsible disclosure",
             description:
               "Report security vulnerabilities or coordinate follow-up on disclosed findings.",
+            icon: "AlertTriangle",
           },
         ],
       }),
@@ -783,16 +815,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Essential cookies",
             description:
               "Required for security, session continuity, and core website functionality.",
+            icon: "Lock",
           },
           {
             title: "Preference cookies",
             description:
               "Remember user selections such as display preferences when enabled.",
+            icon: "Settings",
           },
           {
             title: "Analytics cookies",
             description:
               "Help us understand page usage patterns so we can improve content and navigation.",
+            icon: "Eye",
           },
         ],
       }),
@@ -886,16 +921,19 @@ export const trustPages: Record<string, ContentPage> = {
             title: "Service usage boundaries",
             description:
               "Defines acceptable use expectations and baseline conditions for platform access.",
+            icon: "FileText",
           },
           {
             title: "Commercial alignment",
             description:
               "Clarifies when public terms apply versus customer-specific contractual agreements.",
+            icon: "Users",
           },
           {
             title: "Legal change management",
             description:
               "Describes how material updates are communicated and where current terms are published.",
+            icon: "Settings",
           },
         ],
       }),

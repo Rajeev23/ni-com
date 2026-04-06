@@ -157,8 +157,8 @@ export function HeroAnimated() {
             variants={item}
             className="mt-8 text-xs text-muted-foreground"
           >
-            Live in production with enterprise customers across logistics,
-            financial software, engineering services, and telecom.
+            Replacing Citrix and VMware for enterprise teams — deployed across
+            managed cloud, customer cloud, and on-premises environments.
           </motion.p>
         </motion.div>
       </div>
@@ -179,7 +179,7 @@ const proofStats = [
     value: "70–80%",
     label: "Cost reduction",
     icon: <DollarSign className="size-4 text-sky-400" />,
-    sub: "vs full VDI for browser-first users",
+    sub: "Compared to provisioning full desktop VDI seats",
   },
   {
     value: "Days",
@@ -246,7 +246,7 @@ const browserBullets = [
   "Granular DLP: copy/paste, downloads, printing, watermarks",
   "Forensic session recording with full replay",
   "No agent install — works on any BYOD or contractor device",
-  "70–80% lower cost than a full VDI seat",
+  "Fraction of the cost of provisioning a full desktop seat",
 ]
 
 export function TwoWorkModes() {

@@ -23,6 +23,8 @@ export type SectionBlock = {
   description: string
   bullets?: string[]
   metric?: string
+  /** Lucide icon name (e.g. "Shield", "Globe"). Rendered by BlockGrid. */
+  icon?: string
 }
 
 export type FaqItem = {

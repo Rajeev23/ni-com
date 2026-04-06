@@ -57,16 +57,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "RBI and DPDP data localization mandates",
             description:
               "RBI outsourcing guidelines require that customer data processing stays within India. The DPDP Act adds consent-based data handling and storage locality rules. Every workspace session must enforce jurisdictional boundaries at the infrastructure level.",
+            icon: "BadgeCheck",
           },
           {
             title: "Third-party vendor and BPO processor risk",
             description:
               "Banks outsource claims processing, KYC verification, and loan servicing to vendors who access core banking data from unmanaged endpoints — creating the exposure RBI and GLBA auditors flag first.",
+            icon: "AlertTriangle",
           },
           {
             title: "Citrix and legacy VDI cost at BFSI scale",
             description:
               "Large banks run 5,000-50,000 Citrix seats with per-user licensing, dedicated StoreFront infrastructure, and multi-month upgrade cycles. The operational cost per seat makes digital transformation budgets impossible.",
+            icon: "DollarSign",
           },
         ],
       }),
@@ -81,11 +84,13 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Desktop Workspaces for employees and analysts",
             description:
               "Persistent desktops for treasury, risk, and operations teams running Bloomberg terminals, core banking thick clients, and Excel-heavy financial models. Sub-second session restore keeps trading floors operational during infrastructure events. Deploy on OCI, AWS, or on-premises to meet RBI data localization requirements.",
+            icon: "Monitor",
           },
           {
             title: "Secure Browser Workspaces for vendors and processors",
             description:
               "Browser-only access for BPO processors, KYC vendors, audit firms, and contract staff. No agent install on vendor devices, clipboard and download restrictions enforced by policy, full session recording for GLBA and SOX audit evidence. 70-80% lower cost per seat than provisioning a full desktop for every vendor user.",
+            icon: "Globe",
           },
         ],
       }),
@@ -124,16 +129,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Managed cloud",
             description:
               "Fastest path to production for fintechs and digital lenders. Neverinstall manages infrastructure in region-specific data centers while the institution retains full policy control.",
+            icon: "Cloud",
           },
           {
             title: "Customer cloud (OCI, AWS, Azure)",
             description:
               "Deploy inside your own cloud tenancy — the preferred model for banks meeting RBI outsourcing guidelines. Available on Oracle Cloud Infrastructure for Oracle-aligned institutions.",
+            icon: "Server",
           },
           {
             title: "On-premises deployment",
             description:
               "Full deployment inside bank-owned data centers for institutions with board-level mandates on data sovereignty or air-gap requirements for core banking workloads.",
+            icon: "Building2",
           },
         ],
       }),
@@ -215,16 +223,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Hardware procurement delays kill project ramp-up",
             description:
               "Every new engagement or staffing change triggers laptop procurement, imaging, shipping, and secure configuration. A 50-person project ramp takes weeks before a single line of code ships — burning margin and client patience.",
+            icon: "Clock",
           },
           {
             title: "Client IP leaks through offshore and contractor endpoints",
             description:
               "SOW terms require IP isolation, but offshore developers and subcontractors access client code from personal or shared machines. One unmanaged endpoint storing a client repo creates contractual and legal exposure that no NDA covers.",
+            icon: "AlertTriangle",
           },
           {
             title: "Environment drift across projects and geographies",
             description:
               "Different OS versions, SDK configurations, and local dependency states across team machines create 'works on my machine' bugs that consume senior engineering time and delay client deliverables.",
+            icon: "Layers",
           },
         ],
       }),
@@ -239,12 +250,14 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Desktop Workspaces for developers and project teams",
             description:
               "Golden-image desktops pre-loaded with client-specific IDEs, SDKs, container runtimes, and VPN configurations. Spin up 50 identical environments for a new engagement in one API call. Developers get consistent builds, IT gets centralized patching, and project managers get instant ramp-up without procurement tickets.",
+            icon: "Monitor",
           },
           {
             title:
               "Secure Browser Workspaces for contractors and offshore teams",
             description:
               "Browser-only access for subcontracted developers, QA testers, and client reviewers. Code never leaves the workspace — clipboard, download, and screen-capture restrictions enforce client IP boundaries. No agent install on contractor devices, no MDM enrollment, no laptop shipping. 70-80% lower cost per seat than provisioning a full desktop.",
+            icon: "Globe",
           },
         ],
       }),
@@ -258,21 +271,25 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Minutes to first commit",
             description:
               "Pre-configured developer desktops eliminate the multi-day onboarding cycle. New team members write code on day one instead of waiting for hardware and environment setup.",
+            icon: "Zap",
           },
           {
             title: "Client-level environment isolation",
             description:
               "Workspace policies, network rules, and access controls are scoped per client engagement. No cross-contamination between projects even when the same developer works across accounts.",
+            icon: "Shield",
           },
           {
             title: "Zero IP on unmanaged endpoints",
             description:
               "Source code, build artifacts, and client data never reach a local filesystem. DLP enforcement at the platform level satisfies the IP isolation clauses in enterprise SOWs and MSAs.",
+            icon: "Lock",
           },
           {
             title: "Elastic project scaling",
             description:
               "Add 30 seats for a sprint surge and deprovision them when the phase ends. No hardware return logistics, no asset tracking, no data wipe procedures.",
+            icon: "Cloud",
           },
         ],
       }),
@@ -355,16 +372,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Agent churn outpaces provisioning capacity",
             description:
               "BPO operations onboard new agent cohorts weekly for campaign launches, seasonal surges, and attrition backfill. Manual desktop provisioning and imaging cannot keep pace — every delay is unbillable seat time and missed SLA commitments to clients.",
+            icon: "Users",
           },
           {
             title: "Shift handovers leak client data between agents",
             description:
               "When Agent B logs into the same workstation Agent A used last shift, cached credentials, browser history, CRM session tokens, and clipboard data from the previous session create data spillover. This is a PCI DSS and client contractual violation waiting to happen.",
+            icon: "AlertTriangle",
           },
           {
             title: "Citrix per-seat licensing erodes BPO margins",
             description:
               "Legacy VDI stacks charge per named user or concurrent user with add-on licensing for NetScaler, StoreFront, and Provisioning Services. At 3,000-10,000 seats, the licensing cost alone consumes margin that should fund operations.",
+            icon: "DollarSign",
           },
         ],
       }),
@@ -379,11 +399,13 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Desktop Workspaces for contact center agents",
             description:
               "Non-persistent desktop sessions pre-loaded with CRM (Salesforce, Zoho, Freshdesk), telephony clients (Genesys, Five9, Avaya), and client-specific application stacks. Every shift starts from a clean golden image. When the agent logs out, the session is destroyed — no cached data, no residual credentials, no carryover between shifts. Runs on existing thin clients and low-end hardware.",
+            icon: "Monitor",
           },
           {
             title: "Secure Browser Workspaces for supervisors and QA",
             description:
               "Browser-only access for team leads monitoring dashboards, QA analysts reviewing call recordings, and client stakeholders accessing reporting portals. No full desktop license needed. Clipboard and download restrictions prevent data extraction. 70-80% lower cost per seat than a full agent desktop — the right economics for users who only touch web applications.",
+            icon: "Globe",
           },
         ],
       }),
@@ -397,21 +419,25 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Clean shift resets",
             description:
               "Non-persistent sessions destroy all user data at shift end. The next agent gets a pristine environment — no cached credentials, no clipboard remnants, no browser history from the previous shift.",
+            icon: "Shield",
           },
           {
             title: "Thin client and commodity hardware",
             description:
               "All compute runs server-side. Agent endpoints only stream the session, so existing thin clients, refurbished PCs, and low-cost Chromebooks become fully capable agent workstations.",
+            icon: "Server",
           },
           {
             title: "Centralized DLP across all seats",
             description:
               "USB blocking, clipboard restrictions, download prevention, and screen-capture controls enforce client data protection policies uniformly across every agent session — no endpoint-level configuration needed.",
+            icon: "Lock",
           },
           {
             title: "Provision 500 seats in an afternoon",
             description:
               "New campaign launches and seasonal ramps no longer wait for hardware procurement and imaging. Template-based provisioning scales agent seat counts in hours, not weeks.",
+            icon: "Zap",
           },
         ],
       }),
@@ -519,17 +545,20 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Shared workstations expose PHI between clinicians",
             description:
               "Nurses, physicians, and allied health staff share COWs (computers on wheels), nurse station terminals, and exam room PCs across shifts. Cached EHR sessions, browser credentials, and clipboard data from the previous user create HIPAA violations that endpoint management tools cannot prevent at clinical pace.",
+            icon: "AlertTriangle",
           },
           {
             title:
               "HIPAA Security Rule demands technical safeguards at every access point",
             description:
               "The Security Rule requires unique user identification, automatic logoff, encryption, and audit controls for ePHI access. When clinicians access Epic, Cerner, or Meditech from shared devices and personal tablets, every access point becomes a compliance surface that IT must monitor and control.",
+            icon: "BadgeCheck",
           },
           {
             title: "Ransomware shuts down clinical operations for days",
             description:
               "Hospital ransomware attacks disable EHR access, divert ambulances, and force paper-based workflows. Traditional recovery takes 3-7 days of downtime. Clinical operations need infrastructure that can restore access to patient systems in seconds, not through backup tape restoration.",
+            icon: "Shield",
           },
         ],
       }),
@@ -544,12 +573,14 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Desktop Workspaces for clinicians and clinical staff",
             description:
               "Non-persistent desktop sessions for physicians, nurses, and allied health staff accessing Epic, Cerner, Meditech, or PACS imaging systems. Each login provisions a fresh session with the clinician's profile and application state. When they walk to the next workstation, the session follows. When they log off, PHI is destroyed from the endpoint. Sub-second restore keeps clinical workflows running through infrastructure events.",
+            icon: "Monitor",
           },
           {
             title:
               "Secure Browser Workspaces for administration and telehealth",
             description:
               "Browser-only access for billing specialists, medical coders, telehealth coordinators, and contract staff accessing web-based patient portals, scheduling systems, and claims management platforms. No PHI on the local device, clipboard and download restrictions enforced by policy, and full session recording for HIPAA audit evidence. 70-80% lower cost than provisioning a full clinical desktop for administrative users.",
+            icon: "Globe",
           },
         ],
       }),
@@ -563,16 +594,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Managed cloud with BAA",
             description:
               "Fastest deployment for clinics and ambulatory networks. Neverinstall manages HIPAA-aligned infrastructure with a Business Associate Agreement and customer-controlled access policies.",
+            icon: "Cloud",
           },
           {
             title: "Customer cloud (AWS, Azure, OCI)",
             description:
               "Deploy inside your health system's own HIPAA-eligible cloud tenancy. PHI processing stays within your infrastructure boundary and your existing cloud BAA.",
+            icon: "Server",
           },
           {
             title: "On-premises for hospital data centers",
             description:
               "Full on-premises deployment for large hospital systems and health networks with board-level mandates on data locality or air-gap requirements for clinical workloads.",
+            icon: "Building2",
           },
         ],
       }),
@@ -655,16 +689,19 @@ export const industryPages: Record<string, ContentPage> = {
               "Data sovereignty under FISMA, ITAR, and national security directives",
             description:
               "FISMA requires that federal information systems operate within authorized boundaries. ITAR prohibits foreign access to defense articles. National security directives mandate jurisdictional control over classified workloads. Any workspace platform that routes data through shared commercial infrastructure fails these requirements at the architecture level.",
+            icon: "Shield",
           },
           {
             title: "Operational independence during contested environments",
             description:
               "Military and intelligence operations require systems that continue functioning when commercial cloud connectivity is degraded or denied. Workspace infrastructure must operate independently of internet-dependent vendor services — including licensing servers, update channels, and management consoles.",
+            icon: "Lock",
           },
           {
             title: "Supply chain and vendor trust boundaries",
             description:
               "NIST 800-161 supply chain risk management and Zero Trust Architecture (NIST 800-207) require that agencies control who can access infrastructure components. Vendor-managed platforms create trust boundary violations that security assessors flag during ATO reviews.",
+            icon: "Fingerprint",
           },
         ],
       }),
@@ -679,12 +716,14 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Desktop Workspaces for agency personnel and analysts",
             description:
               "Full desktop environments for intelligence analysts, program managers, and operations staff running thick-client applications, GIS tools, and data analysis platforms. Centralized policy enforcement, session recording for insider threat programs, and sub-second restore for operational continuity. Deployed entirely on-premises or in AWS GovCloud / Azure Government with no data egress to vendor infrastructure.",
+            icon: "Monitor",
           },
           {
             title:
               "Secure Browser Workspaces for contractors and inter-agency access",
             description:
               "Browser-only access for defense contractors, inter-agency collaborators, and temporary personnel who need controlled entry to specific web applications without a full desktop footprint. No agent on contractor devices, enforced DLP controls, and complete session audit trails — all running on the same sovereign infrastructure as full desktops.",
+            icon: "Globe",
           },
         ],
       }),
@@ -698,16 +737,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "GovCloud deployment (AWS, Azure, OCI)",
             description:
               "Deploy inside your agency's FedRAMP-authorized cloud tenancy on AWS GovCloud, Azure Government, or OCI Government. Neverinstall operates within your existing ATO boundary without introducing new external data flows.",
+            icon: "Cloud",
           },
           {
             title: "On-premises in agency data centers",
             description:
               "Full deployment inside government-owned data centers with no external connectivity requirements for platform operation. The control plane, session orchestration, and data plane all run on infrastructure your agency physically controls.",
+            icon: "Building2",
           },
           {
             title: "Air-gapped and SCIF-ready",
             description:
               "Architecture supports fully disconnected operation for classified environments. No license call-home, no telemetry egress, no update dependency on external servers. Designed for SCIF and compartmented facility deployment.",
+            icon: "Server",
           },
         ],
       }),
@@ -814,18 +856,21 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Engineering workstations tied to physical locations",
             description:
               "CAD and PLM applications require GPU-accelerated hardware that costs $3,000-8,000 per workstation. Engineers at remote plants, home offices, or partner sites cannot access design tools without shipping expensive hardware or accepting degraded performance over VPN.",
+            icon: "Server",
           },
           {
             title:
               "Design IP and process data exposure across partner networks",
             description:
               "Supply chain partners, contract manufacturers, and maintenance vendors need access to engineering drawings, BOMs, and process specifications — but every file shared outside your network is IP that can be copied, forwarded, or stored on unmanaged devices. ITAR-controlled designs add export compliance risk to every external access point.",
+            icon: "AlertTriangle",
           },
           {
             title:
               "Citrix licensing costs scale faster than engineering headcount",
             description:
               "Legacy Citrix environments require per-user licensing, StoreFront infrastructure, GPU pass-through configuration, and dedicated admin teams. At 500+ engineering seats across multiple plants, the total cost of Citrix ownership exceeds the cost of the engineering workstations it was supposed to replace.",
+            icon: "DollarSign",
           },
         ],
       }),
@@ -840,11 +885,13 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Desktop Workspaces for engineers and operations teams",
             description:
               "GPU-accelerated desktop environments for mechanical engineers, electrical designers, and manufacturing operations teams running SolidWorks, AutoCAD, Siemens NX, PTC Creo, and PLM systems like Teamcenter and Windchill. Full workstation performance without physical workstation hardware. Deploy on-premises at plant sites or in your cloud tenancy to keep design files, simulation data, and process IP inside your infrastructure boundary.",
+            icon: "Monitor",
           },
           {
             title: "Secure Browser Workspaces for partners and contractors",
             description:
               "Browser-only access for contract manufacturers reviewing engineering drawings, maintenance vendors accessing equipment documentation, and supply chain partners checking BOM specifications. No design files download to partner devices. Clipboard restrictions, watermarked sessions, and download prevention enforce IP containment without requiring MDM on partner hardware. 70-80% lower cost than provisioning a full engineering desktop for every external collaborator.",
+            icon: "Globe",
           },
         ],
       }),
@@ -859,16 +906,19 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Managed cloud for corporate engineering",
             description:
               "Fastest deployment for corporate engineering teams and design centers without plant-level data restrictions. GPU-accelerated instances on managed infrastructure with full policy control.",
+            icon: "Cloud",
           },
           {
             title: "Customer cloud (OCI, AWS, Azure)",
             description:
               "Deploy in your own cloud tenancy for engineering organizations that require data residency within specific regions. GPU instance types matched to CAD and simulation workload requirements.",
+            icon: "Server",
           },
           {
             title: "On-premises at plant sites",
             description:
               "Full on-prem deployment for manufacturing facilities where engineering data, process specifications, or ITAR-controlled designs must remain on the plant network with no external connectivity.",
+            icon: "Building2",
           },
         ],
       }),
@@ -977,17 +1027,20 @@ export const industryPages: Record<string, ContentPage> = {
               "BYOD students on unmanaged devices defeat endpoint security",
             description:
               "Students access SIS portals, LMS platforms, and research databases from personal Chromebooks, iPads, Windows laptops, and phones. MDM enrollment is impractical for student-owned devices. Every unmanaged access point is a FERPA exposure surface where student education records can be cached, screenshotted, or stored on devices IT does not control.",
+            icon: "AlertTriangle",
           },
           {
             title:
               "Physical computer labs cost $500K+ per refresh and sit empty most of the day",
             description:
               "A 50-seat computer lab with licensed engineering or creative software costs $250,000-500,000 per hardware refresh cycle. Labs run at peak utilization only during class hours and finals week — the rest of the time, the investment sits idle. Students who need lab software outside class hours have no access.",
+            icon: "DollarSign",
           },
           {
             title: "FERPA compliance across decentralized access points",
             description:
               "FERPA requires institutions to protect student education records wherever they are accessed. When a student accesses their academic records from a coffee shop laptop or a shared dorm-room Chromebook, the institution bears responsibility for that data. Traditional VPN-only access does not prevent local storage, clipboard copying, or screenshot capture of student data.",
+            icon: "BadgeCheck",
           },
         ],
       }),
@@ -1002,12 +1055,14 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Secure Browser Workspaces for student virtual labs",
             description:
               "Students access MATLAB, Adobe Creative Suite, AutoCAD, SPSS, and specialized courseware through a browser session — from Chromebooks, personal laptops, iPads, or library terminals. No software installation on student devices, no license management per device, and no MDM enrollment. Non-persistent sessions reset between students so no academic records, research data, or login credentials persist on shared or personal devices. 70-80% lower cost per student than provisioning full virtual desktops.",
+            icon: "Globe",
           },
           {
             title:
               "Desktop Workspaces for faculty, staff, and graduate researchers",
             description:
               "Persistent desktop environments for professors running statistical analysis packages, graduate researchers accessing IRB-approved datasets, and IT staff managing campus systems. Licensed software (SAS, Stata, NVivo, specialized research tools) is available from any campus, home, or conference location. Research data and student records stay inside the workspace boundary — faculty can work from any device without transferring sensitive files to personal laptops.",
+            icon: "Monitor",
           },
         ],
       }),
@@ -1022,21 +1077,25 @@ export const industryPages: Record<string, ContentPage> = {
             title: "Deploy before next semester",
             description:
               "Virtual lab environments deploy in weeks, not the multi-semester rollout timeline of traditional VDI. Plan in spring, deploy over summer, and go live for fall enrollment.",
+            icon: "Zap",
           },
           {
             title: "70-80% lower cost than full VDI per student",
             description:
               "Browser-based virtual lab seats cost a fraction of full desktop licenses. Match the cost model to actual usage — students who only need lab software during class hours do not need permanent desktop allocations.",
+            icon: "DollarSign",
           },
           {
             title: "Works on every student-owned device",
             description:
               "Chromebooks, iPads, Windows laptops, Mac laptops, and Linux devices all access virtual labs through a standard browser. No MDM, no agent, no device requirements — eliminating the equity gap between students who can afford expensive hardware and those who cannot.",
+            icon: "Globe",
           },
           {
             title: "Clean session resets between students",
             description:
               "Non-persistent lab sessions destroy all student data at logout — no cached credentials, no downloaded files, no research data from the previous user. Critical for shared library terminals and open-access lab stations.",
+            icon: "Shield",
           },
         ],
       }),

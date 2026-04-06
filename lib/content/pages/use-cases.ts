@@ -58,31 +58,37 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Months to deploy",
             description:
               "Legacy VDI requires dedicated infra teams, hypervisor licensing, and months of integration work before a single user logs in.",
+            icon: "Clock",
           },
           {
             title: "3–5x Broadcom cost increases",
             description:
               "Broadcom's acquisition of VMware forced enterprises into bundled suites at multiples of previous license costs, with no opt-out path.",
+            icon: "DollarSign",
           },
           {
             title: "Citrix complexity tax",
             description:
               "Citrix Virtual Apps and Desktops demands specialist staff, NetScaler gateways, and constant tuning just to stay operational.",
+            icon: "AlertTriangle",
           },
           {
             title: "Hardware refresh cycle",
             description:
               "On-prem VDI ties you to fixed hardware cycles. Scale-up means procurement. Scale-down means stranded CapEx.",
+            icon: "Server",
           },
           {
             title: "Session reliability gap",
             description:
               "Legacy VDI sessions that disconnect often take tens of seconds or minutes to restore, making the experience worse than a local machine.",
+            icon: "Zap",
           },
           {
             title: "Forced bundling",
             description:
               "Both Broadcom and Citrix now require purchasing large software suites to access the specific VDI capability you actually need.",
+            icon: "Lock",
           },
         ],
       }),
@@ -121,11 +127,13 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Indovance replaced Citrix",
             description:
               "Indovance, an AEC engineering firm, migrated off Citrix Virtual Apps and Desktops to Neverinstall without a hardware refresh or replatforming project.",
+            icon: "Building2",
           },
           {
             title: "Porter chose Neverinstall over Microsoft AVD",
             description:
               "Porter evaluated Microsoft Azure Virtual Desktop and chose Neverinstall for faster deployment, simpler operations, and lower cost at scale.",
+            icon: "BadgeCheck",
           },
         ],
       }),
@@ -223,16 +231,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Slow onboarding",
             description:
               "Shipping, imaging, and configuring laptops adds days or weeks before a new hire can actually work.",
+            icon: "Clock",
           },
           {
             title: "VPN friction and risk",
             description:
               "Network-centric access adds user friction, creates bottlenecks, and does not solve the underlying endpoint risk.",
+            icon: "AlertTriangle",
           },
           {
             title: "Device failure stops work",
             description:
               "When a laptop breaks or is lost, the user is offline until a replacement arrives and is re-imaged.",
+            icon: "Monitor",
           },
         ],
       }),
@@ -246,21 +257,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Minute-level provisioning",
             description:
               "Create a fully configured work environment in minutes from any browser, with no hardware required.",
+            icon: "Zap",
           },
           {
             title: "Any-device access",
             description:
               "Users work from managed or personal devices. The workspace experience is identical regardless of endpoint.",
+            icon: "Globe",
           },
           {
             title: "No VPN required",
             description:
               "Access is browser-native. There is no network tunnel to configure, maintain, or troubleshoot.",
+            icon: "Lock",
           },
           {
             title: "Central policy control",
             description:
               "Manage data movement, session behavior, and access permissions from one place across your entire workforce.",
+            icon: "Settings",
           },
         ],
       }),
@@ -364,16 +379,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Environment drift",
             description:
               "Local setup differences between team members cause hard-to-reproduce bugs and slow onboarding for every new hire.",
+            icon: "AlertTriangle",
           },
           {
             title: "Hardware as a bottleneck",
             description:
               "High-spec laptops create procurement delays, support overhead, and single points of failure when a machine breaks.",
+            icon: "Server",
           },
           {
             title: "Code on uncontrolled endpoints",
             description:
               "Distributed engineering teams accumulate source code, credentials, and sensitive data on personal and contractor devices.",
+            icon: "Shield",
           },
         ],
       }),
@@ -387,21 +405,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Persistent environments",
             description:
               "State, tooling, and configuration survive session end. Developers pick up exactly where they left off.",
+            icon: "Database",
           },
           {
             title: "Windows and Linux",
             description:
               "Match real engineering toolchains. Support frontend, backend, and system development without compromise.",
+            icon: "Monitor",
           },
           {
             title: "Fast contractor onboarding",
             description:
               "Provision a secure, scoped development environment for external or offshore developers without handing over broad access.",
+            icon: "Users",
           },
           {
             title: "Code stays in the cloud",
             description:
               "Repos, credentials, and build artifacts never leave the controlled environment. Endpoint loss or theft exposes nothing.",
+            icon: "Cloud",
           },
         ],
       }),
@@ -493,16 +515,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Device failure",
             description:
               "Users cannot work if access depends on a specific laptop. A broken machine means a stopped employee until replacement hardware arrives.",
+            icon: "Monitor",
           },
           {
             title: "Office or network disruption",
             description:
               "Physical-site events — floods, power failures, network outages — should not halt critical operations for entire teams.",
+            icon: "AlertTriangle",
           },
           {
             title: "Ransomware and endpoint compromise",
             description:
               "When local devices or on-prem infrastructure are compromised, teams need a clean environment that is completely separate from affected systems.",
+            icon: "Shield",
           },
         ],
       }),
@@ -516,21 +541,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Known-good environment",
             description:
               "Cloud workspaces are unaffected by endpoint ransomware, local hardware failure, or site disruptions.",
+            icon: "Cloud",
           },
           {
             title: "No device dependency",
             description:
               "Users access their workspace from any available device — a borrowed laptop, a phone, a shared terminal — without losing their environment.",
+            icon: "Globe",
           },
           {
             title: "Policy continuity",
             description:
               "The same access controls, data movement restrictions, and security policies remain in force during a disruption.",
+            icon: "Lock",
           },
           {
             title: "Standby economics",
             description:
               "Use cloud workspaces as a flexible continuity layer. No duplicate hardware to procure or maintain just for DR scenarios.",
+            icon: "DollarSign",
           },
         ],
       }),
@@ -635,16 +664,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Hardware for temporary users",
             description:
               "Teams still procure and recover devices for short-term engagements, creating cost and logistics overhead.",
+            icon: "DollarSign",
           },
           {
             title: "Incomplete offboarding",
             description:
               "Revoking access across tools, networks, and endpoints leaves gaps. Former contractors sometimes retain access for weeks.",
+            icon: "AlertTriangle",
           },
           {
             title: "No visibility into sessions",
             description:
               "Third parties access sensitive systems from devices you do not control, with no audit trail of what was accessed or changed.",
+            icon: "Eye",
           },
         ],
       }),
@@ -658,21 +690,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Minutes to provision",
             description:
               "Create a scoped, time-bound workspace without hardware procurement or endpoint configuration.",
+            icon: "Zap",
           },
           {
             title: "Instant offboarding",
             description:
               "Revoke the workspace and all associated access in seconds when the engagement ends.",
+            icon: "Clock",
           },
           {
             title: "Isolated sessions",
             description:
               "Each third-party user runs in a clean, contained environment. No lateral movement between contractor sessions.",
+            icon: "Shield",
           },
           {
             title: "Session recording",
             description:
               "Keep a full audit record of every contractor session for compliance, investigation, and forensic review.",
+            icon: "Eye",
           },
         ],
       }),
@@ -777,16 +813,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Uncontrolled device posture",
             description:
               "Personal devices vary in patch level, antivirus coverage, and whether they are shared with family members.",
+            icon: "AlertTriangle",
           },
           {
             title: "Employee resistance to MDM",
             description:
               "Staff push back against MDM profiles on personal machines because enrollment feels invasive and permanent.",
+            icon: "Users",
           },
           {
             title: "VPN does not solve the data problem",
             description:
               "Network tunnels let traffic through but do nothing to prevent local storage, screenshots, or data exfiltration from the endpoint.",
+            icon: "Lock",
           },
         ],
       }),
@@ -800,21 +839,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "No data on the device",
             description:
               "Work happens inside a remote session. Files, credentials, and application data never land on the personal endpoint.",
+            icon: "Shield",
           },
           {
             title: "Policy-led controls",
             description:
               "Enforce clipboard restrictions, download blocking, printing controls, and DLP at the session layer without touching the device.",
+            icon: "Settings",
           },
           {
             title: "No installation required",
             description:
               "Users access the workspace through a browser. No MDM enrollment, no VPN client, no agent to install or maintain.",
+            icon: "Globe",
           },
           {
             title: "Full session auditability",
             description:
               "Security teams get clear visibility into what happened inside every session — something fragmented BYOD tooling cannot provide.",
+            icon: "Eye",
           },
         ],
       }),
@@ -895,16 +938,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "No visibility into what admins do",
             description:
               "VPN-based access gives privileged users network reach without any session-layer audit of what they actually touched.",
+            icon: "Eye",
           },
           {
             title: "Credentials on endpoints",
             description:
               "Admin credentials stored on laptops or personal devices create a persistent exfiltration risk.",
+            icon: "Fingerprint",
           },
           {
             title: "Compliance gaps",
             description:
               "Audit and compliance teams cannot reconstruct privileged sessions without purpose-built recording. Most orgs have the gap and hope nothing triggers an audit.",
+            icon: "BadgeCheck",
           },
         ],
       }),
@@ -918,21 +964,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Session recording",
             description:
               "Capture every privileged session with full fidelity — keystrokes, screen activity, and application interactions.",
+            icon: "Eye",
           },
           {
             title: "Forensic replay",
             description:
               "Replay any session for incident investigation, compliance review, or audit response without relying on logs alone.",
+            icon: "FileText",
           },
           {
             title: "Audit trail",
             description:
               "Every access event, session start, session end, and policy violation is logged and exportable.",
+            icon: "BadgeCheck",
           },
           {
             title: "Isolated from endpoint",
             description:
               "Admin credentials and sensitive system data stay inside the session. Nothing reaches the privileged user's device.",
+            icon: "Lock",
           },
         ],
       }),
@@ -1024,16 +1074,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "High seat turnover",
             description:
               "Agents share workstations across shifts. Data from one shift cannot carry over to the next, but manual cleanup is unreliable.",
+            icon: "Users",
           },
           {
             title: "Scale spikes are unpredictable",
             description:
               "Campaign launches, seasonal peaks, and business growth require fast capacity addition. Hardware cycles cannot keep up.",
+            icon: "Zap",
           },
           {
             title: "Endpoint sprawl",
             description:
               "Thin clients, shared desktops, and BYOD devices create inconsistent security postures across the agent floor.",
+            icon: "Monitor",
           },
         ],
       }),
@@ -1047,21 +1100,25 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Shift-based clean resets",
             description:
               "Sessions start fresh each shift. No carryover of data, credentials, or browsing state between agents.",
+            icon: "Shield",
           },
           {
             title: "Central policy enforcement",
             description:
               "DLP controls, clipboard restrictions, and access rules apply to every seat from a single management plane.",
+            icon: "Settings",
           },
           {
             title: "Instant scaling",
             description:
               "Add hundreds of seats in hours without hardware procurement or imaging queues.",
+            icon: "Cloud",
           },
           {
             title: "Works on any endpoint",
             description:
               "Run on existing thin clients, shared PCs, or BYOD devices. No hardware refresh required to deploy.",
+            icon: "Globe",
           },
         ],
       }),
@@ -1166,16 +1223,19 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "DPDP Act",
             description:
               "India's Digital Personal Data Protection Act creates data localization obligations for personal data processing across sectors.",
+            icon: "FileText",
           },
           {
             title: "RBI data localization",
             description:
               "The Reserve Bank of India requires payment system data to be stored exclusively in India, with no mirroring outside the country.",
+            icon: "Database",
           },
           {
             title: "Enterprise data sovereignty",
             description:
               "Global enterprises face board-level requirements to keep sensitive IP, financial data, and customer records within specific jurisdictions.",
+            icon: "Building2",
           },
         ],
       }),
@@ -1214,11 +1274,13 @@ export const useCasePages: Record<string, ContentPage> = {
             title: "Desktop Workspaces",
             description:
               "Windows and Linux desktops run entirely within your infrastructure boundary. User files, applications, and session data never leave the deployment region.",
+            icon: "Monitor",
           },
           {
             title: "Secure Browser Workspaces",
             description:
               "Browser sessions are isolated within your infrastructure. Web content and enterprise application data are rendered and discarded inside the boundary, not on the endpoint.",
+            icon: "Globe",
           },
         ],
       }),
