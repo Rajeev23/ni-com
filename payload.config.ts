@@ -1,9 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
-import { Media } from './collections/media'
-import { Authors } from './collections/authors'
-import { Categories } from './collections/categories'
+import { Media, Authors, Categories, Posts } from './collections'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
@@ -28,6 +26,7 @@ export default buildConfig({
     Media,
     Authors,
     Categories,
+    Posts,
   ],
   editor: lexicalEditor(),
   db: postgresAdapter({
