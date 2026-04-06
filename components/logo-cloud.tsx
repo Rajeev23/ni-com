@@ -83,7 +83,7 @@ export default function LogoCloudTwo() {
             data-current={currentGroup}
             className="mt-4 text-lg text-muted-foreground"
           >
-            Tailark is trusted by leading teams from{" "}
+            Neverinstall is trusted by leading teams from{" "}
             <span className="transition-colors duration-200 in-data-[current=ai]:text-foreground">
               Generative AI Companies,
             </span>{" "}

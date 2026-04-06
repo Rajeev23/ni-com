@@ -70,7 +70,7 @@ export default function Pricing() {
                 <div className="self-end">
                   <CardTitle className="text-lg font-medium">Free</CardTitle>
                   <div className="mt-1 text-sm text-balance text-muted-foreground">
-                    For developers trying out Tailark for the first time
+                    For developers trying out Neverinstall for the first time
                   </div>
                 </div>
 

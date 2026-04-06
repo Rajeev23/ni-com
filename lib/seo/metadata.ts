@@ -43,6 +43,8 @@ export function getBaseMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      site: "@neverinstall",
+      creator: "@neverinstall",
       title,
       description,
       images: [toAbsolute(defaultTwitterImagePath)],

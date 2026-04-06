@@ -2,7 +2,7 @@ export default function StatsSection() {
   return (
     <section className="bg-background py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="sr-only">Tailark in stats</h2>
+        <h2 className="sr-only">Neverinstall in stats</h2>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <div className="space-y-0.5 md:text-center">
             <div className="text-4xl font-bold text-primary">90+</div>

@@ -7,7 +7,7 @@ import { useState, useEffect } from "react"
 export const ChatIllustration = () => {
   const [isStreaming, setIsStreaming] = useState(false)
 
-  const response = `Tailark is a collection of pre-built, responsive UI blocks and components designed to accelerate the development of marketing websites. `
+  const response = `Neverinstall delivers cloud-native virtual desktops and secure enterprise browsers that replace legacy VDI infrastructure. `
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -57,11 +57,11 @@ export const ChatIllustration = () => {
         <div className="mx-auto mt-2 max-w-lg">
           {isStreaming && (
             <div className="flex flex-wrap gap-2">
-              <Source href="https://tailark.com">
+              <Source href="https://neverinstall.com">
                 <SourceTrigger showFavicon />
                 <SourceContent
-                  title="Tailark"
-                  description="Tailark is a collection of pre-built, responsive UI blocks and components designed to accelerate the development of marketing websites."
+                  title="Neverinstall"
+                  description="Neverinstall delivers cloud-native virtual desktops and secure enterprise browsers that replace legacy VDI infrastructure."
                 />
               </Source>
               <Source href="https://www.google.com">

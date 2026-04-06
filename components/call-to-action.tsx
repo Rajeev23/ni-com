@@ -19,7 +19,7 @@ export default function CallToAction() {
             </h2>
             <p className="mt-4 mb-6 text-balance text-muted-foreground">
               Join a community of over 1000+ companies and developers who have
-              already discovered the power of Tailark.{" "}
+              already discovered the power of Neverinstall.{" "}
             </p>
 
             <Button asChild>

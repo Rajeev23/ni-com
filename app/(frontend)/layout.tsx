@@ -6,6 +6,13 @@ import "@/styles/globals.css"
 import { SchemaScript } from "@/components/marketing/schema-script"
 import { SiteShell } from "@/components/marketing/site-shell"
 import { ThemeProvider } from "@/components/theme-provider"
+import { PostHogProvider } from "@/components/analytics/posthog-provider"
+import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/analytics/google-tag-manager"
+import { GoogleAnalytics } from "@/components/analytics/gtag"
+import { LinkedInInsight } from "@/components/analytics/linkedin-insight"
+import { MicrosoftClarity } from "@/components/analytics/clarity"
+import { MdbPixel } from "@/components/analytics/mdb-pixel"
+import { Intercom } from "@/components/analytics/intercom"
 import { seoSiteUrl } from "@/lib/seo/metadata"
 import { organizationSchema } from "@/lib/seo/schema"
 import { cn } from "@/lib/utils"
@@ -19,7 +26,14 @@ const fontMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(seoSiteUrl),
+  other: {
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Neverinstall",
+    "msapplication-TileColor": "#0a0a0a",
+  },
 }
+
 
 export default function RootLayout({
   children,
@@ -37,12 +51,23 @@ export default function RootLayout({
         geist.variable
       )}
     >
+      <head>
+        <GoogleTagManager />
+        <GoogleAnalytics />
+        <LinkedInInsight />
+        <MicrosoftClarity />
+        <MdbPixel />
+      </head>
       <body>
-        <ThemeProvider>
-          <SchemaScript schema={organizationSchema()} />
-          <GlobalSchema />
-          <SiteShell>{children}</SiteShell>
-        </ThemeProvider>
+        <GoogleTagManagerNoscript />
+        <SchemaScript schema={organizationSchema()} />
+        <GlobalSchema />
+        <PostHogProvider>
+          <ThemeProvider>
+            <SiteShell>{children}</SiteShell>
+          </ThemeProvider>
+        </PostHogProvider>
+        <Intercom />
       </body>
     </html>
   )

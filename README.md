@@ -25,7 +25,7 @@ One platform, two work modes, any deployment (managed cloud, customer cloud, sov
 - `Next.js 16`
 - `React 19`
 - `Tailwind CSS v4`
-- `shadcn/ui` (radix-nova style) + Tailark Pro blocks
+- `shadcn/ui` (radix-nova style)
 - `motion` (Framer Motion 12) for animations
 - `oxlint` for linting
 - `oxfmt` for formatting

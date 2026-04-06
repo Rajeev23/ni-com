@@ -12,14 +12,14 @@ export default function HeroSection() {
         </div>
         <div className="mx-auto mt-20 max-w-2xl text-center">
           <span className="rounded-full border border-primary/10 bg-primary/5 px-2 py-1 text-sm font-medium text-primary">
-            Tailark AI
+            Neverinstall
           </span>
           <h1 className="mt-4 text-4xl font-semibold text-balance md:text-5xl lg:text-6xl">
             AI-driven insights, seamless execution.
           </h1>
           <p className="mx-auto mt-4 mb-6 max-w-md text-lg text-balance text-muted-foreground">
-            With Tailark&apos;s personal AI, get your projects to the finish
-            line faster and with context.
+            Replace legacy VDI with cloud-native desktops and secure browsers.
+            One platform, any deployment.
           </p>
 
           <Button asChild>

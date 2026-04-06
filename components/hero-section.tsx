@@ -29,8 +29,8 @@ export default function HeroSection() {
                   Powerful Analytics for Smarter Decisions
                 </h1>
                 <p className="mx-auto mt-4 mb-8 max-w-xl text-lg text-balance text-muted-foreground">
-                  With Tailark&apos;s personal AI, get your projects to the
-                  finish line faster and with no context switching.
+                  Replace legacy VDI with cloud-native desktops and secure
+                  browsers. One platform, any deployment.
                 </p>
 
                 <div className="flex items-center justify-center gap-3 max-sm:flex-col">

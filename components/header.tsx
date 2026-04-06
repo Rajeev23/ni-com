@@ -298,7 +298,7 @@ export function HeroHeader() {
             {/* Mobile top bar — logo + hamburger */}
             <div className="flex items-center justify-between gap-8 max-lg:h-14 max-lg:w-full max-lg:in-data-[state=active]:border-b max-lg:in-data-[state=active]:border-foreground/5">
               <Link href="/" aria-label="home">
-                <Logo uniColor className="h-5" />
+                <Logo uniColor className="h-10" />
               </Link>
 
               <button
@@ -332,7 +332,7 @@ export function HeroHeader() {
                           aria-label="home"
                           className="flex size-7 rounded-md hover:bg-foreground/5"
                         >
-                          <LogoIcon className="m-auto size-4" />
+                          <LogoIcon className="m-auto size-5" />
                         </Link>
                       </motion.div>
                     )}
