@@ -10,7 +10,7 @@
     "lint": "oxlint .",
     "format": "oxfmt .",
     "typecheck": "tsc --noEmit",
-    "seed": "tsx lib/seed.ts"
+    "seed": "node --env-file=.env.local --import=tsx/esm lib/seed.ts"
   },
   "dependencies": {
     "@number-flow/react": "^0.6.0",
