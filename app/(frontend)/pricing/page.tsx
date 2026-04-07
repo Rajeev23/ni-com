@@ -176,8 +176,10 @@ function Indicator({ checked = false }: { checked?: boolean }) {
           ? "bg-emerald-500/10 text-emerald-600"
           : "bg-foreground/[0.065] text-foreground/40"
       )}
+      aria-label={checked ? "Included" : "Not included"}
+      role="img"
     >
-      {checked ? "✓" : "✗"}
+      <span aria-hidden="true">{checked ? "✓" : "✗"}</span>
     </span>
   )
 }
@@ -199,11 +201,15 @@ function ComparatorTable({
         {/* Column header row */}
         <thead>
           <tr>
-            <th className="h-14 px-5 text-left font-medium text-foreground">
+            <th
+              scope="col"
+              className="h-14 px-5 text-left font-medium text-foreground"
+            >
               Features
             </th>
             {planNames.map((name, i) => (
               <th
+                scope="col"
                 key={name}
                 className={cn(
                   "h-14 px-4 text-center font-medium text-foreground",
@@ -226,9 +232,12 @@ function ComparatorTable({
         <tbody>
           {features.map((feature) => (
             <tr key={feature.name} className="border-t">
-              <td className="h-12 px-5 text-muted-foreground">
+              <th
+                scope="row"
+                className="h-12 px-5 text-left font-normal text-muted-foreground"
+              >
                 {feature.name}
-              </td>
+              </th>
               {feature.plans.map((included, i) => (
                 <td
                   key={i}

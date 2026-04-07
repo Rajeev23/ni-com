@@ -190,7 +190,7 @@ function TableRow({
       className={`border-b last:border-b-0 ${isEven ? "" : "bg-zinc-50/50 dark:bg-zinc-900/30"}`}
     >
       {/* Row label */}
-      <td className="w-[200px] shrink-0 border-r px-5 py-4 align-top text-sm font-semibold text-foreground sm:w-[220px]">
+      <td className="w-[140px] shrink-0 border-r px-3 py-4 align-top text-sm font-semibold text-foreground sm:w-[220px] sm:px-5">
         {label}
       </td>
 
@@ -250,7 +250,7 @@ export function CompareTableSection({
             <thead>
               <tr className="border-b bg-card/95 backdrop-blur-sm">
                 {/* Empty label cell */}
-                <th className="w-[200px] border-r px-5 py-3.5 sm:w-[220px]" />
+                <th className="w-[140px] border-r px-3 py-3.5 sm:w-[220px] sm:px-5" />
 
                 {/* Neverinstall header — indigo band */}
                 <th className="border-r bg-indigo-500/10 px-5 py-3.5">

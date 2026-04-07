@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
-import { Logo, LogoIcon } from "@/components/logo"
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import React from "react"
+import { useScroll, useMotionValueEvent } from "motion/react"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,6 +14,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import {
+  Menu,
+  X,
   Monitor,
   Globe,
   Layers,
@@ -21,19 +24,11 @@ import {
   Lock,
   Code2,
   Database,
-  Building2,
-  Stethoscope,
-  Shield,
-  Factory,
-  GraduationCap,
   BookOpen,
   MessageSquare,
   FileText,
   BadgeCheck,
-  Menu,
-  X,
   BriefcaseBusiness,
-  PhoneCall,
 } from "lucide-react"
 import { useMedia } from "@/hooks/use-media"
 import {
@@ -43,12 +38,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { cn } from "@/lib/utils"
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "motion/react"
 
 // ---------------------------------------------------------------------------
 // Types
@@ -58,7 +47,7 @@ interface FeatureLink {
   href: string
   name: string
   description?: string
-  icon: React.ReactElement
+  icon?: React.ReactElement
 }
 
 interface MobileLink {
@@ -69,7 +58,7 @@ interface MobileLink {
 }
 
 // ---------------------------------------------------------------------------
-// Navigation data — sourced from navigation.ts + brief icon mapping
+// Navigation data
 // ---------------------------------------------------------------------------
 
 const products: FeatureLink[] = [
@@ -137,83 +126,35 @@ const industries: FeatureLink[] = [
   {
     href: "/solutions/industry/financial-services",
     name: "Financial Services",
-    icon: <Building2 className="fill-indigo-500/15 stroke-foreground" />,
   },
-  {
-    href: "/solutions/industry/it-services",
-    name: "IT Services",
-    icon: <Layers className="fill-sky-500/15 stroke-foreground" />,
-  },
-  {
-    href: "/solutions/industry/bpo-call-centers",
-    name: "BPO & Call Centers",
-    icon: <PhoneCall className="fill-emerald-500/15 stroke-foreground" />,
-  },
-  {
-    href: "/solutions/industry/healthcare",
-    name: "Healthcare",
-    icon: <Stethoscope className="fill-red-500/15 stroke-foreground" />,
-  },
+  { href: "/solutions/industry/it-services", name: "IT Services" },
+  { href: "/solutions/industry/bpo-call-centers", name: "BPO & Call Centers" },
+  { href: "/solutions/industry/healthcare", name: "Healthcare" },
   {
     href: "/solutions/industry/government-defense",
     name: "Government & Defense",
-    icon: <Shield className="fill-blue-500/15 stroke-foreground" />,
   },
-  {
-    href: "/solutions/industry/manufacturing",
-    name: "Manufacturing",
-    icon: <Factory className="fill-orange-500/15 stroke-foreground" />,
-  },
-  {
-    href: "/solutions/industry/education",
-    name: "Education",
-    icon: <GraduationCap className="fill-yellow-500/15 stroke-foreground" />,
-  },
+  { href: "/solutions/industry/manufacturing", name: "Manufacturing" },
+  { href: "/solutions/industry/education", name: "Education" },
 ]
 
 const daasCompare: FeatureLink[] = [
-  {
-    href: "/compare/vs-citrix",
-    name: "vs Citrix",
-    icon: <ArrowLeftRight className="fill-indigo-500/15 stroke-foreground" />,
-  },
+  { href: "/compare/vs-citrix", name: "vs Citrix" },
   {
     href: "/compare/vs-azure-virtual-desktop",
     name: "vs Azure Virtual Desktop",
-    icon: <ArrowLeftRight className="fill-sky-500/15 stroke-foreground" />,
   },
-  {
-    href: "/compare/vs-omnissa",
-    name: "vs VMware / Omnissa",
-    icon: <ArrowLeftRight className="fill-violet-500/15 stroke-foreground" />,
-  },
-  {
-    href: "/compare/vs-windows-365",
-    name: "vs Windows 365",
-    icon: <ArrowLeftRight className="fill-blue-500/15 stroke-foreground" />,
-  },
-  {
-    href: "/compare/vs-aws-workspaces",
-    name: "vs AWS WorkSpaces",
-    icon: <ArrowLeftRight className="fill-amber-500/15 stroke-foreground" />,
-  },
+  { href: "/compare/vs-omnissa", name: "vs VMware / Omnissa" },
+  { href: "/compare/vs-windows-365", name: "vs Windows 365" },
+  { href: "/compare/vs-aws-workspaces", name: "vs AWS WorkSpaces" },
 ]
 
 const browserCompare: FeatureLink[] = [
-  {
-    href: "/compare/vs-island",
-    name: "vs Island",
-    icon: <ArrowLeftRight className="fill-emerald-500/15 stroke-foreground" />,
-  },
-  {
-    href: "/compare/vs-menlo",
-    name: "vs Menlo Security",
-    icon: <ArrowLeftRight className="fill-teal-500/15 stroke-foreground" />,
-  },
+  { href: "/compare/vs-island", name: "vs Island" },
+  { href: "/compare/vs-menlo", name: "vs Menlo Security" },
   {
     href: "/compare/vs-prisma-access-browser",
     name: "vs Prisma Access Browser",
-    icon: <ArrowLeftRight className="fill-cyan-500/15 stroke-foreground" />,
   },
 ]
 
@@ -268,106 +209,58 @@ const mobileLinks: MobileLink[] = [
 
 export function HeroHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
-  const isLarge = useMedia("(min-width: 64rem)")
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const isLarge = useMedia("(min-width: 64rem)")
 
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 75)
+    setIsScrolled(latest > 50)
   })
 
   return (
     <header
       role="banner"
-      {...(isScrolled && { "data-scrolled": true })}
       data-state={isMobileMenuOpen ? "active" : "inactive"}
-      className="bg-background"
+      {...(isScrolled && { "data-scrolled": true })}
+      className="fixed inset-x-0 top-0 z-50"
     >
       <div
         className={cn(
-          "relative",
-          "not-in-data-scrolled:has-data-[state=open]:[--viewport-translate:-4rem]",
-          !isLarge &&
-            "fixed inset-x-0 top-0 z-50 h-16 overflow-hidden in-data-scrolled:border-b in-data-scrolled:border-foreground/5 in-data-scrolled:bg-card/50 in-data-scrolled:backdrop-blur",
-          "max-lg:in-data-[state=active]:h-screen max-lg:in-data-[state=active]:bg-card/50 max-lg:in-data-[state=active]:backdrop-blur"
+          "absolute inset-x-0 top-0 z-50 h-18 border-transparent ring-1 ring-transparent transition-all duration-300",
+          "in-data-scrolled:border-b in-data-scrolled:border-foreground/5 in-data-scrolled:bg-background/75 in-data-scrolled:backdrop-blur",
+          "max-lg:h-14 max-lg:overflow-hidden max-lg:border-b max-lg:in-data-[state=active]:h-screen max-lg:in-data-[state=active]:bg-background/75 max-lg:in-data-[state=active]:backdrop-blur"
         )}
       >
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="relative flex flex-wrap items-center justify-between py-1.5 max-lg:not-in-data-[state=active]:h-16 lg:py-5">
-            {/* Mobile top bar — logo + hamburger */}
-            <div className="flex items-center justify-between gap-8 max-lg:h-14 max-lg:w-full max-lg:in-data-[state=active]:border-b max-lg:in-data-[state=active]:border-foreground/5">
-              <Link href="/" aria-label="home">
+        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+          <div className="relative flex flex-wrap items-center justify-between lg:py-5">
+            <div className="flex justify-between gap-8 max-lg:h-14 max-lg:w-full max-lg:border-b">
+              <Link
+                href="/"
+                aria-label="home"
+                className="flex items-center space-x-2"
+              >
                 <Logo uniColor className="h-10" />
               </Link>
 
+              {isLarge && <NavMenu />}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden"
+                aria-label={
+                  isMobileMenuOpen == true ? "Close Menu" : "Open Menu"
+                }
+                className="relative z-20 -m-3 -mr-3.5 block cursor-pointer p-3 lg:hidden"
               >
                 <Menu className="m-auto size-5 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
                 <X className="absolute inset-0 m-auto size-5 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
               </button>
             </div>
 
-            {/* Desktop floating pill nav */}
-            {isLarge && (
-              <motion.div
-                animate={{ width: "fit-content", gap: 8 }}
-                className="fixed inset-x-0 z-50 mx-auto size-fit max-w-2xl rounded-xl bg-popover/50 py-1.5 pl-1.5 shadow-md ring-1 shadow-black/6.5 ring-border backdrop-blur-xl"
-              >
-                <div className="flex items-center">
-                  <AnimatePresence>
-                    {isScrolled && (
-                      <motion.div
-                        key="logo"
-                        initial={{ opacity: 0, width: 0 }}
-                        animate={{ opacity: 1, width: "3rem" }}
-                        exit={{ opacity: 0, width: 0 }}
-                        className="relative before:absolute before:inset-y-1 before:right-2 before:w-0.5 before:rounded before:border-r before:border-background/75 before:bg-foreground/10"
-                      >
-                        <Link
-                          href="/"
-                          aria-label="home"
-                          className="flex size-7 rounded-md hover:bg-foreground/5"
-                        >
-                          <LogoIcon className="m-auto size-5" />
-                        </Link>
-                      </motion.div>
-                    )}
-
-                    <div className="pr-1.5">
-                      <NavMenu key="nav-menu" />
-                    </div>
-
-                    {isScrolled && (
-                      <motion.div
-                        key="cta-button"
-                        initial={{ opacity: 0, width: 0 }}
-                        animate={{ opacity: 1, width: "auto" }}
-                        exit={{ opacity: 0, width: 0 }}
-                        className="-my-1 overflow-hidden py-1 pr-0.5"
-                      >
-                        <Button asChild size="sm" className="mr-1 ml-2.5 h-7">
-                          <Link href="/get-demo">
-                            <span>Get a Demo</span>
-                          </Link>
-                        </Button>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Mobile menu panel */}
             {!isLarge && isMobileMenuOpen && (
               <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} />
             )}
 
-            {/* Desktop right-side CTAs (visible before scroll) */}
-            <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 in-data-[state=active]:flex max-lg:in-data-[state=active]:mt-6 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+            <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild size="sm">
                   <Link href="/get-demo">
@@ -413,15 +306,9 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
                         <Link
                           href={item.href}
                           onClick={closeMenu}
-                          className="grid grid-cols-[auto_1fr] items-center gap-2.5 px-4 py-2"
+                          className="block px-4 py-2 text-base"
                         >
-                          <div
-                            aria-hidden
-                            className="flex items-center justify-center *:size-4"
-                          >
-                            {item.icon}
-                          </div>
-                          <div className="text-base">{item.name}</div>
+                          {item.name}
                         </Link>
                       </li>
                     ))}
@@ -433,7 +320,6 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           return null
         })}
       </Accordion>
-
       {mobileLinks.map((link, index) => {
         if (link.name && link.href) {
           return (
@@ -467,17 +353,17 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 
 const NavMenu = () => {
   return (
-    <NavigationMenu className="**:data-[slot=navigation-menu-viewport]:max-w-2xl **:data-[slot=navigation-menu-viewport]:min-w-lg **:data-[slot=navigation-menu-viewport]:translate-x-(--viewport-translate) **:data-[slot=navigation-menu-viewport]:transition-all max-lg:hidden">
-      <NavigationMenuList className="gap-0 gap-1 **:data-[slot=navigation-menu-trigger]:h-7 **:data-[slot=navigation-menu-trigger]:px-3 **:data-[slot=navigation-menu-trigger]:text-sm **:data-[slot=navigation-menu-trigger]:text-foreground/75">
+    <NavigationMenu className="[--viewport-outer-px:2rem] max-lg:hidden">
+      <NavigationMenuList className="gap-3">
         {/* Products */}
-        <NavigationMenuItem>
+        <NavigationMenuItem value="products">
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-          <NavigationMenuContent className="w-full origin-top p-0">
-            <div className="rounded-xl border border-foreground/5 border-transparent bg-card p-px pt-2 shadow ring-1 ring-foreground/5">
-              <span className="ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          <NavigationMenuContent>
+            <div className="min-w-lg p-4">
+              <span className="ml-2 text-xs font-medium text-muted-foreground uppercase">
                 Products
               </span>
-              <ul className="mt-1 grid grid-cols-1">
+              <ul className="mt-2 space-y-2">
                 {products.map((item, index) => (
                   <ListItem
                     key={index}
@@ -494,136 +380,107 @@ const NavMenu = () => {
         </NavigationMenuItem>
 
         {/* Solutions */}
-        <NavigationMenuItem>
+        <NavigationMenuItem value="solutions">
           <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-          <NavigationMenuContent className="grid w-full min-w-lg origin-top grid-cols-[1fr_1fr] gap-2 p-0">
-            {/* By Use Case */}
-            <div className="rounded-xl border border-foreground/5 border-transparent bg-card p-px pt-2 shadow ring-1 ring-foreground/5">
-              <span className="ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                By Use Case
-              </span>
-              <ul className="mt-1">
-                {useCases.map((item, index) => (
-                  <ListItem
-                    key={index}
-                    href={item.href}
-                    title={item.name}
-                    description={item.description}
-                  >
-                    {item.icon}
-                  </ListItem>
-                ))}
-              </ul>
-            </div>
-            {/* By Industry */}
-            <div className="p-0.5 pt-2">
-              <span className="ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                By Industry
-              </span>
-              <ul className="mt-1">
-                {industries.map((item, index) => (
-                  <NavigationMenuLink key={index} asChild>
-                    <Link
+          <NavigationMenuContent>
+            <div className="grid w-full min-w-4xl grid-cols-[1fr_1fr] gap-4 divide-x divide-foreground/10 p-4">
+              <div className="row-span-2 -mr-2 grid grid-rows-subgrid gap-1 pr-2">
+                <span className="ml-2 text-xs font-medium text-muted-foreground uppercase">
+                  By Use Case
+                </span>
+                <ul className="mt-2 space-y-2">
+                  {useCases.map((item, index) => (
+                    <ListItem
+                      key={index}
                       href={item.href}
-                      className="grid grid-cols-[auto_1fr] items-center gap-2.5 rounded-md px-3 py-2 transition-colors hover:bg-accent"
+                      title={item.name}
+                      description={item.description}
                     >
-                      <div
-                        className="flex size-4 items-center justify-center *:size-4"
-                        aria-hidden
+                      {item.icon}
+                    </ListItem>
+                  ))}
+                </ul>
+              </div>
+              <div className="row-span-2 grid grid-rows-subgrid gap-1 pl-2">
+                <span className="ml-2 text-xs font-medium text-muted-foreground uppercase">
+                  By Industry
+                </span>
+                <ul className="mt-2">
+                  {industries.map((item, index) => (
+                    <NavigationMenuLink key={index} asChild>
+                      <Link
+                        href={item.href}
+                        className="block rounded-md px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
                       >
-                        {item.icon}
-                      </div>
-                      <span className="text-sm font-medium text-foreground">
                         {item.name}
-                      </span>
-                    </Link>
-                  </NavigationMenuLink>
-                ))}
-              </ul>
+                      </Link>
+                    </NavigationMenuLink>
+                  ))}
+                </ul>
+              </div>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         {/* Compare */}
-        <NavigationMenuItem>
+        <NavigationMenuItem value="compare">
           <NavigationMenuTrigger>Compare</NavigationMenuTrigger>
-          <NavigationMenuContent className="grid w-full min-w-lg origin-top grid-cols-[1fr_1fr] gap-2 p-0">
-            {/* DaaS / VDI column */}
-            <div className="rounded-xl border border-foreground/5 border-transparent bg-card p-px pt-2 shadow ring-1 ring-foreground/5">
-              <span className="ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                DaaS / VDI
-              </span>
-              <ul className="mt-1">
-                {daasCompare.map((item, index) => (
-                  <NavigationMenuLink key={index} asChild>
-                    <Link
-                      href={item.href}
-                      className="grid grid-cols-[auto_1fr] items-center gap-2.5 rounded-md px-3 py-2 transition-colors hover:bg-accent"
-                    >
-                      <div
-                        className="flex size-4 items-center justify-center *:size-4"
-                        aria-hidden
+          <NavigationMenuContent>
+            <div className="grid w-full min-w-md grid-cols-[1fr_1fr] gap-4 divide-x divide-foreground/10 p-4">
+              <div className="row-span-2 -mr-2 grid grid-rows-subgrid gap-1 pr-2">
+                <span className="ml-2 text-xs font-medium text-muted-foreground uppercase">
+                  DaaS / VDI
+                </span>
+                <ul className="mt-2">
+                  {daasCompare.map((item, index) => (
+                    <NavigationMenuLink key={index} asChild>
+                      <Link
+                        href={item.href}
+                        className="block rounded-md px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
                       >
-                        {item.icon}
-                      </div>
-                      <span className="text-sm font-medium text-foreground">
                         {item.name}
-                      </span>
-                    </Link>
-                  </NavigationMenuLink>
-                ))}
-              </ul>
-            </div>
-            {/* Secure Browser column */}
-            <div className="p-0.5 pt-2">
-              <span className="ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                Secure Browser
-              </span>
-              <ul className="mt-1">
-                {browserCompare.map((item, index) => (
-                  <NavigationMenuLink key={index} asChild>
-                    <Link
-                      href={item.href}
-                      className="grid grid-cols-[auto_1fr] items-center gap-2.5 rounded-md px-3 py-2 transition-colors hover:bg-accent"
-                    >
-                      <div
-                        className="flex size-4 items-center justify-center *:size-4"
-                        aria-hidden
+                      </Link>
+                    </NavigationMenuLink>
+                  ))}
+                </ul>
+              </div>
+              <div className="row-span-2 grid grid-rows-subgrid gap-1 pl-2">
+                <span className="ml-2 text-xs font-medium text-muted-foreground uppercase">
+                  Secure Browser
+                </span>
+                <ul className="mt-2">
+                  {browserCompare.map((item, index) => (
+                    <NavigationMenuLink key={index} asChild>
+                      <Link
+                        href={item.href}
+                        className="block rounded-md px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
                       >
-                        {item.icon}
-                      </div>
-                      <span className="text-sm font-medium text-foreground">
                         {item.name}
-                      </span>
-                    </Link>
-                  </NavigationMenuLink>
-                ))}
-              </ul>
+                      </Link>
+                    </NavigationMenuLink>
+                  ))}
+                </ul>
+              </div>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* Pricing — direct link */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className={navigationMenuTriggerStyle({
-              className: "text-foreground/75 h-7 px-3 text-sm",
-            })}
-          >
+        {/* Pricing */}
+        <NavigationMenuItem value="pricing">
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/pricing">Pricing</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         {/* Resources */}
-        <NavigationMenuItem>
+        <NavigationMenuItem value="resources">
           <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-          <NavigationMenuContent className="w-full origin-top p-0">
-            <div className="rounded-xl border border-foreground/5 border-transparent bg-card p-px pt-2 shadow ring-1 ring-foreground/5">
-              <span className="ml-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+          <NavigationMenuContent>
+            <div className="min-w-lg p-4">
+              <span className="ml-2 text-xs font-medium text-muted-foreground uppercase">
                 Resources
               </span>
-              <ul className="mt-1 grid grid-cols-1">
+              <ul className="mt-2 space-y-2">
                 {resources.map((item, index) => (
                   <ListItem
                     key={index}
@@ -644,7 +501,7 @@ const NavMenu = () => {
 }
 
 // ---------------------------------------------------------------------------
-// Shared list item (with icon box, title, description)
+// Shared list item
 // ---------------------------------------------------------------------------
 
 function ListItem({
@@ -662,7 +519,7 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild>
         <Link href={href} className="grid grid-cols-[auto_1fr] gap-2.5 p-3">
-          <div className="relative flex size-9 items-center justify-center rounded-lg border border-transparent bg-illustration shadow shadow-sm ring-1 ring-foreground/10 *:drop-shadow *:drop-shadow-black/6.5 before:absolute before:inset-0 before:rounded-lg before:bg-radial before:to-foreground/3">
+          <div className="flex size-9 items-center justify-center rounded-lg bg-muted/60 *:size-5">
             {children}
           </div>
           <div className="space-y-0.5">

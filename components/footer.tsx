@@ -21,14 +21,14 @@ export default function FooterSection() {
             </p>
 
             {/* Social links */}
-            <div className="flex items-center gap-3">
+            <div className="-ml-3 flex items-center">
               {/* LinkedIn */}
               <Link
                 href="https://www.linkedin.com/company/neverinstall"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Neverinstall on LinkedIn"
-                className="text-muted-foreground transition-colors duration-[var(--transition-base,200ms)] hover:text-primary"
+                className="inline-flex items-center justify-center p-3 text-muted-foreground transition-colors duration-[var(--transition-base,200ms)] hover:text-primary"
               >
                 <svg
                   className="size-5"
@@ -50,7 +50,7 @@ export default function FooterSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Neverinstall on X"
-                className="text-muted-foreground transition-colors duration-[var(--transition-base,200ms)] hover:text-primary"
+                className="inline-flex items-center justify-center p-3 text-muted-foreground transition-colors duration-[var(--transition-base,200ms)] hover:text-primary"
               >
                 <svg
                   className="size-5"

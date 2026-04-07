@@ -6,7 +6,6 @@ import {
   HeroAnimated,
   ProofBar,
   TwoWorkModes,
-  WhyNow,
   DeploymentFlexibility,
   CompetitiveMatrix,
   FinalCta,
@@ -32,10 +31,7 @@ export default function Page() {
       {/* 3. Two work modes — side-by-side cards */}
       <TwoWorkModes />
 
-      {/* 4. Why now — market timing cards */}
-      <WhyNow />
-
-      {/* 5. Deployment flexibility — three deployment models */}
+      {/* 4. Deployment flexibility — three deployment models */}
       <DeploymentFlexibility />
 
       {/* 6. Competitive matrix — legacy VDI vs browser-only vs hyperscaler vs Neverinstall */}

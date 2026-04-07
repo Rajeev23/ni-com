@@ -87,7 +87,7 @@ export default function HeroSection() {
                       <span className="text-[15px] font-medium">Mist AI</span>
                     </div>
                     <p className="mx-auto mt-3 max-w-40 leading-tight text-balance text-foreground/75">
-                      Your Personnal AI When it really matters
+                      Your Personal AI When it really matters
                     </p>
                     <div className="inline-flex h-0.5 w-20 border-b border-background bg-foreground/10"></div>
                   </div>

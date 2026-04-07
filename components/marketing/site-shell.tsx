@@ -1,7 +1,3 @@
-"use client"
-
-import * as React from "react"
-
 import FooterSection from "@/components/footer"
 import { HeroHeader as Header } from "@/components/header"
 

@@ -8,7 +8,7 @@ export function MdbPixel() {
   return (
     <Script
       src={`https://p.mdb.tools/v1/${MDB_PIXEL_ID}?options=${encodeURIComponent('{"domain":"neverinstall.com"}')}`}
-      strategy="afterInteractive"
+      strategy="lazyOnload"
     />
   )
 }

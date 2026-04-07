@@ -19,6 +19,7 @@ function SubmitButton({ label }: { label: string }) {
       type="submit"
       className="inline-flex h-9 items-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground disabled:opacity-60"
       disabled={pending}
+      aria-busy={pending}
     >
       {pending ? "Submitting..." : label}
     </button>
@@ -42,7 +43,7 @@ function Field({
     <label className="grid gap-1.5 text-sm">
       <span className="font-medium">{label}</span>
       <input
-        className="h-10 rounded-lg border bg-background px-3 text-sm"
+        className="h-10 rounded-lg border bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
         name={name}
         type={type}
         placeholder={placeholder}
@@ -53,16 +54,17 @@ function Field({
 }
 
 function Message({ message, ok }: { message: string; ok: boolean }) {
-  if (!message) {
-    return null
-  }
-
   return (
-    <p
-      className={`text-sm ${ok ? "text-emerald-600 dark:text-emerald-500" : "text-destructive"}`}
-    >
-      {message}
-    </p>
+    <div aria-live="polite" aria-atomic="true">
+      {message && (
+        <p
+          role={ok ? "status" : "alert"}
+          className={`text-sm ${ok ? "text-emerald-600 dark:text-emerald-500" : "text-destructive"}`}
+        >
+          {message}
+        </p>
+      )}
+    </div>
   )
 }
 
@@ -89,7 +91,7 @@ export function DemoForm() {
         <span className="font-medium">Use case</span>
         <select
           name="useCase"
-          className="h-10 rounded-lg border bg-background px-3 text-sm"
+          className="h-10 rounded-lg border bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
           required
         >
           <option value="">Select one</option>
@@ -108,7 +110,7 @@ export function DemoForm() {
         <span className="font-medium">Company size</span>
         <select
           name="companySize"
-          className="h-10 rounded-lg border bg-background px-3 text-sm"
+          className="h-10 rounded-lg border bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
         >
           <option value="">Select one</option>
           <option value="1-50">1-50</option>
@@ -122,7 +124,7 @@ export function DemoForm() {
         <span className="font-medium">Current stack (optional)</span>
         <textarea
           name="currentStack"
-          className="min-h-24 rounded-lg border bg-background px-3 py-2 text-sm"
+          className="min-h-24 rounded-lg border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
           placeholder="e.g., Citrix, AVD, Island, VMware Horizon, Windows 365"
         />
       </label>
@@ -181,7 +183,7 @@ export function ContactForm() {
         <span className="font-medium">Inquiry type</span>
         <select
           name="inquiryType"
-          className="h-10 rounded-lg border bg-background px-3 text-sm"
+          className="h-10 rounded-lg border bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
         >
           <option value="sales">Sales inquiry</option>
           <option value="support">Technical support</option>
@@ -194,7 +196,7 @@ export function ContactForm() {
         <span className="font-medium">Message</span>
         <textarea
           name="message"
-          className="min-h-32 rounded-lg border bg-background px-3 py-2 text-sm"
+          className="min-h-32 rounded-lg border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
           placeholder="Tell us how we can help."
           required
         />

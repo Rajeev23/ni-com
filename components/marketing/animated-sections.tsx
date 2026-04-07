@@ -13,17 +13,13 @@ import {
   Shield,
   DollarSign,
   Clock,
-  AlertTriangle,
-  TrendingDown,
   Server,
   Cloud,
   Building2,
-  CalendarDays,
   BadgeCheck,
 } from "lucide-react"
 
 import { Button } from "@/components/button"
-import { Badge } from "@/components/badge"
 import {
   Card,
   CardContent,
@@ -151,15 +147,6 @@ export function HeroAnimated() {
               </Link>
             </Button>
           </motion.div>
-
-          {/* trust context line */}
-          <motion.p
-            variants={item}
-            className="mt-8 text-xs text-muted-foreground"
-          >
-            Replacing Citrix and VMware for enterprise teams — deployed across
-            managed cloud, customer cloud, and on-premises environments.
-          </motion.p>
         </motion.div>
       </div>
     </section>
@@ -173,25 +160,21 @@ const proofStats = [
     value: "< 1s",
     label: "Session restore",
     icon: <Zap className="size-4 text-indigo-400" />,
-    sub: "Resume any workspace instantly — no competitor matches this",
   },
   {
     value: "70–80%",
     label: "Cost reduction",
     icon: <DollarSign className="size-4 text-sky-400" />,
-    sub: "Compared to provisioning full desktop VDI seats",
   },
   {
     value: "Days",
     label: "Time to deploy",
     icon: <Clock className="size-4 text-emerald-400" />,
-    sub: "Not the months Citrix required",
   },
   {
     value: "Zero",
     label: "Data on endpoints",
     icon: <Shield className="size-4 text-violet-400" />,
-    sub: "Execution stays in the cloud session",
   },
 ]
 
@@ -220,9 +203,6 @@ export function ProofBar() {
               <p className="text-sm font-medium text-foreground">
                 {stat.label}
               </p>
-              <p className="text-xs leading-relaxed text-muted-foreground">
-                {stat.sub}
-              </p>
             </motion.div>
           ))}
         </div>
@@ -237,21 +217,17 @@ const desktopBullets = [
   "Sub-second session restore — no other platform does this",
   "Windows & Linux persistent and ephemeral environments",
   "GPU-backed workstations for engineering and rendering",
-  "Any-device access — no managed endpoint required",
-  "Shared admin console with Secure Browser Workspaces",
 ]
 
 const browserBullets = [
   "Isolated cloud sessions — zero endpoint trust",
   "Granular DLP: copy/paste, downloads, printing, watermarks",
-  "Forensic session recording with full replay",
   "No agent install — works on any BYOD or contractor device",
-  "Fraction of the cost of provisioning a full desktop seat",
 ]
 
 export function TwoWorkModes() {
   return (
-    <section className="border-b py-20 sm:py-24">
+    <section className="border-b py-16 sm:py-24">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <div className="mb-3 text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
@@ -266,7 +242,7 @@ export function TwoWorkModes() {
           </p>
         </FadeUp>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {/* Desktop Workspaces */}
           <FadeUp delay={0.1}>
             <Card className="relative overflow-hidden rounded-2xl border bg-card/90 shadow-sm">
@@ -347,114 +323,12 @@ export function TwoWorkModes() {
             </Card>
           </FadeUp>
         </div>
-
-        {/* Hook line */}
-        <FadeUp delay={0.3}>
-          <div className="mt-8 flex items-center gap-3 rounded-2xl border border-indigo-500/20 bg-indigo-500/5 px-5 py-4">
-            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-indigo-500/15">
-              <BadgeCheck className="size-4 text-indigo-500" />
-            </div>
-            <p className="text-sm text-muted-foreground">
-              <span className="font-medium text-foreground">
-                Most enterprises need both.
-              </span>{" "}
-              Neverinstall is the only platform that delivers full desktop VDI
-              and secure browser workspaces from one admin console, one identity
-              layer, and one control plane.
-            </p>
-          </div>
-        </FadeUp>
       </div>
     </section>
   )
 }
 
-// ─── 4. WHY NOW ───────────────────────────────────────────────────────────────
-
-const whyNowCards = [
-  {
-    icon: <TrendingDown className="size-5 text-rose-500" />,
-    iconBg: "bg-rose-500/10",
-    badge: "Broadcom / VMware",
-    badgeVariant: "outline" as const,
-    title: "3–5x cost increases overnight",
-    body: "Broadcom's VMware acquisition forced immediate license repricing. Customers who built their infrastructure on VMware Horizon are facing renewal costs they cannot absorb — creating an urgent migration event.",
-  },
-  {
-    icon: <AlertTriangle className="size-5 text-amber-500" />,
-    iconBg: "bg-amber-500/10",
-    badge: "Citrix",
-    badgeVariant: "outline" as const,
-    title: "Active churn from complexity and uncertainty",
-    body: "Citrix environments require consultant-heavy change management and long deployment cycles. Customers are actively evaluating exits as product direction remains uncertain and operational overhead compounds.",
-  },
-  {
-    icon: <Globe className="size-5 text-sky-500" />,
-    iconBg: "bg-sky-500/10",
-    badge: "Browser-First Work",
-    badgeVariant: "outline" as const,
-    title: "90% of enterprise workflows run in a browser",
-    body: "Most SaaS-first organizations are paying full VDI seat costs for users who never leave the browser. Secure Browser Workspaces closes the gap — delivering the security outcome at a fraction of the cost.",
-  },
-]
-
-export function WhyNow() {
-  const ref = useRef<HTMLElement>(null)
-  const inView = useInView(ref, { once: true, margin: "-60px" })
-
-  return (
-    <section ref={ref} className="border-b py-20 sm:py-24">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <FadeUp>
-          <div className="mb-3 text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
-            Market Timing
-          </div>
-          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-            Enterprise work delivery is broken.
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Three compounding forces are driving the largest shift in enterprise
-            desktop infrastructure in a decade.
-          </p>
-        </FadeUp>
-
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {whyNowCards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.55, delay: 0.1 + i * 0.12, ease: EASE }}
-            >
-              <Card className="h-full rounded-2xl bg-card/90 shadow-sm">
-                <CardHeader className="pb-3">
-                  <div
-                    className={`mb-3 flex size-10 items-center justify-center rounded-xl ${card.iconBg}`}
-                  >
-                    {card.icon}
-                  </div>
-                  <Badge variant={card.badgeVariant} className="w-fit text-xs">
-                    {card.badge}
-                  </Badge>
-                  <CardTitle className="mt-2 text-base leading-snug">
-                    {card.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {card.body}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── 5. DEPLOYMENT FLEXIBILITY ────────────────────────────────────────────────
+// ─── 4. DEPLOYMENT FLEXIBILITY ────────────────────────────────────────────────
 
 const deploymentModels = [
   {
@@ -467,7 +341,6 @@ const deploymentModels = [
       "Zero infrastructure to operate",
       "Provision workspaces in hours",
       "Neverinstall manages the full stack",
-      "Ideal for rapid pilots and migrations",
     ],
   },
   {
@@ -478,7 +351,6 @@ const deploymentModels = [
     tagColor: "text-sky-400",
     bullets: [
       "Deploy inside your own cloud tenancy",
-      "Tally Solutions runs production desktops on OCI today",
       "Data never leaves your environment",
       "Leverage existing cloud commitments",
     ],
@@ -493,14 +365,13 @@ const deploymentModels = [
       "Full deployment on your hardware",
       "No external connectivity required",
       "Meets strictest data sovereignty rules",
-      "Same platform capabilities, no compromise",
     ],
   },
 ]
 
 export function DeploymentFlexibility() {
   return (
-    <section className="border-b py-20 sm:py-24">
+    <section className="border-b py-16 sm:py-24">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <div className="mb-3 text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
@@ -516,7 +387,7 @@ export function DeploymentFlexibility() {
           </p>
         </FadeUp>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {deploymentModels.map((model, i) => (
             <FadeUp key={model.title} delay={i * 0.12}>
               <Card className="h-full rounded-2xl bg-card/90 shadow-sm">
@@ -652,7 +523,7 @@ function MatrixCell({
 
 export function CompetitiveMatrix() {
   return (
-    <section className="border-b py-20 sm:py-24">
+    <section className="border-b py-20 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <div className="mb-3 text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
@@ -844,26 +715,9 @@ export function FinalCta() {
                 See it in action.
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Book a guided evaluation session, run a transparent TCO
-                comparison against your current stack, or start a pilot in your
-                own cloud environment.
+                Book a 30-minute evaluation or start a pilot in your own
+                environment — same day.
               </p>
-              <div className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1">
-                  <CalendarDays className="size-3.5" />
-                  30-min guided demo
-                </span>
-                <span>&middot;</span>
-                <span className="flex items-center gap-1">
-                  <Clock className="size-3.5" />
-                  Same-day pilot setup
-                </span>
-                <span>&middot;</span>
-                <span className="flex items-center gap-1">
-                  <Shield className="size-3.5" />
-                  No agent install required
-                </span>
-              </div>
             </div>
 
             <div className="flex shrink-0 flex-wrap gap-3">
