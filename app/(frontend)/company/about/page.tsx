@@ -25,9 +25,10 @@ import {
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "About Neverinstall",
+  title:
+    "About Neverinstall: Virtual Desktop & Browser Platform | Neverinstall",
   description:
-    "Company story, leadership, and platform vision for secure enterprise workspaces.",
+    "Neverinstall builds desktop as a service and secure browser workspaces for regulated enterprises. Company story, leadership, mission—headquartered in Bengaluru.",
   path: "/company/about",
 })
 
@@ -109,11 +110,12 @@ export default function AboutPage() {
       <HeroSection
         hero={{
           eyebrow: "Company",
-          title: "Replacing legacy VDI — from the ground up",
+          title:
+            "Virtual desktop and secure browser platform built to replace legacy VDI",
           subtitle:
-            "Neverinstall helps organizations modernize secure access with cloud-native desktops and browsers built for control, speed, and deployment flexibility.",
+            "Neverinstall delivers desktop as a service (DaaS) and secure enterprise browsers on one control plane—built for regulated teams that need speed, auditability, and deployment choice.",
           supportingCopy:
-            "Headquartered in Bengaluru with production-hardened platform infrastructure refined over five years.",
+            "Headquartered in Bengaluru with production-hardened infrastructure refined over years of customer workloads.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "Careers", href: "/company/careers" },
         }}
@@ -127,8 +129,9 @@ export default function AboutPage() {
               Our story
             </h2>
             <p className="text-sm leading-7 text-muted-foreground sm:text-base">
-              From virtual desktop origins to a full secure enterprise platform
-              spanning browser and workspace delivery.
+              From hosted virtual desktop roots to a full platform for cloud
+              desktops and secure browser workspaces—one stack for IT and
+              security teams.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">

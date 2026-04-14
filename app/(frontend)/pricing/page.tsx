@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 export const metadata: Metadata = getBaseMetadata({
   title: corePages.pricing.title,
   description:
-    "Pricing for Desktop Workspaces and Secure Browser Workspaces with enterprise support options.",
+    "Desktop as a service (DaaS) and secure browser pricing per user—cloud, customer cloud, or on-prem. Compare tiers, GPU options, and enterprise deployment. Book a demo.",
   path: "/pricing",
 })
 
@@ -260,11 +260,12 @@ function ComparatorSection() {
       <PageContainer>
         <div className="mx-auto max-w-4xl">
           <h2 className="text-center text-lg font-semibold tracking-tight">
-            Compare plans at a glance
+            Compare DaaS and secure browser plans at a glance
           </h2>
           <p className="mt-2 text-center text-sm text-muted-foreground">
-            See exactly what&apos;s included in each tier so you can pick the
-            right fit for your team.
+            See what each desktop-as-a-service and secure browser tier includes
+            so you can match virtual desktop and browser seats to real
+            workloads.
           </p>
 
           <Tabs defaultValue="browser" className="mt-8 grid gap-6">
@@ -350,9 +351,10 @@ export default function PricingPage() {
       <HeroSection
         hero={{
           eyebrow: "Pricing",
-          title: "Transparent per-user pricing",
+          title:
+            "Desktop as a service pricing for cloud desktops and secure browsers",
           subtitle:
-            "Choose the work mode that fits each user segment. Both products are managed from a single platform — mix and match across your organization.",
+            "Per-user DaaS and secure browser plans—choose Desktop Workspaces, Secure Browser Workspaces, or both from one platform. Mix tiers across managed cloud, customer cloud, and on-premises deployment.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "Calculate TCO", href: "/tco-calculator" },
         }}

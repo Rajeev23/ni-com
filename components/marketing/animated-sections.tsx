@@ -108,7 +108,7 @@ export function HeroAnimated() {
           <motion.div variants={item}>
             <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1.5 text-xs font-medium tracking-wide text-indigo-400">
               <BadgeCheck className="size-3.5" />
-              The modern Citrix and VMware replacement
+              The modern virtual desktop platform
             </span>
           </motion.div>
 
@@ -117,9 +117,7 @@ export function HeroAnimated() {
             variants={item}
             className="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl"
           >
-            One Platform.{" "}
-            <span className="text-indigo-500">Two Work Modes.</span> Any
-            Deployment.
+            Virtual Desktop & Cloud PC Platform for Enterprise Teams
           </motion.h1>
 
           {/* subtitle */}
@@ -127,9 +125,9 @@ export function HeroAnimated() {
             variants={item}
             className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            Replace Citrix and VMware with a cloud-native platform that delivers
-            secure Desktop Workspaces and Secure Browser Workspaces from a
-            single control plane — at 70–80% lower cost, deployed in days.
+            Replace legacy VDI with a cloud-native desktop as a service (DaaS)
+            platform. Deliver secure virtual desktops, cloud PCs, and isolated
+            browser workspaces from one control plane at 70–80% lower cost.
           </motion.p>
 
           {/* CTAs */}
@@ -157,8 +155,8 @@ export function HeroAnimated() {
             variants={item}
             className="mt-8 text-xs text-muted-foreground"
           >
-            Replacing Citrix and VMware for enterprise teams — deployed across
-            managed cloud, customer cloud, and on-premises environments.
+            Trusted by enterprise teams replacing Citrix and VMware across
+            managed cloud, customer cloud, and on-premises deployments.
           </motion.p>
         </motion.div>
       </div>
@@ -258,11 +256,23 @@ export function TwoWorkModes() {
             Platform
           </div>
           <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-            Two work modes. One platform.
+            Desktop as a Service + Secure Browser. One platform.
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Match the work mode to the user. Most enterprises need both — and
-            Neverinstall manages both from a single control plane.
+            Match each user to the right work mode. Use full virtual desktops
+            for power users and secure browser workspaces for browser-first
+            teams, all managed from one control plane.
+          </p>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Explore{" "}
+            <Link href="/products/daas" className="text-foreground underline">
+              Desktop as a Service (DaaS)
+            </Link>{" "}
+            and compare deployment models on the{" "}
+            <Link href="/platform" className="text-foreground underline">
+              platform overview
+            </Link>
+            .
           </p>
         </FadeUp>
 
@@ -280,8 +290,8 @@ export function TwoWorkModes() {
                 </div>
                 <CardTitle className="text-lg">Desktop Workspaces</CardTitle>
                 <CardDescription className="text-sm leading-relaxed">
-                  Full Windows and Linux environment delivery — the modern
-                  replacement for Citrix and VMware Horizon.
+                  Full Windows and Linux virtual desktop delivery as a modern
+                  alternative to Citrix and VMware Horizon.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -322,7 +332,8 @@ export function TwoWorkModes() {
                 </CardTitle>
                 <CardDescription className="text-sm leading-relaxed">
                   Cloud-isolated browser sessions with full DLP controls for
-                  contractors, BYOD, and unmanaged devices.
+                  contractors, BYOD, and unmanaged devices that do not need a
+                  full cloud desktop.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -410,11 +421,11 @@ export function WhyNow() {
             Market Timing
           </div>
           <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-            Enterprise work delivery is broken.
+            Why enterprises are replacing legacy VDI now
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Three compounding forces are driving the largest shift in enterprise
-            desktop infrastructure in a decade.
+            Three market shifts are accelerating demand for virtual desktop
+            infrastructure (VDI) modernization and cloud desktop adoption.
           </p>
         </FadeUp>
 
@@ -507,12 +518,12 @@ export function DeploymentFlexibility() {
             Deployment
           </div>
           <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-            Deploy anywhere. Same platform.
+            Deploy your virtual desktop platform anywhere
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Deployment model is a configuration choice — not a product change.
-            All three models run the same Desktop Workspaces and Secure Browser
-            Workspaces stack.
+            Choose managed cloud, customer cloud, or sovereign on-prem without
+            changing products. Every model runs the same Desktop Workspaces and
+            Secure Browser Workspaces platform.
           </p>
         </FadeUp>
 
@@ -659,11 +670,18 @@ export function CompetitiveMatrix() {
             Comparison
           </div>
           <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-            How Neverinstall stacks up.
+            Compare virtual desktop and cloud PC options
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            No other platform delivers both full OS desktop delivery and
-            agentless secure browser workspaces from a single control plane.
+            See how Neverinstall compares with legacy VDI, hyperscaler DaaS, and
+            browser-only tools across cost, deployment speed, and control.
+          </p>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Need a deeper breakdown? Visit our{" "}
+            <Link href="/compare" className="text-foreground underline">
+              compare alternatives
+            </Link>{" "}
+            pages and review deployment options before you book a demo.
           </p>
         </FadeUp>
 
@@ -841,12 +859,19 @@ export function FinalCta() {
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-xl">
               <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                See it in action.
+                Launch your virtual desktop migration
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Book a guided evaluation session, run a transparent TCO
-                comparison against your current stack, or start a pilot in your
-                own cloud environment.
+                Book a guided demo, run a transparent TCO analysis, and launch a
+                pilot for your virtual desktop, cloud PC, or secure browser
+                rollout.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Review{" "}
+                <Link href="/security" className="text-foreground underline">
+                  security and compliance details
+                </Link>{" "}
+                to accelerate internal approval and procurement.
               </p>
               <div className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
                 <span className="flex items-center gap-1">
@@ -887,6 +912,62 @@ export function FinalCta() {
             </div>
           </div>
         </motion.div>
+      </div>
+    </section>
+  )
+}
+
+const faqItems = [
+  {
+    question: "What is a virtual desktop?",
+    answer:
+      "A virtual desktop is a full desktop environment hosted in the cloud and streamed to any device. It lets teams access secure workspaces without storing company data on local endpoints.",
+  },
+  {
+    question: "What is the difference between Cloud PC and VDI?",
+    answer:
+      "Cloud PC usually refers to managed desktop delivery through cloud infrastructure, while VDI is the broader desktop virtualization model. Neverinstall supports modern VDI use cases with faster deployment and lower cost.",
+  },
+  {
+    question: "What is Desktop as a Service (DaaS)?",
+    answer:
+      "Desktop as a Service (DaaS) is a cloud-delivered model for provisioning and managing virtual desktops. It reduces infrastructure overhead and simplifies scaling for distributed teams.",
+  },
+]
+
+export function SeoFaq() {
+  return (
+    <section className="border-b py-20 sm:py-24">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <FadeUp>
+          <div className="mb-3 text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
+            FAQ
+          </div>
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+            Virtual desktop and DaaS FAQ
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
+            Answers to common evaluation questions from IT, security, and
+            operations teams.
+          </p>
+        </FadeUp>
+
+        <div className="mt-10 grid gap-4">
+          {faqItems.map((item, i) => (
+            <FadeUp key={item.question} delay={i * 0.08}>
+              <Card className="rounded-2xl bg-card/90 shadow-sm">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">{item.question}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {item.answer}
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeUp>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -32,10 +32,9 @@ export const corePages = {
       "Live in production with enterprise customers across logistics, financial software, engineering, and telecom.",
   },
   pricing: {
-    title:
-      "DaaS & Secure Browser Pricing: Cloud, On-Prem, Hybrid | Neverinstall",
+    title: "Desktop as a Service Pricing: DaaS & Secure Browser | Neverinstall",
     subtitle:
-      "Compare pricing for Desktop Workspaces and Secure Browser Workspaces across deployment models.",
+      "Per-user desktop as a service (DaaS) and secure browser pricing—managed cloud, your cloud, or on-prem. Mix Desktop Workspaces and Secure Browser seats on one platform.",
   },
   resources: {
     title: "Resources: Guides, Comparisons & Customer Stories | Neverinstall",
@@ -176,18 +175,18 @@ export const staticRouteSeo: Record<
   "/pricing": {
     title: corePages.pricing.title,
     description:
-      "Compare DaaS and Secure Browser workspace pricing across managed cloud, customer cloud, and on-prem. Start with a free trial.",
+      "Desktop as a service (DaaS) and secure browser pricing per user—cloud, customer cloud, or on-prem. Compare tiers, GPU options, and enterprise deployment. Book a demo.",
   },
   "/tco-calculator": {
     title:
-      "DaaS TCO Calculator: Compare vs Citrix, AVD & Omnissa | Neverinstall",
+      "DaaS TCO Calculator: Virtual Desktop Cost vs Citrix & AVD | Neverinstall",
     description:
-      "Model your 3-year workspace TCO and compare Citrix, AVD, or Omnissa costs against Neverinstall DaaS. Get results in minutes.",
+      "Compare 3-year virtual desktop and DaaS TCO vs Citrix, Azure Virtual Desktop, and Omnissa. Model your stack, regions, and browser vs desktop mix—results in minutes.",
   },
   "/get-demo": {
-    title: "Book a Demo: Virtual Desktop & Secure Browser | Neverinstall",
+    title: "Book a Demo: DaaS & Virtual Desktop Platform | Neverinstall",
     description:
-      "See Desktop Workspaces and Secure Browser Workspaces in action. Get a personalized demo with deployment and compliance guidance.",
+      "Schedule a virtual desktop and secure browser demo—Desktop Workspaces, Secure Browser, or both. Deployment, compliance, and TCO guidance. We respond within one business day.",
   },
   "/signup": {
     title: "Start Free Trial: Desktop & Browser Workspaces | Neverinstall",
@@ -229,18 +228,20 @@ export const staticRouteSeo: Record<
       "Setup guides, API references, and admin docs for Desktop Workspaces and Secure Browser Workspaces. Get started in minutes.",
   },
   "/company/about": {
-    title: "About Neverinstall: Secure Desktop & Browser Workspaces",
+    title:
+      "About Neverinstall: Virtual Desktop & Browser Platform | Neverinstall",
     description:
-      "Neverinstall delivers DaaS and Secure Browser workspaces for regulated enterprises. Learn about our mission, team, and platform vision.",
+      "Neverinstall builds desktop as a service and secure browser workspaces for regulated enterprises. Company story, leadership, mission—headquartered in Bengaluru.",
   },
   "/company/careers": {
-    title: "Careers: Build the Future of Secure Workspaces | Neverinstall",
+    title:
+      "Careers: Virtual Desktop & Secure Browser Engineering | Neverinstall",
     description:
-      "Join Neverinstall and help enterprises replace legacy VDI with modern, secure workspace delivery. See open roles and apply today.",
+      "Careers at Neverinstall—engineering, product, and sales roles building secure cloud desktops and enterprise browser infrastructure. Bengaluru and remote roles.",
   },
   "/contact": {
-    title: "Contact Neverinstall: Sales, Support & Partnerships",
+    title: "Contact: DaaS Sales, Support & Partnerships | Neverinstall",
     description:
-      "Talk to our team about Desktop Workspaces, Secure Browser, pricing, or deployment options. We respond within one business day.",
+      "Contact Neverinstall for desktop as a service (DaaS), secure browser pricing, deployment, and partnerships. Sales, support, and recruiting—we reply within one business day.",
   },
 }

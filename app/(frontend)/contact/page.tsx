@@ -11,9 +11,9 @@ import {
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "Contact Neverinstall",
+  title: "Contact: DaaS Sales, Support & Partnerships | Neverinstall",
   description:
-    "Contact sales, support, and partnerships teams at Neverinstall.",
+    "Contact Neverinstall for desktop as a service (DaaS), secure browser pricing, deployment, and partnerships. Sales, support, and recruiting—we reply within one business day.",
   path: "/contact",
 })
 
@@ -42,9 +42,9 @@ export default function ContactPage() {
       <HeroSection
         hero={{
           eyebrow: "Contact",
-          title: "Talk to Neverinstall",
+          title: "Contact Neverinstall for DaaS, pricing, and deployment",
           subtitle:
-            "Reach our sales, support, or partnerships team. Select an inquiry type below and we&apos;ll route your request to the right people.",
+            "Reach sales, support, partnerships, or recruiting. Choose an inquiry type and we route your request—virtual desktop services, secure browser, pricing, or procurement.",
           primaryCta: { label: "Send Message", href: "#contact-form" },
           secondaryCta: { label: "Book a Demo", href: "/get-demo" },
         }}

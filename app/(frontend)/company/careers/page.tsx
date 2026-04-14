@@ -26,9 +26,9 @@ import {
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "Careers | Neverinstall",
+  title: "Careers: Virtual Desktop & Secure Browser Engineering | Neverinstall",
   description:
-    "Join Neverinstall and help build secure enterprise workspace products.",
+    "Careers at Neverinstall—engineering, product, and sales roles building secure cloud desktops and enterprise browser infrastructure. Bengaluru and remote roles.",
   path: "/company/careers",
 })
 
@@ -146,9 +146,10 @@ export default function CareersPage() {
       <HeroSection
         hero={{
           eyebrow: "Careers",
-          title: "Build the future of secure enterprise computing",
+          title:
+            "Careers building virtual desktop services and secure browser products",
           subtitle:
-            "Join a team focused on modern browser security, cloud desktops, and enterprise deployment infrastructure.",
+            "Engineering, product, and go-to-market roles on a desktop-as-a-service and enterprise browser platform—shipping for regulated customers worldwide.",
           primaryCta: { label: "Contact Recruiting", href: "/contact" },
           secondaryCta: { label: "About Neverinstall", href: "/company/about" },
         }}

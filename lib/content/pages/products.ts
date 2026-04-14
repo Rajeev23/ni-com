@@ -20,30 +20,31 @@ export const productPages: Record<string, ContentPage> = {
     template: "product",
     seo: {
       title:
-        "Secure Browser Workspaces - Enterprise Browsing Without Endpoint Agents - Neverinstall",
+        "Secure Browser Workspace: Enterprise Browser Security | Neverinstall",
       description:
-        "Isolated browser sessions with DLP controls, session recording, and zero endpoint trust for contractors, BYOD, and unmanaged devices. 70-80% lower cost than full desktop VDI for browser-first users.",
+        "Enterprise browser security with cloud-isolated sessions, DLP, and forensic replay for BYOD and contractors. Secure virtual desktop–class controls without endpoint agents—70–80% less than full VDI.",
     },
     summary:
-      "Isolated browser workspaces with DLP controls, forensic session replay, and zero endpoint trust for contractors, BYOD, and unmanaged devices — at 70-80% lower cost than full desktop VDI.",
+      "Enterprise browser security: isolated secure browser workspaces with DLP, session replay, and zero endpoint trust for contractors and BYOD—delivering secure virtual desktop–class isolation at 70–80% lower cost than full desktop VDI.",
     hero: {
       eyebrow: "Neverinstall Secure Browser Workspaces",
-      title: "Secure enterprise browsing without endpoint agents",
+      title:
+        "Enterprise browser security with secure virtual desktop–class isolation",
       subtitle:
-        "Isolated sessions, granular DLP controls, and forensic replay for contractors, BYOD users, and unmanaged devices — no agent install required.",
+        "Cloud-isolated enterprise browser sessions with granular DLP and forensic replay for contractors, BYOD users, and unmanaged devices—no agent install, no MDM, full browser security policy control.",
       supportingCopy:
-        "90% of enterprise workflows are browser-delivered. Neverinstall puts the execution boundary in the cloud, not on the device, so you get full policy control without touching the endpoint.",
+        "Most enterprise work is browser-delivered. Neverinstall moves execution into the cloud session so you get enterprise browser security and secure virtual desktop–grade isolation without touching the endpoint.",
       metric: "70-80% lower cost than full desktop VDI for browser-first users",
       primaryCta: demoCta,
       secondaryCta: pricingCta,
     },
     answerCapsule: answerCapsule(
       "What is Neverinstall Secure Browser Workspaces?",
-      "Neverinstall Secure Browser Workspaces is an isolated cloud browser environment that enforces DLP policy, records sessions with forensic replay, and eliminates endpoint trust requirements — purpose-built for contractors, BYOD, and unmanaged device scenarios at a fraction of the cost of full VDI."
+      "Neverinstall Secure Browser Workspaces is an enterprise browser platform that delivers isolated cloud browser sessions with DLP, forensic replay, and zero endpoint trust—browser security and secure virtual desktop–class session isolation for contractors, BYOD, and unmanaged devices at a fraction of full VDI cost."
     ),
     sections: [
       gridSection({
-        title: "The problem with securing unmanaged devices today",
+        title: "Enterprise browser security gaps on unmanaged devices and BYOD",
         description:
           "Contractors, vendors, and BYOD users access sensitive data from devices IT cannot govern. Existing approaches either ship hardware that takes weeks to arrive, deploy agents onto devices you do not own, or accept the risk and hope nothing leaks.",
         blocks: [
@@ -68,9 +69,10 @@ export const productPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "How Secure Browser Workspaces protects every device",
+        title:
+          "How secure browser workspaces deliver enterprise browser security",
         description:
-          "Policy enforcement moves from the endpoint to the session. If a device can run a browser, it is covered — no agent, no MDM, no hardware swap.",
+          "Policy enforcement moves from the endpoint to the cloud browser session. If a device can run a browser, it is covered — no agent, no MDM, no hardware swap.",
         columns: 4,
         blocks: [
           {
@@ -241,33 +243,34 @@ export const productPages: Record<string, ContentPage> = {
     path: "/products/daas",
     template: "product",
     seo: {
-      title:
-        "Desktop Workspaces - Replace Legacy VDI with Cloud Desktops That Work - Neverinstall",
+      title: "Desktop as a Service (DaaS): Cloud Desktops & VDI | Neverinstall",
       description:
-        "Cloud-native VDI replacement with sub-second session restore, Windows and Linux support, and deployment in days — not months. Citrix and VMware alternative without the Broadcom cost increase.",
+        "Desktop as a service (DaaS) with hosted virtual desktops and cloud PCs. Replace Citrix or VMware VDI with sub-second session restore, Windows and Linux, managed cloud or on-prem—deploy in days, not months.",
     },
     summary:
-      "Cloud-native desktop delivery that replaces Citrix and VMware VDI with sub-second restore, any-device access, and deployment measured in days rather than months.",
+      "Desktop as a service (DaaS) and hosted virtual desktops that replace legacy VDI: sub-second restore, Windows and Linux cloud desktops, and rollout in days—not months—across managed cloud, customer cloud, or on-premises.",
     hero: {
       eyebrow: "Neverinstall Desktop Workspaces",
-      title: "Replace legacy VDI with cloud desktops that actually work",
+      title:
+        "Desktop as a service: cloud desktops that replace legacy Citrix and VMware VDI",
       subtitle:
-        "Sub-second session restore, Windows and Linux support, and a rollout measured in days — not the months Citrix and VMware required.",
+        "Hosted virtual desktops and cloud PCs with sub-second session restore, Windows and Linux support, and rollout measured in days—not the months typical of Citrix and VMware Horizon.",
       supportingCopy:
-        "Broadcom's acquisition of VMware caused 3-5x cost increases overnight. Citrix complexity has been a drag for years. Desktop Workspaces gives enterprise IT a clean migration path that does not require a six-month project.",
+        "Broadcom’s VMware acquisition drove 3–5x licensing jumps; Citrix stacks stay heavy to run. This desktop-as-a-service path delivers a predictable virtual desktop platform migration without a six-month project.",
       metric: "Sub-second session restore. Days to deploy, not months.",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "What is Neverinstall Desktop Workspaces?",
-      "Neverinstall Desktop Workspaces is a cloud-native VDI replacement that delivers secure Windows and Linux desktops with sub-second session restore, persistent and ephemeral modes, and flexible deployment across managed cloud, customer cloud, or sovereign on-premises environments."
+      "Neverinstall Desktop Workspaces is desktop as a service (DaaS): a cloud-native VDI replacement that delivers secure hosted virtual desktops—Windows and Linux cloud desktops with sub-second restore, persistent or ephemeral modes, and deployment on managed cloud, customer cloud, or sovereign on-premises."
     ),
     sections: [
       gridSection({
-        title: "Why enterprises are replacing VDI now",
+        title:
+          "Why enterprises adopt desktop as a service instead of legacy VDI",
         description:
-          "Citrix and VMware have been the default for decades. Broadcom changed the math. IT leaders who stayed on legacy VDI through the pandemic are now facing a compounding set of problems that make the status quo untenable.",
+          "Citrix and VMware dominated for years; Broadcom changed VMware economics. Teams on legacy VDI now face licensing spikes, slow rollouts, and mounting pressure to move to a modern virtual desktop platform.",
         blocks: [
           {
             title: "Broadcom's acquisition made VMware unaffordable",
@@ -290,9 +293,10 @@ export const productPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Enterprise VDI capabilities without the legacy overhead",
+        title:
+          "Hosted virtual desktops and cloud PC capabilities without legacy VDI overhead",
         description:
-          "Everything Citrix and VMware deliver — persistent desktops, session isolation, DLP, multi-OS support — without the consultant-heavy deployments, months-long rollouts, and unpredictable licensing.",
+          "Everything Citrix and VMware deliver—persistent cloud desktops, session isolation, DLP, multi-OS support—without consultant-heavy deployments, months-long rollouts, or unpredictable licensing.",
         columns: 4,
         blocks: [
           {
@@ -322,9 +326,10 @@ export const productPages: Record<string, ContentPage> = {
         ],
       }),
       gridSection({
-        title: "Deploy anywhere — three models, one platform",
+        title:
+          "Deploy cloud desktops anywhere—three models, one virtual desktop platform",
         description:
-          "Deployment model is a configuration choice, not a product change. The same Desktop Workspaces platform runs across all three options.",
+          "Deployment model is a configuration choice, not a product change. The same desktop-as-a-service platform runs across managed cloud, your cloud, and sovereign on-premises.",
         blocks: [
           {
             title: "Neverinstall-managed cloud",

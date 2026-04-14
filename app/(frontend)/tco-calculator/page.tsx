@@ -10,9 +10,10 @@ import { TcoCalculatorPanel } from "@/components/marketing/tco-calculator"
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "DaaS TCO Calculator - Compare vs Citrix, AVD, Omnissa | Neverinstall",
+  title:
+    "DaaS TCO Calculator: Virtual Desktop Cost vs Citrix & AVD | Neverinstall",
   description:
-    "Model your current stack and compare 3-year cost against Neverinstall scenarios.",
+    "Compare 3-year virtual desktop and DaaS TCO vs Citrix, Azure Virtual Desktop, and Omnissa. Model your stack, regions, and browser vs desktop mix—results in minutes.",
   path: "/tco-calculator",
 })
 
@@ -22,11 +23,12 @@ export default function TcoCalculatorPage() {
       <HeroSection
         hero={{
           eyebrow: "TCO Calculator",
-          title: "See what your current stack really costs",
+          title:
+            "Virtual desktop TCO: compare DaaS vs Citrix, AVD, and Omnissa",
           subtitle:
-            "Compare your assembled stack against Neverinstall in transparent 3-year scenarios by region and use case.",
+            "Model 3-year desktop-as-a-service and secure browser costs against legacy VDI and browser point tools—by region, headcount, and workload mix.",
           supportingCopy:
-            "This calculator covers Desktop Workspaces and Secure Browser Workspaces.",
+            "Directional savings for Desktop Workspaces and Secure Browser Workspaces; validate with your procurement data.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "See Pricing", href: "/pricing" },
         }}
@@ -42,10 +44,10 @@ export default function TcoCalculatorPage() {
             <article className="rounded-xl border bg-card p-6">
               <h2 className="text-xl font-semibold">Methodology</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Model inputs include per-seat software assumptions for VDI,
-                endpoint controls, browser security tools, and network access
-                layers. Regional multipliers reflect deployment and operations
-                differences.
+                Inputs cover per-seat virtual desktop and DaaS software,
+                endpoint and browser security layers, and network access costs.
+                Regional multipliers reflect deployment and operations
+                differences for cloud PC and VDI comparisons.
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
                 <li>Scenarios calculated over 36 months.</li>

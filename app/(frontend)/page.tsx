@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 
 import { getBaseMetadata } from "@/lib/seo/metadata"
-import { corePages } from "@/lib/content/site"
 import {
   HeroAnimated,
   ProofBar,
@@ -9,14 +8,15 @@ import {
   WhyNow,
   DeploymentFlexibility,
   CompetitiveMatrix,
+  SeoFaq,
   FinalCta,
 } from "@/components/marketing/animated-sections"
 import { CustomerLogoCloud } from "@/components/marketing/customer-logos"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: corePages.homepage.title,
+  title: "Virtual Desktop, Cloud PC & DaaS Platform | Neverinstall",
   description:
-    "Neverinstall delivers Desktop Workspaces and Secure Browser Workspaces on one cloud-native platform. Replace Citrix and VMware at 70–80% lower cost.",
+    "Neverinstall is a cloud-native virtual desktop and cloud PC platform. Replace Citrix and VMware with desktop as a service (DaaS) and secure browser workspaces at 70-80% lower cost.",
   path: "/",
 })
 
@@ -44,7 +44,10 @@ export default function Page() {
       {/* 7. Customer logos — infinite slider */}
       <CustomerLogoCloud />
 
-      {/* 8. Final CTA — Get Demo + TCO Calculator */}
+      {/* 8. SEO FAQ */}
+      <SeoFaq />
+
+      {/* 9. Final CTA — Get Demo + TCO Calculator */}
       <FinalCta />
     </>
   )

@@ -18,7 +18,7 @@ export const platformPage: ContentPage = {
   template: "platform",
   seo: {
     title:
-      "Neverinstall Platform - Cloud Desktops and Secure Browsers from One Control Plane",
+      "Neverinstall Platform: DaaS & Secure Browser Control Plane | Neverinstall",
     description:
       "Replace Citrix, VMware, and standalone enterprise browsers with one platform. Desktop Workspaces and Secure Browser Workspaces share a single admin console, unified policy, and three deployment models — managed cloud, customer cloud, or on-prem.",
   },

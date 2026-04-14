@@ -58,7 +58,7 @@ export const customerStories: Record<string, CustomerStory> = {
   },
   "alliance-broadband": {
     slug: "alliance-broadband",
-    title: "Alliance Broadband launched cloud desktops as a subscriber service",
+    title: "Alliance Broadband: cloud desktops for subscribers",
     description:
       "Alliance Broadband bundles Neverinstall cloud desktops as a value-added service for their broadband subscribers, creating a new revenue line.",
     industry: "Telecom",
