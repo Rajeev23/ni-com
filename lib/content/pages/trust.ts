@@ -7,6 +7,7 @@ import {
   docsCta,
   gridSection,
   relatedLink,
+  statsSection,
   tableSection,
   trustCta,
 } from "@/lib/content/shared"
@@ -609,6 +610,25 @@ export const trustPages: Record<string, ContentPage> = {
           },
         ],
       }),
+      statsSection({
+        title: "Continue your security review",
+        description:
+          "Expand beyond this summary with architecture, infrastructure, and policy depth.",
+        items: [
+          {
+            label: "Architecture",
+            value: "Security",
+            detail:
+              "Zero-trust model and session isolation on the main Security page.",
+          },
+          {
+            label: "Evidence",
+            value: "Compliance",
+            detail:
+              "Certifications and attestation index under Compliance & Certifications.",
+          },
+        ],
+      }),
     ],
     relatedLinks: [
       relatedLink(
@@ -683,6 +703,24 @@ export const trustPages: Record<string, ContentPage> = {
           },
         ],
       }),
+      statsSection({
+        title: "Related Trust Center resources",
+        description:
+          "Pair this overview with architecture detail and official contact paths.",
+        items: [
+          {
+            label: "Control model",
+            value: "Security",
+            detail: "How isolation and policy enforcement support containment.",
+          },
+          {
+            label: "Engagement",
+            value: "Contact",
+            detail:
+              "Security Contact for questionnaires and disclosure coordination.",
+          },
+        ],
+      }),
     ],
     relatedLinks: [
       relatedLink(
@@ -751,6 +789,25 @@ export const trustPages: Record<string, ContentPage> = {
             description:
               "Report security vulnerabilities or coordinate follow-up on disclosed findings.",
             icon: "AlertTriangle",
+          },
+        ],
+      }),
+      statsSection({
+        title: "After you reach out",
+        description:
+          "Typical follow-ups from security and procurement teams using this channel.",
+        items: [
+          {
+            label: "Documentation",
+            value: "Tailored",
+            detail:
+              "SOC summaries, architecture decks, and FAQs shared under NDA when needed.",
+          },
+          {
+            label: "Architecture",
+            value: "Deep dive",
+            detail:
+              "Infrastructure & Architecture for deployment and data-flow questions.",
           },
         ],
       }),

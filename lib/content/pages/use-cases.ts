@@ -28,29 +28,29 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/vdi-replacement",
     template: "useCase",
     seo: {
-      title: "Citrix Alternative for Enterprise VDI Replacement | Neverinstall",
+      title: "VDI Replacement: Citrix & VMware Alternative | Neverinstall",
       description:
-        "Replace Citrix and VMware VDI with cloud desktops that deploy in days and cost 70% less. Windows & Linux on any cloud or on-prem. No Broadcom lock-in.",
+        "VDI replacement with hosted virtual desktops: replace Citrix and VMware in days, sub-second restore, Windows and Linux, any cloud or on-prem—predictable cost vs Broadcom-era VDI.",
     },
     summary:
-      "Cloud desktops that replace Citrix and VMware VDI in days, not months, at a fraction of the cost.",
+      "VDI replacement and hosted virtual desktops that replace Citrix and VMware Horizon in days—not months—with sub-second restore and lower TCO.",
     hero: {
       eyebrow: "Use Case",
       title:
-        "Replace Citrix and VMware with cloud desktops that deploy in days",
+        "VDI replacement: hosted virtual desktops that deploy in days, not quarters",
       subtitle:
-        "Legacy VDI was already expensive and slow to run. Broadcom's 3–5x license increases made it untenable. Neverinstall gives you persistent Windows and Linux desktops that provision in days, restore in under a second, and run on any cloud or on-prem infrastructure.",
+        "Legacy VDI was costly and slow; Broadcom-era licensing made it worse. Neverinstall delivers desktop as a service-style hosted virtual desktops—persistent Windows and Linux, sub-second restore, managed cloud, customer cloud, or on-prem.",
       metric: "Days to deploy. 70% lower cost.",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall replace Citrix and VMware VDI?",
-      "Neverinstall replaces legacy VDI with cloud-native desktop workspaces that provision in days rather than months, require no dedicated infrastructure team to operate, and deliver sub-second session restore across Windows and Linux. Customers have moved from Citrix and VMware AVD to Neverinstall and cut costs by 70% while reducing deployment timelines from quarters to weeks."
+      "VDI replacement on Neverinstall means hosted virtual desktops on a cloud-native stack: provision in days, sub-second session restore on Windows and Linux, no hypervisor team tax. Teams migrate from Citrix and AVD with materially lower TCO and weeks-not-quarters timelines."
     ),
     sections: [
       gridSection({
-        title: "Why the legacy VDI model is broken",
+        title: "Why legacy VDI breaks—and why VDI replacement is urgent",
         description:
           "The problems were already there before Broadcom bought VMware. The licensing shock just made the decision unavoidable.",
         blocks: [
@@ -202,28 +202,30 @@ export const useCasePages: Record<string, ContentPage> = {
     template: "useCase",
     seo: {
       title:
-        "Secure Remote Work Without VPN or Hardware Shipping | Neverinstall",
+        "Remote & Hybrid Work: Cloud Desktops & Browser Sessions | Neverinstall",
       description:
-        "Onboard remote employees in minutes with cloud workspaces on any device. No VPN, no laptop shipping, no endpoint data. Cut onboarding from weeks to minutes.",
+        "Remote and hybrid work with hosted virtual desktops and secure browser workspaces—onboard in minutes, no VPN, no laptop shipping, data off the endpoint. Desktop or browser mode.",
     },
     summary:
-      "Cloud workspaces for fast remote onboarding, any-device access, and zero VPN dependency.",
+      "Virtual desktop services for remote and hybrid teams: hosted virtual desktops or secure browser workspaces, fast onboarding, any-device access, no VPN dependency.",
     hero: {
       eyebrow: "Use Case",
-      title: "Stop shipping laptops. Start delivering workspaces.",
+      title:
+        "Remote and hybrid work: hosted virtual desktops without shipping laptops",
       subtitle:
-        "Onboard remote employees in minutes with secure cloud workspaces that run on any device and keep data completely off the endpoint. No VPN. No hardware queue. No IT ticket to start work.",
+        "Onboard remote employees in minutes with secure cloud workspaces—hosted virtual desktops or browser sessions—so data stays off the endpoint. No VPN sprawl, no hardware queue.",
       metric: "From 10 days to minutes",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall support remote and hybrid work?",
-      "Neverinstall replaces device-heavy remote access models with cloud workspaces that provision in minutes, persist across sessions, and run on almost any endpoint. Users get a consistent work environment from day one without IT shipping hardware or configuring VPN access."
+      "Virtual desktop services replace laptop-and-VPN models: hosted virtual desktops provision in minutes, persist across sessions, and run from any browser; browser-first users get secure browser workspaces at lower seat cost."
     ),
     sections: [
       gridSection({
-        title: "What breaks in the device-first model",
+        title:
+          "What breaks in laptop-first remote work—and how cloud workspaces fix it",
         description:
           "Remote work exposes the cost and fragility of building access around physical hardware.",
         blocks: [
@@ -350,28 +352,30 @@ export const useCasePages: Record<string, ContentPage> = {
     template: "useCase",
     seo: {
       title:
-        "Secure Cloud Developer Environments for Enterprise Teams | Neverinstall",
+        "Developer Workspaces: Hosted Virtual Desktops for Engineering | Neverinstall",
       description:
-        "Onboard developers in minutes with consistent Windows & Linux cloud environments. Code never touches the endpoint. Persistent state, sub-second restore.",
+        "Developer workspaces on hosted virtual desktops: consistent Windows and Linux cloud environments, code off endpoints, persistent state, sub-second restore, fast contractor onboarding.",
     },
     summary:
-      "Consistent cloud developer environments that onboard fast, support Windows and Linux, and keep code off endpoints.",
+      "Hosted virtual desktops for developers—golden images, Windows and Linux, code and secrets in the cloud session, minutes-to-first-commit onboarding.",
     hero: {
       eyebrow: "Use Case",
-      title: "Local performance. Cloud control.",
+      title:
+        "Developer workspaces: hosted virtual desktops with cloud-native control",
       subtitle:
-        "Give developers ready-to-code environments with consistent toolchains, persistent state, and strong code protection. Onboard in minutes. Support contractors without exposing your codebase. Keep code off every endpoint.",
+        "Give engineers ready-to-code hosted virtual desktops with consistent toolchains, persistent state, and IP-safe contractor access—repos stay in the workspace, not on laptops.",
       metric: "Consistent dev environments in minutes",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "Why use Neverinstall for developer workspaces?",
-      "Neverinstall gives engineering teams consistent cloud environments with Windows and Linux support, persistent state between sessions, and centralized code access controls. Onboarding drops from days to minutes and the risk of source code sprawl across personal endpoints is eliminated."
+      "Developer workspaces are hosted virtual desktops: consistent Windows/Linux images, persistent sessions, centralized policy, and code that never lands on unmanaged endpoints—onboarding in minutes instead of laptop queues."
     ),
     sections: [
       gridSection({
-        title: "What slows engineering teams down",
+        title:
+          "What slows engineering teams—and why hosted virtual desktops help",
         description:
           "Developer productivity suffers when environments are inconsistent, tied to specific hardware, or difficult to replicate.",
         blocks: [
@@ -486,28 +490,30 @@ export const useCasePages: Record<string, ContentPage> = {
     template: "useCase",
     seo: {
       title:
-        "Business Continuity & Disaster Recovery Cloud Workspaces | Neverinstall",
+        "Business Continuity: Cloud Workspaces for DR & Outages | Neverinstall",
       description:
-        "Activate cloud workspaces in minutes during outages, ransomware, or device failures. No rebuild. No hardware dependency. Policy controls stay in force.",
+        "Business continuity with hosted virtual desktops and secure browser sessions: activate in minutes during outages, ransomware, or device loss—policy stays on, no hardware rebuild.",
     },
     summary:
-      "Known-good cloud workspaces for rapid fallback during outages, ransomware events, and device failures.",
+      "Virtual desktop services for continuity: known-good hosted virtual desktops and browser workspaces as instant fallback when sites, devices, or endpoints fail.",
     hero: {
       eyebrow: "Use Case",
-      title: "When systems fail, your work does not.",
+      title:
+        "Business continuity: hosted virtual desktops when offices or devices fail",
       subtitle:
-        "Switch teams into controlled cloud workspaces during outages, ransomware events, and device failures without rebuilding from scratch. The workspace is always there. Access is always available. Recovery is minutes, not days.",
+        "Fail teams over to controlled cloud workspaces—hosted virtual desktops or secure browser sessions—during outages, ransomware, or hardware loss. Same policies; recovery in minutes.",
       metric: "Outage to operational in minutes",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall support business continuity?",
-      "Neverinstall gives teams a controlled, known-good workspace environment that can activate immediately when offices, devices, or primary systems fail. Because work lives in the cloud rather than on the endpoint, device loss or ransomware on local infrastructure does not stop operations."
+      "Continuity is a virtual desktop services play: work lives in hosted virtual desktops and browser sessions, not on fragile laptops—so ransomware on a device or a site outage does not strand your workforce."
     ),
     sections: [
       gridSection({
-        title: "Where endpoint dependence creates continuity risk",
+        title:
+          "Endpoint dependence—and how virtual desktop services reduce DR risk",
         description:
           "Business continuity breaks down when work is tied to physical devices or specific local infrastructure.",
         blocks: [
@@ -635,28 +641,31 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/contractor-vendor-access",
     template: "useCase",
     seo: {
-      title: "Secure Third-Party Contractor & Vendor Access | Neverinstall",
+      title:
+        "Contractor & Vendor Access: Secure Browser & Desktops | Neverinstall",
       description:
-        "Provision isolated, time-bound workspaces for contractors in minutes. Session recording, instant offboarding, zero endpoint trust. No hardware required.",
+        "Contractor and vendor access via secure browser workspaces or hosted virtual desktops—provision in minutes, session recording, instant offboarding, zero endpoint trust, no hardware.",
     },
     summary:
-      "Time-bound, isolated workspace access for third parties — provisioned in minutes, offboarded instantly.",
+      "Virtual desktop services for third parties: isolated hosted virtual desktops or secure browser sessions, time-bound access, full audit trail, revoke in seconds.",
     hero: {
       eyebrow: "Use Case",
-      title: "Onboard in minutes. Offboard instantly.",
+      title:
+        "Contractor and vendor access: secure browser and desktop workspaces in minutes",
       subtitle:
-        "Give contractors and vendors secure, time-bound access to controlled workspaces without shipping hardware or trusting their devices. Session recording keeps every interaction auditable. When the engagement ends, access is gone in seconds.",
+        "Give third parties time-bound hosted virtual desktops or secure browser workspaces—no laptop shipping, no endpoint trust, session recording for audit, instant revocation when the SOW ends.",
       metric: "Third-party access without endpoint trust",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall secure contractor and vendor access?",
-      "Neverinstall gives third parties access to isolated workspace sessions with policy-enforced controls, session recording, and instant offboarding. No hardware is shipped. No endpoint is trusted. Access is created and revoked in software, so the IT overhead of onboarding and offboarding contractors drops to near zero."
+      "Third-party access runs through virtual desktop services: secure browser workspaces for most vendors, hosted virtual desktops when apps require a full OS—policy, DLP, recording, and offboarding from one control plane."
     ),
     sections: [
       gridSection({
-        title: "Where third-party access creates risk today",
+        title:
+          "Third-party access risk—and how virtual desktop services contain it",
         description:
           "The old model treats contractors like employees — with hardware, broad access, and messy offboarding.",
         blocks: [
@@ -784,28 +793,30 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/secure-byod",
     template: "useCase",
     seo: {
-      title: "Secure BYOD Access Without MDM or VPN | Neverinstall",
+      title: "Secure BYOD: Browser & Virtual Desktop Sessions | Neverinstall",
       description:
-        "Enable BYOD without MDM enrollment or VPN. Enterprise data stays in the cloud session, never on the personal device. Policy controls at the session layer.",
+        "Secure BYOD with secure browser workspaces and hosted virtual desktops—no MDM, no VPN, enterprise data in the cloud session, DLP at the session layer. Personal devices stay clean.",
     },
     summary:
-      "BYOD access without data on personal devices, MDM enrollment, or VPN dependency.",
+      "BYOD done safely: secure browser sessions or hosted virtual desktops so corporate data never persists on personal laptops—no MDM, optional full desktop when needed.",
     hero: {
       eyebrow: "Use Case",
-      title: "Let employees use any device. Without the risk.",
+      title:
+        "Secure BYOD with secure browser and virtual desktop sessions—no MDM",
       subtitle:
-        "Keep work inside a controlled session so personal devices stay personal and enterprise data stays protected. No MDM enrollment. No VPN client. No data on the device. Users get the flexibility they want and IT keeps the controls they need.",
+        "Run work inside secure browser workspaces or hosted virtual desktops so data never lands on personal devices. No VPN client, no invasive MDM—policy, DLP, and audit at the session boundary.",
       metric: "No MDM. No VPN. No compromise.",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall make BYOD safer?",
-      "Neverinstall keeps work inside browser-based sessions so enterprise data never reaches the personal device. There is nothing to install, no MDM profile to push, and no VPN to configure. Policy controls — clipboard restrictions, download blocking, session recording — are enforced at the session layer, not the device layer."
+      "BYOD maps to virtual desktop services: secure browser workspaces for most users, hosted virtual desktops when staff need a full OS—everything enforced in the cloud session, not on the phone or laptop."
     ),
     sections: [
       gridSection({
-        title: "Why BYOD becomes a security gap",
+        title:
+          "Why BYOD breaks classic endpoint security—and session-layer virtual desktops fix it",
         description:
           "The problem is not that employees want to use personal devices. It is that the work and the data follow them onto those devices.",
         blocks: [
@@ -909,28 +920,30 @@ export const useCasePages: Record<string, ContentPage> = {
     template: "useCase",
     seo: {
       title:
-        "Privileged Access Management with Session Recording | Neverinstall",
+        "Privileged Access: Session Recording & Audit Trails | Neverinstall",
       description:
-        "Record and replay every privileged session. Isolate admin credentials from endpoints. Full audit trail for SOC 2, ISO 27001, and RBI compliance.",
+        "Privileged access through secure browser and virtual desktop sessions: full session recording, forensic replay, credentials off endpoints—SOC 2, ISO 27001, RBI, DPDP-aligned evidence.",
     },
     summary:
-      "Session-level controls, recording, and audit trails for admin and privileged user access to sensitive systems.",
+      "Virtual desktop services for admins: recorded hosted virtual desktop or secure browser sessions, replayable forensic evidence, least-privilege paths without VPN-only sprawl.",
     hero: {
       eyebrow: "Use Case",
-      title: "Control privileged access without slowing operations",
+      title:
+        "Privileged access: recorded virtual desktop and browser sessions for admins",
       subtitle:
-        "Give administrators and privileged users access to sensitive systems inside recorded, policy-controlled sessions. Every action is logged. Every session is replayable. Compliance and security teams get the audit trail they need without adding friction to the operations team.",
+        "Put admin and break-glass work inside recorded hosted virtual desktops or secure browser sessions—full replay, complete audit trail, credentials never resident on laptops.",
       metric: "Every privileged session recorded and replayable",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall handle privileged user access?",
-      "Neverinstall delivers privileged access through isolated workspace sessions with full session recording, forensic replay capability, and a complete audit trail. Admins and IT users access sensitive systems without the session data ever reaching their endpoint, and every action is logged at the session layer without requiring a separate PAM appliance."
+      "Privileged work uses the same virtual desktop services stack: isolated sessions with recording and replay, admin actions in the workspace boundary, exportable audit evidence—often enough to complement or replace legacy PAM for session-centric controls."
     ),
     sections: [
       gridSection({
-        title: "Why privileged access is a persistent control problem",
+        title:
+          "Privileged access gaps—and why session-based virtual desktops close them",
         description:
           "Admin access creates outsized risk because the people who need it most are also the people who can do the most damage or make the most costly mistakes.",
         blocks: [
@@ -1045,28 +1058,31 @@ export const useCasePages: Record<string, ContentPage> = {
     path: "/solutions/use-case/call-center-access",
     template: "useCase",
     seo: {
-      title: "Secure Call Center & BPO Workspaces with DLP | Neverinstall",
+      title:
+        "Call Center Workspaces: Virtual Desktops & DLP at Scale | Neverinstall",
       description:
-        "Shift-based clean sessions for call center agents. Central DLP, instant scaling, no hardware refresh. Used by Tally Solutions on OCI in production.",
+        "Call center and BPO virtual desktop services: shift-clean hosted virtual desktops or secure browser sessions, central DLP, elastic scale—Tally Solutions on OCI in production.",
     },
     summary:
-      "Secure, scalable workspace access for call centers and high-volume operations with shift-based clean resets.",
+      "Virtual desktop services for call centers: non-persistent hosted virtual desktops, secure browser seats for supervisors, shift resets, DLP everywhere—production at scale on OCI.",
     hero: {
       eyebrow: "Use Case",
-      title: "Secure every agent session. Scale without limits.",
+      title:
+        "Call center and BPO: virtual desktop services with shift-clean sessions",
       subtitle:
-        "Deliver consistent, policy-controlled workspace sessions to every call center agent at shift start. Clean resets between shifts prevent data carryover. Central policy covers every seat. Scale up or down without hardware procurement.",
+        "Deliver hosted virtual desktops and secure browser workspaces to every agent—clean resets between shifts, centralized DLP, elastic scale without hardware procurement. Tally runs this model in production.",
       metric: "Shift-ready sessions. Instant scale.",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall work for call center and high-volume operations?",
-      "Neverinstall delivers browser-based workspace sessions to call center agents that reset cleanly between shifts, enforce DLP and access policies centrally, and scale up for high-demand periods without hardware procurement. Tally Solutions runs this model in production."
+      "High-volume ops need virtual desktop services: hosted virtual desktops for CRM and telephony stacks with non-persistent shift resets, secure browser workspaces for lighter roles—central policy, DLP, and OCI-proven scale."
     ),
     sections: [
       gridSection({
-        title: "What makes call center access hard to secure",
+        title:
+          "Call center security at scale—and why virtual desktop services fit",
         description:
           "High-volume, shift-based operations create unique security and operations challenges that VDI and standard desktop management were not designed to handle efficiently.",
         blocks: [
@@ -1194,28 +1210,30 @@ export const useCasePages: Record<string, ContentPage> = {
     template: "useCase",
     seo: {
       title:
-        "Data Residency & DPDP Compliance for Cloud Workspaces | Neverinstall",
+        "Data Residency: Virtual Desktop Services in Your Cloud | Neverinstall",
       description:
-        "Deploy workspaces on your infrastructure — OCI, AWS, Azure, on-prem, or air-gapped. No data leaves your boundary. Built for DPDP Act and RBI compliance.",
+        "Data residency for virtual desktop services: deploy hosted virtual desktops and secure browser workspaces on OCI, AWS, Azure, on-prem, or air-gapped—DPDP and RBI-aligned boundaries.",
     },
     summary:
-      "Workspace delivery that satisfies DPDP Act, RBI data localization, and enterprise data residency requirements across any deployment model.",
+      "Virtual desktop services where data stays in your tenancy: hosted virtual desktops and secure browser sessions on your cloud, on-prem, or disconnected—built for DPDP, RBI, and sovereignty reviews.",
     hero: {
       eyebrow: "Use Case",
-      title: "Your data never leaves your boundary",
+      title:
+        "Data residency: virtual desktop services that stay inside your boundary",
       subtitle:
-        "Neverinstall deploys on your infrastructure — OCI, AWS, Azure, GCP, on-prem, or air-gapped — so data never crosses a border you have not approved. Purpose-built for DPDP Act compliance, RBI data localization mandates, and enterprise data sovereignty requirements.",
+        "Run hosted virtual desktops and secure browser workspaces on OCI, AWS, Azure, on-prem, or air-gapped stacks—no surprise data egress, aligned to DPDP Act, RBI localization, and enterprise sovereignty.",
       metric: "Any cloud. Any region. Full data control.",
       primaryCta: demoCta,
       secondaryCta: tcoCta,
     },
     answerCapsule: answerCapsule(
       "How does Neverinstall support data residency requirements?",
-      "Neverinstall runs on the infrastructure you control — OCI, AWS, Azure, GCP, private cloud, or on-prem — with no data passing through Neverinstall-managed systems. For organizations under DPDP Act obligations, RBI data localization rules, or enterprise residency policies, this means the workspace platform itself does not create a compliance gap."
+      "Virtual desktop services deploy entirely in your cloud or data center: hosted virtual desktop and secure browser traffic stay in-region, supporting DPDP, RBI, and board-level sovereignty without vendor data-plane detours."
     ),
     sections: [
       gridSection({
-        title: "The regulatory drivers",
+        title:
+          "Regulatory drivers for residency—and virtual desktop services in-region",
         description:
           "Data residency is no longer optional in regulated industries. The regulatory pressure is compounding.",
         blocks: [

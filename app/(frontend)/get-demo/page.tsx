@@ -10,9 +10,9 @@ import {
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "Book a Demo | Neverinstall",
+  title: "Book a Demo: DaaS & Virtual Desktop Platform | Neverinstall",
   description:
-    "Talk to Neverinstall experts and design a secure browser and DaaS evaluation plan.",
+    "Schedule a virtual desktop and secure browser demo—Desktop Workspaces, Secure Browser, or both. Deployment, compliance, and TCO guidance. We respond within one business day.",
   path: "/get-demo",
 })
 
@@ -41,9 +41,10 @@ export default function GetDemoPage() {
       <HeroSection
         hero={{
           eyebrow: "Get Demo",
-          title: "See Neverinstall in action",
+          title:
+            "Book a virtual desktop and secure browser demo tailored to your stack",
           subtitle:
-            "Share your use case, current stack, and rollout goals. We'll tailor the walkthrough to cover Desktop Workspaces, Secure Browser, or both.",
+            "Share your use case, current VDI or browser tooling, and rollout goals. We walk through desktop as a service (DaaS), Secure Browser Workspaces, or both—with deployment and compliance angles.",
           primaryCta: { label: "Submit Request", href: "#demo-form" },
           secondaryCta: { label: "See Pricing", href: "/pricing" },
         }}
@@ -56,9 +57,9 @@ export default function GetDemoPage() {
               <div>
                 <h2 className="text-lg font-semibold">What to expect</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  A product expert will walk through the platform based on your
-                  deployment scenario — whether you&apos;re replacing Citrix,
-                  securing BYOD contractors, or evaluating both work modes.
+                  A product expert walks through hosted virtual desktops and
+                  secure browser sessions for your scenario—Citrix or VMware
+                  replacement, BYOD and contractors, or a mixed DaaS rollout.
                 </p>
               </div>
               <ul className="space-y-4">

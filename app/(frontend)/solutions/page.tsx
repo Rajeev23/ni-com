@@ -9,8 +9,10 @@ import { industryPages, useCasePages } from "@/lib/content/site"
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
 export const metadata: Metadata = getBaseMetadata({
-  title: "Solutions | Neverinstall",
-  description: "Explore Neverinstall solutions by use case and industry.",
+  title:
+    "Solutions: Virtual Desktop Services by Use Case & Industry | Neverinstall",
+  description:
+    "Browse virtual desktop services and secure browser solutions by use case (VDI replacement, BYOD, contractors) and by industry—financial services, healthcare, manufacturing, and more.",
   path: "/solutions",
 })
 
@@ -20,16 +22,17 @@ export default function SolutionsIndexPage() {
       <HeroSection
         hero={{
           eyebrow: "Solutions",
-          title: "Solutions by use case and industry",
+          title:
+            "Virtual desktop services and secure browser workspaces—by scenario and sector",
           subtitle:
-            "Match Neverinstall to the operational challenge or industry context your organization is facing today.",
+            "Choose a use case for hosted virtual desktops and secure browser sessions, or an industry page for compliance and deployment patterns that match your regulators and data residency needs.",
           primaryCta: { label: "Get a Demo", href: "/get-demo" },
           secondaryCta: { label: "See the Platform", href: "/platform" },
         }}
       />
       <ResourceGrid
         title="By use case"
-        description="Select the operating problem that best matches your rollout priority."
+        description="VDI replacement, remote work, BYOD, contractors, call centers, data residency, and more—each with hosted virtual desktop or secure browser paths."
         cards={Object.values(useCasePages).map((page) => ({
           title: page.name,
           description: page.summary,

@@ -1103,8 +1103,7 @@ export const comparePages: Record<string, ContentPage> = {
 
   "vs-prisma-access-browser": comparePage({
     slug: "vs-prisma-access-browser",
-    title:
-      "Neverinstall vs Prisma Access Browser: Standalone Platform vs SASE Bundle Add-On",
+    title: "Neverinstall vs Prisma Access Browser: Standalone vs SASE Add-On",
     description:
       "Compare Neverinstall and Palo Alto Prisma Access Browser on standalone value, SASE dependency, desktop workspace support, and sovereign deployment. When the browser is an add-on vs a platform.",
     summary:
