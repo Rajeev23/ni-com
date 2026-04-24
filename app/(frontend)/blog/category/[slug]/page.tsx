@@ -10,6 +10,8 @@ import { getBaseMetadata } from "@/lib/seo/metadata"
 
 type Params = { slug: string }
 
+export const dynamic = "force-dynamic"
+
 async function getCategory(slug: string) {
   const payload = await getPayload({ config })
   const result = await payload.find({
@@ -36,13 +38,21 @@ async function getCategoryPosts(categoryId: number | string) {
 }
 
 export async function generateStaticParams() {
-  const payload = await getPayload({ config })
-  const categories = await payload.find({
-    collection: "categories",
-    limit: 100,
-    select: { slug: true },
-  })
-  return categories.docs.map((cat) => ({ slug: cat.slug }))
+  if (!process.env.DATABASE_URI) {
+    return []
+  }
+
+  try {
+    const payload = await getPayload({ config })
+    const categories = await payload.find({
+      collection: "categories",
+      limit: 100,
+      select: { slug: true },
+    })
+    return categories.docs.map((cat) => ({ slug: cat.slug }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({

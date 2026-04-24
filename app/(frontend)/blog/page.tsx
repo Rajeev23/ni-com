@@ -10,6 +10,8 @@ import {
 import { BlogCard } from "@/components/blog/blog-card"
 import { getBaseMetadata } from "@/lib/seo/metadata"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = getBaseMetadata({
   title: "Blog | Neverinstall",
   description:

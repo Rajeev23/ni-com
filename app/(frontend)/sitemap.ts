@@ -5,6 +5,8 @@ import config from "@payload-config"
 import { allRoutePaths } from "@/lib/content/site"
 import { seoSiteUrl } from "@/lib/seo/metadata"
 
+export const dynamic = "force-dynamic"
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date()
 
